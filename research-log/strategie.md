@@ -37,3 +37,8 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Status:** nieuw
 **Bron:** Harvard Business Review (Frank Nagle, MIT & Microsoft Research) · september/oktober 2026
 **Kern:** Concurrentievoordeel ontstaat door strategisch te kiezen waar je samenwerkt (infrastructuur, standaarden) en waar je differentieert. Vijf beslissingsfactoren — marktdynamica, technologielevenscyclus, positie in de stack, concurrentieniveau en regelgeving — bepalen of een capability in de "core" of de "edge" valt. De Tour de France peloton-metafoor maakt dit direct toepasbaar in strategiegesprekken.
+
+## 2026-11-01 — [Strategy in the Age of Arenas](https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/strategy-in-the-age-of-arenas)
+**Status:** nieuw  
+**Bron:** McKinsey & Company · 11 september 2026  
+**Kern:** Het 'arena'-concept vervangt de traditionele bedrijfstaklogica: technologieplatforms maken sectoroverschrijdende competitie de norm. Vier strategische antwoorden: kernactiviteiten heruit­vinden, herpositioneren, volgend concurrentievoordeel bouwen vóór huidig erodeert, of de fringe verkennen voor asymmetrische groei.
