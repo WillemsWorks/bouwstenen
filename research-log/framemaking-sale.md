@@ -30,3 +30,8 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Status:** nieuw
 **Bron:** Harvard Business Review (Chung, Fann e.a.) · 4 september 2026
 **Kern:** Agentic AI doet de traditionele grens tussen marketing en sales vervagen: content personaliseert zich in real-time op basis van verkoopdata, en verkopers krijgen automatisch context uit marketinginteracties. Organisaties moeten ook structuur, meetmethoden en incentivesystemen aanpassen om de klantreis werkelijk te integreren.
+
+## 2026-11-01 — [2026 B2B Buying Disconnect Report](https://www.trustradius.com/vendor-blog/b2b-buying-disconnect)
+**Status:** nieuw  
+**Bron:** TrustRadius · bijgewerkt 19 oktober 2026  
+**Kern:** 63% van B2B-kopers gebruikte AI bij aankoopproces; 94% controleert AI-informatie achteraf. Analystenrapporten als bron daalden 63%; peer-reviews stegen. Kopers willen zelf ontdekken — verkopers die dit negeren, verliezen vroegtijdig invloed op het framingproces.
