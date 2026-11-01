@@ -1,3 +1,4 @@
+---
 # Kennisbank Weekly Digest — Instructie
 
 *Dit bestand is de enige bron van waarheid voor de wekelijkse Cowork-taak.
@@ -57,6 +58,17 @@ Elk doc in `gov-index.json` heeft een `cluster`-veld — gebruik dat om een item
 
 **Uitzondering: Strategie.** Dit doc heeft geen vast cluster (`cluster: null`, `context_afhankelijk: true`). Beoordeel per Strategie-gerelateerd artikel zelf: gaat het over richting/positionering vóór een veranderopgave → Verandering & Leiderschap. Gaat het over het verkennen/valideren van een nieuwe propositie of markt → Innovatie & Marketing. Geen vaste regel, per artikel op inhoud beoordelen (zie `beslisregel`-veld in gov-index.json).
 
+**Bronnen die de volledige tekst blokkeren (bijv. HBR PROVENANCE_REQUIRED):**
+Als WebFetch of een vergelijkbare tool een fout geeft bij het ophalen van de volledige tekst van een artikel — zoals een `PROVENANCE_REQUIRED`-melding (HBR), een betaalmuur, of een "access denied" — ga dan als volgt te werk:
+
+1. **Sla het item niet over.** Neem het op in de digest.
+2. Gebruik de titel, URL, bron en datum zoals gevonden via de zoekopdracht.
+3. Schrijf voor de Kern-paragraaf: `⚠️ Volledige tekst niet beschikbaar — bron vereist directe toegang. [Lees het originele artikel →](URL)`
+4. Laat de Toepassing-paragraaf weg voor dit item.
+5. Noteer in de HTML-pagina dezelfde melding op de plek van de Kern-tekst, zodat het voor de lezer ook zichtbaar is.
+
+Het feit dat een bron niet automatisch ophaalbaar is, is **geen reden om de push te annuleren of uit te stellen**. Zie ook de regel hieronder.
+
 Outputformaat (basis voor Stap 4 en Stap 5):
 ```
 # 📚 Kennisbank Update — week [weeknummer], [datum]
@@ -91,7 +103,7 @@ Outputformaat (basis voor Stap 4 en Stap 5):
    ## [datum] — [Titel](URL)
    **Status:** nieuw
    **Bron:** [bron] · [publicatiedatum]
-   **Kern:** [2-3 zinnen]
+   **Kern:** [2-3 zinnen, of de foutmelding als de tekst niet beschikbaar was]
    ```
 4. Commit-message: `Research-log update [datum]: [thema]`
 
@@ -101,7 +113,14 @@ Volg de workflow "nieuwe digest-editie publiceren" uit de gov-library-html skill
 
 ## Afsluiting
 
-Meld kort: GitHub-publicatie gelukt (met link naar `digest-[YYYY-MM-DD].html`) / overgeslagen (geen token of skill) / gedeeltelijk gefaald (en welk deel).
+**Altijd pushen — ook bij gedeeltelijk mislukte stappen.**
+
+Publiceer de digest naar GitHub zodra er minimaal 1 volledig item beschikbaar is, ongeacht of andere items een foutmelding bevatten of bronnen niet bereikbaar waren. Stop nooit de push vanwege een ophaalfout.
+
+Meld kort:
+- GitHub-publicatie gelukt (met link naar `digest-[YYYY-MM-DD].html`) / overgeslagen (geen token of skill) / gedeeltelijk gefaald (en welk deel)
+- Welke items een blokkeringsfout hadden (bron niet bereikbaar)
+- Welke research-log bestanden zijn bijgewerkt
 
 ## Regels
 
@@ -109,5 +128,3 @@ Meld kort: GitHub-publicatie gelukt (met link naar `digest-[YYYY-MM-DD].html`) /
 - Bondig — leesbaar op een telefoon
 - Geen opvulling, geen samenvatting van samenvattingen
 - Minder dan 3 relevante items: zeg dat eerlijk
-
-
