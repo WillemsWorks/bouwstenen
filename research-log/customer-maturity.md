@@ -22,3 +22,8 @@ Items met status `nieuw` zijn nog niet besproken met Paul.
 **Status:** nieuw
 **Bron:** Harvard Business Review · 5 augustus 2026
 **Kern:** Klantluistersystemen missen structureel een derde kritiek signaal: "temporal urgency" — wanneer klanten verwachten dat de organisatie nu handelt, los van wat ze willen of hoe ze zich voelen. Door AI met menselijk oordeel te combineren kunnen bedrijven dit urgentiesignaal opsporen, overreactie op klachten voorkomen en innovatieprioriteiten scherper stellen. Context en culturele nuance zijn cruciaal bij de interpretatie van urgentiesignalen.
+
+## 2026-11-01 — [Customer Centricity in 2026](https://insights.renascence.io/p/customer-centricity-in-2026)
+**Status:** nieuw  
+**Bron:** Renascence.io · 6 augustus 2026  
+**Kern:** Klantcentriciteit in 2026 is een operationele discipline, geen positioneringskeuze. AI verlaagt overstapkosten dramatisch; personalisatie is van nice-to-have naar minimumverwachting verschoven. Organisaties die het als communicatiestrategie behandelen, verliezen marktaandeel.
