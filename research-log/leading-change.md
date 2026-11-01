@@ -53,3 +53,8 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Status:** nieuw
 **Bron:** Harvard Business Review · 1 september 2026
 **Kern:** AI-implementaties falen niet aan de top of bij leveranciers, maar bij middenmanagers die de kloof moeten overbruggen tussen strategische ambitie en dagelijks gedrag. Tsipursky identificeert vijf managementprofielen — van scepticus tot katalysator — elk met een eigen benaderingsstrategie. Wie alle profielen over één kam scheert, verliest draagvlak en vertraagt de adoptie.
+
+## 2026-11-01 — [The Agentic Transformation Office](https://www.mckinsey.com/capabilities/transformation/our-insights/the-agentic-transformation-office)
+**Status:** nieuw  
+**Bron:** McKinsey & Company · 16 september 2026  
+**Kern:** AI-agenten nemen drie TO-pijlers over (monitoring, risicosignalering, rapportage), waardoor bezetting 35–40% daalt en medewerkers zich kunnen richten op menselijk oordeel en stakeholdermanagement. Programma's rapporteren 35–70% tijdsbesparing op routinebeheer.
