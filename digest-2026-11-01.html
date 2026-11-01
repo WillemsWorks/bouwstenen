@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennisbank Digest — Week 44, 2026 — Paul Willems GOV Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .topbar a:hover { text-decoration: underline; }
+
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 4px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+    .doc-content h2 a {
+      color: var(--purple-dark);
+      text-decoration: none;
+    }
+    .doc-content h2 a:hover { text-decoration: underline; }
+
+    .doc-content p { margin-bottom: 16px; }
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    .digest-eyebrow {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-dark);
+      opacity: 0.55;
+      margin-bottom: 4px;
+    }
+    .digest-meta-line {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-mid);
+      margin-bottom: 10px;
+    }
+    .digest-gov-link {
+      display: inline-block;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple-dark);
+      background: var(--purple-light);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+    .digest-tip {
+      border-left: 3px solid var(--lime);
+      background: var(--lime-light);
+      padding: 14px 20px;
+      margin: 4px 0 8px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+    .digest-tip strong { color: var(--purple-dark); }
+    .digest-source-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--purple-dark);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .digest-source-link:hover { text-decoration: underline; }
+
+    /* Cluster-koptekst */
+    .cluster-heading {
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin: 56px 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .cluster-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown { position: relative; }
+    .topnav-dropdown-toggle {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s, background 0.12s;
+      user-select: none;
+    }
+    .topnav-dropdown-toggle:hover,
+    .topnav-dropdown-toggle.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.15s; }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg { transform: rotate(180deg); }
+    .topnav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--purple-dark);
+      border: 1px solid rgba(196,255,72,0.2);
+      border-radius: 6px;
+      min-width: 180px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .topnav-dropdown.open .topnav-dropdown-menu { display: block; }
+    .topnav-dropdown-item {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-dropdown-item:hover,
+    .topnav-dropdown-item.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-item-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 1px;
+    }
+
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+      .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+      .doc-footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html" class="topnav-logo">
+        <img src="logo-dark.svg" alt="WillemsWorks" height="28">
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link">Kennisbasis</a>
+        <a href="digest.html" class="topnav-link active">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="doc-header">
+    <div class="doc-header-inner">
+      <span class="doc-label">Kennisbank digest</span>
+      <h1 class="doc-title">Week 44 &middot; 1 november 2026</h1>
+      <p class="doc-subtitle">Transformatiekantoor als AI-regie-eenheid, psychologische veiligheid als teamfundament, arena-strategie voor platformtijdperk, B2B-kopergedrag na AI-adoptie &amp; klantcentriciteit als operationele discipline &mdash; 5 items.</p>
+      <div class="doc-meta">
+        <span><strong>Editie</strong> Week 44, 2026</span>
+        <span><strong>Items</strong> 5</span>
+        <span><strong>Gegenereerd</strong> 1 november 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <p>Deze digest is automatisch samengesteld vanuit bronnen die relevant zijn voor de GOV-frameworks van Paul Willems. De samenvattingen zijn door AI opgesteld en ter illustratie bedoeld; raadpleeg de originele bronnen voor besluitvorming.</p>
+  </div>
+
+  <div class="doc-content">
+
+    <div class="cluster-heading">Verandering &amp; Leiderschap</div>
+
+    <div class="digest-item">
+      <div class="digest-eyebrow">LeadingChange &middot; Transformatie-infrastructuur</div>
+      <h2><a href="https://www.mckinsey.com/capabilities/transformation/our-insights/the-agentic-transformation-office" target="_blank">The Agentic Transformation Office</a></h2>
+      <p class="digest-meta-line">McKinsey &amp; Company &middot; 16 september 2026</p>
+      <span class="digest-gov-link">GOV-koppeling: LeadingChange</span>
+      <p>McKinsey beschrijft een nieuwe organisatievorm voor grote transformaties: het Agentic Transformation Office (ATO). AI-agenten nemen drie traditionele TO-pijlers over — voortgangsmonitoring, risicosignalering en rapportage — waardoor TO-bezetting met 35&ndash;40% daalt en de focus van medewerkers verschuift naar menselijke oordeelsvorming en stakeholdermanagement. Programma&rsquo;s die deze aanpak gebruiken, rapporteren 35&ndash;70% tijdsbesparing op routinematige beheeractiviteiten. <a href="https://www.mckinsey.com/capabilities/transformation/our-insights/the-agentic-transformation-office" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+      <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Bij het inrichten van een transformatie-PMO: bouw agentic monitoring in als standaardlaag, niet als vervanging van menselijk oordeel maar als versterking ervan. Positioneer dit in het LeadingChange-kader als infrastructuurkeuze die vrijheid cre&euml;ert voor mensgerichte interventies.</div>
+    </div>
+
+    <hr>
+
+    <div class="cluster-heading">Team &amp; Mensen</div>
+
+    <div class="digest-item">
+      <div class="digest-eyebrow">PsychologischeVeiligheid &middot; Teamdynamiek &middot; backlog</div>
+      <h2><a href="https://www.internalauditguide.com/fearless-organization-summary/" target="_blank">The Fearless Organization — samenvatting</a></h2>
+      <p class="digest-meta-line">internalauditguide.com &middot; 26&ndash;27 oktober 2026</p>
+      <span class="digest-gov-link">GOV-koppeling: PsychologischeVeiligheid (backlog)</span>
+      <p>Een toegankelijke samenvatting van Amy Edmondsons <em>The Fearless Organization</em>, gericht op leiderschapspraktijk. Drie kerninzichten: (1) psychologische veiligheid is de overtuiging dat je niet gestraft wordt voor spreken — anders dan vertrouwen of vriendelijkheid; (2) stilte kost organisaties innovatie, kwaliteit &amp; veiligheid aantoonbaar meer dan openhartigheid; (3) leiders hebben drie taken: maak werk frames tot leeruitdaging, erken je eigen feilbaarheid, en nodig actief andere stemmen uit. <a href="https://www.internalauditguide.com/fearless-organization-summary/" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+      <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Gebruik het drietaken-model van Edmondson als concrete checklist voor leiderschapsontwikkeling binnen het PsychologischeVeiligheid-framework. De definitie (&lsquo;niet de verwachting straf te krijgen voor spreken&rsquo;) is scherper dan &lsquo;vertrouwen&rsquo; en helpt misverstanden in teamtrainingen voorkomen.</div>
+    </div>
+
+    <hr>
+
+    <div class="cluster-heading">Innovatie &amp; Marketing</div>
+
+    <div class="digest-item">
+      <div class="digest-eyebrow">Strategie &middot; Marktpositionering</div>
+      <h2><a href="https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/strategy-in-the-age-of-arenas" target="_blank">Strategy in the Age of Arenas</a></h2>
+      <p class="digest-meta-line">McKinsey &amp; Company &middot; 11 september 2026</p>
+      <span class="digest-gov-link">GOV-koppeling: Strategie</span>
+      <p>McKinsey introduceert het &lsquo;arena&rsquo;-concept als opvolger van de traditionele bedrijfstaklogica: technologieplatforms maken sectoroverschrijdende competitie de norm. Vier strategische antwoorden worden uitgewerkt: (1) kernactiviteiten opnieuw uitvinden, (2) herpositioneren in een betere arena, (3) het volgende concurrentievoordeel opbouwen v&oacute;&oacute;rdat het huidige erodeert, (4) de fringe verkennen voor asymmetrische groeikansen. Bepalende vraag is niet &lsquo;wie zijn mijn concurrenten&rsquo; maar &lsquo;in welke arena wil ik overleven&rsquo;. <a href="https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/strategy-in-the-age-of-arenas" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+      <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Gebruik de vier arena-responses als diagnostisch kader bij strategiesessies: welk van de vier antwoorden past bij de huidige positie van de organisatie? Dit maakt abstracte strategiegesprekken concreter en keuzegeori&euml;nteerder — sterk instrument voor het Strategie-framework.</div>
+    </div>
+
+    <hr>
+
+    <div class="cluster-heading">Commercie &amp; Klant</div>
+
+    <div class="digest-item">
+      <div class="digest-eyebrow">FramemakingSale &middot; B2B Verkoopgedrag</div>
+      <h2><a href="https://www.trustradius.com/vendor-blog/b2b-buying-disconnect" target="_blank">2026 B2B Buying Disconnect Report</a></h2>
+      <p class="digest-meta-line">TrustRadius &middot; bijgewerkt 19 oktober 2026</p>
+      <span class="digest-gov-link">GOV-koppeling: FramemakingSale</span>
+      <p>TrustRadius&rsquo; jaarlijkse onderzoek naar de kloof tussen kopers en verkopers in B2B laat een breukpunt zien door AI-adoptie: 63% van de B2B-kopers gebruikte AI bij hun aankoopproces, maar 94% controleert AI-gegenereerde informatie achteraf op juistheid. Analystenrapporten zijn als vertrouwde bron met 63% gedaald; peer-reviews stegen juist. Kopers willen zelf ontdekken, niet overtuigd worden &mdash; verkopers die dit negeren, verliezen vroegtijdig invloed op het framingproces. <a href="https://www.trustradius.com/vendor-blog/b2b-buying-disconnect" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+      <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Binnen het FramemakingSale-framework: als 94% van kopers AI-content verifieert via peer-reviews, is de logische zet om als aanbieder juist de reviewlaag te bewerken (case studies, klantcitaten in communities) in plaats van te vertrouwen op traditionele contentmarketing. Frame je propositie zo dat het de verificatiefase van de koper overleeft.</div>
+    </div>
+
+    <div class="digest-item">
+      <div class="digest-eyebrow">CustomerMaturity &middot; Klantbeleving &middot; backlog</div>
+      <h2><a href="https://insights.renascence.io/p/customer-centricity-in-2026" target="_blank">Customer Centricity in 2026</a></h2>
+      <p class="digest-meta-line">Renascence.io &middot; 6 augustus 2026</p>
+      <span class="digest-gov-link">GOV-koppeling: CustomerMaturity (backlog)</span>
+      <p>Renascence betoogt dat klantcentriciteit in 2026 geen positioneringskeuze meer is maar een operationele discipline: bedrijven die het serieus nemen, hebben het verankerd in meetbare service-KPI&rsquo;s, personeelsbeloning en productontwikkeling. Twee externe druk-factoren versterken het belang: AI verlaagt overstapkosten voor klanten dramatisch, en gepersonaliseerde ervaringen zijn van &lsquo;nice to have&rsquo; naar minimumverwachting verschoven. Organisaties die dit als communicatiestrategie behandelen, verliezen marktaandeel aan zij die het als bedrijfsvoeringsmodel implementeren. <a href="https://insights.renascence.io/p/customer-centricity-in-2026" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+      <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Voor het CustomerMaturity-framework: gebruik het onderscheid &lsquo;verklaring vs. discipline&rsquo; als diagnose-instrument bij klantgerichtheidsscans. Vraag niet &lsquo;zegt de organisatie klantgericht te zijn&rsquo; maar &lsquo;zit klantgerichtheid in KPI&rsquo;s, beloningsstructuren en productkeuzes&rsquo;.</div>
+    </div>
+
+  </div>
+
+  <footer class="doc-footer">
+    <span>Automatisch gegenereerd op 1 november 2026 &middot; GOV Library van Paul Willems</span>
+    <a href="digest.html">&larr; Alle edities</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".topnav-dropdown-toggle").forEach(toggle => {
+      toggle.addEventListener("click", e => {
+        e.stopPropagation();
+        toggle.closest(".topnav-dropdown").classList.toggle("open");
+      });
+    });
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".topnav-dropdown").forEach(d => d.classList.remove("open"));
+    });
+  </script>
+</body>
+</html>
