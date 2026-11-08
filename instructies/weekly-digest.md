@@ -1,4 +1,3 @@
----
 # Kennisbank Weekly Digest — Instructie
 
 *Dit bestand is de enige bron van waarheid voor de wekelijkse Cowork-taak.
@@ -7,7 +6,7 @@ opvolgen. Wijzigingen aan hoe de digest werkt: alleen hier aanpassen.*
 
 ## Doel
 
-Vind nieuwe publicaties, artikelen en onderzoek van de afgelopen 7 dagen
+Vind nieuwe publicaties, artikelen en onderzoek van de afgelopen 14 dagen
 die relevant zijn voor Paul's GOV Library. Maak een compacte digest en
 publiceer die naar de GOV Library op GitHub — research-log, digest-archief
 en HTML-pagina. Geen lokale kopie: de GOV Library is het enige eindstation.
@@ -27,13 +26,39 @@ Haal `research-log/gov-index.json` op (publiek, geen token nodig via raw.githubu
 
 Vertaal de onderwerpen naar minimaal 6 gerichte zoekopdrachten, verdeeld over de aanwezige docs (live én backlog) — niet alle docs per se elke week, maar wel over de volle breedte heen gedurende meerdere weken.
 
+**Zoek actief bij Nederlandse bronnen met Nederlandse zoektermen**, naast de Engelstalige internationale bronnen. Combineer twee à drie Nederlandse zoekopdrachten met termen als "verandermanagement", "leiderschap", "innovatie", "klantbeleving", "AI adoptie" per run.
+
 ## Stap 2 — Filteren
 
 Neem alleen items op die:
-- Gepubliceerd zijn in de afgelopen 30 dagen (voorkeur: afgelopen 7 dagen)
+- **Gepubliceerd zijn in de afgelopen 14 dagen** — dit is een harde grens. Items ouder dan 14 dagen worden niet in de digest opgenomen, ook niet als ze status `nieuw` hebben in de research-logs. Oudere `nieuw`-items zijn bedoeld voor de maandelijkse catch-up met Paul, niet voor de wekelijkse digest.
 - Echte nieuwe inzichten, onderzoek of toepassingen bieden — geen basisherhaling
 - Duidelijk aansluiten op een GOV-thema uit gov-index.json
-- Komen van betrouwbare bronnen (Harvard Business Review, McKinsey, MIT Sloan, academische journals, toonaangevende practitioners)
+- Komen van betrouwbare bronnen (zie hieronder)
+
+**Betrouwbare bronnen:**
+
+*Internationaal:*
+- Harvard Business Review (hbr.org)
+- McKinsey & Company (mckinsey.com)
+- MIT Sloan Management Review (sloanreview.mit.edu)
+- Strategy+Business / PwC (strategy-business.com)
+- Deloitte Insights (deloitte.com/insights)
+- BCG Henderson Institute (bcg.com/publications)
+- Gallup Research (gallup.com)
+- Center for Creative Leadership (ccl.org)
+- Accenture Research (accenture.com/research)
+- Korn Ferry Institute (kornferry.com/institute)
+- MIT Technology Review (technologyreview.com) — voor AI/innovatie-items
+
+*Nederlands:*
+- Emerce (emerce.nl) — digitalisering, marketing, tech
+- MT/Sprout (mt.nl, sprout.nl) — ondernemerschap, schaalbedrijven, management
+- Managementsite (managementsite.nl) — leiderschap, verandermanagement, managementkennis
+- Energeia (energeia.nl) — energietransitie, markttrends; relevant bij items over verandering en innovatie in de energiesector
+
+*Podcasts (niet doorzoekbaar):*
+Podcasts zoals AI Report en BNR Nieuwsradio zijn niet automatisch te monitoren. Als Paul zelf een tip aanlevert vanuit een podcast, verwerk die dan als regulier item met de bron "Podcast: [naam], aflevering [datum]".
 
 ## Stap 3 — Schrijven
 
