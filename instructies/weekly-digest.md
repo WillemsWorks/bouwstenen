@@ -4,6 +4,13 @@
 De taak zelf bevat alleen nog: token lezen, dit bestand ophalen, en
 opvolgen. Wijzigingen aan hoe de digest werkt: alleen hier aanpassen.*
 
+> **Sinds 8 november 2026: concept eerst, publicatie na akkoord van Paul.**
+> De geplande taak publiceert de digest niet meer direct live, maar als concept
+> (Stap 5). Paul leest het concept en geeft daarna in een chat in het
+> WillemsWorks-project opdracht tot plaatsing (Stap 6). Deze regel gaat vóór
+> elke andere formulering in de taaktekst, zoals "live URL" in de afsluiting:
+> meld dan de concept-URL.
+
 ## Doel
 
 Vind nieuwe publicaties, artikelen en onderzoek van de afgelopen 14 dagen
@@ -114,7 +121,7 @@ Outputformaat (basis voor Stap 4 en Stap 5):
 ---
 [herhaal per item]
 ---
-*Automatisch gegenereerd op [datum] · GOV Library van Paul Willems*
+*Samengesteld met AI, gecureerd door Paul Willems · [datum] · GOV Library*
 ```
 
 **Bronlink bij de Kern-paragraaf verplicht:** naast de link op de titel krijgt ook de Kern-paragraaf zelf een link naar de bron (zie `(bron →)` hierboven) — zo is de bron direct zichtbaar bij de conclusie, niet alleen bij de titel.
@@ -132,20 +139,38 @@ Outputformaat (basis voor Stap 4 en Stap 5):
    ```
 4. Commit-message: `Research-log update [datum]: [thema]`
 
-## Stap 5 — HTML-publicatie (via gov-library-html + gov-library-github-sync skills)
+## Stap 5 — Concept publiceren (via gov-library-html + gov-library-github-sync skills)
 
-Volg de workflow "nieuwe digest-editie publiceren" uit de gov-library-html skill. Publiceer als `digest-[YYYY-MM-DD].html`, voeg kaart toe aan `digest.html`. Elke Kern-paragraaf (`.digest-item p`) krijgt aan het einde een link naar de bron-URL van dat item (zie `assets/digest-page-template.html`), naast de link op de titel.
+Volg de workflow "nieuwe digest-editie publiceren" uit de gov-library-html skill, met deze afwijkingen:
+- Publiceer als `concepten/digest-[YYYY-MM-DD].html` — niet in de root.
+- Zet `<meta name="robots" content="noindex">` in de `<head>`.
+- Voeg **geen** kaart toe aan `digest.html`.
+- Elke Kern-paragraaf (`.digest-item p`) krijgt aan het einde een link naar de bron-URL van dat item (zie `assets/digest-page-template.html`), naast de link op de titel.
+- Footer van de pagina: "Samengesteld met AI, gecureerd door Paul Willems".
+
+De research-log-updates uit Stap 4 gaan wél direct door: dat zijn interne werkbuffers, geen publicatie.
+
+## Stap 6 — Plaatsen na akkoord (in een chat, niet in de geplande taak)
+
+Wanneer Paul in een chat opdracht geeft om de digest te plaatsen (eventueel met correcties: items schrappen of aanpassen):
+1. Verwerk zijn correcties in het concept.
+2. Publiceer als `digest-[YYYY-MM-DD].html` in de root, zonder de noindex-tag.
+3. Voeg de kaart toe aan `digest.html` (nieuwste eerst).
+4. Verwijder `concepten/digest-[YYYY-MM-DD].html`.
+5. Geschrapte items: zet in het research-log de status op `afgewezen`.
+6. Commit-message: `Digest gepubliceerd: week [nr], [jaar] (na review)`.
 
 ## Afsluiting
 
-**Altijd pushen — ook bij gedeeltelijk mislukte stappen.**
+**Altijd het concept pushen — ook bij gedeeltelijk mislukte stappen.**
 
-Publiceer de digest naar GitHub zodra er minimaal 1 volledig item beschikbaar is, ongeacht of andere items een foutmelding bevatten of bronnen niet bereikbaar waren. Stop nooit de push vanwege een ophaalfout.
+Zet het concept op GitHub zodra er minimaal 1 volledig item beschikbaar is, ongeacht of andere items een foutmelding bevatten of bronnen niet bereikbaar waren. Stop nooit de push vanwege een ophaalfout.
 
-Meld kort:
-- GitHub-publicatie gelukt (met link naar `digest-[YYYY-MM-DD].html`) / overgeslagen (geen token of skill) / gedeeltelijk gefaald (en welk deel)
-- Welke items een blokkeringsfout hadden (bron niet bereikbaar)
-- Welke research-log bestanden zijn bijgewerkt
+Stuur een PushNotification met:
+- "Digest-concept week [nr] staat klaar voor je check" + link naar `https://willemsworks.github.io/gov-library/concepten/digest-[YYYY-MM-DD].html`
+- Aantal items en welke items een blokkeringsfout hadden (bron niet bereikbaar)
+- Welke research-log-bestanden zijn bijgewerkt
+- De vraag aan Paul om na lezing in het WillemsWorks-project "plaats de digest" te zeggen (met eventuele correcties)
 
 ## Regels
 
