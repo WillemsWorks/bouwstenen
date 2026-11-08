@@ -84,8 +84,8 @@ nieuw praktijkinzicht op dat het Wegter- of StoryBrand-denkkader zelf
 verfijnt (zoals eerder gebeurde bij de Hoomie- en Sanquin-illustraties in
 Deel 4) — dan wordt dat vastgelegd als item met status `nieuw` in
 `research-log/storytelling.md`, volgens dezelfde standaardcyclus als elk
-ander onderwerp in de bibliotheek (research-log-item → beoordeling bij het
-kwartaalgesprek of ad-hoc na bevestiging → eventuele verwerking in
+ander onderwerp in de bibliotheek (research-log-item → beoordeling bij de
+maandelijkse catch-up of ad-hoc na bevestiging → eventuele verwerking in
 GOV-ALL-Storytelling). Dit bestand bestaat nog niet en wordt aangemaakt
 zodra het eerste item zich aandient.
 

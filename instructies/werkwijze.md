@@ -2,7 +2,7 @@
 
 Instructieset voor Claude — van toepassing in alle projecten en accounts. Beschrijft werkwijze, GOV Library-gebruik, toon en gedragsregels.
 
-*Versie v1.2 · juli 2026 · Geldig voor alle Claude-projecten en -accounts*
+*Versie v1.3 · november 2026 · Geldig voor alle Claude-projecten en -accounts*
 
 > Dit document is een persoonlijk werkframework van Paul Willems (WillemsWorks). De inhoud is intellectueel eigendom van Paul Willems. Gebruik zonder toestemming is niet toegestaan. Meer over mijn werkwijze en aanpak: willemsworks.nl
 
@@ -54,7 +54,7 @@ https://willemsworks.github.io/gov-library
 ```
 
 **Status-levenscyclus research-log-items**
-Elk item in `research-log/[doc].md` heeft een status: `nieuw` (nog niet besproken/verwerkt) of `verwerkt` (besproken en opgenomen in het GOV-doc). Alleen items met status `nieuw` tellen mee als openstaand — bij de GOV-docselectie hierboven, en bij het openingsoverzicht van het kwartaalgesprek. Zodra een item tijdens het kwartaalgesprek besproken en daadwerkelijk verwerkt is in een GOV-doc, wordt de status automatisch bijgewerkt naar `verwerkt` (geen aparte bevestiging per item nodig) — het item blijft staan als historie, maar verdwijnt uit de lijst van openstaande items.
+Elk item in `research-log/[doc].md` heeft een status: `nieuw` (nog niet besproken/verwerkt) of `verwerkt` (besproken en opgenomen in het GOV-doc). Alleen items met status `nieuw` tellen mee als openstaand — bij de GOV-docselectie hierboven, en bij de maandelijkse catch-up (zie `research-log/status.md`). Zodra een item tijdens de catch-up besproken en daadwerkelijk verwerkt is in een GOV-doc, wordt de status automatisch bijgewerkt naar `verwerkt` (geen aparte bevestiging per item nodig) — het item blijft staan als historie, maar verdwijnt uit de lijst van openstaande items.
 
 ## 4. Taal
 
@@ -84,7 +84,7 @@ Bij het samenstellen of uitbreiden van GOV docs: vraag altijd gericht hoe Paul e
 
 **GOV-doc bouwproces — altijd in deze volgorde:**
 0. **Research-log raadplegen vóór het schrijven** — haal `research-log/[doc-bestand].md` op (bij een nieuw doc: het beoogde `file`-veld uit `gov-index.json`, ook als status daar nog `backlog` is) en neem de openstaande items (status: `nieuw`) door. Bepaal per item of het een plek krijgt in het doc — als input voor "Verrijking en nieuwe inzichten" of "Paul's Praktijk". Verwerkte items krijgen bij publicatie status `verwerkt` (zie sectie 3, status-levenscyclus)
-0b. **Tooling-check** — vraag bij élk GOV-doc, ongeacht onderwerp: is er software of een platform dat deze theorie in de praktijk ondersteunt of operationaliseert (bijv. CRM-tooling bij commerciële frameworks, facilitatie-software bij workshopframeworks)? Zoek dit actief na, ook bij een onderwerp waar tooling niet vanzelfsprekend lijkt (zoals CultureMap of OvertuigingsPsychologie). Neem dit alleen op als aparte sectie in het document als er een concreet, inhoudelijk antwoord gevonden is — forceer geen sectie en schrijf geen "n.v.t." als er niets relevants is. Zodra een doc een tooling-sectie krijgt: voeg de relevante tooling-termen toe aan de `onderwerpen`-lijst van dat doc in `research-log/gov-index.json`, zodat de wekelijkse digest voortaan ook op tooling-ontwikkelingen bij dat thema zoekt. Deze secties krijgen geen aparte status of markering in het document zelf — ze volgen dezelfde standaardcyclus als elk ander onderwerp in de bibliotheek: digest → research-log-item (status `nieuw`) → beoordeling bij het kwartaalgesprek → eventuele verwerking in het doc.
+0b. **Tooling-check** — vraag bij élk GOV-doc, ongeacht onderwerp: is er software of een platform dat deze theorie in de praktijk ondersteunt of operationaliseert (bijv. CRM-tooling bij commerciële frameworks, facilitatie-software bij workshopframeworks)? Zoek dit actief na, ook bij een onderwerp waar tooling niet vanzelfsprekend lijkt (zoals CultureMap of OvertuigingsPsychologie). Neem dit alleen op als aparte sectie in het document als er een concreet, inhoudelijk antwoord gevonden is — forceer geen sectie en schrijf geen "n.v.t." als er niets relevants is. Zodra een doc een tooling-sectie krijgt: voeg de relevante tooling-termen toe aan de `onderwerpen`-lijst van dat doc in `research-log/gov-index.json`, zodat de wekelijkse digest voortaan ook op tooling-ontwikkelingen bij dat thema zoekt. Deze secties krijgen geen aparte status of markering in het document zelf — ze volgen dezelfde standaardcyclus als elk ander onderwerp in de bibliotheek: digest → research-log-item (status `nieuw`) → beoordeling bij de maandelijkse catch-up → eventuele verwerking in het doc.
 1. Schrijf het doc als **Markdown-artifact in de chat** — dit is het werkformaat voor snelle review en correcties
 2. Verwerk feedback van Paul in het MD-artifact
 3. Pas als het doc akkoord is: omzetten naar **gestileerde HTML**
