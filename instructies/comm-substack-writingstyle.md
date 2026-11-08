@@ -8,8 +8,8 @@
 
 **⚠️ BELANGRIJK: Gebruik altijd de nieuwste versie van dit document. Oudere versies zijn niet meer geldig voor implementatie.**
 
-**Versie:** 1.2  
-**Laatst bijgewerkt:** 13 augustus 2026
+**Versie:** 1.3  
+**Laatst bijgewerkt:** 7 november 2026
 
 ---
 
@@ -17,6 +17,7 @@
 
 | Versie | Datum | Belangrijkste Wijzigingen |
 |--------|--------|---------------------------|
+| **1.3** | 7 november 2026 | **CTA-regel vereenvoudigd** - Deel 6 herschreven: geen tussentijdse CTA's meer, alleen één Subscribe CTA onderaan elk artikel. Milde business-CTA vervallen. Kwaliteitscontrole aangepast. |
 | **1.2** | 13 augustus 2026 | **Storytelling-mapping verplicht gesteld** - Nieuwe verplichte voorbereidingsstap in Deel 2: elk Substack-artikel wordt vóór het schrijven gemapt volgens GOV-ALL-Storytelling (Wegter-structuur altijd, StoryBrand-positionering waar relevant), met terugkoppelroute naar research-log/storytelling.md voor praktijkinzichten die het GOV-doc zelf verfijnen. Kwaliteitscontrole-checklist in Deel 9 uitgebreid met bijbehorend controlepunt. |
 | **1.1** | 17 augustus 2025 | **Strategische CTA integratie + Substack technische specificaties** - Nieuwe Deel 6 & 7 over Substack CTA strategie met technische beperkingen. CTA frequentie aangepast naar 3-6 per artikel met verplichte Subscribe en Comment. Quote box formatting geïntegreerd. LinkedIn vs Substack Notes distinctie toegevoegd. Engagement optimization principles aangepast aan platform mogelijkheden. |
 | **1.0** | 24 juli 2025 | **Initiële versie** - Substack-specifieke schrijfstijl richtlijnen gecreëerd op basis van bestaande communicatiestijl instructie. Focus op thought leadership, persoonlijke observaties en verhalende content voor expertise positioning. Geïntegreerd in document governance systeem. |
@@ -120,11 +121,8 @@ zodra het eerste item zich aandient.
 - **Open einde:** Retorische vraag of gedachte om over na te denken
 - **Persoonlijke conclusie:** Wat neem jij mee uit deze observatie?
 
-### 6. Milde Business CTA (Optioneel, 30-50 woorden)
-- **Thematische aansluiting:** CTA sluit natuurlijk aan bij artikel onderwerp
-- **Subtiele expertise positioning:** Geen directe verkoop, wel competentie tonen
-- **Open vraag:** Eindigt altijd met uitnodiging tot dialoog
-- **Natuurlijke flow:** Voelt als logisch onderdeel van het verhaal, niet als toevoeging
+### 6. Afsluiting
+- **Alleen de vaste tagline-regel** en één Subscribe CTA onderaan (zie Deel 6). Geen business-CTA, geen tussentijdse CTA's.
 
 ---
 
@@ -226,120 +224,28 @@ zodra het eerste item zich aandient.
 
 ---
 
-# DEEL 6: SUBSTACK CTA STRATEGIE
+# DEEL 6: SUBSTACK CTA
 
-## Substack CTA Technische Specificaties
+## Vaste regel (sinds 7 november 2026)
 
-### CTA Types & Mogelijkheden
-**Substack ondersteunt alleen:**
-- **Subscribe & Share:** Kunnen captions/tekst bevatten
-- **Send Message & Leave Comment:** Alleen als button zonder tekst
-- **Quote boxes:** Kunnen worden gebruikt voor context/uitnodiging
+**Eén CTA per artikel: één Subscribe onderaan, na de tagline-regel. Geen CTA's tussen de tekst.**
 
-### Aanbevolen CTA Format
+Tussentijdse CTA's (Subscribe, Share, Leave a Comment, Send a Message) onderbreken de leeservaring en worden op Substack steeds minder gebruikt. Paul vindt ze storend. De lezer volgt het verhaal zonder onderbreking; de enige uitnodiging staat aan het eind.
+
+### Format
 ```markdown
-> [Pakkende tekst die uitnodigt tot actie]
-*[Substack CTA: Button Type]*
-```
+*Paul Willems deelt observaties uit het dagelijks leven over innovatie, merk en marketing.*
 
-## CTA Frequentie & Vereisten
-
-### Verplichte CTA's per Artikel
-**Minimum 3, Maximum 6 CTA's per artikel:**
-- ✅ **Subscribe CTA** (verplicht) - Voor newsletter groei
-- ✅ **Leave Comment CTA** (verplicht) - Voor engagement en discussie
-- ⭐ **Aanvullende CTA's** (1-4 stuks): Share, Send Message
-
-### Strategische Plaatsing
-
-#### 1. Early Subscribe (Verplicht)
-- **Timing:** Na eerste 2-3 alinea's
-- **Format:** 
-```markdown
-> Meer verhalen over [relevant thema]?
-*[Substack CTA: Subscribe]*
-```
-- **Doel:** Zachte introductie voor nieuwsgierige lezers
-
-#### 2. Leave Comment (Verplicht)
-- **Timing:** Na schokkende cijfers, controversiële informatie, of provocerende stelling
-- **Format:**
-```markdown
-> Wat denk jij van [specifieke vraag/stelling]?
-*[Substack CTA: Leave a Comment]*
-```
-- **Doel:** Discussie stimuleren, engagement verhogen
-
-#### 3. Share CTA's (Optioneel, 1-2 per artikel)
-- **Timing:** Na emotionele pieken of verhaal climax
-- **Format:**
-```markdown
-> [Emotionele verbinding/verhaal waarde]
-*[Substack CTA: Share]*
-```
-- **Doel:** Organic reach via emotionele connectie
-
-#### 4. Send Message CTA (Optioneel, max 1 per artikel)
-- **Timing:** Na persoonlijke anekdotes of relateerbare momenten
-- **Format:**
-```markdown
-> Heb jij ook [gerelateerde ervaring] meegemaakt?
-*[Substack CTA: Send a Message]*
-```
-- **Doel:** Persoonlijke verhalen van lezers stimuleren
-
-#### 5. End Subscribe (Sterk aanbevolen)
-- **Timing:** Na "Voor wie schrijf ik" sectie
-- **Format:**
-```markdown
 > 10-15 keer per jaar observaties over innovatie, merk en marketing in je mailbox
 *[Substack CTA: Subscribe]*
 ```
-- **Doel:** Definitieve conversie voor engaged lezers
 
-## Timing en Psychologie
+### Wat vervalt
+- Early Subscribe na de opening
+- Leave a Comment, Share en Send a Message in de tekst
+- De milde business-CTA aan het eind (persoonlijke stukken sluiten af met alleen de tagline, zie "Patronen uit sessie-evaluaties", 3 augustus 2025)
 
-### Early Subscribe (Na Opening)
-- **Psychologie:** Nieuwsgierigheid gewekt, nog geen commitment
-- **Strategie:** Zachte introductie voor geïnteresseerde lezers
-- **Quote focus:** Waarde-propositie van newsletter
-
-### Mid-Article Engagement (Emotionele/Factual Pieken)
-- **Emotionele piek:** Share button na inspirerend/ontroerend moment
-- **Factual bombshell:** Comment trigger na schokkende data/informatie
-- **Verrassingsmoment:** Send message na onverwachte wending
-- **Strategie:** Emotie en interesse kanaliseren naar interactie
-
-### End Conversion (Definitieve Subscribe)
-- **Psychologie:** Volledige waardering artikel, bereid tot commitment
-- **Strategie:** Definitieve subscribe voor engaged lezers
-- **Quote focus:** Concrete verwachting (frequentie en onderwerpen)
-
-## CTA Types en Doelen
-
-### Subscribe CTA's (Verplicht - minimum 1, aanbevolen 2)
-- **Doel:** Newsletter groei, community building
-- **Timing:** Opening (zacht) en einde (definitief)
-- **Quote tone:** Uitnodigend, waarde-gericht
-- **Caption mogelijk:** Ja
-
-### Share CTA's (Optioneel - 1-2 per artikel)
-- **Doel:** Organic reach, viral potential
-- **Timing:** Emotionele pieken, verhaal climax
-- **Quote tone:** Verbindend, gemeenschap-gericht
-- **Caption mogelijk:** Ja
-
-### Comment CTA's (Verplicht - minimum 1)
-- **Doel:** Engagement, discussie, community
-- **Timing:** Na controversiële/schokkende informatie
-- **Quote tone:** Uitdagend, nieuwsgierig
-- **Caption mogelijk:** Nee - alleen button
-
-### Message CTA's (Optioneel - maximum 1)
-- **Doel:** Persoonlijke verhalen, relatie building
-- **Timing:** Na verrassende/relateerbare momenten
-- **Quote tone:** Persoonlijk, uitnodigend
-- **Caption mogelijk:** Nee - alleen button
+Discussie uitlokken blijft mogelijk, maar via de tekst zelf: een open slotvraag in de laatste alinea, niet via een knop.
 
 ---
 
@@ -433,15 +339,9 @@ zodra het eerste item zich aandient.
 - [ ] Gebruik ik concrete voorbeelden en beeldspraak?
 - [ ] Is de toon positief maar realistisch?
 
-### CTA Optimization Check
-- [ ] Zijn tussen de 3-6 CTA's geplaatst?
-- [ ] Is Subscribe CTA aanwezig (verplicht)?
-- [ ] Is Leave Comment CTA aanwezig (verplicht)?
-- [ ] Sluiten CTA quotes thematisch aan bij artikel momenten?
-- [ ] Is er variatie in CTA types binnen Substack's mogelijkheden?
-- [ ] Voelen alle CTA quotes natuurlijk en uitnodigend?
-- [ ] Zijn Subscribe & Share CTA's voorzien van goede quote context?
-- [ ] Zijn Send Message & Comment CTA's duidelijk geformuleerd in quotes?
+### CTA Check
+- [ ] Staan er géén CTA's tussen de tekst?
+- [ ] Staat er precies één Subscribe CTA onderaan, na de tagline-regel?
 
 ### Structuur Check
 - [ ] Heeft het artikel een logische opbouw van persoonlijk naar algemeen?
