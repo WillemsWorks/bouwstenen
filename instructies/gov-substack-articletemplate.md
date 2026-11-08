@@ -4,12 +4,12 @@
 
 **Masterdocument:** MASTER-ALL-Structure - Paul Willems v2.2
 
-**Doel:** Dit document bevat de complete template en instructies voor het genereren van Substack artikelen voor Paul Willems' personal branding. Het richt zich op thought leadership in Innovatie, Merk en Marketing met persoonlijke observaties en strategische CTA plaatsing.
+**Doel:** Dit document bevat de complete template en instructies voor het genereren van Substack artikelen voor Paul Willems' personal branding. Het richt zich op thought leadership in Innovatie, Merk en Marketing met persoonlijke observaties.
 
 **⚠️ BELANGRIJK: Gebruik altijd de nieuwste versie van dit document. Oudere versies zijn niet meer geldig voor implementatie.**
 
-**Versie:** 1.2  
-**Laatst bijgewerkt:** 3 augustus 2025
+**Versie:** 1.3  
+**Laatst bijgewerkt:** 7 november 2026
 
 ---
 
@@ -17,6 +17,7 @@
 
 | Versie | Datum | Belangrijkste Wijzigingen |
 |--------|--------|---------------------------|
+| **1.3** | 7 november 2026 | **CTA-regel vereenvoudigd** - Deel 8 vervangen: geen strategische in-artikel-CTA's meer, alleen één Subscribe CTA onderaan. Milde business-CTA (sectie 6) vervallen. Checklist en deliverables aangepast. |
 | **1.1** | 17 augustus 2025 | **Strategische CTA plaatsing toegevoegd** - Nieuwe sectie 8 met 6 strategische CTA momenten gedefinieerd. LinkedIn posts uitgebreid naar zakelijke relevantie focus. Substack Notes toegevoegd voor persoonlijke belevenissen. Illustratie markers geïntegreerd. Artikel vereisten uitgebreid met engagement optimization. |
 | **1.2** | 3 augustus 2025 | **Note-cadans toegevoegd** - Substack Notes-sectie uitgebreid met sequencing-strategie: eerste Note als brede aankondiging (kern in het klein, geen clou), vervolgnotes elk over precies één specifiek onderdeel uit het artikel. Vastgelegd n.a.v. gepubliceerde aankondiging bij 'Over sigaren en de overeenkomst tussen keukenramen en levervensters'. |
 | **1.0** | 24 juli 2025 | **Initiële versie** - Substack artikel generator template gecreëerd op basis van bestaande prompt. Inclusief onderscheid met WillemsWorks communicatie, LinkedIn promotie richtlijnen, en complete artikel structuur voor personal branding doeleinden. |
@@ -238,24 +239,9 @@ Eindig met één van deze elementen:
 - Nodig uit tot discussie over een specifiek punt
 - Verwijs naar relevante resources of tools
 - Stel een vervolgvraag voor toekomstige artikelen
-- Uitnodiging om de Substack nieuwsbrief te abonneren
 
-### 6. Milde Business CTA (Optioneel)
-**Belangrijke richtlijn:** Voeg een subtiele, thematisch-afgestemde business CTA toe die natuurlijk aansluit bij het artikel thema:
-
-**Format:** "Ik werk met [specifieke situatie gerelateerd aan artikel thema]. [Milde beschrijving van aanpak]. Werk je zelf aan vergelijkbare vraagstukken? [Open vraag die dialoog uitnodigt]."
-
-**Voorbeelden:**
-- **IKEA artikel:** "Ik werk met bedrijven die willen vernieuwen. Ik help hen om het meest vertrouwde merk in hun sector te worden... Werk je zelf aan vergelijkbare vraagstukken?"
-- **Innovatie artikel:** "Ik help organisaties hun technische expertise vertalen naar klantvertrouwen... Herken je dit in jouw sector?"
-- **Customer experience artikel:** "Ik ondersteun bedrijven bij het ontwerpen van klantreizen die écht werken... Welke uitdagingen zie jij in jouw klantencontact?"
-
-**Vereisten:**
-- Maximaal 2-3 zinnen
-- Sluit thematisch aan bij artikel inhoud
-- Geen directe verkoop, wel expertise positioning
-- Eindigt altijd met open vraag die dialoog uitnodigt
-- Voelt natuurlijk en niet geforceerd binnen artikel context
+### 6. Afsluiting
+Alleen de vaste tagline-regel en één Subscribe CTA onderaan (zie Deel 8). Geen business-CTA.
 
 ### 7. Publicatie Frequentie
 - **Aanbevolen frequentie:** 10-15 artikelen per jaar
@@ -265,52 +251,11 @@ Eindig met één van deze elementen:
 
 ---
 
-# DEEL 8: STRATEGISCHE CTA PLAATSING
+# DEEL 8: CTA
 
-## In-Artikel CTA Strategie
-**Zes strategische momenten voor maximale engagement:**
+**Eén CTA per artikel: één Subscribe onderaan, na de tagline-regel. Geen CTA's tussen de tekst** (sinds 7 november 2026, zie `comm-substack-writingstyle.md` Deel 6).
 
-### 1. Na Opening (Subscribe Soft)
-**Timing:** Na eerste 2-3 alinea's wanneer nieuwsgierigheid gewekt is
-**Format:** `*[Substack CTA: Subscribe with Caption - "Meer verhalen over [relevant thema]? Schrijf je in!"]*`
-**Doel:** Zachte subscribe voor geïnteresseerde lezers
-**Psychologie:** Lezer is nieuwsgierig maar nog niet gecommitteerd
-
-### 2. Emotioneel Hoogtepunt (Share)
-**Timing:** Na emotionele piek in verhaal (persoonlijke onthulling, inspirerend moment)
-**Format:** `*[Substack CTA: Share with Caption - "Ken jij ook zo'n [relevant element]? Deel dit artikel!"]*`
-**Doel:** Emotionele connectie benutten voor organic reach
-**Psychologie:** Emotie drijft sharing behavior
-
-### 3. Verrassingsmoment (Send Message)
-**Timing:** Na onverwachte wending of interessante observatie
-**Format:** `*[Substack CTA: Send a Message - "Heb jij ook [gerelateerde ervaring] meegemaakt? Stuur me een bericht!"]*`
-**Doel:** Persoonlijke verhalen van lezers stimuleren
-**Psychologie:** Verassing roept herkenning en delen op
-
-### 4. Data/Fact Bombshell (Leave Comment)
-**Timing:** Na schokkende cijfers of nieuwe informatie
-**Format:** `*[Substack CTA: Leave a Comment - "Wat denk jij van [specifieke data/feit]? Laat je reactie achter!"]*`
-**Doel:** Discussie starten rond betekenis data
-**Psychologie:** Controversiële informatie genereert respons
-
-### 5. Verhaal Climax (Share Post)
-**Timing:** Voor business-sectie, wanneer verhaal compleet is
-**Format:** `*[Substack CTA: Share Post - "Vond je dit verhaal de moeite waard? Deel het met je netwerk!"]*`
-**Doel:** Delen op hoogtepunt van interesse
-**Psychologie:** Volledig verhaal begrepen, hoogste waardering
-
-### 6. Artikel Einde (Subscribe Definitief)
-**Timing:** Na "Voor wie schrijf ik" sectie
 **Format:** `*[Substack CTA: Subscribe with Caption - "10-15 keer per jaar observaties over innovatie, merk en marketing in je mailbox"]*`
-**Doel:** Definitieve conversie voor engaged lezers
-**Psychologie:** Volledige waardering artikel, bereid tot commitment
-
-## CTA Timing Strategie
-- **Early Subscribe:** Zachte introductie tijdens nieuwsgierigheid fase
-- **Mid-Article Engagement:** Emotionele en factual pieken benutten
-- **Comment Triggers:** Controversiële of schokkende informatie
-- **End Conversion:** Definitieve subscribe na complete waardering
 
 ---
 
@@ -437,16 +382,12 @@ Vervolgnotes: één note over de kernzin ("hoe iets verkocht wordt is belangrijk
 - [ ] Is de persoonlijke toon consistent door het hele artikel?
 - [ ] Worden persoonlijke ervaringen effectief gekoppeld aan vakinhoud?
 - [ ] Is het onderscheid met WillemsWorks business content behouden?
-- [ ] Zijn alle 6 strategische CTA's geplaatst op de juiste momenten?
-- [ ] Is de milde business CTA thematisch afgestemd op het artikel?
-- [ ] Voelt de business CTA natuurlijk en niet geforceerd?
+- [ ] Staan er géén CTA's tussen de tekst, en precies één Subscribe CTA onderaan?
 
 ### Engagement Optimization Check
 - [ ] Zijn illustratie markers toegevoegd bij foto captions?
-- [ ] Bevatten alle CTA's relevante, specifieke tekst?
 - [ ] Zijn LinkedIn posts gericht op zakelijke relevantie?
 - [ ] Zijn Substack Notes persoonlijk en toegankelijk?
-- [ ] Is er variatie in CTA types (Subscribe, Share, Comment, Message)?
 
 ### Inhoudelijke Kwaliteit
 - [ ] Begin ik met een concrete, persoonlijke observatie?
@@ -460,10 +401,9 @@ Vervolgnotes: één note over de kernzin ("hoe iets verkocht wordt is belangrijk
 - [ ] Sluit de reflectie goed aan bij de opening?
 
 ## Verplichte Deliverables per Artikel
-1. ✅ **Hoofdartikel** met 6 strategische CTA's
+1. ✅ **Hoofdartikel** met één Subscribe CTA onderaan
 2. ✅ **5 LinkedIn Posts** (zakelijke relevantie)
 3. ✅ **3 Substack Notes** (persoonlijke belevenissen)  
-4. ✅ **CTA Timing Documentatie** (waarom welke CTA waar)
 5. ✅ **Illustratie suggestie** met markers
 6. ✅ **Tags** voor Substack categorisering
 7. ✅ **Samenvatting** voor social sharing
