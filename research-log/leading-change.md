@@ -58,3 +58,8 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Status:** nieuw  
 **Bron:** McKinsey & Company · 16 september 2026  
 **Kern:** AI-agenten nemen drie TO-pijlers over (monitoring, risicosignalering, rapportage), waardoor bezetting 35–40% daalt en medewerkers zich kunnen richten op menselijk oordeel en stakeholdermanagement. Programma's rapporteren 35–70% tijdsbesparing op routinebeheer.
+
+## 2026-11-08 — [Match Your Pace to the Moment — The 5 Tempos of Leadership](https://hbr.org/2026/10/match-your-pace-to-the-moment-the-5-tempos-of-leadership)
+**Status:** nieuw
+**Bron:** Harvard Business Review · oktober 2026
+**Kern:** ⚠️ Artikel gevonden via zoekresultaten maar niet volledig raadpleegbaar. Titel suggereert een model van vijf leiderschapstempi dat koppelt aan situatiekenmerken — relevant voor het LeadingChange-framework rond situationeel leiderschap. Raadpleeg originele bron voor de volledige inhoud.
