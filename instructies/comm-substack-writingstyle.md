@@ -8,8 +8,8 @@
 
 **⚠️ BELANGRIJK: Gebruik altijd de nieuwste versie van dit document. Oudere versies zijn niet meer geldig voor implementatie.**
 
-**Versie:** 1.3  
-**Laatst bijgewerkt:** 7 november 2026
+**Versie:** 1.4  
+**Laatst bijgewerkt:** 11 november 2026
 
 ---
 
@@ -17,6 +17,7 @@
 
 | Versie | Datum | Belangrijkste Wijzigingen |
 |--------|--------|---------------------------|
+| **1.4** | 11 november 2026 | **Privacy van kinderen** - Vaste regel in Deel 5: geen namen van Pauls kinderen in artikelen op willemsworks.nl en de daarvan afgeleide Substack-versies. |
 | **1.3** | 7 november 2026 | **CTA-regel vereenvoudigd** - Deel 6 herschreven: geen tussentijdse CTA's meer, alleen één Subscribe CTA onderaan elk artikel. Milde business-CTA vervallen. Kwaliteitscontrole aangepast. |
 | **1.2** | 13 augustus 2026 | **Storytelling-mapping verplicht gesteld** - Nieuwe verplichte voorbereidingsstap in Deel 2: elk Substack-artikel wordt vóór het schrijven gemapt volgens GOV-ALL-Storytelling (Wegter-structuur altijd, StoryBrand-positionering waar relevant), met terugkoppelroute naar research-log/storytelling.md voor praktijkinzichten die het GOV-doc zelf verfijnen. Kwaliteitscontrole-checklist in Deel 9 uitgebreid met bijbehorend controlepunt. |
 | **1.1** | 17 augustus 2025 | **Strategische CTA integratie + Substack technische specificaties** - Nieuwe Deel 6 & 7 over Substack CTA strategie met technische beperkingen. CTA frequentie aangepast naar 3-6 per artikel met verplichte Subscribe en Comment. Quote box formatting geïntegreerd. LinkedIn vs Substack Notes distinctie toegevoegd. Engagement optimization principles aangepast aan platform mogelijkheden. |
@@ -215,6 +216,11 @@ zodra het eerste item zich aandient.
 - **Abstracte theorieën** altijd koppelen aan praktijk
 - **Teveel vakjargon** zonder uitleg vermijden
 - **Focus niet verliezen** door te veel zijsporen
+
+### Namen van kinderen noemen (vaste regel sinds 11 november 2026)
+- **Geen namen van Pauls kinderen** in artikelen op willemsworks.nl en in de daarvan afgeleide Substack-versies. Schrijf "mijn dochter" of "onze dochter".
+- **Het persoonlijke zit in de details**, niet in de naam: wat er gebeurde, wat ze zei, wat ze deed.
+- **Waarom (Paul):** "Het gaat hier niet om mij maar om haar." Een website blijft jaren vindbaar en zij kan daar nu zelf niet over beslissen.
 
 ### Menselijke Dimensie Vergeten
 - **Technologie niet als doel op zich** behandelen
