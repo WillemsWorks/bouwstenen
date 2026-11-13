@@ -155,7 +155,7 @@ De research-log-updates uit Stap 4 gaan wél direct door: dat zijn interne werkb
 
 Wanneer Paul in een chat opdracht geeft om de digest te plaatsen (eventueel met correcties: items schrappen of aanpassen):
 1. Verwerk zijn correcties in het concept.
-2. Publiceer als `digest-[YYYY-MM-DD].html` in de root, mét de noindex-tag (alle GOV Library-pagina's zijn openbaar maar niet vindbaar in Google, besluit 13 november 2026).
+2. Publiceer als `digest-[YYYY-MM-DD].html` in de root, mét de noindex-tag en de link naar `/bouwstenen/assets/site-theme.css` (neem `<head>` en topnav over van een bestaande digest-pagina; alle GOV Library-pagina's zijn openbaar maar niet vindbaar in Google, besluit 13 november 2026).
 3. Voeg de kaart toe aan `digest.html` (nieuwste eerst).
 4. Verwijder `concepten/digest-[YYYY-MM-DD].html`.
 5. Geschrapte items: zet in het research-log de status op `afgewezen`.

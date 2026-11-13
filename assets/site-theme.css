@@ -1,0 +1,49 @@
+/* Bouwstenen — sitethema (13 nov 2026)
+   Laat de bouwstenen aansluiten op www.willemsworks.nl en de blog:
+   zelfde lettertypes, afgeronde vlakken binnen de breedte van de site,
+   lichte navigatiebalk met het WillemsWorks-logo.
+   Wordt NA het eigen <style>-blok van elke pagina geladen. */
+
+@font-face { font-family: "PP Formula Extended"; font-weight: 700; font-display: swap;
+  src: url("https://framerusercontent.com/assets/uFYJ6xGabtuR4WQfkAKmcChREs.woff2") format("woff2"); }
+@font-face { font-family: "PP Formula Semi Extended"; font-weight: 700; font-display: swap;
+  src: url("https://framerusercontent.com/assets/FD70etBNjyfxhua4t0sCTMab4.woff2") format("woff2"); }
+@font-face { font-family: "PP Formula"; font-weight: 400; font-display: swap;
+  src: url("https://framerusercontent.com/assets/YrR4iWxwnzxas6ITI8VD0iUfc.woff2") format("woff2"); }
+/* "Sora" (oude kopletter) wordt PP Formula Extended, zodat alle bestaande koppen meegaan */
+@font-face { font-family: "Sora"; font-weight: 300 800; font-display: swap;
+  src: url("https://framerusercontent.com/assets/uFYJ6xGabtuR4WQfkAKmcChREs.woff2") format("woff2"); }
+@font-face { font-family: "BDO Grotesk"; font-weight: 300 400; font-display: swap;
+  src: url("https://framerusercontent.com/assets/ikUELtnonKBBjOPq4DSnfaWqBM.woff2") format("woff2"); }
+@font-face { font-family: "BDO Grotesk"; font-weight: 500; font-display: swap;
+  src: url("https://framerusercontent.com/assets/iUOVWtLYI8neEiEG4yVlDTlfo.woff2") format("woff2"); }
+@font-face { font-family: "BDO Grotesk"; font-weight: 600; font-display: swap;
+  src: url("https://framerusercontent.com/assets/DqD45dbZMdbPCfwSidVYGkEoWhw.woff2") format("woff2"); }
+
+:root { --ink: #3a2e59; --ink-mid: #78718b; --site-w: min(1648px, calc(100% - 32px)); }
+body { font-weight: 400; -webkit-font-smoothing: antialiased; }
+
+/* Navigatie: lichte balk zoals op de site */
+.topnav { background: transparent; border-bottom: 0; padding-top: 16px; }
+.topnav-inner { max-width: none; width: var(--site-w); height: 68px; padding: 0 24px;
+  background: rgba(255,255,255,.75); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border-radius: 16px; box-shadow: 0 1px 0 rgba(58,46,89,.06), 0 8px 30px rgba(58,46,89,.06); }
+.topnav-logo { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--purple-dark);
+  font-family: "PP Formula Semi Extended", "Sora", sans-serif; font-weight: 700; font-size: 20px; text-transform: lowercase; letter-spacing: -.01em; }
+.topnav-logo svg { width: 25px; height: 20px; }
+.topnav-link { font-family: "BDO Grotesk", sans-serif; font-size: 15px; letter-spacing: 0; text-transform: lowercase; color: var(--purple-dark); border-radius: 99px; }
+.topnav-link:hover, .topnav-link.active { color: var(--purple-dark); background: var(--lime); }
+
+/* Kop- en voetvlakken: afgerond, binnen de breedte van de site */
+.hero, .doc-header { width: var(--site-w); margin: 16px auto 0; border-radius: 20px; }
+.doc-footer { width: var(--site-w); margin: 64px auto 16px; border-radius: 16px; }
+.disclaimer-bar { width: var(--site-w); margin: 16px auto 0; border-radius: 16px; border-bottom: 0; }
+
+/* Koppen in het lettertype van de site */
+h1, h2, h3, .doc-title, .hero h1 { font-family: "PP Formula Extended", "Sora", sans-serif; letter-spacing: -.01em; }
+
+@media (max-width: 640px) {
+  .topnav-inner { padding: 0 16px; height: 60px; }
+  .topnav-logo { font-size: 17px; }
+  .topnav-link { font-size: 14px; padding: 6px 10px; }
+}
