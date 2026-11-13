@@ -145,3 +145,6 @@ op en pas beide toe. De {Opdrachtgever}-werkwijze heeft voorrang bij conflicten.
 - Substack-verwijzing toevoegen aan disclaimer GOV Library zodra artikel over GOV-methodiek gepubliceerd is
 - Spirotech-skill bouwen zodra Spirotech tone of voice en brand instructions beschikbaar zijn
 
+
+**Vindbaarheid — besluit 13 november 2026**
+De GOV Library staat sinds 13 november 2026 op www.willemsworks.nl/gov-library/. De pagina's zijn openbaar (bereikbaar via een link), maar mogen niet in Google verschijnen. Elke HTML-pagina in deze repo krijgt daarom `<meta name="robots" content="noindex">` in de `<head>`, ook nieuwe GOV-doc-pagina's en gepubliceerde digests. Blokkeer de library niet via robots.txt: dan kan Google de noindex-tag niet lezen.
