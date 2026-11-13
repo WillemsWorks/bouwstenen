@@ -31,7 +31,7 @@ body { font-weight: 400; -webkit-font-smoothing: antialiased; }
 .topnav-logo { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--purple-dark);
   font-family: "PP Formula Semi Extended", "Sora", sans-serif; font-weight: 700; font-size: 20px; text-transform: lowercase; letter-spacing: -.01em; }
 .topnav-logo svg { width: 25px; height: 20px; }
-.topnav-link { font-family: "BDO Grotesk", sans-serif; font-size: 15px; letter-spacing: 0; text-transform: lowercase; color: var(--purple-dark); border-radius: 99px; }
+.topnav-link { white-space: nowrap; font-family: "BDO Grotesk", sans-serif; font-size: 15px; letter-spacing: 0; text-transform: lowercase; color: var(--purple-dark); border-radius: 99px; }
 .topnav-link:hover, .topnav-link.active { color: var(--purple-dark); background: var(--lime); }
 
 /* Kop- en voetvlakken: afgerond, binnen de breedte van de site */
@@ -44,6 +44,7 @@ h1, h2, h3, .doc-title, .hero h1 { font-family: "PP Formula Extended", "Sora", s
 
 @media (max-width: 640px) {
   .topnav-inner { padding: 0 16px; height: 60px; }
-  .topnav-logo { font-size: 17px; }
-  .topnav-link { font-size: 14px; padding: 6px 10px; }
+  .topnav-logo { font-size: 0; gap: 0; }
+  .topnav-logo svg { width: 28px; height: 22px; }
+  .topnav-link { font-size: 14px; padding: 6px 10px; white-space: nowrap; }
 }
