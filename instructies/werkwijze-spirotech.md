@@ -57,9 +57,9 @@ Naast dit project heeft Paul twee andere Spirotech-projecten: één specifiek vo
 
 ```
 Lees bij de start van elk gesprek
-https://raw.githubusercontent.com/WillemsWorks/gov-library/main/instructies/werkwijze.md
+https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze.md
 én
-https://raw.githubusercontent.com/WillemsWorks/gov-library/main/instructies/werkwijze-spirotech.md
+https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze-spirotech.md
 op en pas beide toe. De Spirotech-werkwijze heeft voorrang bij conflicten.
 ```
 

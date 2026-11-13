@@ -1,6 +1,6 @@
 # Research Log — leiderschap
 
-*Gekoppeld aan: [leiderschap.html](https://willemsworks.github.io/gov-library/leiderschap.html)*
+*Gekoppeld aan: [leiderschap.html](https://www.willemsworks.nl/bouwstenen/leiderschap.html)*
 
 Items met status `nieuw` zijn nog niet besproken met Paul.
 Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.

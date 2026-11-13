@@ -50,7 +50,7 @@ Bij substantiële taken (content, deliverables, analyses):
 Bij kleine vragen of snelle sparring: GOV Library alleen raadplegen als Paul ernaar verwijst.
 
 ```
-https://willemsworks.github.io/gov-library
+https://www.willemsworks.nl/bouwstenen
 ```
 
 **Status-levenscyclus research-log-items**
@@ -118,7 +118,7 @@ Paul gebruikt spraak-naar-tekst — ruim transcriptiefouten stilzwijgend op.
 Plak dit in de project instructions van elk nieuw Claude-project of -account:
 
 ```
-Lees bij de start van elk gesprek https://raw.githubusercontent.com/WillemsWorks/gov-library/main/instructies/werkwijze.md op en pas die werkwijze toe.
+Lees bij de start van elk gesprek https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze.md op en pas die werkwijze toe.
 ```
 
 ### Nieuwe opdrachtgever toevoegen — vaste structuur
@@ -130,9 +130,9 @@ Basis + aanvulling, nooit dupliceren. `werkwijze.md` (dit document) bevat alle a
 2. Sluit dat bestand af met dit promptinstructie-blok, aangepast per opdrachtgever:
 ```
 Lees bij de start van elk gesprek
-https://raw.githubusercontent.com/WillemsWorks/gov-library/main/instructies/werkwijze.md
+https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze.md
 én
-https://raw.githubusercontent.com/WillemsWorks/gov-library/main/instructies/werkwijze-{opdrachtgever}.md
+https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze-{opdrachtgever}.md
 op en pas beide toe. De {Opdrachtgever}-werkwijze heeft voorrang bij conflicten.
 ```
 3. Plak dat blok in de project instructions van het betreffende Claude-project of -account
@@ -146,5 +146,8 @@ op en pas beide toe. De {Opdrachtgever}-werkwijze heeft voorrang bij conflicten.
 - Spirotech-skill bouwen zodra Spirotech tone of voice en brand instructions beschikbaar zijn
 
 
-**Vindbaarheid — besluit 13 november 2026**
-De GOV Library staat sinds 13 november 2026 op www.willemsworks.nl/gov-library/. De pagina's zijn openbaar (bereikbaar via een link), maar mogen niet in Google verschijnen. Elke HTML-pagina in deze repo krijgt daarom `<meta name="robots" content="noindex">` in de `<head>`, ook nieuwe GOV-doc-pagina's en gepubliceerde digests. Blokkeer de library niet via robots.txt: dan kan Google de noindex-tag niet lezen.
+**Naam, adres en vindbaarheid — besluit 13 november 2026**
+- Naar buiten heet de library **Bouwstenen** (voorheen GOV Library); een los document is een **bouwsteen**. Intern blijft "GOV-doc" de werkterm, net als de codes (GOV-ALL-…), de skills (gov-library-html, gov-library-github-sync) en deze instructies.
+- Repository: `WillemsWorks/bouwstenen` (voorheen `gov-library`). Adres: www.willemsworks.nl/bouwstenen/. Het oude adres /gov-library/ verwijst door via de website-repo.
+- De pagina's zijn openbaar (bereikbaar via een link), maar mogen niet in Google verschijnen. Elke HTML-pagina krijgt daarom `<meta name="robots" content="noindex">` in de `<head>`, ook nieuwe bouwsteen-pagina's en gepubliceerde digests. Blokkeer de library niet via robots.txt: dan kan Google de noindex-tag niet lezen.
+- Engelse versie van de website (later): Nederlands blijft op de root, Engels onder /en/ met hreflang. De bouwstenen blijven Nederlands.

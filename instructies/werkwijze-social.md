@@ -15,8 +15,8 @@
 
 Deze twee documenten bevatten de volledige schrijfstijl, structuur en CTA-strategie. Haal ze op bij elke Substack- of LinkedIn-taak:
 
-- `https://raw.githubusercontent.com/WillemsWorks/gov-library/main/instructies/comm-substack-writingstyle.md` — schrijfstijl, toon, taalgebruik, kwaliteitscontrole
-- `https://raw.githubusercontent.com/WillemsWorks/gov-library/main/instructies/gov-substack-articletemplate.md` — artikelstructuur, CTA-plaatsing, cross-platform promotiestrategie (LinkedIn posts + Substack Notes per artikel)
+- `https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/comm-substack-writingstyle.md` — schrijfstijl, toon, taalgebruik, kwaliteitscontrole
+- `https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/gov-substack-articletemplate.md` — artikelstructuur, CTA-plaatsing, cross-platform promotiestrategie (LinkedIn posts + Substack Notes per artikel)
 
 ## Aanvullende gedragsregels
 
@@ -38,8 +38,8 @@ Na afronding van een Substack-artikel: evalueer de schrijfsessie op nieuwe, nog 
 
 ```
 Lees bij de start van elk gesprek
-https://raw.githubusercontent.com/WillemsWorks/gov-library/main/instructies/werkwijze.md
+https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze.md
 én
-https://raw.githubusercontent.com/WillemsWorks/gov-library/main/instructies/werkwijze-social.md
+https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze-social.md
 op en pas beide toe. De Social Content-werkwijze heeft voorrang bij conflicten.
 ```

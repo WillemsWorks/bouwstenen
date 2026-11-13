@@ -1,6 +1,6 @@
 # Research Log — strategie
 
-*Gekoppeld aan: [strategie.html](https://willemsworks.github.io/gov-library/strategie.html)*
+*Gekoppeld aan: [strategie.html](https://www.willemsworks.nl/bouwstenen/strategie.html)*
 
 Items met status `nieuw` zijn nog niet besproken met Paul.
 Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.

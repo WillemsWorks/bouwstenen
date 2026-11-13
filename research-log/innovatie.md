@@ -1,6 +1,6 @@
 # Research Log — innovatie
 
-*Gekoppeld aan: [innovatie.html](https://willemsworks.github.io/gov-library/innovatie.html)*
+*Gekoppeld aan: [innovatie.html](https://www.willemsworks.nl/bouwstenen/innovatie.html)*
 
 Items met status `nieuw` zijn nog niet besproken met Paul.
 Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.

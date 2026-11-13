@@ -1,6 +1,6 @@
 # Research Log — team-psychologie
 
-*Gekoppeld aan: [team-psychologie.html](https://willemsworks.github.io/gov-library/team-psychologie.html)*
+*Gekoppeld aan: [team-psychologie.html](https://www.willemsworks.nl/bouwstenen/team-psychologie.html)*
 
 Items met status `nieuw` zijn nog niet besproken met Paul.
 Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.

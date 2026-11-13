@@ -1,6 +1,6 @@
 # Research Log — framemaking-sale
 
-*Gekoppeld aan: [framemaking-sale.html](https://willemsworks.github.io/gov-library/framemaking-sale.html)*
+*Gekoppeld aan: [framemaking-sale.html](https://www.willemsworks.nl/bouwstenen/framemaking-sale.html)*
 
 Items met status `nieuw` zijn nog niet besproken met Paul.
 Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.

@@ -1,6 +1,6 @@
 # Research Log — leading-change
 
-*Gekoppeld aan: [leading-change.html](https://willemsworks.github.io/gov-library/leading-change.html)*
+*Gekoppeld aan: [leading-change.html](https://www.willemsworks.nl/bouwstenen/leading-change.html)*
 
 Items met status `nieuw` zijn nog niet besproken met Paul.
 Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.

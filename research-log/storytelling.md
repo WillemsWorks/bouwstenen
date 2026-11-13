@@ -1,6 +1,6 @@
 # Research Log — storytelling
 
-*Gekoppeld aan: [storytelling.html](https://willemsworks.github.io/gov-library/storytelling.html)*
+*Gekoppeld aan: [storytelling.html](https://www.willemsworks.nl/bouwstenen/storytelling.html)*
 
 Items met status `nieuw` zijn nog niet besproken met Paul.
 Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.

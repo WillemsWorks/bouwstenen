@@ -1,6 +1,6 @@
 # Research Log — overtuigingspsychologie
 
-*Gekoppeld aan: [overtuigingspsychologie.html](https://willemsworks.github.io/gov-library/overtuigingspsychologie.html)*
+*Gekoppeld aan: [overtuigingspsychologie.html](https://www.willemsworks.nl/bouwstenen/overtuigingspsychologie.html)*
 
 Items met status `nieuw` zijn nog niet besproken met Paul.
 Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.

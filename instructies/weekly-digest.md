@@ -167,7 +167,7 @@ Wanneer Paul in een chat opdracht geeft om de digest te plaatsen (eventueel met 
 Zet het concept op GitHub zodra er minimaal 1 volledig item beschikbaar is, ongeacht of andere items een foutmelding bevatten of bronnen niet bereikbaar waren. Stop nooit de push vanwege een ophaalfout.
 
 Stuur een PushNotification met:
-- "Digest-concept week [nr] staat klaar voor je check" + link naar `https://willemsworks.github.io/gov-library/concepten/digest-[YYYY-MM-DD].html`
+- "Digest-concept week [nr] staat klaar voor je check" + link naar `https://www.willemsworks.nl/bouwstenen/concepten/digest-[YYYY-MM-DD].html`
 - Aantal items en welke items een blokkeringsfout hadden (bron niet bereikbaar)
 - Welke research-log-bestanden zijn bijgewerkt
 - De vraag aan Paul om na lezing in het WillemsWorks-project "plaats de digest" te zeggen (met eventuele correcties)
