@@ -1,8 +1,9 @@
 # Kennisbank Weekly Digest — Instructie
 
 *Dit bestand is de enige bron van waarheid voor de wekelijkse Cowork-taak.
-De taak zelf bevat alleen nog: token lezen, dit bestand ophalen, en
-opvolgen. Wijzigingen aan hoe de digest werkt: alleen hier aanpassen.*
+De taak zelf bevat alleen nog: de repo koppelen via de GitHub-koppeling
+(sinds 13 november 2026; token alleen als reserve), dit bestand lezen uit de
+clone, en opvolgen. Wijzigingen aan hoe de digest werkt: alleen hier aanpassen.*
 
 > **Sinds 8 november 2026: concept eerst, publicatie na akkoord van Paul.**
 > De geplande taak publiceert de digest niet meer direct live, maar als concept
@@ -27,7 +28,7 @@ Als een van beide skills niet beschikbaar/ingeschakeld is: meld dit expliciet, s
 
 ## Stap 1 — Onderwerpen ophalen (dynamisch, niet vast)
 
-Haal `research-log/gov-index.json` op (publiek, geen token nodig via raw.githubusercontent.com). Gebruik de `onderwerpen`-lijst van elk doc in dit bestand als basis voor zoekopdrachten — niet een vaste, hardcoded lijst. Zo zoekt de taak automatisch mee zodra er een nieuw GOV-doc bijkomt in dit bestand, zonder dat deze instructie hoeft te veranderen.
+Lees `research-log/gov-index.json` uit de clone. Gebruik de `onderwerpen`-lijst van elk doc in dit bestand als basis voor zoekopdrachten — niet een vaste, hardcoded lijst. Zo zoekt de taak automatisch mee zodra er een nieuw GOV-doc bijkomt in dit bestand, zonder dat deze instructie hoeft te veranderen.
 
 **Live én backlog tellen mee.** Elk doc heeft een `status`-veld: `live` (gepubliceerde pagina) of `backlog` (nog geen publieke pagina, staat in `instructies/backlog.md`). Zoek op de onderwerpen van beide statussen — een backlog-doc heeft evengoed actuele input nodig tegen de tijd dat het gebouwd wordt.
 
