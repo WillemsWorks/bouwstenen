@@ -48,3 +48,31 @@ h1, h2, h3, .doc-title, .hero h1 { font-family: "PP Formula Extended", "Sora", s
   .topnav-logo svg { width: 28px; height: 22px; }
   .topnav-link { font-size: 14px; padding: 6px 10px; white-space: nowrap; }
 }
+
+/* Overzichtspagina's (index, digest): zelfde opbouw als het blogoverzicht */
+.hero { background: transparent; padding: 72px 20px 24px; text-align: center; overflow: visible; }
+.hero::before, .hero::after { display: none; }
+.hero-inner { max-width: 720px; }
+.hero-eyebrow { display: inline-block; font-family: "BDO Grotesk", sans-serif; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--purple-dark); background: var(--purple-pale, #d1d1ff); padding: 6px 12px; border-radius: 99px; margin-bottom: 18px; }
+.hero h1 { color: var(--purple-dark); font-size: clamp(34px, 5vw, 56px); line-height: 1.05; text-transform: lowercase; }
+.hero-sub { color: var(--ink-mid); font-size: 18px; margin: 16px auto 0; max-width: 560px; }
+.hero-stats { justify-content: center; border-top: 0; margin-top: 24px; padding-top: 0; }
+.hero-stat-num { color: var(--purple-dark); }
+.hero-stat-label { color: var(--ink-mid); }
+.disclaimer-bar { background: transparent; border: 0; text-align: center; }
+.disclaimer-bar-inner { color: var(--ink-mid); font-size: 13px; }
+
+.section { max-width: none; width: var(--site-w); padding: 40px 0 0; }
+.section-label { font-family: "BDO Grotesk", sans-serif; color: var(--purple, #b295ff); font-size: 12px; letter-spacing: .08em; }
+.card-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; background: transparent; border: 0; }
+.card { border: 1px solid #ececf6; border-radius: 16px; padding: 24px 24px 22px; background: #fff; transition: border-color .15s; }
+.card:hover { background: #fff; border-color: var(--purple, #b295ff); }
+.card-tag { font-family: "BDO Grotesk", sans-serif; font-size: 12px; letter-spacing: .06em; color: var(--purple, #b295ff); opacity: 1; font-weight: 500; }
+.card-title { font-family: "PP Formula Extended", "Sora", sans-serif; font-weight: 700; font-size: 20px; line-height: 1.25; }
+.card-desc { font-size: 15px; line-height: 1.55; }
+.card-footer { border-top: 0; padding-top: 6px; }
+.about-section { width: var(--site-w); max-width: none; }
+
+@media (max-width: 1100px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .card-grid { grid-template-columns: 1fr; } .section { padding-top: 24px; } }
