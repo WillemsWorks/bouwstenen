@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennisbank Digest — Week 34, 2026 — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .topbar a:hover { text-decoration: underline; }
+
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 4px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+    .doc-content h2 a {
+      color: var(--purple-dark);
+      text-decoration: none;
+    }
+    .doc-content h2 a:hover { text-decoration: underline; }
+
+    .doc-content p { margin-bottom: 16px; }
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    .digest-eyebrow {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-dark);
+      opacity: 0.55;
+      margin-bottom: 4px;
+    }
+    .digest-meta-line {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-mid);
+      margin-bottom: 10px;
+    }
+    .digest-gov-link {
+      display: inline-block;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple-dark);
+      background: var(--purple-light);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+    .digest-tip {
+      border-left: 3px solid var(--lime);
+      background: var(--lime-light);
+      padding: 14px 20px;
+      margin: 4px 0 8px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+    .digest-tip strong { color: var(--purple-dark); }
+    .digest-source-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--purple-dark);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .digest-source-link:hover { text-decoration: underline; }
+
+
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+      .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+      .doc-footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link active">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Kennisbank digest</span>
+    <h1 class="doc-title">Week 34 &middot; 23 augustus 2026</h1>
+    <p class="doc-subtitle">Nieuwe publicaties over ecosystemen in transformatie, uitvoeringsgereedheid, AI-leadership drift, veiligheidsparadox in teamcultuur, oordeelsvermogen onder AI-druk en de verborgen AI-kans in de middle office.</p>
+    <div class="doc-meta">
+      <span><strong>Editie</strong> Week 34, 2026</span>
+      <span><strong>Items</strong> 6</span>
+      <span><strong>Gegenereerd</strong> 23 augustus 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Deze pagina wordt wekelijks automatisch gegenereerd op basis van actuele publicaties, onderzoek en artikelen. Items worden pas onderdeel van een GOV-framework na bespreking &mdash; zie de bijbehorende <a href="index.html">bouwstenen</a> voor de verwerkte inzichten.</p>
+</div>
+
+<div class="doc-content">
+
+<!-- CLUSTER: Verandering & Leiderschap -->
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Verandering &amp; Leiderschap</div>
+  <h2><a href="https://hbr.org/2026/08/the-missing-piece-of-your-transformation-strategy" target="_blank">The Missing Piece of Your Transformation Strategy</a></h2>
+  <p class="digest-meta-line">Harvard Business Review &middot; Suketu Gandhi (Kearney) / Adi Ignatius &middot; 21 augustus 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: LeadingChange (coalities bouwen, Kotter)</span>
+  <p>Transformaties mislukken deels doordat organisaties hun ecosysteem van leveranciers en partners structureel buiten de strategieontwikkeling houden. Gandhi stelt dat de meeste bedrijven sterk afhankelijk zijn van complexe partnernetwerken maar die behandelen als uitvoerders in plaats van mede-architecten. Succes vereist dat externe partners vroeg worden aangesloten op de veranderagenda &mdash; Kotter's coalitievorming uitgebreid buiten de eigen hiëarchie. (<a href="https://hbr.org/2026/08/the-missing-piece-of-your-transformation-strategy" target="_blank" class="digest-source-link">&rarr; bron</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> In interim-opdrachten helpt dit de scope van coalitievorming verbreden: leveranciers, ketenpartners en andere externe actoren horen bij de verandercoalitie. Wie ze pas betrekt bij uitvoering, loopt halverwege vast.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Verandering &amp; Leiderschap</div>
+  <h2><a href="https://hbr.org/2026/08/before-rolling-out-a-new-strategy-assess-your-teams-readiness" target="_blank">Before Rolling Out a New Strategy, Assess Your Team's Readiness</a></h2>
+  <p class="digest-meta-line">Harvard Business Review &middot; Steven Morris (Matter Consulting) &middot; 12 augustus 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: VerkennenVerankeren (organisatiediagnose, ontwerp vs uitvoering)</span>
+  <p>Uitvoeringsfouten bij strategie-implementatie ontstaan vrijwel altijd door onzichtbare gereedheidskloven, niet door een gebrekkige strategie zelf. Morris onderscheidt drie dimensies die v&oacute;&oacute;r de uitrol moeten worden beoordeeld: <strong>Appetite</strong> (authentiek eigenaarschap bij de mensen), <strong>Capacity</strong> (beschikbare ruimte en middelen) en <strong>Skillset</strong> (de benodigde competenties). Microsoft en Boeing illustreren hoe het overslaan van deze diagnose leidde tot kostbare stilstand. (<a href="https://hbr.org/2026/08/before-rolling-out-a-new-strategy-assess-your-teams-readiness" target="_blank" class="digest-source-link">&rarr; bron</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Direct inzetbaar als pre-launch checklist bij elk traject: de drie dimensies bieden een snelle maar stevige organisatiediagnose v&oacute;&oacute;rdat de aanpak van start gaat &mdash; het verkennen v&oacute;&oacute;r het verankeren.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Verandering &amp; Leiderschap</div>
+  <h2><a href="https://hbr.org/2026/08/leadership-drift-is-stalling-your-ai-strategy" target="_blank">"Leadership Drift" Is Stalling Your AI Strategy</a></h2>
+  <p class="digest-meta-line">Harvard Business Review &middot; Morgan Blangeois &amp; Thomas Roulet &middot; 11 augustus 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Strategie (→ Verandering &amp; Leiderschap: strategische richting bij AI-adoptie)</span>
+  <p>Op basis van 23 interviews in 11 Europese IT-bedrijven stellen Blangeois en Roulet vast dat AI-strategieën niet mislukken door technologie, maar door "leadership drift": leidinggevenden erkennen priv&eacute; dat AI fundamentele modelaanpassingen vereist aan prijsstelling, personeelsomvang en bedrijfsmodel, maar verlaten die positie zodra groepsdynamiek en comfort de overhand nemen. Geruststellende verhalen vervangen moeilijke beslissingen. Correctief: bedrijfseigen data als ankerpunt, een bewaker van lastige agendapunten, en elk AI-initiatief koppelen aan een expliciete strategische vraag met evaluatiedatum. (<a href="https://hbr.org/2026/08/leadership-drift-is-stalling-your-ai-strategy" target="_blank" class="digest-source-link">&rarr; bron</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Bij AI-trajecten in interim-opdrachten is de diagnose of "leadership drift" speelt even waardevol als de inhoudelijke strategie zelf. Herkenbaar patroon: de boardroom is het eens, maar de moeilijke beslissingen verdwijnen stilletjes van de agenda.</div>
+</div>
+
+<hr>
+
+<!-- CLUSTER: Team & Mensen -->
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Team &amp; Mensen</div>
+  <h2><a href="https://hbr.org/2026/08/is-your-organizational-culture-too-nice" target="_blank">Is Your Organizational Culture Too Nice?</a></h2>
+  <p class="digest-meta-line">Harvard Business Review &middot; Ron Ashkenas &amp; Gali Cooks &middot; 19 augustus 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: TeamPsychologie (psychologische veiligheid, teamdynamiek)</span>
+  <p>Organisaties die harmonie als hoogste waarde stellen, ondermijnen effectieve samenwerking en besluitvorming. Ashkenas en Cooks maken een scherp onderscheid: "aardig zijn" (vermijden van conflict) en "goed zijn" (eerlijke feedback en verantwoording) lopen structureel uiteen. Echte psychologische veiligheid vraagt niet om harmonie maar om candide feedback &mdash; inclusief van topmanagement &mdash; en operationele routines zoals beoordelingsgesprekken en bestuursvergaderingen die substantieel debat bevorderen in plaats van beleefd instemmen. (<a href="https://hbr.org/2026/08/is-your-organizational-culture-too-nice" target="_blank" class="digest-source-link">&rarr; bron</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Directe aanvulling op het SCARF-model en Edmondson: psychologische veiligheid is niet hetzelfde als conflictvermijding. Dit artikel geeft taal aan een subtiel maar veelvoorkomend disfunctioneel patroon &mdash; bijzonder herkenbaar in teams die "te aardig" zijn geweest om het echte probleem te benoemen.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Team &amp; Mensen</div>
+  <h2><a href="https://hbr.org/2026/08/ai-is-undermining-leaders-judgment-heres-what-to-do-about-it" target="_blank">AI Is Undermining Leaders' Judgment. Here's What to Do About It.</a></h2>
+  <p class="digest-meta-line">Harvard Business Review &middot; Leonid Sudakov &amp; Nathan Furr &middot; 19 augustus 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Leiderschap (leiderschapsontwikkeling, Kouzes Posner)</span>
+  <p>Harvard-onderzoek met 228 evaluators toont aan dat overmatig vertrouwen op AI-tools het vermogen tot onafhankelijk oordelen systematisch aantast. Twee capaciteiten zijn essentieel: <strong>brede waarneming</strong> (zwakke signalen en aangrenzende patronen opmerken buiten AI-suggesties) en <strong>onafhankelijke interpretatie</strong> (eigenstandig inzicht bewaren in plaats van modeluitkomsten klakkeloos volgen). Sudakov en Furr pleiten voor gestructureerde nieuwsgierigheid en opzettelijke onenigheid als beschermende praktijken. (<a href="https://hbr.org/2026/08/ai-is-undermining-leaders-judgment-heres-what-to-do-about-it" target="_blank" class="digest-source-link">&rarr; bron</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Cruciaal kaderwerk voor leiderschapsontwikkeling in het AI-tijdperk: hoe cultiveer je het oordeelsvermogen van leiders op het moment dat AI de cognitieve last verlicht maar tegelijk de scherpte van eigenstandig denken sluipend doet verminderen?</div>
+</div>
+
+<hr>
+
+<!-- CLUSTER: Innovatie & Marketing -->
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Innovatie &amp; Marketing</div>
+  <h2><a href="https://hbr.org/2026/08/4-steps-to-transform-the-middle-office-with-ai" target="_blank">4 Steps to Transform the "Middle Office" with AI</a></h2>
+  <p class="digest-meta-line">Harvard Business Review &middot; H. James Wilson, Chetna Sehgal e.a. (Accenture / Google) &middot; 20 augustus 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Innovatie (business model innovatie, Osterwalder)</span>
+  <p>De grootste onbenutte AI-kansen zitten niet in geautomatiseerde routinetaken maar in de "middle office": processen die veel menselijk oordeel vereisen, zoals contractreview, compliance en factuurverwerking. Wilson et al. beschrijven vier stappen: identificeer processen waar uitzonderingen naar experts gaan; bouw AI die van die experts leert t&eacute;rwijl zij werken; meet of escalaties daadwerkelijk afnemen; herbestem vrijgekomen tijd voor complexere taken en relaties. Accenture- en Google-onderzoek toont aan dat dit model de ROI op AI dramatisch verhoogt. (<a href="https://hbr.org/2026/08/4-steps-to-transform-the-middle-office-with-ai" target="_blank" class="digest-source-link">&rarr; bron</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Bij innovatietrajecten de vraag stellen w&aacute;&aacute;r AI het meeste waarde toevoegt: niet bij makkelijke taken maar juist bij de taaie middenprocessen die nu het meeste menselijk oordeel vergen. Dit verschuift AI van kostenbesparing naar echte waardecreatie &mdash; een concreet frame voor het businesscase-gesprek.</div>
+</div>
+
+</div>
+
+<footer class="doc-footer">
+  <span>Automatisch gegenereerd op 23 augustus 2026 &middot; Bouwstenen van Paul Willems</span>
+  <a href="digest.html">&larr; Alle edities</a>
+</footer>
+
+</body>
+</html>

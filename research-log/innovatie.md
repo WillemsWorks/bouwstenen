@@ -1,3 +1,5 @@
+> **Intern werkdocument van Paul Willems (WillemsWorks) — niet bedoeld om extern te delen.** Dit bestand staat in een openbare repository omdat de Bouwstenen-site daaruit wordt gepubliceerd. Deel of hergebruik het niet zonder toestemming.
+
 # Research Log — innovatie
 
 *Gekoppeld aan: [innovatie.html](https://www.willemsworks.nl/bouwstenen/innovatie.html)*

@@ -1,3 +1,5 @@
+> **Intern werkdocument van Paul Willems (WillemsWorks) — niet bedoeld om extern te delen.** Dit bestand staat in een openbare repository omdat de Bouwstenen-site daaruit wordt gepubliceerd. Deel of hergebruik het niet zonder toestemming.
+
 # GOV Library — Backlog
 
 *Centrale werklijst voor de GOV-bibliotheek. Backend-bestand, geen publieke pagina — bijgewerkt per werksessie.*

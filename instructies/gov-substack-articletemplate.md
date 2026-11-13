@@ -1,3 +1,5 @@
+> **Intern werkdocument van Paul Willems (WillemsWorks) — niet bedoeld om extern te delen.** Dit bestand staat in een openbare repository omdat de Bouwstenen-site daaruit wordt gepubliceerd. Deel of hergebruik het niet zonder toestemming.
+
 # Substack Artikel Generator Template - Paul Willems
 
 **Document:** `GOV-SUBSTACK-ArticleTemplate` | v1.1 | 17 augustus 2025 | Substack artikel template en instructies | governance | substack | artikelen

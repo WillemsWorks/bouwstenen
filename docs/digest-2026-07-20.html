@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennisbank Digest — Week 30, 2026 — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .topbar a:hover { text-decoration: underline; }
+
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 4px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+    .doc-content h2 a {
+      color: var(--purple-dark);
+      text-decoration: none;
+    }
+    .doc-content h2 a:hover { text-decoration: underline; }
+
+    .doc-content p { margin-bottom: 16px; }
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    .digest-eyebrow {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-dark);
+      opacity: 0.55;
+      margin-bottom: 4px;
+    }
+    .digest-meta-line {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-mid);
+      margin-bottom: 10px;
+    }
+    .digest-gov-link {
+      display: inline-block;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple-dark);
+      background: var(--purple-light);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+    .digest-tip {
+      border-left: 3px solid var(--lime);
+      background: var(--lime-light);
+      padding: 14px 20px;
+      margin: 4px 0 8px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+    .digest-tip strong { color: var(--purple-dark); }
+    .digest-source-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--purple-dark);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .digest-source-link:hover { text-decoration: underline; }
+
+
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown { position: relative; }
+    .topnav-dropdown-toggle {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s, background 0.12s;
+      user-select: none;
+    }
+    .topnav-dropdown-toggle:hover,
+    .topnav-dropdown-toggle.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.15s; }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg { transform: rotate(180deg); }
+    .topnav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--purple-dark);
+      border: 1px solid rgba(196,255,72,0.2);
+      border-radius: 6px;
+      min-width: 180px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .topnav-dropdown.open .topnav-dropdown-menu { display: block; }
+    .topnav-dropdown-item {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-dropdown-item:hover,
+    .topnav-dropdown-item.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-item-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 1px;
+    }
+
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+      .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+      .doc-footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link active">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Kennisbank digest</span>
+    <h1 class="doc-title">Week 30 &middot; 20 juli 2026</h1>
+    <p class="doc-subtitle">Nieuwe publicaties relevant voor verandermanagement, B2B-strategie en organisatie.</p>
+    <div class="doc-meta">
+      <span><strong>Editie</strong> Week 30, 2026</span>
+      <span><strong>Items</strong> 5</span>
+      <span><strong>Gegenereerd</strong> 20 juli 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Deze pagina wordt wekelijks automatisch gegenereerd op basis van actuele publicaties, onderzoek en artikelen. Items worden pas onderdeel van een GOV-framework na bespreking — zie de bijbehorende <a href="index.html">bouwstenen</a> voor de verwerkte inzichten.</p>
+</div>
+
+<div class="doc-content">
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Verandermanagement</div>
+  <h2><a href="https://clarkstonconsulting.com/insights/2026-ocm-trends/" target="_blank">2026 Organizational Change Management (OCM) Trends</a></h2>
+  <p class="digest-meta-line">Clarkston Consulting &middot; januari 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Leading Change (Kotter)</span>
+  <p>De meest opvallende trend: organisaties verschuiven van project-voor-project verandermanagement naar een overkoepelende OCM-strategie. Slechts 12% van organisaties slaagt erin transformatiedoelen langer dan drie jaar vol te houden &mdash; precies omdat verandering als incident wordt behandeld in plaats van als permanente capability. Nieuw onderscheid dat opduikt: <em>change enablement</em> vs. <em>change management</em> &mdash; waarbij enablement medewerkers zelf leert navigeren door verandering in plaats van ze passief te begeleiden. <a href="https://clarkstonconsulting.com/insights/2026-ocm-trends/" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Sterk diagnose-argument richting directies die steeds opnieuw hetzelfde verandertraject opstarten: het probleem is de afwezigheid van een veranderstrategie, niet de specifieke verandering.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">B2B-strategie</div>
+  <h2><a href="https://www.lennysnewsletter.com/p/a-guide-to-advanced-b2b-positioning" target="_blank">A guide to advanced B2B positioning</a></h2>
+  <p class="digest-meta-line">April Dunford via Lenny&rsquo;s Newsletter &middot; maart 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Strategie (Porter, inside-out)</span>
+  <p>April Dunford destilleert tien jaar en 300 B2B-bedrijven in vier concrete positioneringsvalkuilen: (1) interne functies &mdash; marketing, sales, product, founder &mdash; hebben elk een andere definitie van &ldquo;de concurrent&rdquo;, waardoor positionering versnippert; (2) productpessimisme verblindt teams voor eigen sterktes; (3) differenti&euml;rende waarde wordt slecht vertaald naar wat een prospect <em>echt</em> begrijpt; (4) onduidelijkheid over w&aacute;t je precies positioneert. Kernadvies: de enige perspectief die telt is die van de prospect &mdash; stel jezelf de vraag &ldquo;wat doet een klant als wij niet bestaan?&rdquo; <a href="https://www.lennysnewsletter.com/p/a-guide-to-advanced-b2b-positioning" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Direct bruikbaar als diagnose bij klanten die worstelen met commerci&euml;le positionering: laat marketing, sales en de directeur elk apart benoemen wie de concurrent is &mdash; de discrepantie vertelt alles.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Organisatie &amp; teams</div>
+  <h2><a href="https://drtessbreen.com/2026/03/24/why-psychological-safety-is-the-leadership-skill-of-2026/" target="_blank">Why Psychological Safety Is the Leadership Skill of 2026</a></h2>
+  <p class="digest-meta-line">Dr. Tess Breen / COE Psychological Safety Study (47 landen) &middot; maart 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Organisatie (psychologische veiligheid) + Leading Change (SCARF)</span>
+  <p>De COE Psychological Safety Study over 47 landen bevestigt wat het SCARF-model voorspelt: slechts 26% van leidinggevenden cre&euml;ert daadwerkelijk psychologische veiligheid voor hun team. Tegelijkertijd worstelt 61% van medewerkers met bevlogenheid of motivatie (University of Illinois Workplace Wellbeing Report 2026). De studie markeert psychologische veiligheid als h&eacute;t leiderschapscriterium van dit moment &mdash; niet als soft skill maar als meetbare prestatie-indicator. <a href="https://drtessbreen.com/2026/03/24/why-psychological-safety-is-the-leadership-skill-of-2026/" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Concreet cijfer (26%) om in te zetten bij directies die psychologische veiligheid als vanzelfsprekend beschouwen &mdash; het raakt direct aan Kotter&rsquo;s co&auml;lities en het SCARF-model uit de bouwsteen.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">B2B-strategie</div>
+  <h2><a href="https://www.stackmatix.com/blog/b2b-content-marketing-strategy-2026" target="_blank">B2B Content Marketing Strategy 2026: What Actually Drives Pipeline</a></h2>
+  <p class="digest-meta-line">Stackmatix / Content Marketing Institute &middot; 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: They Ask You Answer (Marcus Sheridan)</span>
+  <p>De verschuiving die Sheridan voorspelde is nu mainstream: B2B-contentmarketing is niet langer een communicatiefunctie maar een integraal onderdeel van de go-to-market-strategie. Formats die consistent pipeline genereren: origineel onderzoek, educatieve video (kort), interactieve tools &mdash; generieke blogposts vallen weg. Kritische succesfactor: tweewekelijkse afstemming tussen content en sales over welke content deals sluit. AI wordt ingezet voor drafts en repetitief werk; mensen voor strategie en authentiek verhaal dat vertrouwen bouwt. <a href="https://www.stackmatix.com/blog/b2b-content-marketing-strategy-2026" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Gebruik dit als actualisering van het They Ask You Answer-framework bij klanten: de methodiek klopt, maar de formats zijn verschoven richting video en eigen onderzoek.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Organisatie &amp; teams</div>
+  <h2><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1768461/full" target="_blank">Psychological safety in interdisciplinary teams: how leadership behaviors empower teams</a></h2>
+  <p class="digest-meta-line">Frontiers in Psychology &middot; 2026 (peer-reviewed)</p>
+  <span class="digest-gov-link">GOV-koppeling: Teamintelligentie + Organisatie</span>
+  <p>Peer-reviewed onderzoek onder bijna 300 leiders over 2,5 jaar verbindt specifiek leiderschapsgedrag aan psychologische veiligheid en teamperformance. Teams met hoge psychologische veiligheid rapporteerden hogere prestaties &eacute;n minder interpersoonlijk conflict. De studie gaat verder dan de bekende definitie van Edmondson en benoemt welk concreet gedrag van leidinggevenden het verschil maakt in interdisciplinaire (cross-functionele) teams. <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1768461/full" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Waardevolle academische onderbouwing voor workshop- en verandertrajecten: combineert goed met de bouwsteen Teamintelligentie (Jitske Kramer) als je de gedragskant concreet wilt maken.</div>
+</div>
+
+</div>
+
+<footer class="doc-footer">
+  <span>Automatisch gegenereerd op 20 juli 2026 &middot; Bouwstenen van Paul Willems</span>
+  <a href="digest.html">&larr; Alle edities</a>
+</footer>
+
+  <script>
+    document.querySelectorAll(".topnav-dropdown-toggle").forEach(toggle => {
+      toggle.addEventListener("click", e => {
+        e.stopPropagation();
+        toggle.closest(".topnav-dropdown").classList.toggle("open");
+      });
+    });
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".topnav-dropdown").forEach(d => d.classList.remove("open"));
+    });
+  </script>
+</body>
+</html>
+

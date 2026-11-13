@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Digest — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    .hero {
+      background: var(--purple-dark);
+      padding: 80px 48px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(196,255,72,0.06);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .hero-eyebrow {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--lime);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 1.08;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 540px;
+      line-height: 1.65;
+    }
+
+    .disclaimer-bar {
+      background: var(--lime-light);
+      border-bottom: 1px solid #D8F0A0;
+      padding: 14px 48px;
+    }
+    .disclaimer-bar-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      font-size: 13px;
+      color: var(--ink-mid);
+    }
+    .disclaimer-bar a { color: var(--purple-dark); text-decoration: none; font-weight: 500; }
+
+    .section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 48px 80px;
+    }
+
+    .section-label {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .card {
+      background: var(--white);
+      padding: 28px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: background 0.12s;
+    }
+    .card:hover { background: var(--lime-light); }
+    .card:hover .card-arrow { opacity: 1; color: var(--purple-dark); }
+
+    .card-tag {
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-dark);
+      opacity: 0.6;
+    }
+    .card-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.3;
+      color: var(--purple-dark);
+    }
+    .card-desc { font-size: 13px; color: var(--ink-mid); line-height: 1.65; flex: 1; }
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      margin-top: 4px;
+    }
+    .card-version { font-size: 11px; color: var(--ink-mid); }
+    .card-arrow { font-size: 16px; color: var(--purple-light); opacity: 0.7; transition: all 0.12s; }
+
+    footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 28px 48px;
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+    }
+    footer a { color: var(--lime); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 48px 20px 40px; }
+      .hero h1 { font-size: 32px; }
+      .section { padding-left: 20px; padding-right: 20px; }
+      .disclaimer-bar { padding: 14px 20px; }
+      .topnav-inner { padding: 0 20px; }
+    }
+
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown { position: relative; }
+    .topnav-dropdown-toggle {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s, background 0.12s;
+      user-select: none;
+    }
+    .topnav-dropdown-toggle:hover,
+    .topnav-dropdown-toggle.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.15s; }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg { transform: rotate(180deg); }
+    .topnav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--purple-dark);
+      border: 1px solid rgba(196,255,72,0.2);
+      border-radius: 6px;
+      min-width: 180px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .topnav-dropdown.open .topnav-dropdown-menu { display: block; }
+    .topnav-dropdown-item {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-dropdown-item:hover,
+    .topnav-dropdown-item.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-item-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 1px;
+    }
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link active">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Bouwstenen — WillemsWorks</p>
+    <h1>Weekly Digest</h1>
+    <p class="hero-sub">Wekelijks overzicht van nieuwe publicaties en onderzoek relevant voor de Bouwstenen. Ruwe research-vondsten, nog niet verwerkt in de frameworks &mdash; zie per item de GOV-koppeling.</p>
+  </div>
+</div>
+
+<div class="disclaimer-bar">
+  <div class="disclaimer-bar-inner">
+    Items uit deze edities landen pas in een bouwsteen na bespreking. &nbsp;<a href="index.html">&larr; Terug naar library</a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Edities</div>
+  <div class="card-grid">
+<a href="digest-2026-11-08.html" class="card">
+  <span class="card-tag">Week 45</span>
+  <h2 class="card-title">8 november 2026</h2>
+  <p class="card-desc">Transformatie zonder eindpunt, vertrouwen als AI-fundament, middenmanagers als scharnierpunt, crisiservaringen die teamveerkracht bouwen, verificatiecapaciteit als concurrentievoordeel &amp; klantluistersystemen die beslissingen sturen &mdash; 6 items.</p>
+  <div class="card-footer">
+    <span class="card-version">6 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+<a href="digest-2026-11-01.html" class="card">
+  <span class="card-tag">Week 44</span>
+  <h2 class="card-title">1 november 2026</h2>
+  <p class="card-desc">Transformatiekantoor als AI-regie-eenheid, psychologische veiligheid als teamfundament, arena-strategie voor platformtijdperk, B2B-kopergedrag na AI-adoptie &amp; klantcentriciteit als operationele discipline &mdash; 5 items.</p>
+  <div class="card-footer">
+    <span class="card-version">5 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+    <a href="digest-2026-10-25.html" class="card">
+  <span class="card-tag">Week 43</span>
+  <h2 class="card-title">25 oktober 2026</h2>
+  <p class="card-desc">Agentic transformation offices, vijf strategische OCM-beslissingen, AI en psychologische veiligheid, energietransitie 2026 &amp; de toekomst van B2B-verkoop &mdash; 5 items.</p>
+  <div class="card-footer">
+    <span class="card-version">5 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+<a href="digest-2026-10-18.html" class="card">
+  <span class="card-tag">Week 42</span>
+  <h2 class="card-title">18 oktober 2026</h2>
+  <p class="card-desc">Deloitte over de 4:1 CM-ROI die organisaties laten liggen, Gartner over AI-waarde &amp; governance op het IT Symposium, Accenture over de opkomende medewerkerstevredenheid met AI, en HBR over invloed zonder autoriteit &mdash; 5 items.</p>
+  <div class="card-footer">
+    <span class="card-version">5 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+<a href="digest-2026-10-11.html" class="card">
+  <span class="card-tag">Week 41</span>
+  <h2 class="card-title">11 oktober 2026</h2>
+  <p class="card-desc">HBR over transformatie als leerproces en klantdoorverwijzingen als groeibron, McKinsey over leiderschap bij bedreigende verandering en het AI-operationsmodel, HBR over agentic AI die silo&rsquo;s overbrugt &mdash; 5 items.</p>
+  <div class="card-footer">
+    <span class="card-version">5 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+<a href="digest-2026-10-04.html" class="card">
+  <span class="card-tag">Week 40</span>
+  <h2 class="card-title">4 oktober 2026</h2>
+  <p class="card-desc">Mindsetverschuivingen voor AI-tijdperkleiders, crisisvrijwilligerswerk als teamveerkracht, AI als architect van strategisch voordeel, verificatie als nieuwe bedrijfsbottleneck &amp; klantdata die beslissingen stuurt &mdash; 5 items.</p>
+  <div class="card-footer">
+    <span class="card-version">5 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+<a href="digest-2026-09-27.html" class="card">
+  <span class="card-tag">Week 39</span>
+  <h2 class="card-title">27 september 2026</h2>
+  <p class="card-desc">Transformatie zonder eindbestemming, optimale groei-investering empirisch onderbouwd, CEO-board dynamiek in vier fases, incentives die het type innovatie bepalen, AI-agenten als co&ouml;rdinatielaag &amp; alternatieve B2B-verhaalstructuren &mdash; 7 items.</p>
+  <div class="card-footer">
+    <span class="card-version">7 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+<a href="digest-2026-09-20.html" class="card">
+  <span class="card-tag">Week 38</span>
+  <h2 class="card-title">20 september 2026</h2>
+  <p class="card-desc">Transformatie als leerreis, AI als cultuurindicator, ethiek van overtuiging, coopetitie-strategie, platform-disruptie van innovatie &amp; klantverwijzingen als verborgen winstmotor &mdash; 7 items.</p>
+  <div class="card-footer">
+    <span class="card-version">7 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+<a href="digest-2026-09-13.html" class="card">
+  <span class="card-tag">Week 37</span>
+  <h2 class="card-title">13 september 2026</h2>
+  <p class="card-desc">Narratief leiderschap &amp; de visibility gap, change-competenties 2026, facilitatie-impact, McKinsey organisatiecomplexiteit, Gartner AI-validatieparadox in B2B &amp; commerci&euml;le volwassenheid &mdash; 7 items.</p>
+  <div class="card-footer">
+    <span class="card-version">7 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+<a href="digest-2026-09-06.html" class="card">
+  <span class="card-tag">Week 36</span>
+  <h2 class="card-title">6 september 2026</h2>
+  <p class="card-desc">Middenmanagers en AI-adoptie, transformatie als leertraject, inclusief leiderschap, invloed zonder autoriteit, AI in strategie &amp; de vervaging van sales en marketing &mdash; 6 items.</p>
+  <div class="card-footer">
+    <span class="card-version">6 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+<a href="digest-2026-08-30.html" class="card">
+  <span class="card-tag">Week 35</span>
+  <h2 class="card-title">30 augustus 2026</h2>
+  <p class="card-desc">AI-transformatie: werk herontwerpen &eacute;n vertrouwen bouwen, AI-agents als organisatie-eenheid, AI als groeimotor, B2B klantwaardegap &amp; urgentiesignalen in klantdata &mdash; 6 items.</p>
+  <div class="card-footer">
+    <span class="card-version">6 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+
+<a href="digest-2026-08-23.html" class="card">
+  <span class="card-tag">Week 34</span>
+  <h2 class="card-title">23 augustus 2026</h2>
+  <p class="card-desc">Ecosystemen in transformatie, uitvoeringsgereedheid, AI-leadership drift, cultuur vs. psychologische veiligheid, oordeelsvermogen &amp; de middle-office AI-kans &mdash; 6 items.</p>
+  <div class="card-footer">
+    <span class="card-version">6 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+
+<a href="digest-2026-08-18.html" class="card">
+  <span class="card-tag">Week 34</span>
+  <h2 class="card-title">18 augustus 2026</h2>
+  <p class="card-desc">Verandering zonder autoriteit, AI-adoptie gap, valse alignment, besluitvorming &amp; agentic AI voor startups &mdash; 6 items.</p>
+  <div class="card-footer">
+    <span class="card-version">6 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+
+<a href="digest-2026-07-20.html" class="card">
+  <span class="card-tag">Week 30</span>
+  <h2 class="card-title">20 juli 2026</h2>
+  <p class="card-desc">Verandermanagement, B2B-positionering, organisatie &amp; teams &mdash; 5 items.</p>
+  <div class="card-footer">
+    <span class="card-version">5 items</span>
+    <span class="card-arrow">&rarr;</span>
+  </div>
+</a>
+
+    <a href="digest-2026-06-29.html" class="card">
+      <span class="card-tag">Week 27</span>
+      <h2 class="card-title">29 juni 2026</h2>
+      <p class="card-desc">SCARF-verschuiving, psychologische veiligheid wereldwijd, B2B-digitale maturiteit en meer &mdash; 7 items.</p>
+      <div class="card-footer">
+        <span class="card-version">7 items</span>
+        <span class="card-arrow">&rarr;</span>
+      </div>
+    </a>
+
+    <a href="digest-2026-06-22.html" class="card">
+      <span class="card-tag">Week 26</span>
+      <h2 class="card-title">22 juni 2026</h2>
+      <p class="card-desc">Engagement-gap in changetrajecten, psychologische veiligheid wereldwijd, revenue loop vs. funnel &mdash; 6 items.</p>
+      <div class="card-footer">
+        <span class="card-version">6 items</span>
+        <span class="card-arrow">&rarr;</span>
+      </div>
+    </a>
+
+    <a href="digest-2026-06-15.html" class="card">
+      <span class="card-tag">Week 25</span>
+      <h2 class="card-title">15 juni 2026</h2>
+      <p class="card-desc">Neuroscience achter weerstand, Gallup manager-engagement collapse, McKinsey high-performance cultuur &mdash; 6 items.</p>
+      <div class="card-footer">
+        <span class="card-version">6 items</span>
+        <span class="card-arrow">&rarr;</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  © Paul Willems — WillemsWorks &nbsp;·&nbsp; <a href="https://willemsworks.nl">willemsworks.nl</a>
+</footer>
+</body>
+</html>

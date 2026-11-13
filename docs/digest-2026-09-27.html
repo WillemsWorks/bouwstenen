@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennisbank Digest — Week 39, 2026 — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .topbar a:hover { text-decoration: underline; }
+
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 4px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+    .doc-content h2 a {
+      color: var(--purple-dark);
+      text-decoration: none;
+    }
+    .doc-content h2 a:hover { text-decoration: underline; }
+
+    .doc-content p { margin-bottom: 16px; }
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    .digest-eyebrow {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-dark);
+      opacity: 0.55;
+      margin-bottom: 4px;
+    }
+    .digest-meta-line {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-mid);
+      margin-bottom: 10px;
+    }
+    .digest-gov-link {
+      display: inline-block;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple-dark);
+      background: var(--purple-light);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+    .digest-tip {
+      border-left: 3px solid var(--lime);
+      background: var(--lime-light);
+      padding: 14px 20px;
+      margin: 4px 0 8px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+    .digest-tip strong { color: var(--purple-dark); }
+    .digest-source-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--purple-dark);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .digest-source-link:hover { text-decoration: underline; }
+
+    /* Cluster-koptekst */
+    .cluster-heading {
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin: 56px 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .cluster-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown { position: relative; }
+    .topnav-dropdown-toggle {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s, background 0.12s;
+      user-select: none;
+    }
+    .topnav-dropdown-toggle:hover,
+    .topnav-dropdown-toggle.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.15s; }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg { transform: rotate(180deg); }
+    .topnav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--purple-dark);
+      border: 1px solid rgba(196,255,72,0.2);
+      border-radius: 6px;
+      min-width: 180px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .topnav-dropdown.open .topnav-dropdown-menu { display: block; }
+    .topnav-dropdown-item {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-dropdown-item:hover,
+    .topnav-dropdown-item.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-item-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 1px;
+    }
+
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+      .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+      .doc-footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link active">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Kennisbank digest</span>
+    <h1 class="doc-title">Week 39 &middot; 27 september 2026</h1>
+    <p class="doc-subtitle">Transformatie zonder eindbestemming, de optimale groeistrategie empirisch onderbouwd, de vier fases van CEO-board dynamiek, incentives die het type innovatie bepalen, AI-agenten als nieuwe coördinatielaag en alternatieve verhaalstructuren voor B2B &mdash; 7 items verspreid over vier clusters.</p>
+    <div class="doc-meta">
+      <span><strong>Editie</strong> Week 39, 2026</span>
+      <span><strong>Items</strong> 7</span>
+      <span><strong>Gegenereerd</strong> 27 september 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Deze pagina wordt wekelijks automatisch gegenereerd op basis van actuele publicaties, onderzoek en artikelen. Items worden pas onderdeel van een GOV-framework na bespreking &mdash; zie de bijbehorende <a href="index.html">bouwstenen</a> voor de verwerkte inzichten.</p>
+</div>
+
+<div class="doc-content">
+
+<div class="cluster-heading">Verandering &amp; Leiderschap</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Verandermanagement</div>
+  <h2><a href="https://hbr.org/2026/09/your-transformation-doesnt-need-an-endpoint" target="_blank">Your Transformation Doesn&rsquo;t Need an Endpoint</a></h2>
+  <p class="digest-meta-line">Harvard Business Review (Gretchen Gavett) &middot; september 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: LeadingChange</span>
+  <p>Traditionele transformatieprogramma&rsquo;s zijn gebouwd rond een vast eindpunt &mdash; een ambitieuze bestemming die het momentum moet leveren. Gavett betoogt dat dit uitgangspunt zelf het probleem is: wanneer de realiteit verandert, wordt vasthouden aan een vooraf bepaald doel een last in plaats van een leidraad. Duurzame transformatie vraagt om een cultuur van voortdurende aanpassing, waarbij leiders bewust afstand nemen van het idee dat de verandering ooit &ldquo;af&rdquo; is. <a href="https://hbr.org/2026/09/your-transformation-doesnt-need-an-endpoint" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Krachtig kader voor interim-opdrachten waarbij opdrachtgevers worstelen met het gevoel dat de transformatie stagneert &mdash; vaak omdat de organisatie vasthoudt aan een blauwdruk die al lang is ingehaald door de werkelijkheid. Sluit naadloos aan op de urgentiedynamiek in LeadingChange: urgentie creëren werkt alleen als de bestemming levend en aanpasbaar blijft.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Bestuurlijke dynamiek</div>
+  <h2><a href="https://hbr.org/2026/09/the-4-stages-of-the-ceo-board-relationship" target="_blank">The 4 Stages of the CEO-Board Relationship</a></h2>
+  <p class="digest-meta-line">Harvard Business Review (Claudius A. Hildebrand &amp; Douglas L. Peterson) &middot; september/oktober 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Leiderschap</span>
+  <p>De relatie tussen een CEO en zijn raad van bestuur verloopt volgens vier voorspelbare fasen, elk met eigen uitdagingen en vereiste leiderschapsvaardigheden. CEO&rsquo;s die deze fasen bewust managen, bouwen een vertrouwensrelatie op die hen operationele vrijheid oplevert; wie dit verwaarloost, verliest slagkracht of raakt in conflict. De balans tussen engagement en autonomie is per fase fundamenteel anders &mdash; te veel nabijheid in de ene fase is te weinig in de volgende. <a href="https://hbr.org/2026/09/the-4-stages-of-the-ceo-board-relationship" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Direct toepasbaar voor interim-managers die naast directies of raden van bestuur opereren: welke fase kenmerkt de huidige CEO-board dynamiek, en welke interventies zijn daarin gepast? Sluit aan op het Kouzes-Posner-model in de bouwsteen Leiderschap &mdash; credibiliteit en vertrouwen als fundament van effectief leiderschap gelden op alle niveaus, ook in governance-relaties.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Groeimanagement &amp; investering</div>
+  <h2><a href="https://hbr.org/2026/09/how-much-should-you-be-investing-in-growth" target="_blank">How Much Should You Be Investing in Growth?</a></h2>
+  <p class="digest-meta-line">Harvard Business Review (Paul Blase &amp; Paul Leinwand, PwC Strategy&amp;) &middot; 22 september 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: ScalingUp (backlog)</span>
+  <p>Analyse van tien jaar prestatiedata van 2.900 Amerikaanse beursgenoteerde bedrijven toont aan dat er per industrie- en groeifase een optimale investeringszone bestaat. Wie te weinig investeert, vertraagt groei; wie te veel investeert, verlaagt rendement op activa en verliest tot 70% aan waardering. Effectieve kapitaalallocatie vereist een ge&iuml;ntegreerde portfolioaanpak, gekoppeld aan expliciete groeimetrics en governance die gedisciplineerd experimenteren aanmoedigt. <a href="https://hbr.org/2026/09/how-much-should-you-be-investing-in-growth" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Empirisch fundament voor gesprekken met directies over groei-investeringen: hoe bevinden zij zich ten opzichte van de sweetspot voor hun sector en groeifase? De kernvraag van Scaling Up (Harnish) &mdash; hoe prioriteiten en cadans richting geven aan groei &mdash; krijgt hier financiële ijkpunten die de prioriteitstelling strategisch onderbouwen.</div>
+</div>
+
+<div class="cluster-heading">Team &amp; Mensen</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Innovatiestimulering &amp; beloning</div>
+  <h2><a href="https://hbr.org/2026/09/why-cash-rewards-dont-always-produce-better-ideas" target="_blank">Why Cash Rewards Don&rsquo;t Always Produce Better Ideas</a></h2>
+  <p class="digest-meta-line">Harvard Business Review (Debora Szpilman) &middot; september 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Organisatie</span>
+  <p>Onderzoek onder 2.376 uitvinders bij Chinese beursgenoteerde bedrijven toont aan dat financi&euml;le beloningsprogramma&rsquo;s sterk uiteenlopende effecten hebben afhankelijk van het type medewerker. Specialisten in smalle technische domeinen produceerden onder financi&euml;le prikkels minder uitvindingen, maar van hogere nieuwheidswaarde; generalisten verhoogden juist hun outputvolume. Het cruciale inzicht: prikkels bepalen niet h&ograve;&eacute;veel innovatie er ontstaat, maar w&eacute;lk type &mdash; en managers die dat negeren, sturen ongewild op de verkeerde uitkomst. <a href="https://hbr.org/2026/09/why-cash-rewards-dont-always-produce-better-ideas" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Cruciaal inzicht voor organisaties die een innovatiecultuur willen opbouwen: beloon niet generiek, maar ontwerp incentivestructuren die aansluiten op de profieldiversiteit van het team. Sluit direct aan op Mintzbergs coördinatiemechanismen in de bouwsteen Organisatie &mdash; de juiste mensen op de juiste plek vereist ook de juiste prikkels voor elk profiel.</div>
+</div>
+
+<div class="cluster-heading">Innovatie &amp; Marketing</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">AI &amp; strategisch denken</div>
+  <h2><a href="https://hbr.org/2026/09/a-better-way-to-craft-strategy-in-the-age-of-ai" target="_blank">A Better Way to Craft Strategy in the Age of AI</a></h2>
+  <p class="digest-meta-line">Harvard Business Review (Amy Bernstein e.a.) &middot; september/oktober 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Strategie (cluster: Innovatie &amp; Marketing)</span>
+  <p>AI maakt het voor het eerst mogelijk om meerdere strategische scenario&rsquo;s parallel te verkennen en snel te testen &mdash; iets wat met traditionele frameworks zoals Porter&rsquo;s vijfkrachtenmodel altijd sequentieel en tijdrovend was. Dit verandert niet de fundamentele vragen van strategieontwikkeling, maar verkort de cyclus van hypothese tot validatie dramatisch. Organisaties die AI inzetten als strategisch exploratietool bouwen zo een structureel leervoordeel op ten opzichte van concurrenten die AI alleen als efficiëntietool inzetten. <a href="https://hbr.org/2026/09/a-better-way-to-craft-strategy-in-the-age-of-ai" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Bruikbaar bij opdrachtgevers in een strategische herijking: AI verlaagt de drempel om meerdere richtingen gelijktijdig te verkennen en te valideren. Verbindt de Ansoff- en Porter-denkkaders in de bouwsteen Strategie met de Build-Measure-Learn-logica van LeanStartup &mdash; maar dan toegepast op strategisch niveau.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Organisatie-innovatie &amp; AI</div>
+  <h2><a href="https://hbr.org/2026/09/how-ai-agents-orchestrate-work-across-silos" target="_blank">How AI Agents Orchestrate Work Across Silos</a></h2>
+  <p class="digest-meta-line">Harvard Business Review (Kris Johnson Ferreira &amp; Jordan Tong) &middot; september/oktober 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Innovatie</span>
+  <p>AI-agenten vertegenwoordigen een nieuwe laag van organisatorische co&ouml;rdinatie: niet meer silo-specifiek, maar verbindend over functies heen. In het model dat de auteurs beschrijven handelt AI de analyse en informatierouting af, terwijl mensen contextuele kennis inbrengen en eindbeslissingen nemen. Organisaties die dit model adopteren rapporteren kortere doorlooptijden, consistentere besliskwaliteit en betere benutting van verspreid aanwezige expertise. <a href="https://hbr.org/2026/09/how-ai-agents-orchestrate-work-across-silos" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Directe input voor opdrachtgevers die worstelen met silo&rsquo;s en trage besluitvorming: AI-agenten kunnen als organisatorische tussenlaag functioneren zonder de bestaande structuur volledig te herzien. Verrijkt de bouwsteen Innovatie (Osterwalder, business model innovatie) met een concrete technologische toepassing die bestaande waardeketens fundamenteel herordent.</div>
+</div>
+
+<div class="cluster-heading">Commercie &amp; Klant</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">B2B-verhaalstructuren</div>
+  <h2><a href="https://www.marketingprofs.com/articles/2026/54630/b2b-storytelling-frameworks" target="_blank">Three Attention-Grabbing Story Structures (That Aren&rsquo;t the Hero&rsquo;s Journey)</a></h2>
+  <p class="digest-meta-line">MarketingProfs (JenMarie Macdonald &amp; Matthew Kabik) &middot; 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Storytelling</span>
+  <p>De Held-reis domineert marketingnarratief, maar is te omvangrijk voor moderne B2B-content waar meerdere stakeholders via verschillende kanalen worden bereikt. De auteurs introduceren drie alternatieve structuren: de Collectieve Reis (voor meerdere stakeholders parallel), Kishōtenketsu (cyclisch, ideaal voor social media continuïteit) en Trickster Stories (gebruik van humor en verrassing voor snelle engagement). Elk framework biedt concrete handvatten om verhalen te bouwen die werken zonder de uitgebreide setup van een heldenverhaal. <a href="https://www.marketingprofs.com/articles/2026/54630/b2b-storytelling-frameworks" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Waardevolle aanvulling op de bouwsteen Storytelling (Donald Miller/StoryBrand): wanneer de SB7-structuur te zwaar is voor het medium of de context, bieden deze drie alternatieven gestructureerde keuzes. Bruikbaar bij klanten die contentmarketing opbouwen met beperkte middelen &mdash; welke verhaalstructuur past bij welk kanaal?</div>
+</div>
+
+</div>
+
+<footer class="doc-footer">
+  <span>Automatisch gegenereerd op 27 september 2026 &middot; Bouwstenen van Paul Willems</span>
+  <a href="digest.html">&larr; Alle edities</a>
+</footer>
+
+  <script>
+    document.querySelectorAll(".topnav-dropdown-toggle").forEach(toggle => {
+      toggle.addEventListener("click", e => {
+        e.stopPropagation();
+        toggle.closest(".topnav-dropdown").classList.toggle("open");
+      });
+    });
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".topnav-dropdown").forEach(d => d.classList.remove("open"));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategie — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'BDO Grotesk', sans-serif; font-weight: 300; background: var(--white); color: var(--ink); line-height: 1.75; font-size: 16px; }
+    .topnav { background: var(--purple-dark); border-bottom: 1px solid rgba(196,255,72,0.15); position: sticky; top: 0; z-index: 100; }
+    .topnav-inner { max-width: 860px; margin: 0 auto; padding: 0 48px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link { font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.55); text-decoration: none; padding: 6px 14px; border-radius: 4px; transition: color 0.12s, background 0.12s; }
+    .topnav-link:hover, .topnav-link.active { color: var(--lime); background: rgba(196,255,72,0.07); }
+    .topnav-dropdown { position: relative; }
+    .topnav-dropdown-toggle { font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.55); text-decoration: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: color 0.12s, background 0.12s; user-select: none; }
+    .topnav-dropdown-toggle:hover, .topnav-dropdown-toggle.active { color: var(--lime); background: rgba(196,255,72,0.07); }
+    .topnav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.15s; }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg { transform: rotate(180deg); }
+    .topnav-dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--purple-dark); border: 1px solid rgba(196,255,72,0.2); border-radius: 6px; min-width: 180px; padding: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .topnav-dropdown.open .topnav-dropdown-menu { display: block; }
+    .topnav-dropdown-item { display: block; font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: color 0.12s, background 0.12s; }
+    .topnav-dropdown-item:hover, .topnav-dropdown-item.active { color: var(--lime); background: rgba(196,255,72,0.07); }
+    .topnav-dropdown-item-label { font-size: 10px; color: rgba(255,255,255,0.3); display: block; margin-top: 1px; }
+    .doc-header { background: var(--purple-dark); color: var(--white); padding: 56px 48px 48px; }
+    .doc-header-inner { max-width: 860px; margin: 0 auto; }
+    .doc-label { display: inline-block; background: var(--lime); color: var(--purple-dark); font-family: 'Sora', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; margin-bottom: 20px; }
+    .doc-title { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 40px; line-height: 1.15; color: var(--white); margin-bottom: 12px; }
+    .doc-subtitle { font-size: 15px; font-weight: 300; color: var(--purple-light); max-width: 600px; margin-bottom: 32px; line-height: 1.65; }
+    .doc-meta { display: flex; gap: 28px; flex-wrap: wrap; font-size: 13px; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px; }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+    .disclaimer { background: var(--lime-light); border-left: 4px solid var(--lime); padding: 16px 24px; font-size: 13px; color: var(--ink-mid); max-width: 860px; margin: 36px auto; }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a { color: var(--purple-dark); text-decoration: none; font-weight: 500; }
+    .disclaimer a:hover { text-decoration: underline; }
+    .doc-content { max-width: 860px; margin: 0 auto; padding: 0 48px 80px; }
+    .doc-content h1 { display: none; }
+    .doc-content h2 { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 22px; color: var(--purple-dark); margin: 52px 0 16px; padding-bottom: 12px; border-bottom: 2px solid var(--lime); }
+    .doc-content h3 { font-family: 'Sora', sans-serif; font-weight: 500; font-size: 17px; color: var(--purple-dark); margin: 32px 0 10px; }
+    .doc-content h4 { font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mid); margin: 24px 0 8px; }
+    .doc-content p { margin-bottom: 16px; }
+    .doc-content ul, .doc-content ol { margin: 12px 0 16px 20px; }
+    .doc-content li { margin-bottom: 6px; }
+    .doc-content blockquote { border-left: 3px solid var(--purple-light); margin: 28px 0; padding: 14px 20px; background: var(--lime-light); font-size: 16px; color: var(--purple-dark); font-style: italic; }
+    .doc-content blockquote p { margin: 0; color: var(--purple-dark); }
+    .doc-content table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .doc-content th { background: var(--purple-dark); color: var(--white); padding: 10px 16px; text-align: left; font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+    .doc-content td { padding: 10px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .doc-content tr:nth-child(even) td { background: var(--lime-light); }
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+    hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+    .ref-block { background: var(--lime-light); border: 1px solid #D8F0A0; border-radius: 8px; padding: 16px 20px; margin: 28px 0; font-size: 13px; color: var(--ink-mid); }
+    .ref-block strong { color: var(--purple-dark); font-weight: 500; }
+    .doc-footer { background: var(--purple-dark); color: rgba(255,255,255,0.45); padding: 28px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-family: 'Sora', sans-serif; }
+    .doc-footer a { color: var(--lime); text-decoration: none; font-weight: 500; }
+    @media (max-width: 640px) { .topnav-inner, .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; } .doc-content { padding-left: 20px; padding-right: 20px; } .disclaimer { margin-left: 20px; margin-right: 20px; } .doc-title { font-size: 28px; } }
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+    <div class="topnav-links">
+      <a href="index.html" class="topnav-link active">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+</nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Persoonlijk werkframework</span>
+    <h1 class="doc-title">Strategie</h1>
+    <p class="doc-subtitle">Dit is geen samenvatting van Porter. Dit is Paul's werkversie van strategie — als diagnose-instrument voor directiegesprekken, als kader voor projectkeuzes, en als brug tussen positionering en uitvoering.</p>
+    <div class="doc-meta">
+      <span><strong>Versie</strong> v1.1</span>
+      <span><strong>Datum</strong> juni 2026</span>
+      <span><strong>Bronnen</strong> Sinek · Treacy &amp; Wiersema · Porter · Hamel &amp; Prahalad · Ansoff · Christensen · Tiggelaar</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Dit document is een persoonlijk werkframework van Paul Willems (WillemsWorks). Het is opgebouwd uit boeken, seminars en eigen praktijkervaring — geen samenvatting, maar een actief werkinstrument. De inhoud is intellectueel eigendom van Paul Willems. Gebruik zonder toestemming is niet toegestaan.</p>
+  <p>Meer over mijn werkwijze en aanpak: <a href="https://willemsworks.nl">willemsworks.nl</a></p>
+</div>
+
+<div class="doc-content">
+
+<p style="font-size:13px;color:var(--ink-mid);margin-bottom:8px;">GOV-ALL-Strategie_v1_1</p>
+<p style="font-size:12px;color:var(--ink-mid);margin-bottom:40px;">Document: GOV-ALL-Strategie | v1.1 | juni 2026 | Persoonlijk werkframework | governance | alle platforms | strategiegesprekken met directie, projectkadering, positioneringsanalyse<br>
+Bronnen: Simon Sinek — Start With Why (2009) · The Infinite Game (2019) · Treacy &amp; Wiersema — The Discipline of Market Leaders (1995) · Michael Porter — Competitive Strategy (1980) · Gary Hamel &amp; C.K. Prahalad — Competing for the Future (1994) · Igor Ansoff — Corporate Strategy (1965) · Clayton Christensen — The Innovator's Dilemma (1997) · Ben Tiggelaar — MBA in één dag (2026)<br>
+Verwante bouwstenen: GOV-ALL-LeadingChange v1.1 · GOV-ALL-VerkennenVerankeren v1.1 · GOV-ALL-OvertuigingsPsychologie v1.3 · GOV-ALL-TeamPsychologie v2.1 · GOV-ALL-TheyAskYouAnswer v1.0 · GOV-ALL-Innovatie v1.0 · GOV-ALL-Principes (in opbouw)</p>
+
+<h2>Versietabel</h2>
+<table>
+  <tr><th>Versie</th><th>Datum</th><th>Beschrijving</th></tr>
+  <tr><td>v1.0</td><td>april 2026</td><td>Initiële opbouw op basis van MBA in één dag (Tiggelaar). Porter, inside-out, Sinek's WHY, normatief kader.</td></tr>
+  <tr><td>v1.1</td><td>juni 2026</td><td>Uitbreiding met Treacy &amp; Wiersema, Ansoff, Infinite Game (vier elementen), Christensen als risicokant. WHY/missie/visie/normatief kader samengevoegd als fundament. Structuur herschikt: buitenkant eerst, binnenkant daarna.</td></tr>
+</table>
+
+<h2>Deel 1 — Strategie is een keuze</h2>
+
+<p>De meeste organisaties hebben geen strategie. Ze hebben een ambitie ("we willen groeien"), een activiteitenplan ("we gaan drie nieuwe producten lanceren") of een wenslijst ("we willen klantgerichter worden"). Geen van deze is een strategie.</p>
+
+<p>Een strategie is een bewuste keuze over waar je wél en waar je níet op concurreert — en waarom. Dat klinkt eenvoudig. In de praktijk is het politiek, want kiezen betekent loslaten.</p>
+
+<blockquote><p>"De meeste strategieën zijn te vaag én onbekend bij medewerkers." — Ben Tiggelaar</p></blockquote>
+
+<p>Twee symptomen van een ontbrekende strategie:</p>
+<ul>
+  <li>Iedereen in de organisatie geeft een ander antwoord op de vraag "waar onderscheiden we ons op?"</li>
+  <li>Beslissingen worden steeds opnieuw geëscaleerd omdat er geen kader is om ze zelfstandig te nemen</li>
+</ul>
+
+<p>Strategie begint niet bij frameworks of tools. Het begint bij de vraag waarom de organisatie bestaat — en wat ze bereid is daarvoor op te offeren.</p>
+
+<h2>Deel 2 — WHY, missie, visie en normatief kader</h2>
+
+<h3>WHY — het kompas</h3>
+
+<p>Sinek's centrale stelling: mensen kopen niet wat je doet, maar waarom je het doet. De WHY is de overtuiging die mensen in beweging zet — de emotionele kern die verklaart waarom een organisatie bestaat en waarom anderen zich daarmee identificeren.</p>
+
+<p>De WHY is tijdloos en verandert niet met de markt. Hij is geen marketingboodschap — hij is een morele positie. Organisaties met een heldere WHY trekken mensen aan die dezelfde overtuiging delen: medewerkers, klanten, partners.</p>
+
+<blockquote><p>"People don't buy what you do, they buy why you do it." — Simon Sinek</p></blockquote>
+
+<p>Belangrijk onderscheid: de WHY hoeft niet groot of wereldveranderend te zijn. Een lokale bakker wiens WHY is <em>"ik geloof dat een goed brood de dag beter maakt"</em> heeft een echte WHY — geen missie van globale impact, wel een authentieke overtuiging die klanten voelen.</p>
+
+<h3>Missie — de opdracht</h3>
+
+<p>De missie is de operationele vertaling van de WHY in een concrete opdracht: wat doet de organisatie, voor wie, in welke context? De missie verandert als de context verandert — de WHY niet.</p>
+
+<p>Het cruciale inzicht: de WHY regeert over de missie. Een organisatie met een heldere WHY kan haar missie uitbreiden of aanpassen zonder haar identiteit te verliezen — zolang de uitbreiding past bij de onderliggende overtuiging.</p>
+
+<p>De KNRM illustreert dit scherp. Hun missie is mensen kosteloos redden op zee. Maar ze zetten ook strandwachten in op quads tijdens de zomermaanden — preventief waarschuwen en ingrijpen op het strand, ver van het water. Dat past niet bij de missie zoals geformuleerd, maar wel bij de WHY: <em>geen mens mag verloren gaan.</em> De WHY maakte ruimte voor een activiteit die de missie overstijgt.</p>
+
+<h3>Visie — de richting</h3>
+
+<p>De visie beschrijft waar de organisatie over X jaar staat als ze de missie succesvol uitvoert. De visie is concreet, tijdgebonden en ambitieus. Ze geeft richting aan strategische keuzes zonder die keuzes zelf te maken.</p>
+
+<p>Volgorde: WHY → missie → visie → strategie. Organisaties die beginnen bij de visie zonder heldere WHY bouwen op drijfzand — zodra de visie bereikt of gemist wordt, verdwijnt de cohesie.</p>
+
+<h3>Normatief kader — beslissingsarchitectuur</h3>
+
+<p>Het normatief kader beantwoordt de vraag: wat doen we als waarden botsen? Het is geen lijst van mooie woorden — het is een rangorde van principes die bepaalt hoe dilemma's worden opgelost zonder escalatie.</p>
+
+<p>De rangorde begint altijd bij de klant. Dat is wat alle sterke normatieve kaders gemeen hebben:</p>
+
+<table>
+  <tr><th>Organisatie</th><th>Rangorde</th><th>Logica</th></tr>
+  <tr><td>Amazon</td><td>1. Klantobsessie 2. Innovatie 3. Operational excellence 4. Lange termijn</td><td>Alles staat in dienst van de klantervaring</td></tr>
+  <tr><td>Disney</td><td>1. Veiligheid 2. Hoffelijkheid 3. Inclusie 4. Show 5. Efficiëntie</td><td>Veiligheid staat bovenaan omdat een bezoeker die zich onveilig voelt het sprookje niet meer beleeft — veiligheid dient de klant</td></tr>
+  <tr><td>Willemen Bouwgroep</td><td>1. Veiligheid (recht van medewerker) 2. Kwaliteit (recht van klant) 3. Efficiëntie (recht van werkgever)</td><td>Expliciete stakeholderlogica — bij conflict weet iedereen wat voorgaat</td></tr>
+</table>
+
+<p>Waarom de volgorde cruciaal is: Disney's keuze om veiligheid boven show te plaatsen is geen ethische statement — het is een operationele beslissingsregel. Een Cast Member stopt een attractie ook als dat de beleving verstoort. Geen discussie nodig, geen escalatie.</p>
+
+<p>Het normatief kader is de operationele vertaling van de WHY. Zonder normatief kader blijft de WHY een poster op de muur.</p>
+
+<h4>Het triage-proces — hoe je tot een normatief kader komt</h4>
+<ol>
+  <li>Benoem de principes samen — niet top-down opgelegd</li>
+  <li>Inventariseer concrete dilemma's uit de praktijk</li>
+  <li>Bespreek de dilemma's: wat gaat voor, en waarom?</li>
+  <li>Zet de principes in volgorde op basis van de uitkomsten</li>
+</ol>
+
+<p>De kracht zit in stap 2 en 3. Je hebt geen abstracte waardendiscussie nodig — je hebt echte dilemma's nodig. Pas als mensen het oneens zijn over een concrete situatie, wordt duidelijk wat ze werkelijk belangrijk vinden.</p>
+
+<div class="ref-block"><strong>→ GOV-ALL-Principes (in opbouw)</strong> — het normatief kader als onderdeel van het overkoepelende principes-doc dat de hele bibliotheek verbindt.</div>
+
+<h2>Deel 3 — Treacy &amp; Wiersema — hoe ben je ingericht om te winnen?</h2>
+
+<p>Porter analyseert de markt van buiten naar binnen. Treacy &amp; Wiersema stellen een andere vraag: hoe moet je organisatie zijn ingericht om in die markt te winnen? De keuze voor een waardediscipline is een organisatorische keuze, geen marketingkeuze.</p>
+
+<p>De kern: elke succesvolle organisatie kiest één waardediscipline als primaire focus en houdt de andere twee op een acceptabel niveau. Excellent willen zijn in alle drie leidt tot middelmatigheid op alle drie.</p>
+
+<h3>Customer Intimacy</h3>
+<p>Je wint door de beste totaaloplossing te bieden voor specifieke klanten. Je kent je klant beter dan hij zichzelf kent. De klantreis is het onderscheid — niet het product.</p>
+
+<p>De organisatie is ingericht rondom de klantrelatie: accountmanagers, klantdata, maatwerkoplossingen, lange contracten. De vraag die ze beantwoorden is niet "wat willen klanten in het algemeen?" maar "wat heeft <em>deze</em> klant nodig?"</p>
+
+<p>De competitive advantage van Customer Intimacy: het is moeilijk kopieerbaar. Een superieur product kan worden nagemaakt. Een klantreis die door de hele organisatie wordt geleefd — in processen, cultuur en mensen — niet.</p>
+
+<p>Coolblue is het schoolvoorbeeld. Ze zijn duurder dan veel alternatieven, maar de klantreis is onverslaanbaar: de bezorger die verpakking meeneemt, de installateur die uitleg geeft, de klantenservice die niet scripted klinkt. Ze hebben bewezen dat Customer Intimacy schaalbaar is met de juiste digitale tooling — het voelt persoonlijk zonder dat het per transactie duur is.</p>
+
+<p>Gevaar: als de relatie weggaat (accountmanager vertrekt), verdwijnt de loyaliteit mee.</p>
+
+<h3>Product Leadership</h3>
+<p>Je wint doordat je producten zo goed zijn dat klanten er niet omheen kunnen. Innovatie is je motor. Je maakt je eigen producten obsoleet voordat de concurrentie dat doet.</p>
+
+<p>De organisatie is ingericht rondom R&amp;D en productontwikkeling. Ze kannibaliseren hun eigen producten voordat een ander dat doet.</p>
+
+<p>Apple is het meest geciteerde voorbeeld — de iPhone was niet de goedkoopste of de meest klantgerichte oplossing. Hij was gewoon beter. Dyson verkoopt stofzuigers van 600 euro omdat ze zo goed werken. Gore-Tex dwingt andere fabrikanten hun producten te positioneren als "met Gore-Tex" — het materiaal is zelf het onderscheid.</p>
+
+<p>Gevaar: je kunt worden ingehaald door een speler die een goedkopere versie maakt die "goed genoeg" is. Dit is precies Christensen's punt — zie Deel 8.</p>
+
+<h3>Operational Excellence</h3>
+<p>Je wint door consistent te leveren tegen de laagste totaalkosten. Het gaat niet om lage prijzen als doel — het gaat om een kostenstructuur die je in staat stelt consistent te leveren waar anderen dat niet kunnen.</p>
+
+<p>De organisatie is ingericht rondom processen, standaardisatie en schaal. McDonald's is het schoolvoorbeeld: gestandaardiseerd menu, gestandaardiseerde processen wereldwijd, een franchisemodel dat schaalt zonder kwaliteitsverlies. Elke Big Mac smaakt hetzelfde in Amsterdam en Tokyo. Ryanair stripte alles wat niet bijdraagt aan de vlucht zelf.</p>
+
+<p>Gevaar: een nieuwkomer met een radicaal ander kostenmodel (platform, digitaal, geen fysieke infrastructuur) maakt je efficiëntie irrelevant.</p>
+
+<h2>Deel 4 — Porter — waar concurreer je?</h2>
+
+<p>Porter beschrijft drie generieke strategische posities. Ze zijn krachtig als diagnostisch instrument: ze dwingen tot een keuze en voorkomen dat een organisatie alles tegelijk probeert.</p>
+
+<table>
+  <tr><th>Richting</th><th>Kern</th><th>Risico</th></tr>
+  <tr><td><strong>Kostenleiderschap</strong></td><td>Laagste kostenbasis in de markt — niet per se de laagste prijs, maar de laagste kostenbasis</td><td>Kwetsbaar voor nog goedkopere nieuwkomers; marges staan permanent onder druk</td></tr>
+  <tr><td><strong>Differentiatie</strong></td><td>Onderscheidende propositie waarvoor klanten meer willen betalen</td><td>Vereist constante innovatie; kopieerbaarheid is het grootste gevaar</td></tr>
+  <tr><td><strong>Focus</strong></td><td>Een niche zo goed bedienen dat anderen het niet kunnen of willen evenaren</td><td>Niche kan krimpen; schaalvoordelen blijven beperkt</td></tr>
+</table>
+
+<p>De kern van Porter's argument: bedrijven die geen keuze maken — die tegelijk goedkoop én premium én voor iedereen willen zijn — eindigen "stuck in the middle." Ze concurreren op geen enkele dimensie sterk genoeg om duurzaam voordeel op te bouwen.</p>
+
+<h3>Porter × Treacy &amp; Wiersema — de combinatie als diagnostisch instrument</h3>
+
+<p>Porter zegt <em>waar</em> je concurreert. Treacy &amp; Wiersema zegt <em>hoe</em> je bent ingericht om daar te winnen. Ze zijn complementair — en de combinatie maakt mismatches zichtbaar.</p>
+
+<table>
+  <tr><th>Porter</th><th>Treacy &amp; Wiersema</th><th>Voorbeelden</th></tr>
+  <tr><td>Kostenleiderschap</td><td>Operational Excellence</td><td>McDonald's, Ryanair, Primark</td></tr>
+  <tr><td>Differentiatie</td><td>Product Leadership</td><td>Apple, Dyson, Gore-Tex</td></tr>
+  <tr><td>Differentiatie</td><td>Customer Intimacy</td><td>Coolblue, McKinsey, Salesforce</td></tr>
+  <tr><td>Focus</td><td>Alle drie mogelijk — in een niche</td><td>Leica (PL), gespecialiseerde advocaten (CI), Action (OE)</td></tr>
+</table>
+
+<p>De diagnostische vraag: zegt de organisatie te differentiëren (Porter) maar is ze ingericht als Operational Excellence (Treacy)? Dan belooft ze onderscheid maar levert ze standaard. Die mismatch is een veelvoorkomend strategisch probleem — en een krachtig startpunt voor een directiegesprek.</p>
+
+<h3>Kanttekening bij Porter</h3>
+<p>Het model gaat impliciet uit van stabiele markten en duidelijke sectorgransen. In snel veranderende markten — energie, technologie, platformeconomie — zijn die grenzen aan het vervagen. Porter geeft de positie, niet het businessmodel. Voor dat laatste: zie GOV-ALL-Innovatie.</p>
+
+<h2>Deel 5 — Inside-out — Hamel &amp; Prahalad</h2>
+
+<p>Porter kijkt van buiten naar binnen: eerst de markt analyseren, dan een positie kiezen. Hamel &amp; Prahalad draaien die volgorde om: begin bij wat je organisatie al kan en is — en bouw daar je strategie op.</p>
+
+<p>De centrale vraag: wat is waardevol, onderscheidend en uitbreidbaar?</p>
+<ul>
+  <li><strong>Waardevol</strong> — levert het iets op voor de klant dat de klant ook wil betalen?</li>
+  <li><strong>Onderscheidend</strong> — kunnen concurrenten dit makkelijk kopiëren, of vraagt het specifieke kennis, relaties of processen?</li>
+  <li><strong>Uitbreidbaar</strong> — kun je deze kracht inzetten voor nieuwe markten of klantgroepen, of is het beperkt tot één toepassing?</li>
+</ul>
+
+<p>Koppeling met VerkennenVerankeren: inside-out denken is de strategische toepassing van de verkenningsfase. Je begint niet met een businessplan — je begint met eerlijk kijken naar wat er al werkt en wat al onderscheidend is.</p>
+
+<div class="ref-block"><strong>→ GOV-ALL-VerkennenVerankeren v1.1</strong> — inside-out als startpunt voor de verkenningsfase.</div>
+
+<p>De sterkste strategieën combineren beide perspectieven. Porter geeft de marktlogica, Hamel &amp; Prahalad geven de organisatielogica. Zonder buiten-in weet je niet waar de markt naartoe gaat. Zonder binnen-in weet je niet waar je vandaan kunt vertrekken.</p>
+
+<h2>Deel 6 — Ansoff — where to play</h2>
+
+<p>De Ansoff matrix maakt onmiddellijk zichtbaar welk risico een organisatie neemt met een groeikeuze. Twee assen: bestaande versus nieuwe producten, bestaande versus nieuwe markten.</p>
+
+<table>
+  <tr><th></th><th>Bestaand product</th><th>Nieuw product</th></tr>
+  <tr><td><strong>Bestaande markt</strong></td><td><strong>Marktpenetratie</strong> — meer verkopen aan wie je al kent. Laagste risico, beperkt groeipotentieel.</td><td><strong>Productontwikkeling</strong> — nieuwe propositie voor bekende klant. Gemiddeld risico.</td></tr>
+  <tr><td><strong>Nieuwe markt</strong></td><td><strong>Marktontwikkeling</strong> — bestaand product naar nieuwe klant of geografie. Gemiddeld risico.</td><td><strong>Diversificatie</strong> — nieuw product én nieuwe markt. Hoogste risico, maar soms de enige optie als de kernmarkt krimpt.</td></tr>
+</table>
+
+<h3>Het spanningsveld tussen product management en sector marketing</h3>
+
+<p>Ansoff maakt een cruciaal organisatorisch onderscheid zichtbaar dat in de praktijk vaak voor conflict zorgt:</p>
+
+<p><strong>Product managers</strong> kijken van binnen naar buiten — ze vertrekken vanuit het product en onderzoeken welke markten daarvoor toegankelijk zijn. Hun logica: hoe zetten we dit product in zo veel mogelijk contexten in?</p>
+
+<p><strong>Sector marketeers</strong> kijken van buiten naar binnen — ze vertrekken vanuit de behoefte van een specifieke markt en bepalen welke producten en diensten daarvoor nodig zijn. Hun logica: wat heeft deze markt nodig, en hebben wij dat?</p>
+
+<p>Dit spanningsveld is precies waar nieuwe strategische inzichten ontstaan over "where to play." Een product manager ziet een bestaand product in een nieuwe markt (marktontwikkeling). Een sector marketeer ziet dat die markt ook andere producten en diensten vraagt die de organisatie nog niet heeft (productontwikkeling of diversificatie). Wie alleen één perspectief hanteert, mist de helft van het beeld.</p>
+
+<p>Koppeling met Christensen: organisaties die te lang in het marktpenetratie-kwadrant blijven terwijl hun kernmarkt wordt ondermijnd, maken een rationele maar fatale keuze. Ansoff beschrijft de keuze — Christensen beschrijft waarom organisaties de verkeerde maken.</p>
+
+<h2>Deel 7 — Het Infinite Game — vier elementen in strategie</h2>
+
+<p>Sinek onderscheidt eindige en oneindige spelers. Eindige spelers spelen om te winnen — ze hebben een duidelijk doel, een tijdshorizon en een scorekaart. Oneindige spelers spelen om te blijven spelen — hun doel is de organisatie levend, relevant en in lijn met de WHY te houden, ook als de wereld verandert.</p>
+
+<p>De meeste directies denken in eindige termen: marktaandeel, kwartaalcijfers, concurrenten verslaan. Het Infinite Game stelt een andere vraag: wat is de langetermijnovertuiging die al onze keuzes stuurt — ook als die keuzes op korte termijn pijn doen?</p>
+
+<p>Vier van de vijf elementen van het Infinite Game hebben directe strategische relevantie. Het vijfde element — Trusting Teams — hoort primair bij teamontwikkeling.</p>
+
+<div class="ref-block"><strong>→ GOV-ALL-TeamPsychologie v2.0</strong> — Trusting Teams als leiderschapsvoorwaarde voor psychologische veiligheid in teams.</div>
+
+<h3>Just Cause — de overtuiging die offers rechtvaardigt</h3>
+
+<p>Een Just Cause is een overtuiging die zo groot is dat mensen bereid zijn er offers voor te brengen — niet omdat het moet, maar omdat ze er echt in geloven. Het is toekomstgericht, inclusief en nooit volledig te bereiken. Dat laatste is het punt: je speelt om hem eeuwig na te streven, niet om hem af te vinken.</p>
+
+<p>De Just Cause is de WHY op organisatieniveau — geformuleerd als een wereld die je wilt zien, niet als een activiteit die je uitvoert. De KNRM's Just Cause is niet "mensen redden op zee" — dat is de missie. De Just Cause is: <em>geen mens mag verloren gaan.</em></p>
+
+<p>Strategische toepassing: de Just Cause fungeert als beslissingsfilter. Nieuwe initiatieven, marktkeuzes en investeringen worden getoetst aan de vraag: past dit bij onze overtuiging — of optimaliseren we alleen onze bestaande activiteit?</p>
+
+<h3>Worthy Rival — de concurrent als spiegel</h3>
+
+<p>In een eindig spel wil je de concurrent verslaan. In een oneindig spel gebruik je de concurrent als spiegel — om je eigen zwaktes te zien en beter te worden. De vraag verschuift van "hoe verslaan we hen?" naar "wat doen zij beter dan wij, en wat kunnen we daarvan leren?"</p>
+
+<p>Strategische toepassing: stop met benchmarken op metrics. Begin met eerlijk kijken naar waar een concurrent je overtreft — en wat dat zegt over jouw eigen blinde vlekken.</p>
+
+<p>Koppeling met TAYA: They Ask You Answer is een continue leerloop over wat de markt al vraagt. Wie zijn Worthy Rival serieus neemt, kijkt ook naar welke vragen de concurrent al beantwoordt die jij nog niet stelt.</p>
+
+<div class="ref-block"><strong>→ GOV-ALL-TheyAskYouAnswer v1.0</strong> — Worthy Rival als marktoriëntatie: leer van wat de markt al vraagt, ook als dat via een concurrent gaat.</div>
+
+<h3>Existential Flexibility — de bereidheid om de missie aan te passen</h3>
+
+<p>Existential Flexibility is de bereidheid om de kernactiviteit radicaal te veranderen als dat nodig is om de Just Cause te blijven dienen. Het is het moeilijkste element — het vraagt om loslaten van wat je succesvol heeft gemaakt.</p>
+
+<p>Apple in 1997 is het meest geciteerde voorbeeld: bijna failliet, Jobs keert terug en gooit het businessmodel om — van computers naar een ecosysteem. De Just Cause bleef. De activiteit veranderde radicaal.</p>
+
+<p>De koppeling met Weak Signals is scherp: Existential Flexibility begint bij de bereidheid te luisteren naar de wijsheid van de minderheid — de zwakke signalen die de meerderheid nog negeert. Op directieniveau is de vraag: hoe lang blijf je zeker van je zaak, en wanneer durf je te handelen op signalen die nog geen bewijs zijn?</p>
+
+<div class="ref-block"><strong>→ GOV-ALL-TeamPsychologie v2.0</strong> — Weak Signals en Ansoff als kader voor vroeg signaleren op teamniveau.<br><strong>→ GOV-ALL-Innovatie (in opbouw)</strong> — Existential Flexibility als organisatorische bereidheid: Christensen als diagnose, Lean Startup als methode.</div>
+
+<h3>Courage to Lead — durven terugkomen op eerdere keuzes</h3>
+
+<p>Oneindige spelers nemen beslissingen die op korte termijn pijn doen maar op lange termijn de Just Cause dienen. Dat vraagt moed — omdat aandeelhouders, medewerkers en klanten denken in kortetermijnresultaten.</p>
+
+<p>CVS Health stopte in 2014 met de verkoop van sigaretten in hun apotheken — een omzetverlies van twee miljard dollar per jaar. De beslissing was gebaseerd op hun Just Cause: mensen helpen gezonder te leven. Sigaretten verkopen past daar niet bij, ook al is het winstgevend.</p>
+
+<p>Courage to Lead is ook het moment waarop strategie en verandering samenkomen. Terugkomen op een eerdere keuze — ook als die keuze ooit breed gedragen was — is precies het moment waarop Kotter's verandermodel activeren noodzakelijk wordt.</p>
+
+<div class="ref-block"><strong>→ GOV-ALL-LeadingChange v1.1</strong> — Courage to Lead als aanleiding voor verandering: hoe je urgentie creëert rondom een moeilijke koerswijziging zonder de organisatie te verliezen.</div>
+
+<h2>Deel 8 — Christensen — de risicokant van strategie</h2>
+
+<p>Elke theorie in dit document beschrijft hoe je een positie bouwt. Christensen beschrijft waarom die positie onhoudbaar kan worden — en waarom de bedrijven die falen dat niet zien aankomen.</p>
+
+<p>De paradox: de bedrijven die falen bij disruptie doen alles <em>goed</em>. Ze luisteren naar hun beste klanten, investeren in de meest winstgevende producten, nemen rationele beslissingen. En toch verliezen ze.</p>
+
+<p>Hoe dat werkt: disruptieve innovatie begint altijd onderaan de markt — een goedkopere, eenvoudigere oplossing die slechter presteert op de dimensies die gevestigde spelers belangrijk vinden. De gevestigde speler negeert dit bewust: de marges zijn laag, de klanten niet aantrekkelijk, de technologie inferieur. Rationeel correct — en fataal.</p>
+
+<p>De disruptieve speler verbetert snel. Op een gegeven moment is de oplossing "goed genoeg" voor de mainstream klant — en goedkoper. Dan is het te laat.</p>
+
+<p>Drie mechanismen die organisaties blind maken:</p>
+<ul>
+  <li><strong>Resource allocation</strong> — budgetten gaan naar de producten met de hoogste marge. Disruptieve innovaties hebben lage marges in het begin.</li>
+  <li><strong>Klantgerichtheid als valkuil</strong> — je beste klanten trekken je omhoog in de markt, richting betere producten voor hogere prijzen. De onderkant laat je los.</li>
+  <li><strong>Processen en waarden</strong> — de organisatie is ingericht op wat nu werkt. Een ander businessmodel vereist andere processen, andere mensen, andere KPI's.</li>
+</ul>
+
+<p>Koppeling met Ansoff: organisaties die te lang in het marktpenetratie-kwadrant blijven terwijl hun markt wordt ondermijnd, maken een rationele maar strategisch fatale keuze. Christensen verklaart het mechanisme daarachter.</p>
+
+<p>Koppeling met Existential Flexibility: Christensen beschrijft <em>waarom</em> je moet veranderen. Sinek's Existential Flexibility beschrijft <em>of je de moed hebt</em> om het te doen.</p>
+
+<div class="ref-block"><strong>→ GOV-ALL-Innovatie (in opbouw)</strong> — Christensen's organisatorische gezicht: hoe richt je een organisatie in om wél te kunnen vernieuwen naast de kern? Lean Startup als methode, Osterwalder als bouwgereedschap.</div>
+
+<h2>Deel 9 — Strategie communiceren</h2>
+
+<p>Een strategie die niet bekend is, bestaat niet. Communiceren is niet één kick-off of presentatie — het is een continu proces van herhaling, vertaling naar concreet gedrag en gebruik als beslissingsframe in dagelijkse gesprekken.</p>
+
+<div class="ref-block">
+  <strong>→ GOV-ALL-LeadingChange v1.1</strong> — Kotter's stap 4 (visie communiceren) en de iteratieve lus tussen visie en communicatie als veranderproces.<br>
+  <strong>→ GOV-ALL-OvertuigingsPsychologie v1.3</strong> — strategie communiceren is geen informatieoverdracht maar overtuigen: principes die bepalen of een boodschap landt.<br>
+  <strong>→ GOV-ALL-ScalingUp (in opbouw)</strong> — ritmes, meetings en cascadering als systeem om strategie levend te houden in de hele organisatie.
+</div>
+
+<h2>Deel 10 — Paul's Praktijk</h2>
+
+<h3>Als sparringpartner bij directie</h3>
+
+<p>Directies denken vaak in activiteiten, niet in positionering. De meest effectieve opening is niet beginnen met frameworks — maar beginnen met de WHY-vraag: <em>"Waarom bestaat jullie organisatie — en herkennen medewerkers dat in dagelijkse beslissingen?"</em></p>
+
+<p>Daarna volgt een natuurlijke sequentie:</p>
+<ol>
+  <li>WHY + normatief kader — wat staat er en wat gaat voor bij conflict?</li>
+  <li>Treacy &amp; Wiersema — hoe zijn jullie ingericht, en is dat een bewuste keuze?</li>
+  <li>Porter — waar concurreer je, en wat laat je bewust los?</li>
+  <li>Mismatch detecteren — zegt de positionering iets anders dan de inrichting?</li>
+  <li>Ansoff — waar wil je groeien, en welk risico accepteer je daarbij?</li>
+  <li>Christensen als spiegel — waar komt de disruptie vandaan die jullie nu nog negeren?</li>
+</ol>
+
+<h3>Als projectvormgever</h3>
+
+<p>Strategie is de context waarin projecten betekenis krijgen. Zonder strategisch kader is een project een activiteit — met strategisch kader is het een investering.</p>
+
+<p>Bij het kaderen van een project:</p>
+<ul>
+  <li>Welke waardediscipline (Treacy) dient dit project — en hoe?</li>
+  <li>Welke strategische richting (Porter) versterkt dit project?</li>
+  <li>In welk Ansoff-kwadrant zit dit initiatief — en accepteert de organisatie dat risico?</li>
+  <li>Past dit bij de Just Cause — of is het opportunisme?</li>
+  <li>Bouwt dit op wat de organisatie al goed kan (inside-out)?</li>
+</ul>
+
+<h3>In proposities</h3>
+<ul>
+  <li>Treacy gebruiken om de waardediscipline van de klant te articuleren vóórdat je een voorstel schrijft — begrijp je hoe zij willen winnen?</li>
+  <li>Ansoff gebruiken om het gesprek over groeiambitie te structureren — product management versus sector marketing als bewust onderscheid</li>
+  <li>Normatief kader aanbieden als deliverable bij strategietrajecten — concreet, co-creatief en met directe operationele waarde</li>
+  <li>Christensen als opener bij organisaties die succesvol zijn maar voelen dat er iets op hen afkomt — de vraag stellen die ze zichzelf niet durven stellen</li>
+</ul>
+
+</div>
+
+<div class="doc-footer">
+  <span>GOV-ALL-Strategie v1.1 — WillemsWorks // juni 2026</span>
+  <a href="index.html">← Terug naar library</a>
+</div>
+
+</body>
+</html>

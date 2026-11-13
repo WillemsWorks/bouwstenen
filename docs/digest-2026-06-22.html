@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennisbank Digest — Week 26, 2026 — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'BDO Grotesk', sans-serif; font-weight: 300; background: var(--white); color: var(--ink); line-height: 1.75; font-size: 16px; }
+    .topbar a:hover { text-decoration: underline; }
+    .doc-header { background: var(--purple-dark); color: var(--white); padding: 56px 48px 48px; }
+    .doc-header-inner { max-width: 860px; margin: 0 auto; }
+    .doc-label { display: inline-block; background: var(--lime); color: var(--purple-dark); font-family: 'Sora', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; margin-bottom: 20px; }
+    .doc-title { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 40px; line-height: 1.15; color: var(--white); margin-bottom: 12px; }
+    .doc-subtitle { font-size: 15px; font-weight: 300; color: var(--purple-light); max-width: 600px; margin-bottom: 32px; line-height: 1.65; }
+    .doc-meta { display: flex; gap: 28px; flex-wrap: wrap; font-size: 13px; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px; }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+    .disclaimer { background: var(--lime-light); border-left: 4px solid var(--lime); padding: 16px 24px; font-size: 13px; color: var(--ink-mid); max-width: 860px; margin: 36px auto; }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a { color: var(--purple-dark); text-decoration: none; font-weight: 500; }
+    .disclaimer a:hover { text-decoration: underline; }
+    .doc-content { max-width: 860px; margin: 0 auto; padding: 0 48px 80px; }
+    .doc-content h1 { display: none; }
+    .doc-content h2 { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 22px; color: var(--purple-dark); margin: 52px 0 4px; padding-bottom: 12px; border-bottom: 2px solid var(--lime); }
+    .doc-content h2 a { color: var(--purple-dark); text-decoration: none; }
+    .doc-content h2 a:hover { text-decoration: underline; }
+    .doc-content p { margin-bottom: 16px; }
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+    hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+    .doc-footer { background: var(--purple-dark); color: rgba(255,255,255,0.45); padding: 28px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-family: 'Sora', sans-serif; }
+    .doc-footer a { color: var(--lime); text-decoration: none; font-weight: 500; }
+    .doc-footer a:hover { text-decoration: underline; }
+    .digest-eyebrow { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple-dark); opacity: 0.55; margin-bottom: 4px; }
+    .digest-meta-line { font-size: 13px; font-style: italic; color: var(--ink-mid); margin-bottom: 10px; }
+    .digest-gov-link { display: inline-block; font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 600; color: var(--purple-dark); background: var(--purple-light); padding: 4px 10px; border-radius: 3px; margin-bottom: 16px; }
+    .digest-tip { border-left: 3px solid var(--lime); background: var(--lime-light); padding: 14px 20px; margin: 4px 0 8px; font-size: 14px; color: var(--ink); }
+    .digest-tip strong { color: var(--purple-dark); }
+    .digest-source-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--purple-dark);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .digest-source-link:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .topbar, .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+      .doc-footer { flex-direction: column; gap: 10px; text-align: center; }
+      .topnav-inner { padding: 0 20px; }
+    }
+    .topnav { background: var(--purple-dark); border-bottom: 1px solid rgba(196,255,72,0.15); position: sticky; top: 0; z-index: 100; }
+    .topnav-inner { max-width: 860px; margin: 0 auto; padding: 0 48px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link { font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.55); text-decoration: none; padding: 6px 14px; border-radius: 4px; transition: color 0.12s, background 0.12s; }
+    .topnav-link:hover, .topnav-link.active { color: var(--lime); background: rgba(196,255,72,0.07); }
+    .topnav-dropdown { position: relative; }
+    .topnav-dropdown-toggle { font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.55); text-decoration: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: color 0.12s, background 0.12s; user-select: none; }
+    .topnav-dropdown-toggle:hover, .topnav-dropdown-toggle.active { color: var(--lime); background: rgba(196,255,72,0.07); }
+    .topnav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.15s; }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg { transform: rotate(180deg); }
+    .topnav-dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--purple-dark); border: 1px solid rgba(196,255,72,0.2); border-radius: 6px; min-width: 180px; padding: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .topnav-dropdown.open .topnav-dropdown-menu { display: block; }
+    .topnav-dropdown-item { display: block; font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: color 0.12s, background 0.12s; }
+    .topnav-dropdown-item:hover, .topnav-dropdown-item.active { color: var(--lime); background: rgba(196,255,72,0.07); }
+    .topnav-dropdown-item-label { font-size: 10px; color: rgba(255,255,255,0.3); display: block; margin-top: 1px; }
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link active">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Kennisbank digest</span>
+    <h1 class="doc-title">Week 26 &middot; 22 juni 2026</h1>
+    <p class="doc-subtitle">Nieuwe publicaties relevant voor verandermanagement, B2B-strategie en organisatie.</p>
+    <div class="doc-meta">
+      <span><strong>Editie</strong> Week 26, 2026</span>
+      <span><strong>Items</strong> 6</span>
+      <span><strong>Gegenereerd</strong> 22 juni 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Deze pagina wordt wekelijks automatisch gegenereerd op basis van actuele publicaties, onderzoek en artikelen. Items worden pas onderdeel van een GOV-framework na bespreking &mdash; zie de bijbehorende <a href="index.html">bouwstenen</a> voor de verwerkte inzichten.</p>
+</div>
+
+<div class="doc-content">
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Verandermanagement &mdash; Engagement Gap</div>
+  <h2><a href="https://www.qultify.com/change-management-trends-2026/" target="_blank">Change Management Trends 2026: What Most Teams Are Still Getting Wrong</a></h2>
+  <p class="digest-meta-line">Qultify &middot; juni 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Urgentie creëren, coalitie bouwen (Kotter 8 stappen)</span>
+  <p>74% van de leiders claimt medewerkers te betrekken bij verandertrajecten &mdash; maar slechts 42% van de medewerkers ervaart dat ook zo. Dit engagement-gat wordt in 2026 aangewakkerd door AI-transformaties: 78% van de CHROs erkent dat AI nieuwe rolverdeling en werkwijzen vereist. Organisaties met uitstekend changemanagement halen 73% succeskans; zonder programma slechts 39%. <a href="https://www.qultify.com/change-management-trends-2026/" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Als interim manager is dit harde aanleiding om bij elke opdracht te inventariseren hoe groot de perceptie-gap is tussen leidinggevenden en medewerkers &mdash; en dat meetbaar te maken vóór de interventiefase.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Psychologische Veiligheid &mdash; Wereldwijd Onderzoek</div>
+  <h2><a href="https://psychsafety.workplaceoptions.com/resource/the-coe-2026-psychological-safety-study/" target="_blank">The 2026 Psychological Safety Study</a></h2>
+  <p class="digest-meta-line">Center for Organizational Effectiveness (COE / WorkplaceOptions) &middot; maart 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Psychologische veiligheid (Amy Edmondson / SCARF)</span>
+  <p>Grootschalig onderzoek over 47 landen. Slechts 26% van de leiders creëert daadwerkelijk psychologische veiligheid, en 1 op de 4 medewerkers durft niet open te spreken. Waar psychologische veiligheid wél aanwezig is: 19% hogere productiviteit en 31% meer innovatie. <a href="https://psychsafety.workplaceoptions.com/resource/the-coe-2026-psychological-safety-study/" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Bruikbaar als onderbouwing bij directies die psychologische veiligheid als 'soft' bestempelen &mdash; de business case is nu empirisch sterker dan ooit, met data uit 47 landen.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Psychologische Veiligheid &mdash; Leiderschapsgedrag</div>
+  <h2><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1768461/full" target="_blank">Psychological safety in interdisciplinary teams: how leadership behaviors empower teams</a></h2>
+  <p class="digest-meta-line">Frontiers in Psychology &middot; 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Psychologische veiligheid, teamdynamiek, coördinatiemechanismen</span>
+  <p>Academisch onderzoek naar het verband tussen concreet leiderschapsgedrag en psychologische veiligheid in interdisciplinaire teams. De studie identificeert welke leiderschapsbewegingen &mdash; actief uitnodigen tot spreken, erkennen van onzekerheid, modelleren van kwetsbaarheid &mdash; de meeste impact hebben op teamprestaties. <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1768461/full" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Direct inzetbaar voor teamcoaching en leiderschapsontwikkeling in complexe, multidisciplinaire organisaties &mdash; geeft handelingsperspectief naast de diagnose.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">B2B Sales &mdash; 7 Strategische Verschuivingen</div>
+  <h2><a href="https://www.180ops.com/blog/b2b-sales-in-2026-the-7-strategic-shifts-reshaping-revenue/" target="_blank">B2B Sales in 2026: The 7 Strategic Shifts Reshaping Revenue</a></h2>
+  <p class="digest-meta-line">180ops &middot; 3 maart 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: B2B-sales, commerciële transformatie, inside-out strategie</span>
+  <p>Koopprocessen zijn niet-lineair, collectief en emotioneel gedreven &mdash; terwijl veel verkooporganisaties nog steeds lineaire funnels hanteren. Twee meest voorkomende fouten: geen rekening houden met meerdere beslissers, en aannemen dat B2B-kopers rationeel en digitaal kopen. De winnende verschuiving: van buyer-led naar signal-led sales. <a href="https://www.180ops.com/blog/b2b-sales-in-2026-the-7-strategic-shifts-reshaping-revenue/" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Gebruik dit rapport om het gesprek te starten over hoe het salesproces van de klant is ingericht versus hoe klanten écht kopen. Het "7 shifts"-kader werkt goed als spiegeltje.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">B2B Contentmarketing &mdash; Kwaliteit Wint van Technologie</div>
+  <h2><a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank">B2B Content & Marketing Trends: Insights for 2026</a></h2>
+  <p class="digest-meta-line">Content Marketing Institute &middot; 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Contentmarketing (Marcus Sheridan / They Ask You Answer), strategische positionering</span>
+  <p>95% van de B2B-marketeers gebruikt AI, maar slechts 39% ziet betere prestaties. Wat wél werkt: contentrelevantie en teamvaardigheden. Video levert de beste resultaten, gevolgd door klantcases en eigen onderzoek. Kooptrajecten worden langer en complexer. <a href="https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Versterkt het They Ask You Answer-argument richting technische klanten: ga voor diepte en relevantie, niet voor AI-volume. Klantcases en eigen onderzoek zijn de meest onderscheidende formats.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">B2B Verandering &mdash; Revenue Loop Vervangt Funnel</div>
+  <h2><a href="https://www.salesglobe.com/blog/business-to-business-sales-strategy/" target="_blank">Why 2026 Demands a Different B2B Sales Strategy</a></h2>
+  <p class="digest-meta-line">SalesGlobe &middot; 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Commerciële transformatie, organisatieontwerp (Mintzberg: coördinatie)</span>
+  <p>De traditionele funnel weerspiegelt niet meer hoe omzet werkt. In 2026 is omzet een continue loop van acquisitie, expansie, verlenging en reactivatie. Het structurele probleem: CRM-systemen zijn gebouwd voor acquisitie, niet voor accountmanagement en expansie tegelijk. <a href="https://www.salesglobe.com/blog/business-to-business-sales-strategy/" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Relevant voor interim-opdrachten waarbij sales en klantbehoud organisatorisch gescheiden zijn: de revenue loop geeft een concreet argument voor integratie van commerciële functies.</div>
+</div>
+
+</div>
+
+<footer class="doc-footer">
+  <span>Automatisch gegenereerd op 22 juni 2026 &middot; Bouwstenen van Paul Willems</span>
+  <a href="digest.html">&larr; Alle edities</a>
+</footer>
+
+</body>
+</html>
+

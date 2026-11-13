@@ -1,3 +1,5 @@
+> **Intern werkdocument van Paul Willems (WillemsWorks) — niet bedoeld om extern te delen.** Dit bestand staat in een openbare repository omdat de Bouwstenen-site daaruit wordt gepubliceerd. Deel of hergebruik het niet zonder toestemming.
+
 # Kennisbank Weekly Digest — Instructie
 
 *Dit bestand is de enige bron van waarheid voor de wekelijkse Cowork-taak.

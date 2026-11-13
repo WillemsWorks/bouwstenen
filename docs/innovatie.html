@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovatie — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* Topbar */
+    .topbar a:hover { text-decoration: underline; }
+
+    /* Doc header */
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    /* Content wrapper */
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+
+    .doc-content h3 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 500;
+      font-size: 17px;
+      color: var(--purple-dark);
+      margin: 32px 0 10px;
+    }
+
+    .doc-content h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin: 24px 0 8px;
+    }
+
+    .doc-content p {
+      margin-bottom: 16px;
+    }
+
+    .doc-content ul, .doc-content ol {
+      margin: 12px 0 16px 20px;
+    }
+
+    .doc-content li { margin-bottom: 6px; }
+
+    .doc-content blockquote {
+      border-left: 3px solid var(--purple-light);
+      margin: 28px 0;
+      padding: 14px 20px;
+      background: var(--lime-light);
+      font-size: 16px;
+      color: var(--purple-dark);
+      font-style: italic;
+    }
+    .doc-content blockquote p { margin: 0; color: var(--purple-dark); }
+
+    /* Tables */
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+    .doc-content th {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 10px 16px;
+      text-align: left;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .doc-content td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .doc-content tr:nth-child(even) td { background: var(--lime-light); }
+
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+    .doc-content code {
+      background: var(--lime-light);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-family: 'Courier New', monospace;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* Footer */
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .topbar, .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+    }
+  
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+    }
+
+  
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    /* Dropdown */
+    .topnav-dropdown {
+      position: relative;
+    }
+    .topnav-dropdown-toggle {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s, background 0.12s;
+      user-select: none;
+    }
+    .topnav-dropdown-toggle:hover,
+    .topnav-dropdown-toggle.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-toggle svg {
+      width: 10px; height: 10px;
+      transition: transform 0.15s;
+    }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg {
+      transform: rotate(180deg);
+    }
+    .topnav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--purple-dark);
+      border: 1px solid rgba(196,255,72,0.2);
+      border-radius: 6px;
+      min-width: 180px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .topnav-dropdown.open .topnav-dropdown-menu {
+      display: block;
+    }
+    .topnav-dropdown-item {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-dropdown-item:hover,
+    .topnav-dropdown-item.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-item-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 1px;
+    }
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+    }
+
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link active">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Persoonlijk werkframework</span>
+    <h1 class="doc-title">Innovatie</h1>
+    <p class="doc-subtitle">Drie kaders tot één werkend geheel: Lean Startup als ruggengraat (hoe je leert), Christensen als diagnoselaag (of iets echt disruptief is), Osterwalder als gereedschapskist voor diagnose én ontwerp. Van diagnose tot uitvoering in één instrumentarium.</p>
+    <div class="doc-meta">
+      <span><strong>Versie</strong> v1.0</span>
+      <span><strong>Datum</strong> juli 2026</span>
+      <span><strong>Bronnen</strong> Eric Ries · Clayton Christensen · Alexander Osterwalder · Geoffrey Moore · Agile/Scrum · eigen praktijkervaring</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Dit document is een persoonlijk werkframework van <strong>Paul Willems</strong> (WillemsWorks). 
+  Het is opgebouwd uit boeken, seminars en eigen praktijkervaring — geen samenvatting, maar een actief werkinstrument. 
+  De inhoud is intellectueel eigendom van Paul Willems. Gebruik zonder toestemming is niet toegestaan.</p>
+  <p>Meer over mijn werkwijze en aanpak: <a href="https://willemsworks.nl" target="_blank">willemsworks.nl</a></p>
+</div>
+
+<div class="doc-content">
+<p><strong>Document:</strong> <code>GOV-ALL-Innovatie</code> | v1.0 | juli 2026 | Persoonlijk werkframework | innovatie, businessmodelontwikkeling, propositieontwerp | alle platforms | strategiesessies, workshopdesign, klantdiagnose, proposities</p>
+<p><strong>Bronnen:</strong> Eric Ries — The Lean Startup (Build-Measure-Learn) · Clayton Christensen — Jobs-to-be-Done en Disruptive Innovation (Resources/Processes/Values) · Alexander Osterwalder — Business Model Canvas, Value Proposition Canvas, Value Proposition Statement · Geoffrey Moore — positioneringsformat (Crossing the Chasm) · Agile/Scrum — user stories · Eigen praktijkervaring en case-analyse (Paul Willems)</p>
+<p><strong>Masterdocument:</strong> MASTER-ALL-Structure v2.2</p>
+<p><strong>Verwante bouwstenen:</strong>
+- <code>GOV-ALL-LeanStartup</code> v1.0 — brondocument, hier geïntegreerd als ruggengraat
+- <code>GOV-ALL-VerkennenVerankeren</code> v1.1 — de verkennen-cirkel is waar Lean Startup ook voor fysieke producten (ontwerpstadium) toepasbaar wordt
+- <code>GOV-ALL-TheyAskYouAnswer</code> v1.0 — praktijkvoorbeeld van digitale MVP-cyclus (content als validatie-instrument)
+- <code>GOV-ALL-CustomerMaturity</code> v1.3 — Osterwalder-verwijzing in dat document wijst nu hierheen; connectivity (Generatie 3 datamechanismen) sluit direct aan op de fysiek/digitaal-these hieronder
+- <code>GOV-ALL-Faciliteren</code> v1.0 — VPC/BMC-sessies als toepassing van de tien facilitatieprincipes (functie-bewuste opdracht, gedeeld scherm)
+- <code>GOV-ALL-Strategie</code> v1.1 — Porter's operationele effectiviteit vs. strategie als onderscheid met disruptie</p>
+<p><strong>Doel:</strong> Dit document verbindt drie kaders tot één werkend geheel voor innovatievraagstukken: Lean Startup als ruggengraat (hoe je leert), Christensen als diagnoselaag (of iets echt disruptief is), Osterwalder als gereedschapskist voor zowel diagnose als ontwerp (hoe je een bestaand model doorgrondt, en hoe je een propositie of nieuw businessmodel concreet maakt). Elk kader beantwoordt een andere vraag; samen vormen ze een compleet instrumentarium van diagnose tot uitvoering.</p>
+<hr />
+<h2>Versietabel</h2>
+<table>
+<thead>
+<tr>
+<th>Versie</th>
+<th>Datum</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0</td>
+<td>juli 2026</td>
+<td>Initiële opbouw. Samenvoeging van LeanStartup, Christensen en Osterwalder tot één werkframework, opgebouwd via interview en case-toetsing.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Deel 1 — Lean Startup: de ruggengraat</h2>
+<h3>De kern</h3>
+<p>Build-Measure-Learn: bouw het kleinste dat nodig is om een aanname te toetsen, meet het resultaat, leer ervan, en beslis dan pas over de volgende stap. Het doel is niet snelheid op zich — het doel is <em>gevalideerd</em> leren vóór je grote investeringen doet.</p>
+<h3>Verrijking — Paul's centrale inzicht: een driedeling, geen tweedeling</h3>
+<p>De reden dat Build-Measure-Learn zo goed werkt, wordt vaak te binair voorgesteld als "fysiek versus digitaal." Preciezer is een driedeling naar <strong>moment in de levenscyclus</strong>:</p>
+<ol>
+<li><strong>Ontwerpstadium (vóór levering)</strong> — ook fysieke producten kunnen hier gevalideerd worden met modellen en prototypes: een "fysieke MVP" om marktbehoefte te toetsen vóórdat er in productie wordt gegaan. Dit is precies de <strong>verkennen-cirkel uit <code>GOV-ALL-VerkennenVerankeren</code></strong> — Lean Startup ís bij uitstek die verkenningsfase, ook voor hardware.</li>
+<li><strong>Na levering, bij de klant (pure hardware)</strong> — hier stopt het. Eenmaal geleverd is het product wat het is; geen upgrades meer mogelijk zonder herproductie en herlevering.</li>
+<li><strong>Na levering, bij producten met een digitale kern ("slimme producten")</strong> — hier gaat het wél door. Tesla is het scherpe voorbeeld: de auto zelf verandert niet, maar de functionaliteit verandert doordat de software tijdens gebruik wordt bijgewerkt. De fysieke schil is bevroren, de digitale kern niet.</li>
+</ol>
+<p><strong>De brug naar connectiviteit (link met CustomerMaturity):</strong> dit verklaart waarom <strong>connectivity als datamechanisme</strong> (Generatie 3 uit GOV-ALL-CustomerMaturity) zo krachtig is: het maakt een fysiek product retroactief "digitaal update-baar," en verplaatst het dus van categorie 2 naar categorie 3 hierboven.</p>
+<h3>Verrijking — twee aanvullingen uit Ries zelf</h3>
+<p><strong>Groeimotor.</strong> Ries onderscheidt drie soorten groeimotoren: terugkerende klanten (retentie/sticky), virale groei, en betaalde acquisitie. De keuze bepaalt waar je in een organisatie op moet sturen en meten. Voor Paul's praktijk is dit een <strong>nieuw, nog te verkennen lens</strong>: klantgroepen worden in B2B-vraagstukken doorgaans gesegmenteerd naar rol in de keten (installateur, groothandel, specifier) of bedrijfstype — niet naar groeimotor. De groeimotor-vraag ("groeien we hier via herhaalaankoop, via mond-tot-mondreclame binnen een netwerk van installateurs, of via betaalde acquisitie?") kan dwars door die bestaande segmentatie heen een scherpere sturingsvraag toevoegen. Dit is nog geen staande praktijk — een aantekening voor verdere toepassing, geen HOW die al bewezen is.</p>
+<p><strong>Kleine batches.</strong> Ries adviseert kleine batches boven grote, omdat ze sneller leren mogelijk maken en verspilling beperken (oorsprong: lean manufacturing/Toyota). Dit maakt de methode ook bruikbaar binnen bestaande organisaties, niet alleen bij startups.</p>
+<h3>Paul's Praktijk</h3>
+<p>MVP werkt bij Paul primair op de <strong>digitale/content-laag</strong>, niet op fysieke producten. Concreet voorbeeld: bij de implementatie van <strong>They Ask You Answer</strong> (zie <code>GOV-ALL-TheyAskYouAnswer</code>) op een specifiek productconcept bestaat de MVP uit een minimale customer journey met een minimaal aantal content-artikelen — gebouwd om te valideren of deze artikelen daadwerkelijk tot meer interactie op de website leiden, vóórdat er verder wordt opgeschaald. Dat is zuivere Build-Measure-Learn: klein beginnen, meten, dan pas investeren.</p>
+<p><strong>Kleine batches in de praktijk:</strong> dit principe is al staande praktijk. Een specifieke klant fungeert regelmatig al als sample voor een nieuw concept, vóórdat het breder wordt uitgerold — precies het small-batch-principe, toegepast op klantniveau in plaats van op productie-aantallen.</p>
+<p>Voor projecten rond nieuwe marktroutes, projectmanagement en digitale dienstontwikkeling is de digitale MVP het primaire toepassingsgebied. Bij fysieke producten is Lean Startup vooral bruikbaar in het ontwerpstadium (zie boven) — tenzij connectivity de levenscyclus-beperking oplost.</p>
+<hr />
+<h2>Deel 2 — Christensen: de diagnoselaag</h2>
+<h3>De kern</h3>
+<p>Twee kernideeën, vaak los van elkaar gebruikt:</p>
+<p><strong>Jobs-to-be-Done</strong> — klanten "huren" een product om een taak te klaren. Ze kopen geen product om het product zelf, maar om de vooruitgang die het mogelijk maakt. Directe brug naar Osterwalder's VPC: de "customer jobs" op het canvas <em>zijn</em> letterlijk Christensen's jobs-to-be-done — geen toeval, Osterwalder heeft JTBD bewust in het VPC verwerkt.</p>
+<p><strong>Disruptive Innovation</strong> — waarom gevestigde bedrijven ingehaald worden, niet ondanks maar juist <em>door</em> goed management. Ze luisteren naar hun beste klanten, investeren in de hoogste marges, en bewegen daardoor steeds verder omhoog in de markt. Dat gedrag maakt ze blind voor kansen onderaan de markt (<strong>low-end disruption</strong> — goedkoper/eenvoudiger voor overserved klanten) of buiten de markt (<strong>new-market disruption</strong> — toegankelijk maken voor non-consumers). De mechaniek achter de blindheid: <strong>Resources, Processes, Values (RPV)</strong> — een disruptieve kans past niet bij de marge-eisen en marktomvang die een gevestigd bedrijf als "de moeite waard" beschouwt, dus wordt hij rationeel genegeerd tot het te laat is.</p>
+<h3>Het RPV-diagnose-instrument</h3>
+<p>Vier vragen om te bepalen of iets écht disruptief is, of dat het woord verkeerd gebruikt wordt:</p>
+<ol>
+<li><strong>RPV-blokkade</strong> — zou de gevestigde partij dit kunnen kopiëren zonder haar eigen verdienmodel te breken? (Nee = mogelijk disruptief; Ja = sustaining/kanaalinnovatie, geen disruptie)</li>
+<li><strong>Non-consumptie of overserved</strong> — wordt een klant of aanbieder ontsloten die er zonder deze innovatie niet zou zijn? Let op verborgen vormen: "illegaal naar legaal" (iTunes), "particulier naar aanbieder" (Uber, Airbnb).</li>
+<li><strong>Trajectory</strong> — verovert de nieuwkomer gestaag de mainstream terwijl de gevestigde partij structureel terugvalt, of ontstaat er een stabiel naast-elkaar-bestaan (multichannel-coëxistentie)?</li>
+<li><strong>Welke laag van de waardeketen</strong> — bij meerdere schakels (maker/distributeur/verkoper) moet je specificeren op welke laag je toetst. Disruptie kan de ene laag vernietigen (platenzaken) en de andere alleen dwingen tot aanpassing (platenmaatschappijen, later zelf weer gedisrupt door streaming).</li>
+</ol>
+<h3>Geteste cases</h3>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>RPV-blokkade</th>
+<th>Non-consumptie</th>
+<th>Trajectory</th>
+<th>Conclusie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nucor (staalminimills)</strong></td>
+<td>Ja — marge-mix zou breken</td>
+<td>Ja — laagste segment</td>
+<td>Ja — klom op, verdrong incumbents</td>
+<td>Zuivere low-end disruption (Christensen's eigen kernvoorbeeld)</td>
+</tr>
+<tr>
+<td><strong>IKEA (flatpack)</strong></td>
+<td>Ja — kwaliteitspositionering zou breken</td>
+<td>Ja — prijsgevoelige, wachtende klanten</td>
+<td>Ja — wereldwijd marktleider, traditionele meubelmakers structureel teruggedrongen</td>
+<td>Zuivere, sterke disruptie — beter voorbeeld dan de meeste standaardcases</td>
+</tr>
+<tr>
+<td><strong>iTunes / platenzaken</strong></td>
+<td>Ja voor platenlabels (bundel-marge brak)</td>
+<td>Ja — "illegaal naar legaal"</td>
+<td>Ja voor platenzaken (Tower Records failliet), gedeeltelijk voor labels (overleefden verzwakt, later gedisrupt door streaming)</td>
+<td>Disruptie, maar laag-specifiek: vernietigt distributie, dwingt labels tot aanpassing</td>
+</tr>
+<tr>
+<td><strong>Quatt (verticale integratie)</strong></td>
+<td>Ja — zou dealer-/groothandelstructuur van incumbents breken</td>
+<td>Ja — dichter op de klant, kostenvoordeel</td>
+<td>Nog in ontwikkeling</td>
+<td>Disruptief via waardeketen-architectuur, niet via product/prijs</td>
+</tr>
+<tr>
+<td><strong>WeHeat (installatiegemak)</strong></td>
+<td>Deels</td>
+<td>Gemengd — deels non-consumptie (nieuwe installateurs), deels versnelling van bestaand gedrag</td>
+<td>Nog in ontwikkeling</td>
+<td>Realistische hybride-case — de meeste praktijkvoorbeelden zijn dit, geen schoolvoorbeeld</td>
+</tr>
+<tr>
+<td><strong>Uber / Airbnb (platforms)</strong></td>
+<td>Ja — vergunningen/vastgoed-kapitaal van incumbents zou breken</td>
+<td>Ja — aan de <strong>aanbodkant</strong>: gewone mensen worden chauffeur/verhuurder</td>
+<td>Ja</td>
+<td>Disruptie via de aanbodkant — vaak over het hoofd gezien omdat iedereen naar de vraagkant kijkt</td>
+</tr>
+<tr>
+<td><strong>Picnic / Just Eat (tegenvoorbeelden)</strong></td>
+<td><strong>Nee</strong> — incumbents kopieerden meteen (eigen bezorgdienst naast de winkel)</td>
+<td>Nee — bestaande klanten, ander kanaal</td>
+<td><strong>Nee</strong> — marktaandeel geplafonneerd (~9%), stabiele coëxistentie</td>
+<td>Geen disruptie — sustaining kanaalinnovatie die vaak ten onrechte zo genoemd wordt</td>
+</tr>
+<tr>
+<td><strong>Sony/Apple (iPod)</strong></td>
+<td>Nee — geen fundamenteel ander aanbod voor nieuw segment</td>
+<td>Nee — zelfde mainstream klant</td>
+<td>Ja — Sony verloor marktleiderschap</td>
+<td>Geen disruptie in Christensens zin — betere uitvoering door een wendbaarder bedrijf (vgl. Jill Lepore's kritiek op te ruim gebruikte "disruptie")</td>
+</tr>
+</tbody>
+</table>
+<h3>Belangrijkste les uit de case-toetsing</h3>
+<p>Platform-architectuur (Uber, Airbnb, Just Eat) is <strong>geen</strong> aparte disruptie-categorie — het is een architectuurkeuze die los staat van de vraag of iets disruptief is. Test niet "is dit een platform" maar altijd dezelfde vier vragen. Bij platforms zit de disruptie vaak aan de <strong>aanbodkant</strong>, wat makkelijk over het hoofd wordt gezien omdat de intuïtie automatisch naar de klant/vraagkant kijkt.</p>
+<h3>Paul's Praktijk</h3>
+<p>Paul gebruikt de RPV-analyse al actief om te bepalen of een dreiging voor een opdrachtgever serieus is. De vier vragen hierboven zijn de expliciete versie van wat tot nu toe impliciet gebeurde — nu herbruikbaar als vast instrument bij het beoordelen van nieuwe marktentrees of concurrentiedreigingen.</p>
+<hr />
+<h2>Deel 3 — Osterwalder: de gereedschapskist</h2>
+<h3>De kern</h3>
+<p>Twee canvassen, met een scherpe keuzelogica — niet gebaseerd op een vaste volgorde, maar op de vraag van de opdrachtgever:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Bron</th>
+<th>Wanneer je hem pakt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business Model Canvas (BMC)</strong></td>
+<td>Osterwalder</td>
+<td>Opdrachtgever wil <strong>breed</strong> nadenken over nieuwe mogelijkheden, of een bestaand businessmodel evalueren</td>
+</tr>
+<tr>
+<td><strong>Value Proposition Canvas (VPC)</strong></td>
+<td>Osterwalder</td>
+<td>Opdrachtgever wil <strong>concreet</strong> weten: welke producteigenschappen, welke prijs, voor welke doelgroep, via welk kanaal</td>
+</tr>
+<tr>
+<td><strong>Value Proposition Statement</strong></td>
+<td>Osterwalder (companion-tool bij VPC)</td>
+<td>Een groter project een gemeenschappelijk gedragen doel geven waar iedereen gedurende het project naar kan terugverwijzen</td>
+</tr>
+<tr>
+<td><strong>Positioneringsformat</strong> ("Voor [doelgroep] die [probleem], is [product] een [categorie] die [voordeel]. In tegenstelling tot [alternatief], zorgt het voor [unieke waarde].")</td>
+<td>Geoffrey Moore, <em>Crossing the Chasm</em> (1991) — vaak aangehaald in lean/startup-context, maar oorspronkelijk niet van Ries</td>
+<td>Zelfde functie als Value Proposition Statement — heldere, herhaalbare positionering</td>
+</tr>
+<tr>
+<td><strong>User stories</strong> ("Als [gebruikerstype] wil ik [doel] zodat [reden]")</td>
+<td>Agile/Scrum (Extreme Programming, Mike Cohn)</td>
+<td>Aannames eruit halen, precies begrijpen wat mensen nodig hebben — vaak bij interne projecten rond automatisering/digitalisering</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Geen vaste volgorde.</strong> De keuze hangt af van drie dingen: de vraag van de opdrachtgever, wat de groep aankan, en hoe concreet het resultaat moet zijn.</p>
+<h3>Verrijking</h3>
+<p>Paul's toegevoegde waarde zit niet in een eigen aanpassing van de canvassen zelf (hij gebruikt ze dicht bij het boek), maar in de <strong>samenvoeging van vier bronnen tot één praktische gereedschapskist</strong> — Osterwalder, Moore en Agile/Scrum door elkaar, ingezet op basis van de aard van de vraag in plaats van blind een methode te volgen.</p>
+<h3>Paul's Praktijk</h3>
+<p>Beide canvassen worden altijd als <strong>workshopmethodiek met een groep</strong> ingezet — nooit als iets dat Paul zelf alleen invult. Dit is een directe, tot nu toe onbewust toegepaste koppeling met <code>GOV-ALL-Faciliteren</code>: functie-bewuste opdrachten, gedeeld scherm, voorbeelden op maat van de groep — allemaal al aanwezig in hoe een VPC/BMC-sessie wordt opgezet, zonder dat het expliciet zo benoemd werd voordat Faciliteren werd gebouwd.</p>
+<hr />
+<h2>Deel 4 — Hoe de drie lagen samenwerken</h2>
+<p>Elke laag beantwoordt een andere vraag in het innovatieproces — maar niet allemaal op dezelfde manier. De scherpere as hierin is niet "strategisch versus tactisch niveau," maar <strong>functie-breedte</strong>:</p>
+<ol>
+<li><strong>Christensen</strong> (uitsluitend diagnose): is er hier daadwerkelijk een disruptieve dreiging of kans, of wordt het woord verkeerd gebruikt? Het RPV-instrument stelt vast — het ontwerpt niets.</li>
+<li><strong>Osterwalder</strong> (diagnose én ontwerp): een BMC kan een bestaand businessmodel analyseren — hoe denkt deze organisatie eigenlijk over key activities, key partners, revenue streams? — én een nieuw model of nieuwe propositie ontwerpen. Dezelfde tool, twee toepassingen, afhankelijk van de vraag.</li>
+<li><strong>Lean Startup</strong> (validatie): hoe toetsen we een aanname voordat we groot investeren — en is dat hier mogelijk gegeven het moment in de levenscyclus (zie Deel 1)?</li>
+</ol>
+<p>Dat Osterwalder dubbelfunctioneel is en Christensen niet, is geen kwestie van "hoger" of "lager" schaalniveau — het is een verschil in wat het instrument kán. Dat verklaart ook waarom Osterwalder in de praktijk zo veelzijdig inzetbaar is.</p>
+<p>De volgorde is niet strikt lineair — een diagnose (Christensen) kan een ontwerptraject (Osterwalder) triggeren, wat weer een validatievraag (Lean Startup) oproept. Maar de drie vragen zijn wel altijd te onderscheiden, en het is een veelgemaakte fout om ze door elkaar te laten lopen — bijvoorbeeld door iets "disruptief" te noemen (Christensen-taal) terwijl de vraag eigenlijk over propositie-ontwerp gaat (Osterwalder-taal).</p>
+<hr />
+<h2>Aantekeningen voor volgende versie</h2>
+<ul>
+<li>Workshopcases uit de meerdaagse leiderschapsworkshop (juli 2026) als illustraties toevoegen zodra ze geanonimiseerd zijn uitgewerkt</li>
+<li>GOV-ALL-CustomerMaturity v1.3 publiceren met bijgewerkte Osterwalder-verwijzing → dit document</li>
+<li>Bij publicatie: terugverwijzing toevoegen in <code>GOV-ALL-VerkennenVerankeren</code> (vaste kruisreferentie-regel, zoals eerder bij Faciliteren)</li>
+<li>Overwegen: los diagnose-instrument (RPV, vier vragen) als eigenstandige, snel te raadplegen tool naast dit volledige document</li>
+<li>Blue Ocean Strategy verkennen als aanvulling op het disruptie-vraagstuk (uit CustomerMaturity's aantekeningen overgenomen)</li>
+<li>Christensen's Innovator's Solution (vervolg op Innovator's Dilemma) verder verkennen voor concrete handelingsopties na diagnose</li>
+<li>Groeimotor-lens (Ries) verder uitdiepen aan de hand van <strong>Sean Ellis &amp; Morgan Brown — Hacking Growth</strong>, ter voorbereiding op een scherpere koppeling met Paul's bestaande klantsegmentatie (rol in de keten / bedrijfstype)</li>
+</ul>
+<hr />
+<p><em>Dit document is een levend werkdocument. Versie verhogen bij elke substantiële aanvulling vanuit nieuwe praktijkervaringen.</em></p>
+</div>
+
+<div class="doc-footer">
+  <span>© Paul Willems — WillemsWorks</span>
+</div>
+
+</body>
+</html>

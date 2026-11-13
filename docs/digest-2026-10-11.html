@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennisbank Digest — Week 41, 2026 — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .topbar a:hover { text-decoration: underline; }
+
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 4px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+    .doc-content h2 a {
+      color: var(--purple-dark);
+      text-decoration: none;
+    }
+    .doc-content h2 a:hover { text-decoration: underline; }
+
+    .doc-content p { margin-bottom: 16px; }
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    .digest-eyebrow {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-dark);
+      opacity: 0.55;
+      margin-bottom: 4px;
+    }
+    .digest-meta-line {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-mid);
+      margin-bottom: 10px;
+    }
+    .digest-gov-link {
+      display: inline-block;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple-dark);
+      background: var(--purple-light);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+    .digest-tip {
+      border-left: 3px solid var(--lime);
+      background: var(--lime-light);
+      padding: 14px 20px;
+      margin: 4px 0 8px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+    .digest-tip strong { color: var(--purple-dark); }
+    .digest-source-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--purple-dark);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .digest-source-link:hover { text-decoration: underline; }
+
+    /* Cluster-koptekst */
+    .cluster-heading {
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin: 56px 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .cluster-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown { position: relative; }
+    .topnav-dropdown-toggle {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s, background 0.12s;
+      user-select: none;
+    }
+    .topnav-dropdown-toggle:hover,
+    .topnav-dropdown-toggle.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.15s; }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg { transform: rotate(180deg); }
+    .topnav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--purple-dark);
+      border: 1px solid rgba(196,255,72,0.2);
+      border-radius: 6px;
+      min-width: 180px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .topnav-dropdown.open .topnav-dropdown-menu { display: block; }
+    .topnav-dropdown-item {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-dropdown-item:hover,
+    .topnav-dropdown-item.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-item-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 1px;
+    }
+
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+      .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+      .doc-footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link active">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Kennisbank digest</span>
+    <h1 class="doc-title">Week 41 &middot; 11 oktober 2026</h1>
+    <p class="doc-subtitle">HBR over transformatie als leerproces en de kracht van klantdoorverwijzingen, McKinsey over leiderschap bij bedreigende verandering en het AI-operationsmodel, en hoe agentic AI organisatiesilo&rsquo;s overbrugt &mdash; 5 items verspreid over vier clusters.</p>
+    <div class="doc-meta">
+      <span><strong>Editie</strong> Week 41, 2026</span>
+      <span><strong>Items</strong> 5</span>
+      <span><strong>Gegenereerd</strong> 11 oktober 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Deze pagina wordt wekelijks automatisch gegenereerd op basis van actuele publicaties, onderzoek en artikelen. Items worden pas onderdeel van een GOV-framework na bespreking &mdash; zie de bijbehorende <a href="index.html">bouwstenen</a> voor de verwerkte inzichten.</p>
+</div>
+
+<div class="doc-content">
+
+<div class="cluster-heading">Verandering &amp; Leiderschap</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Transformatiestrategie &amp; leren</div>
+  <h2><a href="https://hbr.org/2026/09/transformation-should-be-a-learning-journey" target="_blank">Transformation Should Be a Learning Journey</a></h2>
+  <p class="digest-meta-line">Harvard Business Review &middot; Evgeny Kaganer &amp; Christoph Loch &middot; september 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: LeadingChange</span>
+  <p>Organisaties die transformatie behandelen als een vast, topdown programma met een lineair pad falen vaker dan organisaties die het zien als een leerproces. Kaganer en Loch identificeren vier soorten initiatieven die samen een portfolio vormen: pilots (leren onder onzekerheid), opties (marktposities openhouden), verbeteringen (bestaande processen optimaliseren) en ventures (geheel nieuwe waardecreatie). DBS Bank ontwierp bewust een mix van alle vier; GE probeerde alles vanuit de top te sturen en verloor de wendbaarheid. De drie leiderschapspraktijken die het verschil maken: benoem expliciet wat je wilt l&eacute;ren in elk initiatief (niet alleen wat je wilt bereiken), bouw psychologische veiligheid in voor terugtrek- en bijstuurmomenten, en behandel falen als data &mdash; niet als een reputatieprobeem. (<a href="https://hbr.org/2026/09/transformation-should-be-a-learning-journey" target="_blank" class="digest-source-link">bron &rarr;</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Bij het opstellen van een veranderprogramma: vervang de &ldquo;roadmap naar de eindsituatie&rdquo; door een leerarchitectuur met expliciete beslismomenten. Wat willen we weten na fase 1? Welke aanname toetsen we met pilot X? Dit sluit direct aan op de urgentie- en coalitielogica van de bouwsteen LeadingChange en maakt de Kotter-stappen adaptief in plaats van sequentieel.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Leiderschap bij weerstand &amp; bedreiging</div>
+  <h2><a href="https://www.mckinsey.com/capabilities/people-and-organization/our-insights/leading-when-change-feels-threatening" target="_blank">Leading When Change Feels Threatening</a></h2>
+  <p class="digest-meta-line">McKinsey &amp; Company &middot; oktober 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: LeadingChange</span>
+  <p>Wanneer verandering niet als kans maar als bedreiging wordt ervaren &mdash; door baanverlies, verlies van status of verlies van controle &mdash; werkt de klassieke &ldquo;brand the platform&rdquo;-urgentietactiek averechts: hij versterkt de angst in plaats van beweging te creëren. McKinsey beschrijft hoe effectieve leiders de perceptiekloof dichten door drie verschuivingen: van &ldquo;dit moet&rdquo; naar &ldquo;dit is mogelijk voor jou&rdquo;, van informatieverstrekking naar co-creatie van het veranderpad, en van directe sturing naar het bouwen van een omgeving waarin mensen zelf kunnen bewegen. De centrale les: veranderweerstand is geen gebrek aan begrip maar een rationele respons op onzekerheid &mdash; leiders die dat erkennen, bouwen coalitie sneller dan leiders die overtuigen via logica alleen. (<a href="https://www.mckinsey.com/capabilities/people-and-organization/our-insights/leading-when-change-feels-threatening" target="_blank" class="digest-source-link">bron &rarr;</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Als interim changemanager: identificeer v&oacute;&oacute;r de kick-off welke groepen de verandering als bedreigend ervaren (niet wie het &ldquo;niet begrijpt&rdquo;). Pas per groep de coalitiestrategie aan &mdash; co-creatie en zichtbare kleine winsten werken beter dan urgentieretoriek. Sluit aan op de mobilisatiefase van de bouwsteen LeadingChange.</div>
+</div>
+
+<div class="cluster-heading">Innovatie &amp; Marketing</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Agentic AI &amp; organisatiesilo&rsquo;s</div>
+  <h2><a href="https://hbr.org/2026/09/how-ai-agents-orchestrate-work-across-silos" target="_blank">How AI Agents Orchestrate Work Across Silos</a></h2>
+  <p class="digest-meta-line">Harvard Business Review &middot; Jo&atilde;o Ferreira &amp; Leon Tong &middot; september 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Innovatie (AI-adoptie)</span>
+  <p>Agentic AI lost het probleem op dat menselijke co&ouml;rdinatie altijd heeft uitgesteld: informatie die opgesloten zit in een functie-eiland bereikt de beslissing aan de andere kant van de organisatie te laat of te vervormd. Ferreira en Tong beschrijven hoe bedrijven als Walmart, Amazon en Ericsson agents inzetten die handelingen uitvoeren over silo&rsquo;s heen &mdash; van inkoop tot productie tot klantenservice &mdash; terwijl mensen de context leveren en eindbeslissingen nemen. Concreet voorbeeld: bij een plotseling ingevoerd importtarief traceren agents automatisch welke producten geraakt worden, herbereken prijzen en passen orders aan, terwijl een inkoopmanager alleen de uitzonderingen beoordeelt. De kritische randvoorwaarde: agents werken alleen effectief als de datastromen betrouwbaar zijn &mdash; garbage in, autonomous garbage out. (<a href="https://hbr.org/2026/09/how-ai-agents-orchestrate-work-across-silos" target="_blank" class="digest-source-link">bron &rarr;</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> In innovatieopdrachten waarbij AI-adoptie stagneert: vraag niet &ldquo;welke tool pakken we?&rdquo; maar &ldquo;welk silo-grensoverschrijdend proces kost nu de meeste coördinatietijd?&rdquo; Dat is het eerste kandidaat-proces voor agentische automatisering. Sluit aan op de Lean Startup-logica in de bouwsteen Innovatie: begin klein, meet de doorlooptijdwinst, en schaal pas als de databron betrouwbaar is.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">AI-waarde &amp; operationsmodel</div>
+  <h2><a href="https://www.mckinsey.com/capabilities/people-and-organization/our-insights/the-key-to-ai-value-is-hiding-in-plain-sight-your-operating-model" target="_blank">The Key to AI Value Is Hiding in Plain Sight: Your Operating Model</a></h2>
+  <p class="digest-meta-line">McKinsey &amp; Company &middot; oktober 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Innovatie (AI-adoptie)</span>
+  <p>De meeste organisaties zoeken de sleutel tot AI-waarde in het AI-model zelf &mdash; betere algoritmen, grotere modellen, meer data. McKinsey stelt dat de werkelijke hefboom elders ligt: in bewuste ontwerpkeuzes in het operationsmodel. Er is geen universeel &ldquo;best&rdquo; model voor AI-implementatie; wat telt is dat de gemaakte keuzes &mdash; centraal vs. decentraal, product vs. functie, insourcing vs. partnering &mdash; consequent en goed worden uitgevoerd. Organisaties die hun operating model aanpassen aan de specifieke vereisten van AI (snelle iteratie, dataeigenaarschap, mens-machine beslislogica) realiseren aantoonbaar meer waarde dan organisaties die AI op een ongewijzigde structuur plakken. (<a href="https://www.mckinsey.com/capabilities/people-and-organization/our-insights/the-key-to-ai-value-is-hiding-in-plain-sight-your-operating-model" target="_blank" class="digest-source-link">bron &rarr;</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Bij AI-transformatieopdrachten: begin met een operating model-analyse v&oacute;&oacute;r de technologieselectie. Welke beslissingen worden centraal vs. decentraal genomen? Wie is eigenaar van de data die AI voedt? Welk iteratietempo kan de organisatiestructuur aan? De antwoorden bepalen welk AI-implementatiemodel past &mdash; en welke structurele aanpassingen nodig zijn v&oacute;&oacute;r go-live.</div>
+</div>
+
+<div class="cluster-heading">Commercie &amp; Klant</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Klantloyaliteit &amp; doorverwijzing</div>
+  <h2><a href="https://hbr.org/2026/09/dont-underestimate-the-power-of-customer-referrals" target="_blank">Don&rsquo;t Underestimate the Power of Customer Referrals</a></h2>
+  <p class="digest-meta-line">Harvard Business Review &middot; Fred Reichheld, Darci Darnell &amp; Maureen Burns &middot; september&ndash;oktober 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: FramemakingSale</span>
+  <p>Reichheld en co-auteurs analyseerden bij een groot aantal bedrijven hoeveel van de winst uit nieuwe klanten daadwerkelijk afkomstig is van doorverwijzingen door bestaande klanten. De uitkomst: een substantieel deel &mdash; afhankelijk van de sector soms meer dan de helft &mdash; van de nettowinstgroei is te herleiden tot referrals, terwijl de acquisitiekosten per doorverwezen klant significant lager zijn dan bij betaalde kanalen. De implicatie is direct: organisaties die hun marketingbudget concentreren op paid acquisition missen de goedkoopste en meest betrouwbare groeibron. De auteurs pleiten voor systematisch meten van referral-gedrag als leading indicator &mdash; niet Net Promoter Score als surveyuitkomst maar als daadwerkelijk gedragsmaatstaf. (<a href="https://hbr.org/2026/09/dont-underestimate-the-power-of-customer-referrals" target="_blank" class="digest-source-link">bron &rarr;</a>)</p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> In commerci&euml;le transformatieopdrachten: voeg &ldquo;doorverwijzingspercentage&rdquo; toe als KPI naast conversie en retentie. Vraag klanten niet alleen hoe tevreden ze zijn, maar track of ze daadwerkelijk anderen doorverwijzen. Sluit aan op de Framemaking Sale-logica: de sterkste commerci&euml;le propositie is een bestaande klant die het verhaal v&oacute;&oacute;r jou vertelt aan een prospect.</div>
+</div>
+
+</div>
+
+<footer class="doc-footer">
+  <span>Automatisch gegenereerd op 11 oktober 2026 &middot; Bouwstenen van Paul Willems</span>
+  <a href="digest.html">&larr; Alle edities</a>
+</footer>
+
+  <script>
+    document.querySelectorAll(".topnav-dropdown-toggle").forEach(toggle => {
+      toggle.addEventListener("click", e => {
+        e.stopPropagation();
+        toggle.closest(".topnav-dropdown").classList.toggle("open");
+      });
+    });
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".topnav-dropdown").forEach(d => d.classList.remove("open"));
+    });
+  </script>
+</body>
+</html>

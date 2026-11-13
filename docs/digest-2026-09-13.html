@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennisbank Digest — Week 37, 2026 — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .topbar a:hover { text-decoration: underline; }
+
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 4px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+    .doc-content h2 a {
+      color: var(--purple-dark);
+      text-decoration: none;
+    }
+    .doc-content h2 a:hover { text-decoration: underline; }
+
+    .doc-content p { margin-bottom: 16px; }
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    .digest-eyebrow {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-dark);
+      opacity: 0.55;
+      margin-bottom: 4px;
+    }
+    .digest-meta-line {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-mid);
+      margin-bottom: 10px;
+    }
+    .digest-gov-link {
+      display: inline-block;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple-dark);
+      background: var(--purple-light);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+    .digest-tip {
+      border-left: 3px solid var(--lime);
+      background: var(--lime-light);
+      padding: 14px 20px;
+      margin: 4px 0 8px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+    .digest-tip strong { color: var(--purple-dark); }
+    .digest-source-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--purple-dark);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .digest-source-link:hover { text-decoration: underline; }
+
+    /* Cluster-koptekst */
+    .cluster-heading {
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin: 56px 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .cluster-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown { position: relative; }
+    .topnav-dropdown-toggle {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s, background 0.12s;
+      user-select: none;
+    }
+    .topnav-dropdown-toggle:hover,
+    .topnav-dropdown-toggle.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.15s; }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg { transform: rotate(180deg); }
+    .topnav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--purple-dark);
+      border: 1px solid rgba(196,255,72,0.2);
+      border-radius: 6px;
+      min-width: 180px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .topnav-dropdown.open .topnav-dropdown-menu { display: block; }
+    .topnav-dropdown-item {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-dropdown-item:hover,
+    .topnav-dropdown-item.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-item-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 1px;
+    }
+
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+      .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+      .doc-footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link active">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Kennisbank digest</span>
+    <h1 class="doc-title">Week 37 &middot; 13 september 2026</h1>
+    <p class="doc-subtitle">Narratief leiderschap, facilitatie-impact, de AI-validatieparadox in B2B en organisatiecomplexiteit als groeirem &mdash; 7 items verspreid over drie clusters.</p>
+    <div class="doc-meta">
+      <span><strong>Editie</strong> Week 37, 2026</span>
+      <span><strong>Items</strong> 7</span>
+      <span><strong>Gegenereerd</strong> 13 september 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Deze pagina wordt wekelijks automatisch gegenereerd op basis van actuele publicaties, onderzoek en artikelen. Items worden pas onderdeel van een GOV-framework na bespreking &mdash; zie de bijbehorende <a href="index.html">bouwstenen</a> voor de verwerkte inzichten.</p>
+</div>
+
+<div class="doc-content">
+
+<div class="cluster-heading">Verandering &amp; Leiderschap</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Leiderschap &amp; communicatie</div>
+  <h2><a href="https://staffbase.com/blog/narrative-leadership-2026-visibility-gap" target="_blank">Is Narrative Leadership the human antidote to the 2026 visibility gap?</a></h2>
+  <p class="digest-meta-line">Staffbase &middot; 26 mei 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Leiderschap</span>
+  <p>Op basis van het &ldquo;Executive Priorities for the Next Digital Workplace Era 2026&rdquo;-rapport tekent Staffbase de leiderschapskloof van dit moment: 71% van leiders neemt aan dat besluiten begrepen worden, maar slechts 45% verifieert dit daadwerkelijk. 68% hoort van wrijving bij medewerkers pas als het al grote problemen zijn. Narratief leiderschap &mdash; verhalen vertellen die het <em>waarom</em> achter besluiten overbrengen &mdash; wordt hier als directe tegenmaatregel gepresenteerd, niet als soft communicatievaardigheid maar als strategisch koppelstuk tussen directieagenda en werkvloerrealiteit. <a href="https://staffbase.com/blog/narrative-leadership-2026-visibility-gap" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Concreet diagnose-instrument bij organisaties waar veranderboodschappen niet landen: vraag leiders of ze verifi&euml;ren of hun besluiten begrepen zijn &mdash; het gat tussen aannemen en weten vertelt alles. Sluit direct aan op Kouzes &amp; Posner&rsquo;s &ldquo;inspire a shared vision&rdquo;.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Verandermanagement</div>
+  <h2><a href="https://thechangeleadership.com/change-management-competencies-in-2026-the-skills-that-separate-good-leaders-from-great-ones" target="_blank">Change Management Competencies in 2026: The Skills That Separate Good Leaders from Great Ones</a></h2>
+  <p class="digest-meta-line">The Change Leadership &middot; 4 maart 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: LeadingChange</span>
+  <p>Het artikel beschrijft vijf competenties die in 2026 het verschil maken in verandermanagement: emotionele geletterdheid, aanpassingsvermogen en leeragiliteit, <em>capaciteitsbeheer</em> (verandering als eindig goed &mdash; bewust sequencen), strategische zingeving, en coalitievorming &amp; invloed. De kernboodschap: goede leiders helpen navigeren door verandering; geweldige leiders bouwen het vermogen om erin te gedijen. De traditionele checklist-aanpak is voorbij &mdash; verandering is nu het permanente operationele klimaat. <a href="https://thechangeleadership.com/change-management-competencies-in-2026-the-skills-that-separate-good-leaders-from-great-ones" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Gebruik de vijf competenties als zelfscan voor opdrachtgevers in een changerol &mdash; met name <em>capaciteitsbeheer</em> is vaak het blinde vlak: te veel parallel lopen, te weinig bewust sequencen. Sluit strak aan op Kotter&rsquo;s coalitievorming en urgentiefase.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Facilitatie</div>
+  <h2><a href="https://www.sessionlab.com/state-of-facilitation/2026-report/" target="_blank">State of Facilitation 2026</a></h2>
+  <p class="digest-meta-line">SessionLab (714 facilitators, 60 landen) &middot; januari 2026, bijgewerkt augustus 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Faciliteren</span>
+  <p>Het grootste jaarlijkse facilitatie-onderzoek toont een structureel probleem: minder dan 1 op 3 facilitators heeft v&oacute;&oacute;raf meetbare doelen afgesproken met de opdrachtgever. 43,5% noemt het ontbreken van vervolgconversaties als voornaamste belemmering voor echte impact. De meerderheid evalueert hoe een sessie verliep, niet wat er daarna veranderde &mdash; waardoor de waarde van facilitatie onzichtbaar blijft (51,4% communiceert impact alleen via mond-tot-mondreclame). Ervaren facilitators doen dit structureel anders: zij integreren debriefs en vervolgstappen van tevoren. <a href="https://www.sessionlab.com/state-of-facilitation/2026-report/" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Direct bruikbaar als kwaliteitsstandaard voor eigen facilitatiewerk: zorg dat elke opdracht begint met meetbare sessiedoelen &eacute;n eindt met een concreet vervolgafspraak &mdash; zo onderscheid je jezelf van de grote middenmoot.</div>
+</div>
+
+<div class="cluster-heading">Team &amp; Mensen</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Organisatieontwerp</div>
+  <h2><a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations-2026" target="_blank">The State of Organizations 2026</a></h2>
+  <p class="digest-meta-line">McKinsey &amp; Company (10.000+ leidinggevenden, 15 landen) &middot; maart 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: Organisatie</span>
+  <p>McKinsey&rsquo;s grootschalige organisatieonderzoek benoemt als meest urgente kans het vereenvoudigen van werkstromen: 66% van leidinggevenden vindt hun organisatie te complex en ineffici&euml;nt, en 40% ziet werkstroomherdefini&euml;ring als de belangrijkste prioriteit voor de komende twee jaar. De kernboodschap wijkt af van het automatiseringsdiscours: vereenvoudig eerst workflows, automatiseer daarna &mdash; veel capaciteit zit vast in onnodige handoffs, duplicatie en onduidelijke beslissingsbevoegdheden, niet in een tekort aan technologie. <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations-2026" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Krachtig diagnose-argument richting directies die AI als effici&euml;ntiemiddel inzetten v&oacute;&oacute;rdat processen zijn opgeruimd: automatiseren van complexiteit maakt het alleen groter. Sluit aan op Mintzberg&rsquo;s co&ouml;ordinatiemechanismen en de Organisatie-lens van de bouwsteen.</div>
+</div>
+
+<div class="cluster-heading">Commercie &amp; Klant</div>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">B2B-sales &amp; AI</div>
+  <h2><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sixty-nine-percent-of-b-two-b-buyers-turn-to-sales-reps-to-validate-ai-generated-insights" target="_blank">Gartner: 69% of B2B Buyers Turn to Sales Reps to Validate AI-Generated Insights</a></h2>
+  <p class="digest-meta-line">Gartner (gepresenteerd op CSO &amp; Sales Leader Conference) &middot; 20 mei 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: FramemakingSale</span>
+  <p>Gartner benoemt de centrale paradox van het B2B-koopproces in 2026: 67% van kopers prefereert een rep-free ervaring, maar 69% wendt zich toch tot een salesperson om AI-gegenereerde inzichten te valideren. 51% maakt zich zorgen over misleidende AI-informatie; kopers gebruiken gemiddeld zeven informatiebronnen. De implicatie: de rol van de salesrep verschuift fundamenteel van informatiebron naar <em>vertrouwensanker</em> &mdash; betrokken op het kritieke moment van besluitvorming, niet gedurende het hele koopproces. <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sixty-nine-percent-of-b-two-b-buyers-turn-to-sales-reps-to-validate-ai-generated-insights" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Sterk argument bij klanten die hun salesteam willen reduceren ten gunste van AI: de data bevestigen dat reps nodig blijven, maar op een ander moment en met een andere functie &mdash; validatie en vertrouwen, niet informatieoverdracht. Sluit aan op de Gartner-kopreis en JOLT-effect in de bouwsteen.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">B2B-contentmarketing</div>
+  <h2><a href="https://goconsensus.com/research/2026-b2b-buyer-behavior-report" target="_blank">2026 B2B Buyer Behavior Report</a></h2>
+  <p class="digest-meta-line">Consensus (grootschalig koopgedragonderzoek) &middot; 20 mei 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: TheyAskYouAnswer</span>
+  <p>Consensus documenteert hoe sterk aandacht en geduld van B2B-kopers zijn afgenomen: de gemiddelde demo-kijktijd daalde 5,5% naar 5 minuten en 14 seconden; kopers klikken maximaal vier stappen in een productrondleiding voordat ze afhaken &mdash; terwijl demo&rsquo;s gemiddeld 15+ minuten duren. 61% prefereert een rep-free koopeval. Koopteams met zeven of meer stakeholders scoren 36% hogere koppeling aan opportunities, bijna twee keer de norm. Implicatie: content moet raak zijn op de eerste vier klikken, en moet alle stakeholders bedienen die nooit rechtstreeks contact zoeken. <a href="https://goconsensus.com/research/2026-b2b-buyer-behavior-report" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Directe actualisering van het They Ask You Answer-principe: de methodiek klopt, maar de uitdaging is nog groter dan Sheridan beschreef &mdash; content moet niet alleen eerlijk zijn, maar ook instant waarde leveren in een wereld waar kopers na vier klikken afhaken.</div>
+</div>
+
+<hr>
+
+<div class="digest-item">
+  <div class="digest-eyebrow">Commerci&euml;le volwassenheid</div>
+  <h2><a href="https://www.deloittedigital.com/us/en/insights/research/b2b-commerce-trends.html" target="_blank">2026 B2B Commerce Research</a></h2>
+  <p class="digest-meta-line">Deloitte Digital &middot; 17 februari 2026</p>
+  <span class="digest-gov-link">GOV-koppeling: CustomerMaturity (backlog)</span>
+  <p>Deloitte Digital toont aan dat B2B-leveranciers met hoge digitale volwassenheid hun jaarlijkse salesdoelen met 110% beter halen dan minder volwassen concurrenten. De drie kritieke investeringsgebieden: kanaaluitbreiding (meerdere verkoopkanalen), ERP-integratie (klantervaring aan achterkant verbinden) en AI-activering voor specifieke bedrijfsdoelen. Opvallend: de kloof is niet primair een technologievraag maar een maturiteitsvraag &mdash; hoeveel lagen van de commerci&euml;le keten zijn daadwerkelijk verbonden en klantgericht ingericht. <a href="https://www.deloittedigital.com/us/en/insights/research/b2b-commerce-trends.html" target="_blank" class="digest-source-link">&rarr; bron</a></p>
+  <div class="digest-tip">&#128161; <strong>Toepassing:</strong> Sterk onderbouwend cijfer voor het CustomerMaturity-framework in wording: de 110%-marge maakt het businesscase voor commerci&euml;le volwassenheidsgroei tastbaar. Gebruik dit als openingsargument in een maturiteitsdiagnose bij B2B-klanten.</div>
+</div>
+
+</div>
+
+<footer class="doc-footer">
+  <span>Automatisch gegenereerd op 13 september 2026 &middot; Bouwstenen van Paul Willems</span>
+  <a href="digest.html">&larr; Alle edities</a>
+</footer>
+
+  <script>
+    document.querySelectorAll(".topnav-dropdown-toggle").forEach(toggle => {
+      toggle.addEventListener("click", e => {
+        e.stopPropagation();
+        toggle.closest(".topnav-dropdown").classList.toggle("open");
+      });
+    });
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".topnav-dropdown").forEach(d => d.classList.remove("open"));
+    });
+  </script>
+</body>
+</html>

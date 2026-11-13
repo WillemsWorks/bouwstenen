@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framemaking Sale — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* Topbar */
+    .topbar a:hover { text-decoration: underline; }
+
+    /* Doc header */
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    /* Content wrapper */
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+
+    .doc-content h3 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 500;
+      font-size: 17px;
+      color: var(--purple-dark);
+      margin: 32px 0 10px;
+    }
+
+    .doc-content h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin: 24px 0 8px;
+    }
+
+    .doc-content p {
+      margin-bottom: 16px;
+    }
+
+    .doc-content ul, .doc-content ol {
+      margin: 12px 0 16px 20px;
+    }
+
+    .doc-content li { margin-bottom: 6px; }
+
+    .doc-content blockquote {
+      border-left: 3px solid var(--purple-light);
+      margin: 28px 0;
+      padding: 14px 20px;
+      background: var(--lime-light);
+      font-size: 16px;
+      color: var(--purple-dark);
+      font-style: italic;
+    }
+    .doc-content blockquote p { margin: 0; color: var(--purple-dark); }
+
+    /* Tables */
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+    .doc-content th {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 10px 16px;
+      text-align: left;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .doc-content td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .doc-content tr:nth-child(even) td { background: var(--lime-light); }
+
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+    .doc-content code {
+      background: var(--lime-light);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-family: 'Courier New', monospace;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* Footer */
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .topbar, .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+    }
+  
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+    }
+
+  
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    /* Dropdown */
+    .topnav-dropdown {
+      position: relative;
+    }
+    .topnav-dropdown-toggle {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s, background 0.12s;
+      user-select: none;
+    }
+    .topnav-dropdown-toggle:hover,
+    .topnav-dropdown-toggle.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-toggle svg {
+      width: 10px; height: 10px;
+      transition: transform 0.15s;
+    }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg {
+      transform: rotate(180deg);
+    }
+    .topnav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--purple-dark);
+      border: 1px solid rgba(196,255,72,0.2);
+      border-radius: 6px;
+      min-width: 180px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .topnav-dropdown.open .topnav-dropdown-menu {
+      display: block;
+    }
+    .topnav-dropdown-item {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-dropdown-item:hover,
+    .topnav-dropdown-item.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-item-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 1px;
+    }
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+    }
+
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link active">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Persoonlijk werkframework</span>
+    <h1 class="doc-title">Framemaking Sale</h1>
+    <p class="doc-subtitle">Paul's werkframework rond outcome uncertainty en kopersvertrouwen — met Gartner-onderzoek, SCARF, twee praktijkcasus uit de installatiebranche, en een sectie over hoe moderne CRM-tooling de voorbereiding schaalbaar maakt.</p>
+    <div class="doc-meta">
+      <span><strong>Versie</strong> v1.1</span>
+      <span><strong>Datum</strong> juli 2026</span>
+      <span><strong>Bronnen</strong> The Framemaking Sale (Adamson &amp; Schmidt) · Gartner Sales Practice · The JOLT Effect (Dixon &amp; McKenna) · The Challenger Sale</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Dit document is een persoonlijk werkframework van <strong>Paul Willems</strong> (WillemsWorks). 
+  Het is opgebouwd uit boeken, seminars en eigen praktijkervaring — geen samenvatting, maar een actief werkinstrument. 
+  De inhoud is intellectueel eigendom van Paul Willems. Gebruik zonder toestemming is niet toegestaan.</p>
+  <p>Meer over mijn werkwijze en aanpak: <a href="https://willemsworks.nl" target="_blank">willemsworks.nl</a></p>
+</div>
+
+<div class="doc-content">
+<h1>GOV-ALL-FramemakingSale_v1_1</h1>
+<p><strong>Document:</strong> <code>GOV-ALL-FramemakingSale</code> | v1.1 | juli 2026 | Persoonlijk werkframework | governance | alle platforms | klantgesprekken, salesbegeleiding, workshopvoorbereiding</p>
+<p><strong>Bronnen:</strong> <em>The Framemaking Sale</em> (Brent Adamson &amp; Karl Schmidt, 2025) · Gartner Sales Practice-onderzoek (2020-2026, o.a. purchase regret-onderzoek 2021, B2B Buying Report 2023, rep-free-trendonderzoek 2025-2026) · <em>Sensemaking for Sales</em> (Brent Adamson, HBR, 2022) — voorloper-artikel van hetzelfde denken · <em>The JOLT Effect</em> (Matthew Dixon &amp; Ted McKenna, 2022) — externe onderbouwing van outcome uncertainty · <em>The Challenger Sale</em> / <em>The Challenger Customer</em> (Adamson &amp; Dixon) — denklijn waarin de drie adviesvormen (verdienen/besparen/risico) wortelen · CRM-tooling-visies van Microsoft, HubSpot en Salesforce (2026) als praktijkonderbouwing bij Deel 4</p>
+<p><strong>Status:</strong> Het boek is volledig gelezen. Dit is de complete v1.1. Toekomstige aanvullingen — inclusief nieuwe Gartner-cijfers en CRM-tooling-ontwikkelingen — lopen voortaan via de standaard research-log/kwartaalcyclus, niet meer via losse <code>[AANVULLEN]</code>-markeringen.</p>
+<p><strong>Masterdocument:</strong> MASTER-ALL-Structure v2.2</p>
+<p><strong>Verwante bouwstenen:</strong></p>
+<ul>
+<li><code>GOV-ALL-TheyAskYouAnswer</code> v1.1 — drie koppelpunten: (1) TAYA bouwt de kennisbank die de 80%-zelfstandige onderzoeksfase voedt, Framemaking beschrijft wat er nodig is ná die fase, op het beslismoment; (2) het bron-as-voorbeeld (Deel 3b) is een directe toepassing van TAYA's "content per diepteniveau"-principe, nu expliciet gekoppeld aan een kapstokmodel; (3) TAYA's radicale transparantie is het vertrouwensmechanisme waarmee Framemaking de koper door complexity, overload en misalignment heen helpt (zie Deel 1)</li>
+<li><code>GOV-ALL-VerkennenVerankeren</code> v1.1 — de diagnostische vraag "is dit een ontwerpprobleem of een uitvoeringsprobleem" is direct toepasbaar op de vraag of een organisatie klaar is voor geïnformeerde kopers</li>
+<li><code>GOV-ALL-LeadingChange</code> v1.2 — twee koppelpunten: (1) de organisatorische verschuiving die Framemaking vraagt (marketing in een leiderschapsrol, niet afwachtend) is een veranderopgave, geen procesaanpassing; (2) SCARF verklaart de weerstandsdimensies achter outcome uncertainty — een aankoop is voor de koper zelf ook een verandertraject</li>
+<li><code>GOV-ALL-OvertuigingsPsychologie</code> v1.3 — overlapt met maar is niet gelijk aan Framemaking: overtuigen richt zich op vertrouwen in de leverancier, Framemaking op vertrouwen van de koper in zichzelf</li>
+<li><code>GOV-ALL-Storytelling</code> v1.1 — wederkerige koppeling: de StoryBrand-gidspositionering (empathie + autoriteit, bescheiden emotioneel/autoritair inhoudelijk) is het emotionele fundament onder de Challenger Sale-logica die Framemaking beschrijft</li>
+<li><code>GOV-ALL-CustomerMaturity</code> (backlog, nog te publiceren) — de tooling-sectie (Deel 4) is een concrete toepassing van CustomerMaturity's centrale stelling dat klantgedrag, niet gearticuleerde voorkeuren, de primaire input voor bedrijfsprocessen moet zijn. Wederkerige verwijzing volgt zodra dit document live gaat</li>
+</ul>
+<p><strong>Doel:</strong> Dit document beschrijft de kernthese van Framemaking, de onderbouwing vanuit Gartner-onderzoek, en de organisatorische consequentie die Paul hieruit trekt: als het grootste deel van de koopreis zich buiten het gezichtsveld van de verkoper afspeelt, moet marketing die reis actief vormgeven in plaats van sales passief laten wachten op contact.</p>
+<hr />
+<h2>Versietabel</h2>
+<table>
+<thead>
+<tr>
+<th>Versie</th>
+<th>Datum</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0 (in ontwikkeling)</td>
+<td>juli 2026</td>
+<td>Initiële opbouw op basis van lopende leessessie + Gartner-onderzoek + praktijkcasus. Nog niet compleet — boek niet uitgelezen.</td>
+</tr>
+<tr>
+<td>v1.0 (update)</td>
+<td>juli 2026</td>
+<td>Toegevoegd: drie adviesvormen + Kraljic-koppeling, zelftwijfel/sportschool-analogie, JOLT Effect (Dixon &amp; McKenna) en outcome uncertainty, implementatietraject-onzekerheid.</td>
+</tr>
+<tr>
+<td>v1.0 (update 2)</td>
+<td>juli 2026</td>
+<td>Deel 1 herstructureerd rond de vier krachten die het boek als ruggengraat gebruikt (decision complexity, information overload, objective misalignment, outcome uncertainty). Outcome uncertainty uitgewerkt als abstract-versus-context-onderscheid, direct gekoppeld aan de anode-casus in Deel 3.</td>
+</tr>
+<tr>
+<td>v1.0 (update 3)</td>
+<td>juli 2026</td>
+<td>SCARF-koppeling toegevoegd (hoofdstuk 7: business acumen → personal acumen). Aankoop als verandertraject voor de koper, SCARF-tabel vertaald naar B2B-koopcontext.</td>
+</tr>
+<tr>
+<td>v1.0 (update 4)</td>
+<td>juli 2026</td>
+<td>Fasemapping (Teach/Sensemaking/Framemaking) en sectie "marketing als functie" toegevoegd. Framework-als-duiding als conceptidee geïntroduceerd. Tweede praktijkvoorbeeld toegevoegd (bron-as-document) met directe koppeling aan de anode-casus — beide voorbeelden ontmaskeren dezelfde onopgeloste ontwerpvraag. Klaar voor publicatie als interim-versie.</td>
+</tr>
+<tr>
+<td>v1.1</td>
+<td>juli 2026</td>
+<td>Boek volledig uitgelezen — alle openstaande <code>[AANVULLEN]</code>-plekken verwerkt: gemeenschappelijk antwoord op de drie eerste krachten (focus, structuur, customer intimacy — gekoppeld aan TAYA) in Deel 1, groeimodel-weerstand als aanvulling op personal acumen, frameworks als "de tooling van Framemaking" ter afsluiting van framework-als-duiding. Deel 2 uitgebreid met de kanterende Gartner-trend (confident misunderstanding, voorspelde omkering naar 2030). Nieuw Deel 4 toegevoegd: hoe moderne CRM-tooling (Dynamics 365, HubSpot, Salesforce) de supplier-agnostic voorbereiding schaalbaar maakt, met Paul's eigen observatie uit een CRM-implementatietraject. Kruisreferentie naar TheyAskYouAnswer bijgewerkt (v1.0 → v1.1). Status gewijzigd van "in ontwikkeling" naar compleet.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Deel 1: De kern van het framework</h2>
+<h3>Het probleem dat Framemaking oplost</h3>
+<p>B2B-kopers zijn niet ondergeïnformeerd — ze zijn overgeïnformeerd. Voordat een koper ooit met een verkoper spreekt, heeft hij vaak al talloze bronnen geraadpleegd: vergelijkingssites, reviews, AI-tools, whitepapers, forums. Het probleem is niet gebrek aan informatie, maar het onvermogen om die informatie te ordenen tot een beslissing waar hij vertrouwen in heeft.</p>
+<p><strong>De centrale stelling van Adamson en Schmidt:</strong> de grootste drijfveer voor een aankoop is niet vertrouwen in de leverancier, maar het vertrouwen van de koper in zijn eigen vermogen om een goede, verdedigbare beslissing te nemen namens zijn organisatie. Traditionele salesmethoden proberen het eerste te vergroten. Framemaking richt zich op het tweede.</p>
+<p><strong>Het cijfer dat de urgentie onderbouwt:</strong> zelfs wanneer de koper overtuigd is dat een oplossing de beste is, is er nog altijd 40-60% kans dat de deal eindigt in "geen beslissing" — geen verlies aan een concurrent, maar uitstel of afstel.</p>
+<h3>De vier krachten die kopersvertrouwen ondermijnen</h3>
+<p>Dit is de ruggengraat van het boek — elke andere concept in Framemaking Sale hangt aan een van deze vier:</p>
+<p><strong>1. Decision complexity</strong> — koopgroepen zijn de afgelopen jaren verdrievoudigd naar 11+ stakeholders. Meer betrokkenen betekent meer interne afstemming vóór er een besluit kan vallen.</p>
+<p><strong>2. Information overload</strong> — circa 65% van de kopers voelt zich overweldigd door de hoeveelheid beschikbare informatie, ook bij ogenschijnlijk eenvoudige aankopen.</p>
+<p><strong>3. Objective misalignment</strong> — slechts zo'n 27% van de koopgroepen bereikt daadwerkelijk consensus over wat ze precies proberen te bereiken. Meer mensen betekent meer kans op tegenstrijdige doelen.</p>
+<p><strong>4. Outcome uncertainty</strong> — angst voor implementatiefalen bevriest de beslissing. Dit is de kracht waar Framemaking Sale het meest op focust, en de kern van wat Paul herkent uit zijn eigen praktijk (zie Deel 3).</p>
+<p><strong>De kern van outcome uncertainty, in Adamsons eigen woorden:</strong> bedrijven geloven vaak wél in de waarde van een oplossing <em>in het abstract</em>, maar niet in de waarde specifiek <em>voor henzelf, in hun eigen context</em> — niet omdat ze de verkoper wantrouwen, maar omdat ze geen vertrouwen hebben in hun eigen vermogen om die waarde te realiseren. Het product is één ding; hoe het product zich moet manifesteren binnen de organisatie en werkwijze van de koper is een apart onderwerp — en dat tweede onderwerp is waar de meeste onzekerheid zit. Dit raakt rechtstreeks solution selling: de beste case studies ter wereld helpen niet als de koper niet zeker weet of hij zelfs het juiste probleem oplost — dan koopt hij de beste oplossing voor zijn derde-belangrijkste probleem.</p>
+<h3>Het gemeenschappelijke antwoord op de eerste drie krachten</h3>
+<p>Adamson en Schmidt behandelen decision complexity, information overload en objective misalignment niet als drie aparte problemen met drie aparte oplossingen — het antwoord is in de kern steeds hetzelfde: help de koper vertrouwen te krijgen in zijn eigen keuzes door focus aan te brengen op de relevante informatie uit de overvloed, door structuur te brengen in de besluitvorming van de koopgroep (inclusief expliciete aandacht voor de verschillende stakeholders binnen de koperorganisatie), en door customer intimacy op te bouwen die de koper letterlijk aan de hand neemt. Niet door meer te overtuigen, maar door de koper te laten durven vertrouwen op de expertise en goede intentie van de verkoper.</p>
+<p>Dat is een directe lijn naar <code>GOV-ALL-TheyAskYouAnswer</code>: TAYA's radicale transparantie is precies het soort gedrag waarmee een koper leert vertrouwen dat de verkoper zijn belang vooropstelt, niet alleen de eigen verkoopdoelen. Waar TAYA dat vertrouwen op afstand opbouwt — in de zelfstandige onderzoeksfase — levert Framemaking hetzelfde principe in het directe gesprek. Focus, structuur en oprechte customer intimacy zijn drie manifestaties van dezelfde beweging: de barrières wegnemen die complexity, overload en misalignment opwerpen.</p>
+<h3>Van business acumen naar personal acumen — de link met SCARF (hoofdstuk 7)</h3>
+<p>In hoofdstuk 7 maakt Adamson een overgang die Paul als sleutelmoment ziet: van <em>business acumen</em> (het zakelijke argument overbrengen) naar <em>personal acumen</em> — het vermogen van de verkoper om empathisch te adresseren wat outcome uncertainty voor de koper persoonlijk betekent. Niet alleen managen wat de koopgroep rationeel moet begrijpen, maar wat de individuele koper voelt bij de complexiteit en onzekerheid van het besluit.</p>
+<p>Dit is direct te koppelen aan SCARF (David Rock, uitgewerkt in <code>GOV-ALL-LeadingChange</code>). De onderliggende logica: een B2B-aankoop is zelden een doel op zich — de koper doet de aankoop om, via implementatie, zijn eigen businessmodel of manier van werken te verbeteren. Dat betekent per definitie dat hij een organisatieverandering aangaat. Outcome uncertainty is dus in de kern niet onzekerheid over het product, maar onzekerheid of de eigen organisatie die verandering succesvol kan doorlopen — en dat is precies waar de emotionele, niet-rationele weerstanden uit SCARF hun werk doen. Dezelfde vijf weerstandsdimensies die interne verandertrajecten laten vastlopen, spelen dus ook bij de koper, vóór er ooit getekend is:</p>
+<table>
+<thead>
+<tr>
+<th>SCARF-dimensie</th>
+<th>Typische vraag bij een B2B-aankoop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Status</strong></td>
+<td>"Verlies ik expertise of aanzien als deze leverancier dit voortaan doet/bepaalt?"</td>
+</tr>
+<tr>
+<td><strong>Certainty</strong></td>
+<td>"Wat betekent dit concreet voor mijn functie, mijn team, mijn dagelijkse werk?"</td>
+</tr>
+<tr>
+<td><strong>Autonomy</strong></td>
+<td>"Wordt dit ons opgelegd door de leverancier, of houden wij zeggenschap?"</td>
+</tr>
+<tr>
+<td><strong>Relatedness</strong></td>
+<td>"Blijft mijn team/afdeling relevant, of wordt dit ergens anders belegd?"</td>
+</tr>
+<tr>
+<td><strong>Fairness</strong></td>
+<td>"Waarom deze leverancier, dit traject, deze volgorde — en niet anders?"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Praktische consequentie:</strong> een verkoper die alleen het zakelijke argument (ROI, features, businesscase) blijft herhalen, mist de eigenlijke blokkade als die in Status of Autonomy zit. Personal acumen betekent: herkennen welke SCARF-dimensie bij déze koper of dit lid van de koopgroep het meest onder druk staat, en daar expliciet aandacht aan geven — vóór er nog een rationeel argument bij komt.</p>
+<p><strong>Paul's aanvulling — het spiegelbeeld bij de verkopende organisatie:</strong> SCARF speelt niet alleen bij de koper. Bij volwassen organisaties wordt het groeimodel (nieuwe proposities, nieuwe manier van verkopen) voortdurend tegenover het runnen van de business geplaatst — en dat levert twee vormen van weerstand op. Ofwel het groeimodel wordt als bedreigend ervaren (directe SCARF-weerstand: Status, Autonomy), ofwel het groeimodel is onvoldoende scherp geformuleerd, waardoor het simpelweg minder hersenkracht kost om het dagelijkse werk voorrang te geven. In het licht van Framemaking is dit relevant omdat supplier-agnostic verkopen — écht in het denken van de klant kruipen zonder meteen naar de eigen oplossing te sturen — extra inspanning vraagt: het voelt riskant ("gaat de business dan niet naar de concurrent?") en het vraagt vertrouwen dat investeren in de relatie meer oplevert dan een snelle close. Dezelfde weerstand die Framemaking bij de koper beschrijft, moet dus eerst bij de eigen verkooporganisatie overwonnen worden voordat ze bij de koper toegepast kan worden.</p>
+<h3>Wat Framemaking niet is</h3>
+<p>Framemaking is geen overtuigingstechniek en geen weerlegging. Het is niet: "u heeft het mis, hier is het juiste antwoord." Het is ook geen sensemaking (informatie ordenen en samenvatten) — dat is een eerdere fase in dezelfde denklijn van Adamson. Framemaking gaat een stap verder: de koper heeft vaak al een eigen, intern consistente puzzel gelegd op basis van zijn onderzoek. Die puzzel is zelden willekeurig — de losse stukken kloppen vaak theoretisch. Het probleem zit in de context waarin de puzzel is gelegd, niet in de puzzelstukken zelf.</p>
+<h3>De structuur van het boek</h3>
+<p>Elk hoofdstuk volgt hetzelfde patroon: een concept, gevolgd door een concrete vraag "wat doe je hier maandagochtend anders mee." Geen abstracte theorie zonder toepassing — dat sluit aan bij hoe Paul zelf bouwstenen wil gebruiken.</p>
+<h3>Drie vormen van advies (met referentie aan Challenger Sale)</h3>
+<p>Adamson en Schmidt onderscheiden drie dingen waarmee een verkoper een klant kan helpen: geld verdienen, geld besparen, of risico vermijden. Deze indeling komt terug uit de Challenger Sale-lijn (Dixon e.a.) en is geen nieuwe uitvinding, maar wordt hier gebruikt om te bepalen welk type framing een koper nodig heeft — een koper die op zoek is naar omzetgroei heeft een ander gesprek nodig dan een koper die primair risico wil afdekken.</p>
+<p><strong>Koppeling met de Kraljic-matrix (inkoopperspectief):</strong> dit is ouder dan Framemaking Sale (Peter Kraljic, McKinsey, 1983) en redeneert vanuit de koper: inkoopcategorieën worden ingedeeld op <em>profit impact</em> (waarde/kosten-effect) en <em>supply risk</em> (leveringsrisico). De verbindende gedachte is niet dat de modellen identiek zijn, maar dat ze twee kanten van dezelfde koopreis beschrijven: Kraljic is hoe de koper zijn eigen inkoopbeslissing categoriseert, Framemaking is hoe de verkoper zich tot die categorisering moet verhouden. Een leverancier die niet weet in welk Kraljic-kwadrant hij voor de koper valt (strategisch, hefboom, bottleneck, routine) framet vanuit de verkeerde aanname over wat de koper eigenlijk zoekt. Dit sluit aan bij het bredere marketingprincipe dat je als leverancier de wereld van de koper moet begrijpen vóór je een boodschap bepaalt — niet omgekeerd.</p>
+<p><em>Andere inkoopframeworks zijn mogelijk relevant voor deze koppeling — nog te verkennen.</em></p>
+<h3>Zelftwijfel, niet productwijfel</h3>
+<p>Een terugkerend thema: de koper twijfelt zelden aan het product of de leverancier — hij twijfelt aan zichzelf, of aan zijn eigen organisatie. Adamson en Schmidt illustreren dit met de sportschool-analogie: je zegt een abonnement niet af omdat je bang bent dat de sportschool niet levert, maar omdat je bang bent dat jíj niet zult gaan. Vertaald naar B2B: de koper is niet onzeker over de leverancier, maar over zijn eigen vermogen (of dat van zijn organisatie) om de verandering succesvol door te voeren.</p>
+<h3>JOLT Effect en outcome uncertainty — de externe onderbouwing</h3>
+<p>Framemaking Sale verwijst naar <em>The JOLT Effect</em> (Matthew Dixon &amp; Ted McKenna — Dixon ook coauteur van The Challenger Sale): fear of missing out (FOMO) is bij B2B-kopers vervangen door fear of messing up (FOMU). Dixon en McKenna identificeren drie oorzaken van koperstwijfel: waarderingsproblemen, gebrek aan informatie, en <strong>outcome uncertainty</strong> — dezelfde term, dezelfde vierde kracht als hierboven, nu vanuit een ander onderzoeksteam bevestigd.</p>
+<p>Voor aankopen die een implementatietraject of leercurve vereisen geldt: hoe groter de outcome uncertainty, hoe kleiner de kans dat de deal gesloten wordt. Het probleem dat de auteurs signaleren: het is niet de rol van de verkoper om onzekerheid ná de verkoop weg te nemen — dat is te laat. De rol is om vóór de verkoop al vertrouwen te geven in hoe het implementatietraject zal verlopen. Hoe meer meningsverschil er binnen de koopgroep bestaat over hoe de implementatie zal gaan, hoe groter de onzekerheid. Concreet advies: wees expliciet over het implementatietraject en toon bewijs (cases, referenties) zodat de koopgroep vertrouwen kan opbouwen vóórdat er getekend is.</p>
+<h3>Framemaking in de bredere koopreis — verhouding tot Challenger Sale en Sensemaking</h3>
+<p>Framemaking staat niet op zichzelf, maar is één stap in een reeks concepten uit dezelfde denklijn (Adamson, met Dixon en Schmidt), elk gekoppeld aan een andere fase van de koopreis:</p>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Concept</th>
+<th>Bron</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Awareness</td>
+<td>Teach (de koper een probleem laten zien dat hij nog niet zag)</td>
+<td>The Challenger Sale</td>
+</tr>
+<tr>
+<td>Consideration</td>
+<td>Contentgedreven beeldvorming</td>
+<td>TAYA / StoryBrand</td>
+</tr>
+<tr>
+<td>Intent</td>
+<td>Sensemaking (informatie ordenen en samenvatten voor de koopgroep)</td>
+<td>Sensemaking for Sales (Adamson, HBR 2022)</td>
+</tr>
+<tr>
+<td>Purchase</td>
+<td>Framemaking + Take Control (koper helpen zijn eigen puzzel te herzien)</td>
+<td>The Framemaking Sale</td>
+</tr>
+<tr>
+<td>Retention</td>
+<td>Kennisbank + AI-vindbaarheid</td>
+<td>TAYA / Endless Customers</td>
+</tr>
+</tbody>
+</table>
+<p>Framemaking hoort dus specifiek bij het beslismoment zelf — niet bij het informeren (dat is Sensemaking, eerder in de reis) en niet bij het signaleren van een probleem (dat is Teach, nog eerder). Waar Teach een koper een nieuw probleem laat zien en Sensemaking helpt de verzamelde informatie te ordenen, helpt Framemaking de koper zijn eigen — vaak al grotendeels correcte — interpretatie bij te stellen op het punt waar het telt: vlak vóór de beslissing.</p>
+<h3>Wat dit betekent voor marketing als functie</h3>
+<p>Als 80% van de koopreis (awareness, consideration, grotendeels ook intent) buiten het zicht van sales plaatsvindt, dan ligt het functionele eigenaarschap over die fasen bij marketing — niet als ondersteunende rol aan sales, maar als leidende partij met een eigen mandaat.</p>
+<p>Vanuit <code>GOV-ALL-Organisatie</code> (Mintzberg-coördinatiemechanismen) is dit een standaardisatievraagstuk: wie heeft het mandaat gestandaardiseerd om de koopreis vóór het eerste directe contact vorm te geven — de content, de toon, de volgorde van vragen die beantwoord worden? Als dat mandaat nergens expliciet is belegd, ontstaat precies het vacuüm dat Paul in de praktijk tegenkomt: sales geeft geen ruimte, marketing claimt die ruimte ook niet, en niemand voelt zich eigenaar van de eerste 80% van de reis.</p>
+<p><strong>Praktische consequentie:</strong> de vraag "wie is verantwoordelijk voor de eerste 80% van de koopreis" hoort een expliciete organisatiekeuze te zijn, geen impliciete verdeling die ontstaat uit de waan van de dag.</p>
+<h3>Framework-als-duiding: de koper structuur geven over zijn eigen omgeving</h3>
+<p>Een hoofdstuk verderop introduceert Adamson een aanvullend concept: niet alleen de koper geruststellen dat een oplossing zal werken, maar hem een expliciete structuur geven om zijn eigen omgeving mee te doorgronden — bijvoorbeeld in de vorm van een checklist of een vaste diagnosevolgorde. Waar Framemaking de koper helpt zijn bestaande puzzel bij te stellen, gaat dit een stap verder: het geeft de koper het instrument om toekomstige, vergelijkbare vragen ook zelf te kunnen structureren. Zie Deel 3 voor een directe praktijktoepassing.</p>
+<p>In een van de laatste hoofdstukken introduceert Adamson dit concept explicieter onder de noemer "frameworks": checklists, modellen of complexere structuren, die allemaal hetzelfde doel dienen — de werkelijkheid in een repeteerbaar format gieten, zodat koper en verkoper dezelfde taal hanteren en er samen aan kunnen werken. Frameworks zijn, in Adamsons eigen woorden, de tooling van Framemaking. Dat is een treffende parallel met wat de bron-as in Deel 3b concreet doet — en met de Bouwstenen zelf, die in de kern niets anders is dan een verzameling van precies zulke repeteerbare frameworks.</p>
+<hr />
+<h2>Deel 2: Verrijking — de Gartner-onderbouwing</h2>
+<h3>Waar het cijfer vandaan komt, en waarom het genuanceerder ligt dan "70%"</h3>
+<p>Het meest geciteerde Gartner-cijfer is stabiel over meerdere jaren: <strong>B2B-kopers besteden slechts 17% van hun totale aankoopreis aan direct contact met potentiële leveranciers</strong> — en bij vergelijking van meerdere leveranciers krijgt elke individuele partij maar 5-6% van die tijd. Dit is dezelfde bron als het cijfer dat in <em>The Framemaking Sale</em> wordt aangehaald.</p>
+<p>Het rondzwervende "70%"-cijfer (vaak zonder duidelijke bron geciteerd) is een populaire afronding, niet een scherp aan Gartner te herleiden getal. Wat wél goed onderbouwd en actueel is: de <strong>voorkeur</strong> voor een volledig contactloze koopervaring stijgt gestaag — van 43% (2021) via 61% (2024) naar 67% (begin 2026). Direct-contacttijd blijft dus laag en stabiel; de wens om zelfs die 17% te vermijden groeit.</p>
+<h3>De regret-bevinding — de sleutel tot waarom Framemaking werkt</h3>
+<p>Dit is het belangrijkste bewijsstuk, en het is direct verbonden met de auteur: <strong>Brent Adamson was zelf de Gartner-analist achter het purchase regret-onderzoek uit 2021</strong>, jaren voordat hij dit boek schreef. De bevindingen:</p>
+<ul>
+<li>Kopers die een volledig contactloze ervaring prefereren, rapporteren <strong>23% meer koopspijt</strong> dan kopers die met een verkoper spraken (Gartner, 2021)</li>
+<li>Kopers die volledig zelfstandig en digitaal kopen hebben <strong>1,65 keer meer kans op spijt</strong> dan kopers die een verkoper betrokken hebben (Gartner, 2023)</li>
+<li>Kopers die zowel digitale tools als een accountmanager gebruiken zijn <strong>1,8 keer vaker</strong> positief over de kwaliteit van de deal</li>
+<li>In 2026-onderzoek zegt <strong>69% van de kopers die AI gebruikten</strong> dat ze alsnog een verkoper raadplegen om de AI-gegenereerde inzichten te valideren</li>
+</ul>
+<p><strong>De conclusie die dit onderbouwt:</strong> de koper heeft geen extra informatie nodig — hij heeft validatie nodig. Dat is exact wat Framemaking claimt te leveren.</p>
+<h3>De trend kantelt: van rep-free naar bevestigde onzekerheid</h3>
+<p>De voorkeur voor een rep-free ervaring is de afgelopen jaren gestaag gestegen: van 43% (2021) via 61% (2024-2025) naar 67% (begin 2026). Maar recenter Gartner-onderzoek (2025-2026) laat zien dat deze trend een keerpunt nadert. Kopers die uitgebreid zelfstandig onderzoek doen, vormen vaak vaste conclusies op basis van informatie die overtuigend aanvoelt maar gefragmenteerd, onnauwkeurig of niet aansluitend op de eigen situatie blijkt — Gartner noemt dit <strong>"confident misunderstanding"</strong>. Het resultaat: 81% van de kopers is ontevreden over de uiteindelijk gekozen leverancier, en 86% van de aankooptrajecten stokt. Gartner voorspelt dat dit doorwerkt in een omkering van de rep-free-voorkeur: tegen 2030 zal naar verwachting 75% van de B2B-kopers juist saleservaringen prefereren die menselijk contact boven AI stellen, vooral bij complexe of risicovolle aankopen.</p>
+<p>Dit bevestigt de kern van Framemaking vanuit een andere hoek: het probleem is niet dat kopers te weinig doen, maar dat hun zelfstandige onderzoek een intern consistente maar contextueel onjuiste puzzel oplevert — exact het onderscheid tussen abstracte en contextuele waarde uit outcome uncertainty (zie Deel 1). Het geeft ook een directe verbinding met Deel 4: als "confident misunderstanding" ontstaat doordat zelfstandig onderzoek fragmenten van informatie oplevert zonder context, dan is het automatisch vastleggen en combineren van klantgesprekken met externe informatie precies het mechanisme dat die fragmentatie tegengaat — niet door de koper meer informatie te geven, maar door de verkoper sneller te laten zien waar de context ontbreekt.</p>
+<hr />
+<h2>Deel 3: Paul's Praktijk — de anode-casus</h2>
+<h3>Context</h3>
+<p>Een installateur — nog geen klant bij de fabrikant in kwestie — had via eigen onderzoek (internet, ChatGPT) het onderwerp waterkwaliteit in installaties bestudeerd en kwam uit bij een specifieke technische aanpak: een anode-oplossing. Hij bracht die vraag in via Paul.</p>
+<h3>Waar het misging</h3>
+<p>De theorie achter een anode-oplossing wordt door de fabrikant zelf onderschreven — het staat in hun eigen technische handboeken. Maar intern werd de oplossing weggezet als onzin, en er is geen product voor. Toen de installateur ernaar vroeg, werden zowel hij als Paul niet serieus genomen: de reactie was dat de installateur niet wist waarover hij het had, en dat het al vreemd was dat een installateur zijn informatie via internet en ChatGPT haalt.</p>
+<h3>De Framemaking-diagnose</h3>
+<p>Dit is een schoolvoorbeeld van wat er misgaat als een organisatie niet is ingericht op geïnformeerde kopers. De installateur deed precies wat het Gartner-onderzoek beschrijft: hij bouwde zelfstandig een theoretisch onderbouwde puzzel. Die puzzel was niet fout — de anode-theorie klopt, ook volgens de fabrikant zelf. Wat ontbrak was context: waarom leidt deze overigens geldige aanpak in dit specifieke geval niet tot het beste resultaat?</p>
+<p>Dit is exact het abstract-versus-context-onderscheid uit outcome uncertainty (zie Deel 1): de installateur geloofde terecht in de waarde van de anode-theorie <em>in het abstract</em> — die staat immers in het eigen handboek van de fabrikant. Wat ontbrak was vertrouwen in hoe die theorie zich <em>in zijn specifieke situatie</em> zou moeten vertalen naar een advies. Dat is precies het gat dat een verkoper of adviseur zou moeten dichten, niet ontkennen.</p>
+<p>Wat de installateur nodig had was geen afwijzing, maar iemand die hem hielp begrijpen waarom zijn overigens redelijke conclusie hier niet optimaal was — Framemaking in de zuiverste vorm. In plaats daarvan kreeg hij afweer.</p>
+<h3>De organisatorische laag</h3>
+<p>Dit raakt de kern van Paul's bredere diagnose bij deze opdrachtgever: als 80% van de koopreis zich buiten het zicht van sales afspeelt, moet de organisatie zich daarop inrichten — inhoudelijk (een antwoord klaar hebben op vragen die de markt al stelt) én cultureel (een geïnformeerde prospect als kans behandelen, niet als bedreiging). Marketing moet hier de leidende partij zijn, juist omdat marketing de eerste linie is in die 80%. Wat er nu gebeurt bij deze opdrachtgever is het omgekeerde: sales geeft geen ruimte aan wat marketing zou moeten oppakken, en marketing claimt die ruimte ook niet. Daar zit de pijn.</p>
+<p><strong>Koppeling met VerkennenVerankeren:</strong> de reflex om de installateur (en Paul) af te wijzen is een uitvoeringsreflex op wat eigenlijk een ontwerpvraag is — heeft de organisatie ooit uitgewerkt wanneer een anode-oplossing wél en niet geschikt is, en is dat kennisproduct beschikbaar voor sales én voor de markt? Zonder dat ontwerp blijft elke vergelijkbare vraag een verrassing.</p>
+<h2>Deel 3b: Tweede praktijkvoorbeeld — het bron-as-document als framework-als-duiding</h2>
+<h3>Context</h3>
+<p>Bij dezelfde opdrachtgever bestaat een diepgaand technisch handboek, geschreven door het hoofd Innovatie &amp; Productontwikkeling, over de chemische en fysische grondbeginselen van systeemwaterkwaliteit. Dat handboek is de technische waarheid, maar bedient één publiek op één diepteniveau: ontwerpers en installateurs.</p>
+<p>Samen met Paul is een tweede document ontwikkeld — de "bron-as" — dat dezelfde technische kennis herordent tot een marketing- en content-onderlegger. Kern van de bron-as is een "kapstokmodel": vier interventiestrategieën waar elke technische maatregel onder valt (de driver wegnemen, het medium temmen, de aanval omleiden, de producten verwijderen). Datzelfde model wordt vervolgens ontsloten op vier oplopende diepteniveaus — van handelaar (herkenningskaart, geen mechaniek) via consument/kleine installateur en professionele installateur tot systeemarchitect (volledige mechaniek, normen, TCO). Elke doelgroep krijgt hetzelfde fundament, in andere diepgang en taal.</p>
+<h3>Waarom dit framework-als-duiding is</h3>
+<p>Dit is een directe, concrete toepassing van het conceptidee uit het boek: niet alleen een antwoord geven, maar de koper een structuur meegeven waarmee hij zijn eigen vraag — en toekomstige, vergelijkbare vragen — zelf kan plaatsen. De bron-as maakt expliciet wélke vraag bij wélke maatregel hoort, en waaróm de organisatie de ene maatregel wel aanraadt en de andere niet — precies de vraag die outcome uncertainty voedt als hij onbeantwoord blijft.</p>
+<h3>De koppeling met de anode-casus — hetzelfde probleem, nu zichtbaar op organisatieniveau</h3>
+<p>Het meest treffende is dit: de bron-as benoemt zelf, als één van de nog openstaande besluiten, exact dezelfde vraag waar de installateur uit de eerste casus tegenaan liep — of de anode-oplossing wel of niet in het portfolio hoort, en waarom. Dat is geen toeval. Het laat zien dat de afwijzing die de installateur (en Paul) kregen geen incident was, maar het symptoom van een intern nog onbesliste ontwerpvraag. Zolang die vraag open staat, kan geen enkele klantvraag over dit onderwerp goed beantwoord worden — welk antwoord iemand ook krijgt, het is willekeurig totdat de organisatie de onderliggende positionering heeft vastgesteld.</p>
+<p>Dit bevestigt de VerkennenVerankeren-diagnose uit de eerste casus nog scherper: het is geen trainingsvraagstuk voor de mensen die de installateur afwezen, het is een onopgeloste ontwerpvraag op organisatieniveau. De bron-as is het instrument dat die vraag zichtbaar en beslisbaar maakt — mits hij daadwerkelijk wordt afgetekend en gebruikt, niet alleen geschreven.</p>
+<hr />
+<h2>Deel 4: Tooling die de theorie ondersteunt</h2>
+<h3>Het slotinzicht van het boek: insight selling is zelf commodity geworden</h3>
+<p>In het laatste hoofdstuk trekken Adamson en Schmidt een conclusie die confronterend is voor het hele vakgebied: de kennis van producten en oplossingen is de afgelopen jaren zo breed verspreid geraakt — bij kopers, bij concurrenten, bij elke verkoper — dat insight selling als zodanig een commodity is geworden. Het onderscheidende vermogen dat het een decennium geleden nog was, is dat niet meer.</p>
+<p>Tegelijkertijd constateren de auteurs een hardnekkige misvatting bij sales leaders: de aanname dat meer tijd van de verkoper bij de klant vanzelf tot meer omzet leidt. Die aanname klopt niet zomaar. De kern van Framemaking Sale is juist dat extra klanttijd alleen waarde oplevert als die tijd gaat naar supplier-agnostic voorbereiding — het businessmodel en de eigenlijke uitdaging van de koper zo goed doorgronden dat de koper zelf tot het inzicht komt dat hij een probleem heeft, vóór er over een oplossing gesproken wordt. Niet de verkoper die het probleem voorschrijft, maar de verkoper die de koper tot het probleeminzicht brengt, wint het vertrouwen — en daarmee de deal.</p>
+<p>Dat roept een praktische vraag op die het boek zelf niet beantwoordt: als supplier-agnostic voorbereiding de doorslag geeft, wat maakt die voorbereiding dan haalbaar op schaal, voor een heel salesteam, niet alleen voor de paar verkopers die van nature goed voorbereiden? Dat is waar moderne CRM-tooling in beeld komt — niet als vervanging van de theorie, maar als de infrastructuur die de theorie schaalbaar maakt.</p>
+<h3>Paul's observatie: van vastleggingslast naar vastleggingsmotor</h3>
+<p>Bij een recent CRM-implementatietraject (Dynamics 365) werd zichtbaar waar de werkelijke weerstand van sales- en accountmanagers zat. Niet bij het systeem zelf, maar bij één specifieke taak: het schrijven van bezoekverslagen en het handmatig vastleggen van gemaakte afspraken. Dat is administratieve last die geen enkele verkoper graag doet, en die daardoor structureel wordt uitgesteld of overgeslagen — met als gevolg een CRM dat leeg blijft precies op het punt waar de waardevolste informatie zou moeten staan.</p>
+<p>Wat dit oplost, is niet een strenger nalevingsbeleid maar een omkering van het mechanisme: gesprekken opnemen (via Teams, of direct via speech-to-text) en het CRM de natuurlijke gespreksverslaglegging laten destilleren tot inzichten, in plaats van de verkoper te vragen dat gesprek achteraf handmatig te herconstrueren. De rol van het CRM verschuift daarmee van het vastleggen van activiteiten naar het vastleggen én combineren van informatie over de klant — inclusief het combineren van wat er gezegd is met extern gepubliceerde inzichten over die klant.</p>
+<p>Dat mechanisme levert twee lagen inzicht op. Op het eenvoudigste niveau: hoeveel aandacht gaat er eigenlijk naar een klant — zichtbaar zonder dat iemand dat handmatig hoeft bij te houden. Op het diepere niveau: wat wordt er inhoudelijk besproken, welke signalen zitten daarin, en hoe verhoudt zich dat tot wat elders over die klant bekend is. Dat tweede niveau is precies de bouwstof voor supplier-agnostic voorbereiding — het is het businessmodel en de uitdaging van de klant, gedocumenteerd vanuit het gesprek zelf in plaats van vanuit een verkoper die zich achteraf moet herinneren wat er gezegd is.</p>
+<h3>Wat de markt zelf zegt — drie leveranciers, hetzelfde patroon</h3>
+<p>Dit is geen incidentele waarneming bij één implementatie. Alle drie de grote CRM-platformen positioneren zich inmiddels expliciet rond dezelfde verschuiving, onafhankelijk van elkaar:</p>
+<p><strong>Microsoft (Dynamics 365 / Copilot Sales Agent)</strong> framet het doel van de tooling met een zin die vrijwel letterlijk aansluit bij wat Paul bij de implementatie zag gebeuren: elk uur dat een verkoper terugwint van administratief werk, is een uur dat naar het begrijpen van de klant kan. Conversation Intelligence in Teams transcribeert gesprekken, analyseert wat de klant zegt en zet dat automatisch om in samenvattingen met actiepunten die in het CRM belanden — zonder handmatige tussenstap.</p>
+<p><strong>HubSpot (Breeze)</strong> heeft met Notetaker en Smart Deal Progression een vergelijkbaar mechanisme: gesprekken worden automatisch opgenomen en getranscribeerd, waarna het systeem dealstatus, vervolgstappen en samenvattingen voorstelt. Interessant is vooral de Company Research Agent, die klantvoorbereiding expliciet combineert met externe bronnen — de eigen website van de klant, recent nieuws — naast de CRM-historie, en daarmee de voorbereidingstijd per gesprek van twintig tot dertig minuten terugbrengt naar een paar klikken. Dat is exact de combinatie van interne en externe informatie die de voorbereiding voor Framemaking mogelijk maakt.</p>
+<p><strong>Salesforce (Einstein Conversation Insights)</strong> zet dezelfde stap nog explicieter: elk klantgesprek wordt omgezet in gestructureerde, doorzoekbare CRM-data — inclusief signalen zoals concurrentievermeldingen, koopintentie en dealrisico's die anders verloren gaan zodra het gesprek voorbij is.</p>
+<p>Drie leveranciers, drie verschillende technische invullingen, maar dezelfde onderliggende overtuiging: het CRM verandert van een systeem waarin de verkoper moet vastleggen, naar een systeem dat vastlegt en de verkoper voedt. Dat is geen toevallige marketingclaim — het is waar de hele softwarecategorie momenteel naartoe beweegt, en het is precies de infrastructuur die insight selling opnieuw onderscheidend kan maken op het moment dat de kennis zelf commodity is geworden: niet door meer kennis te verzamelen, maar door de voorbereiding die met die kennis gedaan wordt schaalbaar te maken.</p>
+<h3>De koppeling met CustomerMaturity</h3>
+<p>Dit sluit direct aan bij de centrale stelling van <code>GOV-ALL-CustomerMaturity</code> (nog te publiceren): dat de meest volwassen commerciële organisaties klantgedrag — niet gearticuleerde voorkeuren — als primaire input voor hun bedrijfsprocessen gebruiken. Wat hierboven beschreven staat, is een concrete toepassing van precies dat principe, maar dan toegepast op het individuele verkoopgesprek: niet wat de klant zegt te willen als losstaand gegeven, maar het gesprek zelf, gecombineerd met extern gedrag en informatie, als continue voedingsbron voor de voorbereiding. Zodra CustomerMaturity gepubliceerd wordt, hoort hier een wederkerige verwijzing.</p>
+<h3>Paul's Praktijk</h3>
+<p>Bij een workshop- of klantvoorbereiding waarin Framemaking Sale wordt ingezet: vraag altijd naar de huidige staat van CRM-gebruik bij de opdrachtgever, specifiek op het punt van gespreksvastlegging. Een organisatie waar bezoekverslagen een handmatige, vaak overgeslagen taak zijn, heeft een ander adoptieprobleem dan een organisatie waar gesprekken al automatisch worden vastgelegd — en dat bepaalt of het gesprek met de klant in eerste instantie over tooling-adoptie moet gaan, of direct over de inhoud van de voorbereiding zelf.</p>
+<hr />
+<h2>Deel 5: Aantekeningen voor volgende versie</h2>
+<ul>
+<li><strong>Rode draad die standhield door het hele boek:</strong> de koper koopt niet het product, maar probeert via implementatie zijn eigen businessmodel/werkwijze te verbeteren — dat maakt elke aankoop een organisatieverandering voor de koper zelf. Bevestigd tot en met het laatste hoofdstuk.</li>
+<li>Andere inkoopframeworks naast Kraljic verkennen — welke zijn relevant voor de koperskant van deze koopreis?</li>
+<li>Data-visualisatie (vertrouwen × % reis zonder verkoper × tevredenheid over meerdere metingen) — bewust <em>niet</em> onderdeel van deze bouwsteen; geparkeerd als los stuk voor een toekomstige Substack/LinkedIn-publicatie (zie backlog)</li>
+<li>Wederkerige kruisverwijzing naar <code>GOV-ALL-CustomerMaturity</code> toevoegen zodra dat document live gaat</li>
+<li>Tooling-ontwikkelingen (Deel 4) en Gartner-trendcijfers (Deel 2) lopen voortaan mee in de standaard kwartaalcyclus (research-log → kwartaalgesprek), net als elk ander onderwerp in de bibliotheek</li>
+</ul>
+<hr />
+<p><em>Dit document is een levend werkdocument. Versie verhogen bij elke substantiële aanvulling vanuit nieuwe praktijkervaringen.</em></p></div>
+
+<div class="doc-footer">
+  <span>© Paul Willems — WillemsWorks</span>
+</div>
+
+</body>
+</html>

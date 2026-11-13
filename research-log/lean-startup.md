@@ -1,3 +1,5 @@
+> **Intern werkdocument van Paul Willems (WillemsWorks) — niet bedoeld om extern te delen.** Dit bestand staat in een openbare repository omdat de Bouwstenen-site daaruit wordt gepubliceerd. Deel of hergebruik het niet zonder toestemming.
+
 # Research Log — lean-startup
 
 *Gekoppeld aan: [lean-startup.html](https://www.willemsworks.nl/bouwstenen/lean-startup.html)*

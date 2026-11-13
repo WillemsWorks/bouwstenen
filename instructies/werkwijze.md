@@ -1,3 +1,5 @@
+> **Intern werkdocument van Paul Willems (WillemsWorks) — niet bedoeld om extern te delen.** Dit bestand staat in een openbare repository omdat de Bouwstenen-site daaruit wordt gepubliceerd. Deel of hergebruik het niet zonder toestemming.
+
 # Werkwijze Paul Willems
 
 Instructieset voor Claude — van toepassing in alle projecten en accounts. Beschrijft werkwijze, GOV Library-gebruik, toon en gedragsregels.

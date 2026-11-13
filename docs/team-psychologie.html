@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeamPsychologie — Bouwstenen Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'BDO Grotesk', sans-serif; font-weight: 300; background: var(--white); color: var(--ink); line-height: 1.75; font-size: 16px; }
+
+    .topnav { background: var(--purple-dark); border-bottom: 1px solid rgba(196,255,72,0.15); position: sticky; top: 0; z-index: 100; }
+    .topnav-inner { max-width: 860px; margin: 0 auto; padding: 0 48px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link { font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.55); text-decoration: none; padding: 6px 14px; border-radius: 4px; transition: color 0.12s, background 0.12s; }
+    .topnav-link:hover, .topnav-link.active { color: var(--lime); background: rgba(196,255,72,0.07); }
+    .topnav-dropdown { position: relative; }
+    .topnav-dropdown-toggle { font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.55); text-decoration: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: color 0.12s, background 0.12s; user-select: none; }
+    .topnav-dropdown-toggle:hover, .topnav-dropdown-toggle.active { color: var(--lime); background: rgba(196,255,72,0.07); }
+    .topnav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.15s; }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg { transform: rotate(180deg); }
+    .topnav-dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--purple-dark); border: 1px solid rgba(196,255,72,0.2); border-radius: 6px; min-width: 180px; padding: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .topnav-dropdown.open .topnav-dropdown-menu { display: block; }
+    .topnav-dropdown-item { display: block; font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: color 0.12s, background 0.12s; }
+    .topnav-dropdown-item:hover, .topnav-dropdown-item.active { color: var(--lime); background: rgba(196,255,72,0.07); }
+    .topnav-dropdown-item-label { font-size: 10px; color: rgba(255,255,255,0.3); display: block; margin-top: 1px; }
+    @media (max-width: 640px) { .topnav-inner { padding: 0 20px; } }
+
+    .doc-header { background: var(--purple-dark); color: var(--white); padding: 56px 48px 48px; }
+    .doc-header-inner { max-width: 860px; margin: 0 auto; }
+    .doc-label { display: inline-block; background: var(--lime); color: var(--purple-dark); font-family: 'Sora', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; margin-bottom: 20px; }
+    .doc-title { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 40px; line-height: 1.15; color: var(--white); margin-bottom: 12px; }
+    .doc-subtitle { font-size: 15px; font-weight: 300; color: var(--purple-light); max-width: 600px; margin-bottom: 32px; line-height: 1.65; }
+    .doc-meta { display: flex; gap: 28px; flex-wrap: wrap; font-size: 13px; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px; }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+    .doc-content { max-width: 860px; margin: 0 auto; padding: 0 48px 80px; }
+    .doc-content h1 { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 28px; color: var(--purple-dark); margin: 56px 0 20px; padding-bottom: 14px; border-bottom: 3px solid var(--lime); }
+    .doc-content h2 { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 20px; color: var(--purple-dark); margin: 44px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .doc-content h3 { font-family: 'Sora', sans-serif; font-weight: 500; font-size: 16px; color: var(--purple-dark); margin: 28px 0 8px; }
+    .doc-content h4 { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mid); margin: 24px 0 6px; }
+    .doc-content p { margin-bottom: 16px; color: var(--ink); }
+    .doc-content ul, .doc-content ol { margin: 0 0 18px 20px; }
+    .doc-content li { margin-bottom: 6px; color: var(--ink); }
+    .doc-content blockquote { border-left: 3px solid var(--lime); padding: 12px 20px; background: var(--lime-light); margin: 24px 0; font-style: italic; color: var(--ink-mid); font-size: 15px; }
+    .doc-content code { font-family: monospace; background: #F0ECF8; color: var(--purple-dark); padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+    .doc-content pre { background: var(--purple-dark); color: var(--lime); padding: 20px 24px; border-radius: 6px; margin: 20px 0; overflow-x: auto; font-family: monospace; font-size: 13px; line-height: 1.6; }
+    .doc-content pre code { background: none; color: inherit; padding: 0; }
+    .doc-content table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; }
+    .doc-content th { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-mid); background: #F7F5FC; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--border); }
+    .doc-content td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .doc-content tr:last-child td { border-bottom: none; }
+    .doc-content hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+    .doc-content em { font-style: italic; }
+    .doc-content a { color: var(--purple-dark); text-decoration: none; font-weight: 500; }
+    .doc-content a:hover { text-decoration: underline; }
+    footer { background: var(--purple-dark); color: rgba(255,255,255,0.4); text-align: center; padding: 28px 48px; font-family: 'Sora', sans-serif; font-size: 13px; }
+    footer a { color: var(--lime); text-decoration: none; }
+    @media (max-width: 640px) { .doc-header { padding: 40px 20px 32px; } .doc-content { padding: 0 20px 60px; } .doc-title { font-size: 28px; } }
+  
+    
+    @media (max-width: 640px) { .sab-box { font-size: 7px; padding: 6px 2px; } .sab-label { display: none; } }
+
+  
+    /* GOV Visualizations */
+    .gov-viz-block {
+      background: #1e1628;
+      border-radius: 10px;
+      padding: 24px;
+      margin: 28px 0 32px;
+      border: 1px solid rgba(196,255,72,0.1);
+    }
+    .gov-viz-label {
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #C4FF48;
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+    .gov-viz-inner { width: 100%; }
+
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link active">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">GOV-ALL — TeamPsychologie</span>
+    <h1 class="doc-title">TeamPsychologie</h1>
+    <p class="doc-subtitle">De psychologie van teams — van fundament tot leiderschap. Synthese van Kramer, Sinek, Insights/Jung, Ansoff en Diamond.</p>
+    <div class="doc-meta">
+      <span><strong>Versie</strong> v2.1</span>
+      <span><strong>Bijgewerkt</strong> juni 2026</span>
+      <span><strong>Gebruik</strong> consulting · workshops · diagnose · communicatie</span>
+    </div>
+  </div>
+</div>
+
+<div class="doc-content">
+<h1>TeamPsychologie</h1>
+<h2>Werkdocument voor Paul Willems</h2>
+<p><strong>Document:</strong> <code>GOV-ALL-TeamPsychologie</code> | v2.1 | juni 2026 | governance | alle contexten | consulting, workshops, diagnose, communicatie</p>
+<p><strong>Bronnen:</strong></p>
+<ul>
+<li>Jitske Kramer — <em>Corporate Tribe</em>, <em>Building Tribes</em> + seminar DenkProducties februari 2026</li>
+<li>Simon Sinek — <em>Start With Why</em>, <em>Leaders Eat Last</em>, <em>The Infinite Game</em></li>
+<li>Insights Discovery / C.G. Jung — persoonlijk profiel, april 2024</li>
+<li>Igor Ansoff — Weak Signals theory (1975)</li>
+<li>Amy Edmondson — <em>The Fearless Organization</em> (zie <code>GOV-ALL-Organisatie</code>)</li>
+<li>Julie Diamond — machtsdynamieken</li>
+<li>Eric van 't Zelfde — seminar DenkProducties februari 2026</li>
+</ul>
+<p><strong>Versiegeschiedenis:</strong></p>
+<table>
+<thead><tr><th>Versie</th><th>Datum</th><th>Wijzigingen</th></tr></thead><tbody>
+<tr><td>v2.1</td><td>juli 2026</td><td>Versienummering geharmoniseerd (header/body-inconsistentie opgelost). Terugverwijzing naar GOV-ALL-Faciliteren toegevoegd.</td></tr>
+<tr><td>v2.0</td><td>juni 2026</td><td>Volledige herstructurering. Thematisch i.p.v. auteursgekoppeld. Sinek, Insights/Jung en Ansoff toegevoegd. Eigen construct Waarheid × Kleur × SCARF. Titel gewijzigd van TeamintelligentieKramer naar TeamPsychologie.</td></tr>
+<tr><td>v1.1</td><td>juni 2026</td><td>Insights Discovery sectie toegevoegd</td></tr>
+<tr><td>v1.0</td><td>maart 2026</td><td>Initiële versie op basis van Kramer-seminar</td></tr>
+</tbody></table>
+<p><strong>Verwante bouwstenen:</strong></p>
+<ul>
+<li><code>GOV-ALL-LeadingChange</code> — weerstand en SCARF in verandertrajecten</li>
+<li><code>GOV-ALL-OvertuigingsPsychologie</code> — overtuigen, tribale archetypen, kampvuurgesprekken</li>
+<li><code>GOV-ALL-Organisatie</code> — psychologische veiligheid (Edmondson), structuur en coördinatie</li>
+<li><code>GOV-ALL-Strategie</code> — Sinek's Why als strategisch fundament</li>
+<li><code>GOV-ALL-Leiderschap</code> — leiderschapsgedrag, Covey, Bass</li>
+<li><code>GOV-ALL-Faciliteren</code> — groepsdynamiek en cognitieve startposities in workshopdesign</li>
+</ul>
+<hr>
+<hr>
+<h1>INLEIDING — FRAMEWORKS EN BRONNEN IN DIT DOCUMENT</h1>
+<p>Dit document brengt meerdere frameworks samen rond één thema: de psychologie van teams. Het is geen samenvatting van één auteur maar een thematische synthese. Om het document goed te kunnen gebruiken, helpt het om de kernframeworks kort te kennen voordat je begint.</p>
+<h2>Kernframeworks</h2>
+<p><strong>De drie pijlers van teamintelligentie (Jitske Kramer)</strong></p>
+<p>Spirit (cohesie en tribal verbinding), Wijsheid (alle perspectieven welkom) en Purpose (doelen behalen die je niet voor mogelijk hield). Deze drie pijlers vormen het fundament van dit document. Kramer is ook de bron van het sabotageconcept, energievelden en fractale patronen.</p>
+<p><strong>Insights Discovery — kleurenstijlen (C.G. Jung)</strong></p>
+<p>Vier persoonlijkheidsstijlen gebaseerd op Jungs typologie: Rood (resultaat), Geel (enthousiasme), Groen (harmonie) en Blauw (kwaliteit). Dit model loopt als diagnostische lens door het hele document — bij teamsamenstelling, weerstand, macht, waarheid en communicatie. Volledig uitgewerkt in Deel 2, daarna consistent toegepast.</p>
+<p><strong>Sabotagegedrag als systeemsignaal (Kramer)</strong></p>
+<p>Sabotage is geen persoonlijk falen maar een signaal dat een minderheidsstem niet gehoord wordt. De sabotagelijn loopt van grapjes tot vertrek. Hoe vroeger je het herkent, hoe goedkoper de interventie. Uitgewerkt in Deel 3.</p>
+<p><strong>Macht (Julie Diamond)</strong></p>
+<p>Zes soorten macht — van positional tot informal — die elk in andere situaties effectief zijn. De kern: we gebruiken vaker de macht die comfortabel voelt dan die effectief is. Uitgewerkt in Deel 3.</p>
+<p><strong>Ansoff Weak Signals</strong></p>
+<p>Vijf niveaus van signaalsterkte — van vaag gevoel (Level 5) tot onomstotelijk bewijs (Level 1). De paradox: hoe sterker het signaal, hoe minder tijd je hebt om te reageren. Legitimeert het acteren op intuïtie en fractale patronen vóórdat bewijs volledig is. Uitgewerkt in Deel 3.</p>
+<h2>Ondersteunende bronnen</h2>
+<p><strong>Simon Sinek</strong> — <em>Start With Why</em>, <em>Leaders Eat Last</em>, <em>The Infinite Game</em>: Purpose als organisatiefundament (WHY en Just Cause), visie als communicatiemiddel, en de Circle of Safety als leiderschapsconcept.</p>
+<p><strong>Vernā Myers</strong> — Diversiteit, inclusie en belonging als drie onderscheiden niveaus van teamparticipatie.</p>
+<p><strong>Deep Democracy (Arnold Mindell / Myrna Lewis)</strong> — Besluitvormingsmethodiek waarbij minderheidswijsheid actief wordt opgehaald. Uitgewerkt als techniek in Deel 4 — filosofische verdieping volgt in een volgende versie.</p>
+<p><strong>Amy Edmondson</strong> — Psychologische veiligheid als voorwaarde voor teameffectiviteit. Zie <code>GOV-ALL-Organisatie</code> voor volledige uitwerking.</p>
+<hr>
+<h1>DEEL 1: WAT MAAKT EEN TEAM INTELLIGENT?</h1>
+<h2>1.1 Teamintelligentie — het fundament</h2>
+<p>Teamintelligentie is niet de optelsom van individuele IQ's, motivatie of tevredenheid. Het ontstaat door inlevingsvermogen, evenwichtige spreektijd, aandacht voor subtiele signalen en sociale sensitiviteit.</p>
+<p>Drie pijlers, onderling afhankelijk:</p>
+<p><strong>SPIRIT — Cohesie en tribal verbinding</strong></p>
+<p>Een hechte tribe maakt alle leden beter. Teamcultuur bestaat uit vier lagen: waarden, gedrag, normen en fysieke wereld. Cultuur is niet wat je opschrijft — cultuur is wat je doet als niemand kijkt.</p>
+<blockquote><em>"Sterke teams verbinden waar het kan, vechten waar het moet, herstellen waar mogelijk, nemen afscheid als het niet anders kan."</em> — Kramer</blockquote>
+<p><strong>WIJSHEID — Alle perspectieven zijn welkom</strong></p>
+<p>Niet dat iedereen evenveel zegt, maar dat gezegd kan worden wat gezegd moet worden. Wijsheid zit in de onderstroom — het groepsonbewuste onder de consensuswerkelijkheid.</p>
+<p><strong>PURPOSE — Doelen behalen die je niet voor mogelijk hield</strong></p>
+<p>Purpose vereist twee krachten in balans: POWER (doel, prestatie, dopamine) en LOVE (relatie, vertrouwen, oxytocine). Zonder LOVE wordt POWER destructief. Zonder POWER wordt LOVE sentimenteel.</p>
+<p>Cultuur verspreidt zich via drie mechanismen: <strong>nadoen, napraten, nadenken</strong>. Leiders bepalen de cultuur door wat zij modelleren, niet door wat zij zeggen — nadoen is het krachtigste mechanisme.</p>
+<blockquote><em>"Geen prestatie zonder relatie. Een directie bouwt geen goede school — ze bouwt een team. En dat team bouwt de school."</em> — Van 't Zelfde</blockquote>
+<h2>1.2 Why, Just Cause en visie — Sinek</h2>
+<p>Mensen kopen niet wat je doet of hoe je het doet, maar waarom je het doet. Datzelfde geldt voor teams: mensen committeren niet aan een taak, maar aan een reden.</p>
+<p><strong>De Golden Circle:</strong></p>
+<table>
+<thead><tr><th>Niveau</th><th>Vraag</th><th>Teamtoepassing</th></tr></thead><tbody>
+<tr><td>WHY</td><td>Waarom bestaan we?</td><td>Wat is ons hogere doel buiten de deliverable?</td></tr>
+<tr><td>HOW</td><td>Hoe realiseren we dat?</td><td>Welke principes sturen ons gedrag?</td></tr>
+<tr><td>WHAT</td><td>Wat doen we concreet?</td><td>Welke taken en rollen?</td></tr>
+</tbody></table>
+<p>In <em>The Infinite Game</em> voegt Sinek toe dat een sterk team niet alleen een WHY heeft maar een <em>just cause</em> — een doel dat groter is dan henzelf, dat mensen motiveert ook als ze er zelf niet meer bij zijn.</p>
+<p><strong>Van WHY naar visie</strong></p>
+<p>Een WHY of just cause moet gecommuniceerd worden om mensen te kunnen inspireren. Dat vereist een visie — een beeld van de gewenste toekomst dat mensen begrijpen, voelen en willen bijdragen. Martin Luther King had geen plan — hij had een droom. De droom was de visie.</p>
+<p>Visies worden geschreven op verschillende niveaus:</p>
+<ul>
+<li>Organisatievisie — waar gaat de onderneming naartoe?</li>
+<li>Teamvisie — wat is de bijdrage van dit team aan die organisatievisie?</li>
+<li>Projectvisie — wat willen we met dit project bereiken, en hoe sluit dat aan?</li>
+<li>Afdelingsvisie — wat is de rol van deze afdeling in het grotere geheel?</li>
+</ul>
+<p>Een goede visie inspireert, is concreet genoeg om richting te geven en abstract genoeg om bewegingsruimte te laten. En elk niveau linkt expliciet aan het niveau erboven — anders werkt het niet als verbindend kader.</p>
+<p><strong>Koppeling Kotter:</strong> In <code>GOV-ALL-LeadingChange</code> is de visie stap 3 van Kotter's veranderproces — maar ze werkt ook buiten verandertrajecten als permanent kompas voor teamrichting.</p>
+<p><strong>Koppeling Kramer:</strong> Kramer's PURPOSE-pijler en Sinek's WHY beschrijven hetzelfde fenomeen. Kramer antropologisch (tribe, ritueel, belonging), Sinek neurologisch (dopamine vs. oxytocine).</p>
+<blockquote><em>"Martin Luther King zei niet 'I have a plan.' Hij zei 'I have a dream.'"</em> — Sinek</blockquote>
+<h2>1.3 Psychologische veiligheid als voorwaarde</h2>
+<p>Psychologische veiligheid is de overtuiging dat je sociale risico's kunt nemen binnen de groep — een vraag mag stellen, een fout mag benoemen, een afwijkende mening mag hebben — zonder daarvoor gestraft te worden.</p>
+<p>Het is de voorwaarde voor teamintelligentie, niet het resultaat ervan. Zonder psychologische veiligheid blijft de wijsheid in de onderstroom.</p>
+<p><strong>Koppeling Kramer:</strong> Wat gezegd moet worden, kan alleen gezegd worden als de omgeving het veilig maakt. Sabotagegedrag begint precies op het moment dat psychologische veiligheid ontbreekt.</p>
+<p><strong>Koppeling Sinek:</strong> De leider creëert de Circle of Safety. Zonder die cirkel activeren mensen hun overlevingsinstinct — ze beschermen zichzelf in plaats van bij te dragen.</p>
+<p><strong>Diversiteit en stijlverschil als fundament:</strong> Psychologische veiligheid begint met respect voor het feit dat mensen fundamenteel anders zijn — ook in persoonlijkheidsstijl. Stijldiversiteit is geen probleem om te managen maar een kwaliteit om te benutten. Zie Deel 2 (Insights Discovery) voor het volledige kleurenmodel en hoe je stijlen leest op gedrag.</p>
+<blockquote>Zie <code>GOV-ALL-Organisatie</code> (Edmondson) voor de drie leiderschapstaken die psychologische veiligheid opbouwen.</blockquote>
+<h2>1.3.1 Diversiteit, inclusie en belonging</h2>
+<p>Diversiteit, inclusie en belonging zijn drie verschillende niveaus — en worden vaak verward.</p>
+<blockquote><em>"Diversiteit is uitgenodigd worden op het feest. Inclusie is ten dans gevraagd worden."</em> — Vernā Myers (VP Inclusion Strategy Netflix, Harvard-trained lawyer)</blockquote>
+<p>En een derde niveau — belonging — gaat verder: <belonging> is mogen meebeslissen over de muziek, en je vrij voelen om zelf iemand ten dans te vragen. Niet wachten tot je gevraagd wordt.</p>
+<p>De drie niveaus in organisatiecontext:</p>
+<table>
+<thead><tr><th>Niveau</th><th>Wat het betekent</th><th>Wat het vraagt</th></tr></thead><tbody>
+<tr><td><strong>Diversiteit</strong></td><td>Iedereen mag aanwezig zijn — representatie</td><td>Beleid, werving, toegang</td></tr>
+<tr><td><strong>Inclusie</strong></td><td>Iedereen wordt actief betrokken — participatie</td><td>Gedrag, cultuur, leiderschap</td></tr>
+<tr><td><strong>Belonging</strong></td><td>Iedereen voelt zich thuis — authenticiteit</td><td>Psychologische veiligheid, vertrouwen</td></tr>
+</tbody></table>
+<p>Diversiteit zonder inclusie is decoratie. Inclusie zonder belonging is beleefdheid. Belonging is wat Sinek's Circle of Safety en Kramer's tribe-concept beschrijven — de omgeving waarin mensen zichzelf kunnen zijn én bijdragen aan het geheel.</p>
+<p><strong>Koppeling DISC:</strong> Stijldiversiteit is een specifieke vorm van diversiteit die vaak over het hoofd wordt gezien. Een team kan demografisch divers zijn maar stijlhomogeen — allemaal Rood-dominant. Dan ontbreekt nog steeds de Blauw-kwaliteitsbewaker en de Groen-mensgerichte stem. Inclusie van stijlverschillen betekent: de Blauw-collega die kritische vragen stelt wordt niet als rem ervaren maar als bewaker van kwaliteit. De Groen-collega die aarzelt wordt niet als besluiteloos gezien maar als stem voor de menselijke impact.</p>
+<p><strong>Koppeling psychologische veiligheid:</strong> Belonging is de subjectieve beleving van psychologische veiligheid. Je kunt een veilige omgeving creëren (inclusie) — maar of mensen zich ook echt veilig voelen (belonging) hangt af van consistentie in gedrag over tijd.</p>
+<p>-</p>
+<h2>1.4 Cultuur als systeem</h2>
+<p>Cultuur = unieke antwoorden op universele vragen.</p>
+<p>Vier lagen (oppervlakte → diepte):</p>
+<li>Fysieke wereld — wat je ziet: ruimte, kleding, symbolen</li>
+<li>Gedrag — wat mensen doen</li>
+<li>Normen — impliciete en expliciete spelregels</li>
+<li>Waarden — wat van absoluut belang is</li>
+<p>Cultuur komt in patronen. Cultuurproblemen ook. Diagnose begint niet bij individuen maar bij terugkerende patronen.</p>
+<hr>
+<h1>DEEL 2: TEAMSAMENSTELLING</h1>
+<h2>2.1 Insights Discovery — persoonlijkheidsstijlen (C.G. Jung)</h2>
+<p>Het Insights Discovery model is gebaseerd op Jungs persoonlijkheidstypologie (1921). Vier kleurenenergieën — in elk mens aanwezig, maar in unieke verhoudingen dominant. Geen labels, geen diagnose — een taal voor gedragspatronen.</p>
+<h3>De vier kleurenenergieën</h3>
+<table>
+<thead><tr><th>Kleur</th><th>Kernoriëntatie</th><th>Drijfveer</th><th>Herkend gedrag</th></tr></thead><tbody>
+<tr><td>ROOD</td><td>Resultaat, actie, controle</td><td>Winnen, presteren, beslissen</td><td>Direct, ongeduldig, doelgericht, neemt voortouw</td></tr>
+<tr><td>GEEL</td><td>Enthousiasme, mensen, ideeën</td><td>Inspireren, verbinden, creatief zijn</td><td>Enthousiast, overtuigend, relatiegericht, chaotisch</td></tr>
+<tr><td>GROEN</td><td>Harmonie, stabiliteit, relaties</td><td>Samenwerken, zekerheid, continuïteit</td><td>Geduldig, loyaal, vermijdt conflict, traag in beslissing</td></tr>
+<tr><td>BLAUW</td><td>Kwaliteit, analyse, precisie</td><td>Juist doen, begrijpen, systemen</td><td>Nauwkeurig, kritisch, afstandelijk, procesgedreven</td></tr>
+</tbody></table>
+<h3>Stijlen lezen op gedrag — zonder formeel profiel</h3>
+<p><strong>Rood herkennen:</strong> Trekt snel conclusies, toont ongeduld, gefocust op output en deadline.</p>
+<p><strong>Geel herkennen:</strong> Springt van onderwerp naar onderwerp, brengt energie, vergeet details, hecht aan sfeer.</p>
+<p><strong>Groen herkennen:</strong> Wacht af, vermijdt directe confrontatie, vraagt naar gevolgen voor mensen.</p>
+<p><strong>Blauw herkennen:</strong> Stelt veel vragen voor instemming, vraagt naar bronnen, neemt meer tijd.</p>
+<blockquote>Vuistregel: kijk niet naar wat iemand zegt — kijk naar hoe hij reageert onder tijdsdruk of als zijn standpunt wordt aangevochten. Dat is de betrouwbaarste stijlindicator.</blockquote>
+<h2>2.2 Teamsamenstelling lezen</h2>
+<p><strong>Ontbrekende kleur als blinde vlek:</strong> Homogene teams missen de perspectieven van ondervertegenwoordigde kleuren. Benoem het expliciet: "Wie stelt hier de kritische vragen? Wie bewaakt de kwaliteit? Wie denkt aan de mensen?"</p>
+<p><strong>Stijlscan op gedrag (zonder profielen):</strong></p>
+<p><em>Stap 1: Observeer gedrag in vergaderingen of onder druk</em></p>
+<ul>
+<li>Wie neemt het woord zonder gevraagd te worden? (Rood/Geel)</li>
+<li>Wie wacht tot anderen uitgesproken zijn? (Groen/Blauw)</li>
+<li>Wie vraagt naar onderbouwing? (Blauw)</li>
+<li>Wie vraagt naar impact op mensen? (Groen)</li>
+<li>Wie enthousiasmeert spontaan? (Geel)</li>
+<li>Wie stuurt op resultaat en deadline? (Rood)</li>
+</ul>
+<p><em>Stap 2:</em> Informele inschatting — dominante kleur, secundaire kleur per teamlid. Geen labels, werkinstrument.</p>
+<p><em>Stap 3: Diagnose</em></p>
+<ul>
+<li>Welke kleur domineert? Welke ontbreekt?</li>
+<li>Waar zitten stijlbotsingen die als inhoudelijk conflict worden ervaren?</li>
+</ul>
+<p><em>Stap 4: Interventie</em></p>
+<ul>
+<li>Benoem het patroon zonder te labelen: "Ik zie dat we als team snel tot actie neigen — wat betekent dat voor mensen die meer tijd nodig hebben?"</li>
+<li>Geef ruimte aan de ondervertegenwoordigde kleur.</li>
+</ul>
+<h2>2.3 Energievelden</h2>
+<p>Mensen creëren energievelden met elkaar, door gedrag. Een energieveld is een cluster van rollen, meningen, taal, activiteiten, kleding, muziek en emoties.</p>
+<p>Twee wetten:</p>
+<ul>
+<li>Wanneer je in een energieveld stapt, word je erin gezogen.</li>
+<li>Een rigide energieveld zorgt voor een tegenreactie.</li>
+</ul>
+<p><strong>Het magneetwoord als diagnostisch instrument:</strong> Elk team of elke organisatie heeft een onbewust magneetwoord — het woord dat het dominante energieveld beschrijft. Vraag jezelf: als ik één woord zou kiezen dat het energieveld van dit team typeert, wat is dat dan? En: welk woord zou ik willen dat het is?</p>
+<p>Het verschil tussen die twee is de interventieruimte.</p>
+<p><strong>Energieveld aanzetten (5 stappen):</strong></p>
+<li>Kies je gewenste magneetwoord/kernwaarde</li>
+<li>Welke gedragingen, ruimtes, taal en rituelen versterken dit veld?</li>
+<li>Organiseer ruimte voor het tegendeel — een ventiel voorkomt tegenreactie</li>
+<li>Wat is nu niet consistent met het wensveld?</li>
+<li>Wat werkt al wel — hoe vergroot je dat?</li>
+<hr>
+<h1>DEEL 3: TEAMDYNAMIEK</h1>
+<p><em>De mechanismen die teameffectiviteit bepalen — op een schaal van versterkend naar ondermijnend. Elk mechanisme heeft twee kanten.</em></p>
+<h2>3.1 Fractale patronen en het vroege signaal</h2>
+<p>Een fractaal is een patroon in een patroon. Wat geldt voor twee mensen, geldt ook voor twee teams, twee afdelingen, twee organisaties.</p>
+<p>Als je een terugkerend conflict in een team ziet, zoek het fractaal — hetzelfde patroon speelt hoogstwaarschijnlijk ook op organisatieniveau. En omgekeerd: wat je in het klein ziet is vrijwel altijd een vroege uitdrukking van iets groters.</p>
+<p><strong>Het probleem:</strong> Een fractaal patroon in het klein is zelden hard bewijs. Het wordt afgedaan als uitzondering. Maar wie leert vertrouwen op patroonherkenning, ziet eerder dan anderen wat er speelt.</p>
+<h3>Ansoff Weak Signals — legitimering van intuïtie</h3>
+<p>Igor Ansoff (1975) introduceerde Weak Signals: vage, vroege, ambigue indicatoren van toekomstige bedreigingen of kansen. Vijf niveaus:</p>
+<table>
+<thead><tr><th>Niveau</th><th>Signaal</th><th>Respons</th></tr></thead><tbody>
+<tr><td>L5 — Vaag & subjectief</td><td>Gevoel, geruchten, anomalieën</td><td>Scannen, observaties vastleggen</td></tr>
+<tr><td>L4 — Voelbaar maar niet kwantificeerbaar</td><td>Vroege symptomen, impact onbekend</td><td>Hypothesen formuleren</td></tr>
+<tr><td>L3 — Concrete precedenten</td><td>Scope bekend, geen historische data</td><td>Nieuwe opties verkennen</td></tr>
+<tr><td>L2 — Concrete verschijnselen</td><td>Herkenbaar, impact onduidelijk</td><td>Vergelijkende modellen</td></tr>
+<tr><td>L1 — Vertrouwd & helder</td><td>Iedereen ziet het</td><td>Traditionele respons — maar: te laat</td></tr>
+</tbody></table>
+<p><strong>De Ansoff-paradox:</strong> Hoe sterker het signaal, hoe minder tijd je hebt om te reageren. Level 4 en 5 bieden de meeste actietijd — maar het signaal zit nog onder het ruisniveau. Pas bij Level 1-2 gelooft iedereen je — maar is de window to act grotendeels gesloten.</p>
+<p><strong>Koppeling Kramer:</strong> Een fractaal patroon in het klein is per definitie een Level 4-5 Weak Signal. Kramer legitimeert het mechanisme. Ansoff legitimeert het acteren erop — ook zonder volledig bewijs.</p>
+<h3>Hoe communiceer je een Weak Signal in een rationele omgeving?</h3>
+<p><strong>1. Plausibel verhaal:</strong> Niet "ik zie een probleem" maar "ik zie een patroon dat me doet denken aan..." Je biedt een hypothese, geen conclusie.</p>
+<p><strong>2. Hypothesetaal:</strong> Formuleer meerdere hypotheses en vraag welk bewijs elke hypothese zou kunnen ontkrachten. Werkt in rationele omgevingen omdat het analytisch oogt.</p>
+<p><strong>3. Gezamenlijk scannen:</strong> Leg het signaal vast als observatie en nodig anderen uit mee te zoeken. Zo maak je het collectief in plaats van persoonlijk.</p>
+<p><strong>Koppeling minderheidswijsheid:</strong> De afwijkende stem in Deep Democracy is de menselijke variant van een Weak Signal. De stem die niemand wil horen is vaak de vroegste drager van een patroon dat iedereen later herkent.</p>
+<h2>3.2 Sabotage als systeem</h2>
+<p>Sabotage ontstaat wanneer een minderheidsstem niet gehoord wordt. Geen persoonlijk falen — een systeemsignaal.</p>
+<p>De sabotagelijn loopt van bedekt naar openlijk:</p>
+<pre><code>
+Grapjes → Sarcastische grappen → Excuses/smoesjes → Roddel →
+Slechte communicatie → Opzettelijk tegenwerken → Vertragen →
+Staken → 'Oorlog'/vertrek
+</code></pre>
+<p>Hoe verder naar rechts, hoe duurder de organisatiekosten.</p>
+<blockquote><em>"Als wat gezegd moet worden niet gezegd kan worden, zoek je een andere plaats voor je mening. En ga je ander gedrag vertonen."</em> — Kramer</blockquote>
+<p><strong>Kern: vroege sabotage = Weak Signal</strong></p>
+<p>De eerste tekenen op de sabotagelijn (grapjes, lichte sarcastische opmerkingen) zijn Level 4-5 Weak Signals van een dieper probleem. Ze worden stelselmatig afgedaan als sfeer of persoonlijkheid — terwijl ze een patroon aangeven dat links op de lijn begint en rechts eindigt.</p>
+<p><strong>Ontmantelen:</strong></p>
+<ul>
+<li>Welk sabotagegedrag herken je bij jezelf? Bij anderen?</li>
+<li>Welk gesprek wordt eigenlijk niet gevoerd?</li>
+<li>Stop je eigen sabotagegedrag. Voer de kampvuurgesprekken.</li>
+</ul>
+<h2>3.3 Stijlbotsingen als verklaring voor weerstand</h2>
+<table>
+<thead><tr><th>Combinatie</th><th>Typisch wrijvingspunt</th></tr></thead><tbody>
+<tr><td>Rood × Groen</td><td>Rood ervaart Groen als besluiteloos. Groen ervaart Rood als onveilig.</td></tr>
+<tr><td>Rood × Blauw</td><td>Rood wil beslissen, Blauw wil eerst begrijpen.</td></tr>
+<tr><td>Geel × Blauw</td><td>Geel brengt ideeën zonder uitwerking. Blauw wil details en plan.</td></tr>
+<tr><td>Groen × Geel</td><td>Groen wil zekerheid. Geel wil vernieuwing en actie.</td></tr>
+</tbody></table>
+<blockquote>Vuistregel: stel altijd de stijlvraag vóór de inhouds- of politieke vraag. Veel conflicten zijn geen inhoudelijke conflicten — het zijn stijlbotsingen.</blockquote>
+<p><strong>Koppeling sabotage:</strong> Stijlbotsingen die onbesproken blijven, zakken de sabotagelijn in. Een Groen-dominant teamlid dat zich overrompeld voelt door Rood-aansturing zal zelden direct confronteren — maar vertraagt, geeft excuses, communiceert minder. Geen onwil — stijlrespons.</p>
+<h2>3.4 Macht (Julie Diamond)</h2>
+<p>Macht is gedrag — je kunt het leren. Vijf uitgangspunten:</p>
+<li>Macht is een menselijke eigenschap</li>
+<li>Je kunt macht niet uitzetten</li>
+<li>Iedereen kan macht verkeerd gebruiken</li>
+<li>Te weinig macht inzetten is even schadelijk als teveel</li>
+<li>Macht is gedrag — je kunt het leren</li>
+<p><strong>Zes soorten macht:</strong></p>
+<table>
+<thead><tr><th>Machtsbron</th><th>Omschrijving</th><th>Comfortabel voor</th><th>Effectief bij</th></tr></thead><tbody>
+<tr><td>Positional</td><td>Functie en positie</td><td>Rood</td><td>Situaties die formeel gezag vragen</td></tr>
+<tr><td>Social</td><td>Status die de wereld je toeschrijft</td><td>Rood/Geel</td><td>Reputatie-gedreven contexten</td></tr>
+<tr><td>Expert</td><td>Kennis, vaardigheden, ervaring</td><td>Blauw</td><td>Inhoudelijke overtuiging</td></tr>
+<tr><td>Experience</td><td>Levenservaring en tegenslagen</td><td>Groen</td><td>Persoonlijke geloofwaardigheid</td></tr>
+<tr><td>Personal</td><td>Kwaliteit van relaties, charisma</td><td>Geel/Groen</td><td>Vertrouwen bouwen, non-hiërarchisch</td></tr>
+<tr><td>Informal</td><td>Insider-kennis, moreel kompas</td><td>Alle kleuren</td><td>Wanneer formele macht ontbreekt</td></tr>
+</tbody></table>
+<blockquote><em>"We gebruiken vaker de macht die comfortabel voelt, dan die effectief is."</em></blockquote>
+<p><strong>Wanneer comfortabel vs. effectief:</strong></p>
+<p>Rood grijpt automatisch naar Positional en Expert Power — ook als Personal Power effectiever zou zijn. In adviesrollen zonder formeel gezag is dat de valkuil. Blauw heeft Expert Power maar mist soms de sociale macht om het te laten landen. Groen vermijdt machtsinzet en lijdt daar soms onder — terwijl Experience Power juist heel effectief is in teamcontexten.</p>
+<blockquote><em>[Verdieping: Julie Diamond — Power: A User's Guide — nog te verwerken in volgende versie]</em></blockquote>
+<h2>3.5 Waarheid, kleur en pijn</h2>
+<p><em>Eigen construct op basis van Kramer, Insights/Jung en SCARF (Rock)</em></p>
+<h3>Waarom wordt de waarheid niet uitgesproken?</h3>
+<p>Kramer beschrijft vijf oorzaken:</p>
+<li>De waarheid is pijnlijk. We willen fun.</li>
+<li>De waarheid verstoort machtsstructuren. We willen orde.</li>
+<li>We weten niet wie de waarheid spreekt. We willen zekerheid.</li>
+<li>De waarheid plaatst ons buiten de groep. We willen erbij horen.</li>
+<li>De waarheid is complex. We willen simpel.</li>
+<p>Twee vermijdingsstrategieën: verbergen of verzuipen (misinformatie overspoelt de waarheid).</p>
+<h3>Hoe elke kleur de waarheid ervaart</h3>
+<p>Persoonlijkheidsstijl bepaalt hoe mensen de waarheid ervaren, communiceren én ontvangen. Dit verklaart waarom dezelfde boodschap bij de ene persoon landt en bij de andere weerstand oproept.</p>
+<p><strong>Rood</strong> ervaart waarheid als instrumenteel. Feiten zijn relevant als ze helpen winnen of beslissen. Spreekt zelf de waarheid direct — soms te direct, zonder context. Ongemakkelijke waarheid die status of autonomie bedreigt: aanvallen of negeren.</p>
+<p><strong>Geel</strong> ervaart waarheid als relationeel en subjectief. Kleurt feiten met enthousiasme en beleving. De waarheid van dit moment kan morgen anders zijn. Ongemakkelijke waarheden verdrinken in positieve energie of afleidende verhalen.</p>
+<p><strong>Groen</strong> weet de waarheid vaak wel — maar zwijgt om de harmonie te bewaren. De waarheid die Groen het meest pijn doet: "jij veroorzaakt het conflict" of "jij hoort er niet bij."</p>
+<p><strong>Blauw</strong> zoekt de waarheid actief op en voelt zich ongemakkelijk bij onnauwkeurigheid. Communiceert de waarheid zonder sociale context, waardoor het harder aankomt dan bedoeld. De pijnlijkste waarheid voor Blauw: onzekerheid, ontbrekende feiten, een proces dat niet klopt.</p>
+<h3>Wanneer doet waarheid pijn — SCARF per kleur</h3>
+<p><em>Hypothese op basis van logische consistentie van beide modellen — niet empirisch bewezen</em></p>
+<table>
+<thead><tr><th>Kleur</th><th>Pijnlijkste waarheid</th><th>SCARF-bedreiging</th></tr></thead><tbody>
+<tr><td>Rood</td><td>"Jij hebt het fout" / "Jij verliest"</td><td>Status + Autonomy</td></tr>
+<tr><td>Geel</td><td>"Niemand luistert naar jou" / "Jij past niet"</td><td>Relatedness</td></tr>
+<tr><td>Groen</td><td>"Jij veroorzaakt het conflict" / "Jij wordt buitengesloten"</td><td>Relatedness + Fairness</td></tr>
+<tr><td>Blauw</td><td>"De feiten zijn onduidelijk" / "Het proces deugt niet"</td><td>Certainty + Fairness</td></tr>
+</tbody></table>
+<h3>Communiceren aware van kleur — vier aanpakken</h3>
+<p>Als je weet welke kleur dominant is én welke SCARF-bedreiging actief is, kun je voorspellen waarom een waarheid niet landt — en je communicatie aanpassen. Niet de waarheid verzachten, maar de verpakking aanpassen aan de ontvanger.</p>
+<p><strong>Bij Rood:</strong> Bevestig eerst autonomie, dan de waarheid.</p>
+<p><em>"Het is jouw beslissing, maar ik zie..."</em></p>
+<p>Rood voelt zich niet aangevallen als de autonomie intact blijft. Status-bedreiging neutraliseer je door de waarheid te framen als informatie, niet als oordeel.</p>
+<p><strong>Bij Geel:</strong> Verbind de waarheid aan de relatie.</p>
+<p><em>"Ik zeg dit juist omdat ik erin geloof dat jij het kunt."</em></p>
+<p>Geel heeft eerst verbinding nodig voor ze inhoud kunnen ontvangen. Zonder relatie is de waarheid een aanval.</p>
+<p><strong>Bij Groen:</strong> Creëer eerst veiligheid, dan de waarheid — nooit in het openbaar.</p>
+<p><em>"Ik wil iets met je bespreken, en ik wil dat je weet dat dit niets verandert aan onze samenwerking."</em></p>
+<p>Expliciteer dat de relatie niet in gevaar is vóórdat je de inhoud brengt.</p>
+<p><strong>Bij Blauw:</strong> Breng de waarheid met feiten en context. Geef verwerkingstijd.</p>
+<p><em>"Ik heb gekeken naar X, Y en Z, en ik zie een patroon. Ik ben benieuwd wat jij ziet."</em></p>
+<p>Stel de vraag in plaats van de conclusie. Blauw verwerkt liever zelf dan dat de conclusie wordt opgelegd.</p>
+<blockquote>Dit construct is een eigen synthese op basis van Kramer (vijf problemen met waarheid), Insights Discovery (kleurenstijlen) en SCARF (Rock, 2008). Het staat als zodanig niet in de literatuur maar is volledig consistent met de drie bronmodellen.</blockquote>
+<h2>3.6 Deep Democracy — minderheidswijsheid (Arnold Mindell / Myrna Lewis)</h2>
+<p>Alle stemmen horen én meenemen in het besluit. De minderheidswijsheid is vaak de wijsheid die het meest nodig is.</p>
+<p>Drie niveaus in een groep:</p>
+<ul>
+<li>Groepsbewuste consensusrealiteit — iedereen weet wat er speelt</li>
+<li>Groepsonbewuste — niet iedereen is op de hoogte</li>
+<li>Wijsheid/potentieel — gecombineerde kennis; kan zeggen wat gezegd moet worden</li>
+</ul>
+<p>Besluitvorming loopt van diep democratisch (idee → suggestie → voorstel) naar autocratisch (opdracht). Helder zijn over welk niveau je hanteert voorkomt sabotage.</p>
+<p><strong>Koppeling Ansoff:</strong> De afwijkende stem is de menselijke variant van een Weak Signal. In een omgeving zonder psychologische veiligheid worden deze stemmen gesmoord — en verdwijnt de vroegste waarschuwing.</p>
+<hr>
+<h2>3.7 Kleurdiagnostiek — samenvattende tabel</h2>
+<p><em>Eigen construct op basis van Insights/Jung, SCARF (Rock), macht (Diamond) en waarheid (Kramer)</em></p>
+<p>Één diagnostisch instrument dat de drie dimensies samenvoegt. Lees de dominante kleur van je gesprekspartner of teamlid — en zie in één oogopslag de hele psychologie.</p>
+<table>
+<thead><tr><th>Kleur</th><th>Drijfveer</th><th>Pijnlijkste waarheid</th><th>SCARF-bedreiging</th><th>Comfortabele machtsbron</th><th>Effectievere machtsbron bij</th></tr></thead><tbody>
+<tr><td><strong>ROOD</strong></td><td>Winnen, resultaat, controle</td><td>"Jij hebt het fout" / "Jij verliest"</td><td>Status + Autonomy</td><td>Positional + Expert</td><td>Personal (in adviesrol)</td></tr>
+<tr><td><strong>GEEL</strong></td><td>Inspireren, verbinden, creatief</td><td>"Niemand luistert" / "Jij past niet"</td><td>Relatedness</td><td>Personal + Social</td><td>Expert (om serieus genomen te worden)</td></tr>
+<tr><td><strong>GROEN</strong></td><td>Harmonie, zekerheid, samenwerken</td><td>"Jij veroorzaakt het conflict"</td><td>Relatedness + Fairness</td><td>Experience</td><td>Positional (geeft duidelijkheid en veiligheid)</td></tr>
+<tr><td><strong>BLAUW</strong></td><td>Kwaliteit, precisie, juistheid</td><td>"De feiten kloppen niet" / "Het proces deugt niet"</td><td>Certainty + Fairness</td><td>Expert</td><td>Personal (om draagvlak te krijgen)</td></tr>
+</tbody></table>
+<p><strong>Hoe de tabel te gebruiken:</strong></p>
+<ul>
+<li>Schat de dominante kleur in op gedrag (zie 2.1)</li>
+<li>Gebruik de SCARF-kolom om te begrijpen waarom iemand reageert zoals hij reageert</li>
+<li>Gebruik de waarheidskolom om te voorspellen wanneer een boodschap weerstand oproept</li>
+<li>Gebruik de machtskolom om te bepalen welke machtsbron je inzet</li>
+</ul>
+<p><strong>Voorbeeld:</strong> Je wilt een kritische boodschap brengen aan een Blauw-dominant persoon. Je weet: hun pijnpunt is onzekerheid, hun SCARF-bedreiging is Certainty. Dus: breng de boodschap met feiten, geef verwerkingstijd, stel de vraag in plaats van de conclusie. Gebruik Expert Power om geloofwaardig te zijn, maar voeg Personal Power toe om het gesprek veilig te houden.</p>
+<blockquote><em>Dit construct is een eigen synthese op basis van vier bronmodellen. Niet empirisch bewezen — wel logisch consistent en praktisch toepasbaar.</em></blockquote>
+<hr>
+<h1>DEEL 4: TEAMLEIDERSCHAP</h1>
+<h2>4.1 Circle of Safety — Sinek (Leaders Eat Last)</h2>
+<p>Sinek beschrijft leiderschap als het creëren van een Circle of Safety — een omgeving waarin mensen zich veilig genoeg voelen om samen te werken zonder energie te verspillen aan interne bescherming.</p>
+<p><strong>De biologie:</strong> Binnen de cirkel produceren mensen oxytocine (vertrouwen, verbinding). Buiten de cirkel domineert cortisol (angst, zelfbescherming). Angst en samenwerking zijn biologisch onverenigbaar.</p>
+<p><strong>Wat de leider doet:</strong></p>
+<ul>
+<li>Beschermt het team tegen externe druk — absorbeert klappen van boven</li>
+<li>Deelt eer bij succes (WIJ), neemt verantwoordelijkheid bij falen (IK)</li>
+<li>Creëert veiligheid door consistent gedrag — niet door uitspraken</li>
+</ul>
+<p><strong>Praise in public, punish in private</strong></p>
+<p>Een klassiek leiderschapsprincipe — toegeschreven aan leiders van Vince Lombardi tot Catherine the Great, en omarmd door Sinek in Leaders Eat Last. De asymmetrie: succes vier je publiekelijk zodat het team meedeelt in de erkenning. Fouten bespreek je privé zodat niemand gezichtsverlies lijdt. Publieke kritiek beschadigt vertrouwen en voedt de sabotagelijn.</p>
+<blockquote><em>"Goede leiders delen eer wanneer dingen goed gaan en nemen verantwoordelijkheid wanneer dingen fout gaan."</em> — Sinek</blockquote>
+<blockquote><em>"Don't show up to prove. Show up to improve."</em> — Sinek</blockquote>
+<p><strong>Koppeling Kramer:</strong> De Circle of Safety is het energieveld dat de leider aanzet. De leider is de ceremoniemeester.</p>
+<h2>4.2 Stijl aanpassen als leider</h2>
+<p><strong>Bij Rood:</strong> Direct en resultaatgericht. Conclusie eerst. Autonomie bewaken.</p>
+<p><strong>Bij Geel:</strong> Energiek en persoonlijk beginnen. Verbinding voor inhoud. Ruimte voor ideeën. Waardering uitspreken.</p>
+<p><strong>Bij Groen:</strong> Rustig tempo. Vragen naar impact op mensen. Veiligheid creëren voor twijfels. Geen verrassingen — kondig veranderingen aan.</p>
+<p><strong>Bij Blauw:</strong> Gedegen voorbereiding. Feiten paraat. Vragen serieus nemen. Geen druk op snelle beslissing — geef verwerkingstijd.</p>
+<h2>4.3 Kampvuurgesprekken vs. vergaderingen</h2>
+<p>Twee soorten gesprekken die beide nodig zijn maar vaak worden verward:</p>
+<p><strong>Vergadering (bullet point meeting):</strong> Efficiënt, taakgericht, besluitvormend. Weinig psychologische veiligheid. Oppervlakkige consensus.</p>
+<p><strong>Kampvuurgesprek:</strong> Open, relationeel, ruimte voor twijfel en echte meningen. Hier wordt gezegd wat gezegd moet worden.</p>
+<blockquote><em>"Stop met vergaderen, steek kampvuren aan. Bij kampvuur vertel je verhalen die je nooit van plan was te delen — daar ontstaat transformatie."</em> — Kramer</blockquote>
+<blockquote><em>"Organisaties zeggen vaak 'geen tijd voor kampvuur', maar een verkeerd genomen besluit berokkent veel meer schade dan tijd geïnvesteerd in een goed gesprek."</em> — Kramer</blockquote>
+<p>De fout die organisaties maken: alleen bullet point meetings plannen en verwachten dat kampvuurgesprekken vanzelf ontstaan. Dat doen ze niet — ze verdwijnen.</p>
+<p><strong>Praktische inrichting:</strong> Cirkelopstelling · geen agenda maar een intentie en een vraag · tijd nemen · geen rushen naar conclusie.</p>
+<p><strong>Koppeling Circle of Safety:</strong> Het kampvuurgesprek is de praktische uitdrukking van de Circle of Safety. Je kunt de cirkel niet creëren in een bullet point meeting.</p>
+<h2>4.4 Deep Democracy — technieken</h2>
+<p><strong>Het Debat (conflict productief maken):</strong></p>
+<p>A. Veiligheidsprincipes — geen monopolie op de waarheid, doel = relatie versterken</p>
+<p>B. Kant A / Kant B — niet pingpongen, beide kanten verdienen eerlijk pleidooi</p>
+<p>C. Wat heeft geraakt — welk inzicht geeft dat in mezelf?</p>
+<p>D. Los op — terug naar de vraag, bijvangst benoemen</p>
+<p><strong>Besluit nemen (4 stappen):</strong></p>
+<li>Verzamel alle invalshoeken</li>
+<li>Vraag actief naar de andere mening: "Wie heeft een heel ander idee?"</li>
+<li>Maak het veilig voor verschil: "Wie herkent iets soortgelijks?"</li>
+<li>Voeg minderheidswijsheid toe: "Wat heb je nodig om mee te gaan?"</li>
+<p><strong>Check-in (onderstroom boven water):</strong></p>
+<p>Doel: de onderstroom boven water vóór de agenda begint.</p>
+<p>Start zelf · hete vraag · sharing (geen dumping) · neutraal samenvatten · overgang naar agenda.</p>
+<p><strong>Fractalen opsporen:</strong></p>
+<li>Observeren — welke patronen? Terugkerende voorvallen, grappen?</li>
+<li>Duiden — op welk niveau speelt dit ook?</li>
+<li>Analyseren — helpend of ondermijnend? Doorgaan of stoppen?</li>
+<hr>
+<h1>DEEL 5: PAUL'S PRAKTIJK</h1>
+<h2>Bij teamdiagnose (consulting)</h2>
+<p><strong>Stijlscan als voorbereiding:</strong> Schat de kleurenverdeling in vóór je de kamer in loopt. Je leest de groepsdynamiek beter als je de stijlverdeling hebt ingeschat — niet als sessie met profielen, maar als eigen diagnostisch instrument.</p>
+<p><strong>Weerstand verklaren:</strong> Stel altijd de stijlvraag vóór de inhouds- of politieke vraag. Groen vertraagt bij te hoog tempo. Blauw verzet zich bij ontbrekende onderbouwing. Andere diagnose vraagt andere interventie.</p>
+<p><strong>Sabotagelijn lezen:</strong> Vroeg sabotagegedrag (grapjes, lichte sarcastische opmerkingen) zijn Weak Signals. Level 4-5. Niet afdoen als sfeer of persoonlijkheid — zoek het patroon, zoek het fractaal.</p>
+<p><strong>Waarheid brengen:</strong> Bij Rood werkt "het is jouw beslissing, maar ik zie..." — autonomie eerst, dan de waarheid. Bij Groen: eerst de relatie expliciet veiligstellen. Bij Blauw: feiten en verwerkingstijd. Bij Geel: verbinding voor inhoud. De stijl van de ontvanger bepaalt de verpakking — niet de inhoud.</p>
+<p><strong>Kampvuurgesprek als instrument:</strong> Bij vastgelopen besluitvorming: organiseer eerst een kampvuurgesprek voordat je de inhoud terugpakt. Het gesprek dat niet gevoerd is, blokkeert het besluit dat niet genomen wordt.</p>
+<p><strong>Visie per niveau:</strong> Vraag bij elke opdracht: wat is de visie op dit project, team of afdeling — en hoe sluit die aan op de organisatievisie? Als die link ontbreekt, ontbreekt het commitment.</p>
+<p><strong>Machtsbron per situatie:</strong> In consulting zonder formeel gezag is Personal Power effectiever dan Positional of Expert Power. Maar Expert Power opent deuren. Ken je dominante machtsbron en weet wanneer je moet schakelen.</p>
+<h2>Eigen profiel als lens</h2>
+<p>Rood-dominant (type 43, 72% Rood) betekent: sterk in resultaatgericht communiceren, beslissen en tempo bepalen. Valkuil: dit werkt uitstekend bij Rood en Geel, maar roept weerstand op bij Groen en Blauw — niet vanwege inhoud, maar stijl.</p>
+<p>Onder druk verschuift het profiel naar type 3 (Gefocust) — minder accommoderend, meer gefocust op eigen agenda. Herkenningssignalen: ongeduld, conclusies trekken voor anderen, minder luisteren. Dit is het moment om bewust te vertragen en de stijlvraag te stellen.</p>
+<p>Bij waarheid brengen: van nature sterk bij Rood (dicht bij eigen profiel). Bewust oefenen bij Groen (veiligheid eerst) en Blauw (feiten en verwerkingstijd geven).</p>
+<p>Bij machtsgebruik: in non-hiërarchische of adviesrollen is Personal Power effectiever dan Positional of Expert Power — en die vraagt Geel en Groen gedrag.</p>
+<hr>
+<p><em>Backlog voor volgende versie: Julie Diamond — Power: A User's Guide uitwerken · Waarheid × SCARF verder doordenken als zelfstandig instrument · praktijkvoorbeelden toevoegen (anoniem) · psychologische veiligheid eigen bouwsteen (Edmondson)</em></p>
+<p><em>Verwante bouwstenen: <code>GOV-ALL-LeadingChange</code> · <code>GOV-ALL-OvertuigingsPsychologie</code> · <code>GOV-ALL-Organisatie</code> · <code>GOV-ALL-Strategie</code> · <code>GOV-ALL-Leiderschap</code> · <code>GOV-ALL-VerkennenVerankeren</code> · <code>GOV-ALL-Faciliteren</code></em></p>
+</div>
+
+<footer>
+  © Paul Willems — WillemsWorks &nbsp;·&nbsp; <a href="https://willemsworks.nl">willemsworks.nl</a>
+</footer>
+
+</body>
+</html>

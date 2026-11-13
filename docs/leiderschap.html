@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leiderschap — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* Topbar */
+    .topbar a:hover { text-decoration: underline; }
+
+    /* Doc header */
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    /* Content wrapper */
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+
+    .doc-content h3 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 500;
+      font-size: 17px;
+      color: var(--purple-dark);
+      margin: 32px 0 10px;
+    }
+
+    .doc-content h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin: 24px 0 8px;
+    }
+
+    .doc-content p {
+      margin-bottom: 16px;
+    }
+
+    .doc-content ul, .doc-content ol {
+      margin: 12px 0 16px 20px;
+    }
+
+    .doc-content li { margin-bottom: 6px; }
+
+    .doc-content blockquote {
+      border-left: 3px solid var(--purple-light);
+      margin: 28px 0;
+      padding: 14px 20px;
+      background: var(--lime-light);
+      font-size: 16px;
+      color: var(--purple-dark);
+      font-style: italic;
+    }
+    .doc-content blockquote p { margin: 0; color: var(--purple-dark); }
+
+    /* Tables */
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+    .doc-content th {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 10px 16px;
+      text-align: left;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .doc-content td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .doc-content tr:nth-child(even) td { background: var(--lime-light); }
+
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+    .doc-content code {
+      background: var(--lime-light);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-family: 'Courier New', monospace;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* Footer */
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .topbar, .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+    }
+  
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+    }
+
+  
+    /* Topnav */
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    /* Dropdown */
+    .topnav-dropdown {
+      position: relative;
+    }
+    .topnav-dropdown-toggle {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s, background 0.12s;
+      user-select: none;
+    }
+    .topnav-dropdown-toggle:hover,
+    .topnav-dropdown-toggle.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-toggle svg {
+      width: 10px; height: 10px;
+      transition: transform 0.15s;
+    }
+    .topnav-dropdown.open .topnav-dropdown-toggle svg {
+      transform: rotate(180deg);
+    }
+    .topnav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--purple-dark);
+      border: 1px solid rgba(196,255,72,0.2);
+      border-radius: 6px;
+      min-width: 180px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .topnav-dropdown.open .topnav-dropdown-menu {
+      display: block;
+    }
+    .topnav-dropdown-item {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-dropdown-item:hover,
+    .topnav-dropdown-item.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+    .topnav-dropdown-item-label {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      display: block;
+      margin-top: 1px;
+    }
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+    }
+
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link active">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Persoonlijk werkframework</span>
+    <h1 class="doc-title">Leiderschap</h1>
+    <p class="doc-subtitle">Dit is geen boekenamenvatting. Dit is Paul's werkversie van leiderschap als framework — gefilterd door praktijkervaring in niet-hiërarchische projectcontexten, vertaald naar con...</p>
+    <div class="doc-meta">
+      <span><strong>Versie</strong> v1.0</span>
+      <span><strong>Datum</strong> april 2026</span>
+      <span><strong>Bronnen</strong> MBA in één dag (Ben Tiggelaar, Denkproducties, april 2026) · The 7 Habits of Highly Effective People (Stephen Covey) ...</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Dit document is een persoonlijk werkframework van <strong>Paul Willems</strong> (WillemsWorks). 
+  Het is opgebouwd uit boeken, seminars en eigen praktijkervaring — geen samenvatting, maar een actief werkinstrument. 
+  De inhoud is intellectueel eigendom van Paul Willems. Gebruik zonder toestemming is niet toegestaan.</p>
+  <p>Meer over mijn werkwijze en aanpak: <a href="https://willemsworks.nl" target="_blank">willemsworks.nl</a></p>
+</div>
+
+<div class="doc-content">
+<h1>GOV-ALL-Leiderschap_v1_0</h1>
+<p><strong>Document:</strong> <code>GOV-ALL-Leiderschap</code> | v1.0 | april 2026 | Persoonlijk werkframework | governance | alle platforms | eigen rol, sparringpartner leidinggevenden, workshopvoorbereiding</p>
+<p><strong>Bronnen:</strong> <em>MBA in één dag</em> (Ben Tiggelaar, Denkproducties, april 2026) · <em>The 7 Habits of Highly Effective People</em> (Stephen Covey) · Bernard Bass — transformationeel leiderschap · Brené Brown — <em>Dare to Lead</em> · Ken Blanchard · Gallup Q12 methodologie</p>
+<p><strong>Masterdocument:</strong> MASTER-ALL-Structure v2.2</p>
+<p><strong>Verwante bouwstenen:</strong>
+- <code>GOV-ALL-DubbeleCreatie</code> — Covey's dubbele creatie × Lean Startup × DISC (in ontwikkeling)
+- <code>GOV-ALL-LeanStartup</code> v1.0 — Build-Measure-Learn, pivot vs. aanpassing
+- <code>GOV-ALL-LeadingChange</code> — Kotter's 8 stappen (in ontwikkeling)
+- <code>GOV-ALL-TeamintelligentieKramer</code> v1.1 — teamdynamiek en groepsontwikkeling
+- <code>GOV-ALL-OvertuigingsPsychologie</code> v1.3 — invloed en overtuiging</p>
+<p><strong>Doel:</strong> Dit is geen boekenamenvatting. Dit is Paul's werkversie van leiderschap als framework — gefilterd door praktijkervaring in niet-hiërarchische projectcontexten, vertaald naar concrete diagnostische tools en gedragspatronen voor eigen gebruik én als sparringpartner bij leidinggevenden.</p>
+<hr />
+<h2>Versietabel</h2>
+<table>
+<thead>
+<tr>
+<th>Versie</th>
+<th>Datum</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0</td>
+<td>april 2026</td>
+<td>Initiële opbouw op basis van MBA in één dag (Tiggelaar) + verdiepingsgesprek. Covey en Bass als centrale frameworks. Paul's Praktijk sectie op basis van niet-hiërarchische leiderschapscontext.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Deel 1: Wat is leiderschap?</h2>
+<p>Leiderschap is geen eigenschap of persoonlijkheidskenmerk. Het is een <strong>proces en activiteit</strong> — en daarmee erlernbaar.</p>
+<blockquote>
+<p>"Leiderschap is een proces waarbij een individu een groep van individuen beïnvloedt om een gezamenlijk doel te bereiken."
+— Peter Guy Northouse</p>
+<p>"De meest essentiële taak van een leider is om meer leiders te creëren."
+— Mary Parker Follett</p>
+<p>"Leiderschap betekent dat je jezelf ziet als een 'instrument' om dingen gedaan te krijgen. Je kunt het leren, maar alleen als je bereid bent om flink te investeren in je persoonlijke ontwikkeling."
+— Linda Hill</p>
+</blockquote>
+<p><strong>Drie kernprincipes:</strong>
+- Leiderschap is een activiteit, geen aangeboren eigenschap
+- De lat ligt bij wat je bij anderen losmaakt, niet bij wat je zelf bent
+- Persoonlijke ontwikkeling is de voorwaarde, niet de uitkomst</p>
+<p><strong>Paul's context:</strong> In de meeste projectsituaties is er geen formele hiërarchische verhouding. Leiderschap werkt hier uitsluitend via inspiratie, voorbeeldgedrag en authenticiteit — niet via opdrachten of formele autoriteit. Dat maakt het framework van Covey (persoonlijk leiderschap) en Bass (transformationeel leiderschap) bij uitstek relevant.</p>
+<hr />
+<h2>Deel 2: Vijf aandachtsgebieden (Gary Yukl / Ohio &amp; Michigan Studies)</h2>
+<p>Ben Tiggelaar onderscheidt vijf focusgebieden voor leiders:</p>
+<table>
+<thead>
+<tr>
+<th>Gebied</th>
+<th>Wat het vraagt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TAAK</strong></td>
+<td>Structureren, plannen, doelen stellen, resultaten monitoren</td>
+</tr>
+<tr>
+<td><strong>RELATIE</strong></td>
+<td>Verbinding maken, vertrouwen opbouwen, individuele aandacht</td>
+</tr>
+<tr>
+<td><strong>VERANDERING</strong></td>
+<td>Vernieuwing initiëren, innovatie stimuleren, mensen meenemen</td>
+</tr>
+<tr>
+<td><strong>EXTERN</strong></td>
+<td>Stakeholders managen, klantgericht denken, organisatie vertegenwoordigen</td>
+</tr>
+<tr>
+<td><strong>ZELF</strong></td>
+<td>Persoonlijk leiderschap: zelfkennis, proactiviteit, continue ontwikkeling</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Zelfreflectievraag:</strong> Hoe noodzakelijk zijn elk van de vijf gebieden in mijn huidige werk? Hoe vaardig ben ik daarin? Waar zit het grootste gat tussen noodzaak en vaardigheid?</p>
+<hr />
+<h2>Deel 3: Persoonlijk leiderschap — Stephen Covey</h2>
+<p>Covey's uitgangspunt: je kunt anderen pas effectief leiden als je jezelf leidt. Persoonlijk leiderschap is het fundament, niet de bijzaak.</p>
+<p>De 7 Habits zijn opgebouwd in drie lagen:
+- <strong>Laag 1 — Persoonlijke overwinning (habits 1-3):</strong> van afhankelijkheid naar onafhankelijkheid
+- <strong>Laag 2 — Publieke overwinning (habits 4-6):</strong> van onafhankelijkheid naar interdependentie
+- <strong>Laag 3 — Vernieuwing (habit 7):</strong> de zaag scherp houden — investeren in jezelf als instrument</p>
+<h3>3a. Cirkel van invloed (Habit 1 — Wees proactief)</h3>
+<p>Covey onderscheidt drie cirkels:
+- <strong>Betrokkenheid</strong> — alles wat je bezighoudt, zorgen maakt of interesseert
+- <strong>Invloed</strong> — het deel waarop je daadwerkelijk invloed kunt uitoefenen
+- <strong>Proactiviteit</strong> — de keuze om je energie te richten op de cirkel van invloed</p>
+<p>Effectieve leiders focussen op hun cirkel van invloed. Die cirkel groeit daardoor vanzelf.</p>
+<blockquote>
+<p>"Proactief zijn is meer dan positief denken. Proactieve mensen zijn veranderaars en kiezen ervoor geen slachtoffer te zijn of anderen de schuld te geven."
+— Stephen Covey</p>
+</blockquote>
+<p><strong>Paul's uitbreiding:</strong> In niet-hiërarchische leiderschapscontexten is de cirkel van formele invloed structureel beperkt. Opdrachtgevers vragen regelmatig om verandering bij mensen of directies die buiten die cirkel vallen — maar wel binnen de cirkel van betrokkenheid. De helderheid over waar de grens loopt is geen beperking: het is een professionele discipline en een onderdeel van de opdracht-definitie. "Dit kan ik beïnvloeden, dit niet" is een kernboodschap richting opdrachtgevers.</p>
+<h3>3b. Begin met het einde in gedachten (Habit 2)</h3>
+<p>Alles wordt twee keer gecreëerd: eerst mentaal, dan fysiek. Effectief leiderschap vereist bewust ontwerpen vóór uitvoeren.</p>
+<p><strong>Belangrijk onderscheid:</strong> Wat het 'einde' is verschilt fundamenteel per fase van een project. In het eerste creatieproces (fuzzy front-end) is het einde een richting of ontwerpcriterium — nog geen oplossing. In het tweede creatieproces (uitvoering) is het einde het ontwerp dat in de eerste fase is gecreëerd. Dit onderscheid wordt uitgewerkt in <code>GOV-ALL-DubbeleCreatie</code>.</p>
+<h3>3c. Begrijp eerst, dan begrepen worden (Habit 5)</h3>
+<p>De kern is niet "luister beter" — het gaat dieper. De meeste mensen luisteren niet om te begrijpen, maar om te antwoorden. Covey noemt dat <strong>autobiografisch luisteren</strong>: je filtert wat de ander zegt door je eigen ervaringen, referentiekader en agenda.</p>
+<p><strong>Vier niveaus van luisteren:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Wat je doet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Negeren</strong></td>
+<td>Je luistert niet</td>
+</tr>
+<tr>
+<td><strong>Doen alsof</strong></td>
+<td>Je knikt maar verwerkt niets</td>
+</tr>
+<tr>
+<td><strong>Selectief</strong></td>
+<td>Je pikt eruit wat je al verwacht te horen</td>
+</tr>
+<tr>
+<td><strong>Empathisch</strong></td>
+<td>Je luistert met de intentie de ander werkelijk te begrijpen, vanuit hun frame</td>
+</tr>
+</tbody>
+</table>
+<p>Niveau 4 is het enige dat vertrouwen opbouwt — en vertrouwen is de voorwaarde voor invloed, zeker zonder formele hiërarchie.</p>
+<p><strong>Diagnostische lens:</strong> Wanneer mensen in gesprekken veel zenden — hun eigen boodschap herhalen zonder te ontvangen — is dat een signaal dat ze bezig zijn met hun boodschap, niet die van de ander. Aan het begin van een traject is dat begrijpelijk en bruikbaar: je wilt hun frame begrijpen. Later, wanneer co-creatie nodig is, blokkeert het samen bouwen. De overgang van zenden naar ontvangen is een niet-hiërarchische leiderschapstaak.</p>
+<h3>3d. Synergie (Habit 6)</h3>
+<p>Synergie is niet compromis. Compromis is 1+1=1,5: beide partijen geven iets op. Synergie is 1+1=3: een oplossing die geen van beide partijen alleen had kunnen bedenken.</p>
+<p><strong>Voorwaarde:</strong> Habit 5 moet eerst. Je kunt geen synergie creëren als je de ander niet werkelijk begrijpt.</p>
+<p><strong>Covey's redenering:</strong> Het verschil in perspectief tussen twee mensen is niet het probleem — het is de brandstof. Hoe groter het verschil, hoe groter het potentieel voor een creatieve derde oplossing.</p>
+<p><strong>Verbinding met co-creatie:</strong> Habit 5 en 6 samen beschrijven wat effectieve co-creatie vraagt: empathisch luisteren om het echte vraagstuk te ontdekken, gevolgd door synergie als het bewuste doel van de gezamenlijke ontwerpfase. Synergie werkt ook als expliciet woord richting opdrachtgevers — het benoemt het verschil tussen een compromis en een echte derde oplossing. Zie <code>GOV-ALL-DubbeleCreatie</code> voor de uitwerking in projectfasen.</p>
+<hr />
+<h2>Deel 4: Transformationeel leiderschap — Bernard Bass</h2>
+<p>Bass' kernidee: de meest effectieve leiders <em>transformeren</em> mensen. Ze verhogen motivatie en moraal voorbij wat je op basis van transactie (beloning/straf) zou verwachten. Charisma is niet wat je <em>bent</em>, maar wat je <em>doet</em> — het is gedrag dat je kunt leren.</p>
+<p><strong>De 4 i's van transformationeel leiderschap:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Bouwsteen</th>
+<th>Wat het betekent in de praktijk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Idealized Influence</strong></td>
+<td>Rolmodel zijn: hier sta ik voor, hier gedraag ik me naar. Niet charisma als aangeboren eigenschap, maar als verdiend vertrouwen.</td>
+</tr>
+<tr>
+<td><strong>Inspirational Motivation</strong></td>
+<td>Visie helder maken. Mensen weten waarom hun werk ertoe doet. Authenticiteit is de voorwaarde, niet het resultaat.</td>
+</tr>
+<tr>
+<td><strong>Intellectual Stimulation</strong></td>
+<td>Mensen uitdagen om anders te denken, bestaande aannames te bevragen, te innoveren.</td>
+</tr>
+<tr>
+<td><strong>Individualized Consideration</strong></td>
+<td>Individuele aandacht geven. Iedereen anders benaderen op basis van behoeften en ontwikkeling.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>"Er is niets zo oneerlijk als ongelijke mensen gelijk behandelen."
+— Ken Blanchard</p>
+</blockquote>
+<p><strong>Covey × Bass:</strong> Covey beschrijft hoe je jezelf als instrument inzet (persoonlijke overwinning). Bass beschrijft wat dat instrument vervolgens bij anderen doet. De 4 i's zijn de uitwerking van habits 4-6 richting een team — maar dan als leiderschapsgedrag in plaats van persoonlijk principe.</p>
+<p><strong>Niet-hiërarchische context:</strong> In projecten zonder formele macht zijn Idealized Influence en Inspirational Motivation de primaire hefbomen. Je kunt niemand opdragen anders te werken — maar je kunt wel consistent het gewenste gedrag voordoen en de visie zo helder maken dat mensen zelf willen bewegen.</p>
+<hr />
+<h2>Deel 5: Teamleiders — waarom het zo vaak mis gaat</h2>
+<p>Teamleiders zijn de grootste bepalende factor voor variatie in teamprestaties. Toch zijn veel medewerkers ontevreden over hun leidinggevende. Twee hoofdoorzaken:</p>
+<ol>
+<li>We selecteren de verkeerde mensen als teamleider — vakinhoudelijk sterk ≠ leidinggevend vaardig</li>
+<li>We maken het teamleiders structureel moeilijk: te weinig tijd voor mensen, te weinig leiderschapsontwikkeling, te veel nadruk op taak ten koste van relatie</li>
+</ol>
+<p><strong>Diagnostische vraag bij haperende organisaties:</strong> Is het ontwerp wel goed als de uitvoering hapert? De meeste organisaties framen haperende resultaten als een executieprobleem. De werkelijke oorzaak ligt vaak eerder: in een ontwerp dat nog niet klaar was voor uitvoering, of in leiderschapsgedrag dat het gewenste gedrag niet modelleert. Zie <code>GOV-ALL-DubbeleCreatie</code>.</p>
+<hr />
+<h2>Deel 6: Effectieve leiderschapsroutines</h2>
+<h3>Wekelijkse check-in</h3>
+<p>Twee vragen, elke week, aan elke medewerker:
+- Waar werk je deze week aan?
+- Hoe kan ik je daarbij helpen?</p>
+<h3>Driemaandelijks persoonlijk gesprek</h3>
+<p>Focus op persoonlijk welzijn én ontwikkeling. Onderzoeksevidentie (Gallup): bij minder dan één persoonlijk gesprek per kwartaal is er geen meetbare verandering in betrokkenheid of prestaties.</p>
+<h3>Notities bijhouden per medewerker</h3>
+<p>Ken Blanchard noemt dit 'het schriftje van de meester': houd bij wat je per medewerker bespreekt, afspreekt en observeert. Aandacht wordt zo structureel in plaats van willekeurig.</p>
+<h3>Dagelijkse leiderschapsroutine</h3>
+<ul>
+<li>Dagelijks één medewerker of collega inhoudelijk spreken</li>
+<li>Dagelijks één actie ondernemen die de moeite waard is om te benoemen</li>
+<li>Bewust stilstaan bij waarom je dit werk doet</li>
+<li>Een blok per dag reserveren voor onverwachte taken</li>
+</ul>
+<h3>Luisteren als competentie</h3>
+<blockquote>
+<p>"Een dappere leider is iemand die zegt: Ik zie je. Ik hoor je. Ik heb niet alle antwoorden. Maar ik beloof je dat ik blijf luisteren en vragen blijf stellen."
+— Brené Brown</p>
+</blockquote>
+<p>Praktisch: houd 90 seconden vol zonder te reageren. De neiging om te onderbreken ontstaat al na 18 seconden. Leg een lijst aan van goede vragen. Maak notities tijdens gesprekken — het toont oprechte aandacht.</p>
+<hr />
+<h2>Deel 7: Gallup Q12 — diagnostisch instrument</h2>
+<p>Gallup Q12 is geen leiderschapsframework maar een <strong>diagnostisch meetinstrument</strong> voor medewerkersbetrokkenheid. Bruikbaar als spiegel voor een leidinggevende of als startpunt voor een ontwikkelgesprek.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Stelling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ik weet wat er van mij wordt verwacht op het werk.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ik beschik over de materialen en apparatuur die ik nodig heb.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ik heb elke dag de kans om te doen waar ik het beste in ben.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>In de afgelopen zeven dagen heb ik erkenning of lof gekregen voor goed werk.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Mijn leidinggevende lijkt om mij te geven als persoon.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Er is iemand die mijn ontwikkeling stimuleert.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Mijn mening lijkt te tellen op het werk.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>De missie van mijn bedrijf geeft mij het gevoel dat mijn werk belangrijk is.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Mijn collega's zijn toegewijd aan het leveren van kwaliteit.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Ik heb een beste vriend op het werk.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>In de afgelopen zes maanden heeft iemand met mij gesproken over mijn vooruitgang.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Het afgelopen jaar heb ik kansen gehad om te leren en te groeien.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Directe koppeling aan Bass' 4 i's:</strong>
+- Q3 + Q6 + Q12 → Individualized Consideration (sterkepuntenaanpak, ontwikkeling)
+- Q7 + Q8 → Inspirational Motivation (stem en betekenis)
+- Q5 + Q10 → Idealized Influence (vertrouwen als basis)
+- Q9 → Intellectual Stimulation (kwaliteitsstandaard als gedeelde uitdaging)</p>
+<hr />
+<h2>Deel 8: Paul's Praktijk — toepassingen per context</h2>
+<h3>In eigen rol als leider (zonder formele hiërarchie)</h3>
+<p><strong>Kernprincipe:</strong> Invloed zonder formele macht werkt via consistentie in gedrag, niet via positie. De 4 i's van Bass zijn hierin de meest directe handelingslogica.</p>
+<ul>
+<li>Cirkel van invloed bewust hanteren als begrenzing van opdracht en mandaat — explicieter communiceren dan in hiërarchische contexten</li>
+<li>Habit 5 toepassen aan het begin van elk nieuw traject: eerst begrijpen, dan vormen</li>
+<li>De overgang van zenden naar ontvangen in groepen actief begeleiden als leiderschapstaak</li>
+<li>Synergie benoemen als expliciet doel van co-creatiesessies</li>
+</ul>
+<p><strong>Diagnostische zelfvraag:</strong> Op welk van de vijf aandachtsgebieden (taak / relatie / verandering / extern / zelf) ligt mijn energie nu — en waar is het meest nodig?</p>
+<h3>Als sparringpartner bij leidinggevenden</h3>
+<p>De vraag die opdrachtgevers stellen is zelden een leiderschapsvraag. Ze stellen externe doelen (omzet, marge, nieuwe klanten) en constateren dat mensen iets anders moeten gaan doen. De leiderschapsdimensie is impliciet — en moet worden ontsloten.</p>
+<p><strong>Diagnostische vragen:</strong>
+- "Hoe zorgen jullie dat medewerkers weten wat er van hen verwacht wordt — en wanneer ze het goed doen?"
+- "Welk gedrag wil je zien — en stimuleer je dat ook, of corrigeer je alleen wat fout gaat?"
+- "Is dit een probleem van uitvoering, of is het ontwerp nog niet goed genoeg?"
+- "Wie in jullie organisatie doet al — zonder opdracht — wat jullie van iedereen willen zien?"</p>
+<p><strong>Veelvoorkomend patroon:</strong> Directies willen verandering maar gaan er zelf niet in mee. Dat valt buiten de cirkel van formele invloed — maar wel binnen de cirkel van betrokkenheid. Helderheid hierover is onderdeel van de opdracht-definitie, niet een belemmering.</p>
+<h3>In workshops</h3>
+<ul>
+<li>Vijf aandachtsgebieden (Yukl) gebruiken als zelfreflectie-oefening: noodzaak vs. vaardigheid per gebied</li>
+<li>Q12 als spiegeltool: laat leidinggevenden per stelling inschatten hoe hun team zou antwoorden — dan het gesprek voeren over de gap</li>
+<li>Bass' 4 i's als gedragskader: van abstract ("wees een rolmodel") naar concreet ("wat doe jij deze week dat het gewenste gedrag toont?")</li>
+<li>Habit 5 oefenen als luisteroefening met de vier niveaus als context</li>
+</ul>
+<h3>In proposities en go-to-market</h3>
+<ul>
+<li>Leiderschapsframework gebruiken om interne veranderopgave te benoemen naast externe commerciële doelen</li>
+<li>"Mensen moeten iets anders gaan doen" vertalen naar: welk leiderschapsgedrag is daarvoor nodig, en wie toont dat nu al?</li>
+<li>Koppeling aan <code>GOV-ALL-LeadingChange</code>: wanneer de leiderschapsvraag een verandervraag wordt</li>
+</ul>
+<hr />
+<h2>Aantekeningen voor volgende versie</h2>
+<ul>
+<li>Kouzes &amp; Posner (<em>The Leadership Challenge</em>) toevoegen als praktische vertaling van Bass — Paul leest het boek</li>
+<li>DISC-koppeling aan de vijf aandachtsgebieden uitwerken zodra <code>GOV-ALL-DubbeleCreatie</code> beschikbaar is</li>
+<li>Ervaringen met niet-hiërarchisch leiderschap in projecten toevoegen als anonieme voorbeelden</li>
+<li>Koppeling met <code>GOV-ALL-TeamintelligentieKramer</code> uitwerken: teamontwikkeling als context voor leiderschapsgedrag</li>
+<li>Koppeling met <code>GOV-ALL-OvertuigingsPsychologie</code>: vertrouwen als valuta voor niet-hiërarchische invloed</li>
+</ul>
+<hr />
+<p><em>Dit document is een levend werkdocument. Versie verhogen bij elke substantiële aanvulling vanuit nieuwe praktijkervaringen.</em></p>
+</div>
+
+<div class="doc-footer">
+  <span>© Paul Willems — WillemsWorks</span>
+</div>
+
+</body>
+</html>

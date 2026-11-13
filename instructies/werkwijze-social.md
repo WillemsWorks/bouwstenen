@@ -1,3 +1,5 @@
+> **Intern werkdocument van Paul Willems (WillemsWorks) — niet bedoeld om extern te delen.** Dit bestand staat in een openbare repository omdat de Bouwstenen-site daaruit wordt gepubliceerd. Deel of hergebruik het niet zonder toestemming.
+
 # Werkwijze Social Content — Aanvulling op de algemene werkwijze
 
 *Geldig bij: alle Claude-gesprekken in het Social Content-project (Substack + LinkedIn). Heeft voorrang op de algemene werkwijze bij conflicten.*

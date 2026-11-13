@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storytelling — Bouwstenen van Paul Willems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/bdo-grotesk" rel="stylesheet">
+  <style>
+    :root {
+      --lime:        #C4FF48;
+      --lime-light:  #F6FFE4;
+      --purple-light:#D1D1FF;
+      --purple-dark: #3A2E59;
+      --white:       #FFFFFF;
+      --ink:         #1A1816;
+      --ink-mid:     #5A5560;
+      --border:      #E4E0EE;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'BDO Grotesk', sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .topbar a:hover { text-decoration: underline; }
+
+    .doc-header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 56px 48px 48px;
+    }
+    .doc-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .doc-label {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--purple-dark);
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .doc-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--purple-light);
+      max-width: 600px;
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+    }
+    .doc-meta strong { color: var(--purple-light); font-weight: 500; }
+
+    .disclaimer {
+      background: var(--lime-light);
+      border-left: 4px solid var(--lime);
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      max-width: 860px;
+      margin: 36px auto;
+    }
+    .disclaimer p + p { margin-top: 6px; }
+    .disclaimer a {
+      color: var(--purple-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .disclaimer a:hover { text-decoration: underline; }
+
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+    }
+
+    .doc-content h1 { display: none; }
+
+    .doc-content h2 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--purple-dark);
+      margin: 52px 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--lime);
+    }
+
+    .doc-content h3 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 500;
+      font-size: 17px;
+      color: var(--purple-dark);
+      margin: 32px 0 10px;
+    }
+
+    .doc-content h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin: 24px 0 8px;
+    }
+
+    .doc-content p {
+      margin-bottom: 16px;
+    }
+
+    .doc-content ul, .doc-content ol {
+      margin: 12px 0 16px 20px;
+    }
+
+    .doc-content li { margin-bottom: 6px; }
+
+    .doc-content blockquote {
+      border-left: 3px solid var(--purple-light);
+      margin: 28px 0;
+      padding: 14px 20px;
+      background: var(--lime-light);
+      font-size: 16px;
+      color: var(--purple-dark);
+      font-style: italic;
+    }
+    .doc-content blockquote p { margin: 0; color: var(--purple-dark); }
+
+    .doc-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+    .doc-content th {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 10px 16px;
+      text-align: left;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .doc-content td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .doc-content tr:nth-child(even) td { background: var(--lime-light); }
+
+    .doc-content strong { font-weight: 500; color: var(--ink); }
+    .doc-content code {
+      background: var(--lime-light);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-family: 'Courier New', monospace;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    .doc-footer {
+      background: var(--purple-dark);
+      color: rgba(255,255,255,0.45);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-family: 'Sora', sans-serif;
+    }
+    .doc-footer a {
+      color: var(--lime);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .doc-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .topbar, .doc-header, .doc-footer { padding-left: 20px; padding-right: 20px; }
+      .doc-content { padding-left: 20px; padding-right: 20px; }
+      .disclaimer { margin-left: 20px; margin-right: 20px; }
+      .doc-title { font-size: 28px; }
+    }
+
+    @media (max-width: 640px) {
+      .topnav-inner { padding: 0 20px; }
+    }
+
+    .topnav {
+      background: var(--purple-dark);
+      border-bottom: 1px solid rgba(196,255,72,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topnav-logo img { display: block; }
+    .topnav-links { display: flex; gap: 4px; align-items: center; }
+    .topnav-link {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: color 0.12s, background 0.12s;
+    }
+    .topnav-link:hover,
+    .topnav-link.active {
+      color: var(--lime);
+      background: rgba(196,255,72,0.07);
+    }
+  </style>
+<link rel="stylesheet" href="/bouwstenen/assets/site-theme.css">
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="topnav-logo" aria-label="WillemsWorks, naar de website">
+        <svg viewBox="0 0 31.081 25" aria-hidden="true"><path fill="#3a2e59" d="M20.197 15.584c.397-.452 1.137-.06.98.519l-2.188 8.106c-.145.534.489.935.916.581l10.972-9.099a.6.6 0 0 0 .169-.628L26.129 1.74c-.191-.519-.942-.486-1.086.048l-2.437 9.025c-.118.437-.681.567-.981.226L12.079.195c-.347-.394-1-.151-1 .372v5.717c0 .452-.509.722-.888.47L.889.56C.452.269-.116.672.021 1.177L6.245 24.23c.137.505.831.572 1.063.103l2.689-5.436c.266-.539 1.082-.351 1.082.249v5.287c0 .523.653.766 1 .372z"/></svg>
+      willemsworks
+      </a>
+      <div class="topnav-links">
+        <a href="index.html" class="topnav-link active">Bouwstenen</a>
+        <a href="digest.html" class="topnav-link">Weekly Digest</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="doc-header">
+  <div class="doc-header-inner">
+    <span class="doc-label">Persoonlijk werkframework</span>
+    <h1 class="doc-title">Storytelling</h1>
+    <p class="doc-subtitle">Dit is geen samenvatting van beide boeken. Dit is Paul's werkversie van storytelling als geheel: Wegter geeft de algemene structuur, Miller (StoryBrand) geeft de klanttoepassing.</p>
+    <div class="doc-meta">
+      <span><strong>Versie</strong> v1.1</span>
+      <span><strong>Datum</strong> juli 2026</span>
+      <span><strong>Bronnen</strong> Goed verhaal! (Herman Wegter, 2024)</span>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <p>Dit document is een persoonlijk werkframework van <strong>Paul Willems</strong> (WillemsWorks).
+  Het is opgebouwd uit boeken, seminars en eigen praktijkervaring — geen samenvatting, maar een actief werkinstrument.
+  De inhoud is intellectueel eigendom van Paul Willems. Gebruik zonder toestemming is niet toegestaan.</p>
+  <p>Meer over mijn werkwijze en aanpak: <a href="https://willemsworks.nl" target="_blank">willemsworks.nl</a></p>
+</div>
+
+<div class="doc-content">
+<h1>GOV-ALL-Storytelling_v1_1</h1>
+<p><strong>Document:</strong> <code>GOV-ALL-Storytelling</code> | v1.1 | 25 juli 2026 | Persoonlijk werkframework | governance | alle platforms | LinkedIn/Substack content, klantverhalen, positionering, presentaties bij opdrachtgevers, klantgesprekken</p>
+<p><strong>Bronnen:</strong> Herman Wegter — <em>Goed verhaal! Succesvolle storytelling in 7 stappen</em> (2024) · Donald Miller — <em>Building a StoryBrand</em> (2017)</p>
+<p><strong>Masterdocument:</strong> MASTER-ALL-Structure v2.2</p>
+<p><strong>Vervangt:</strong> <code>GOV-ALL-Verhaalstructuur</code> v1.0 en <code>GOV-ALL-StoryBrand</code> v1.0 — beide zijn samengevoegd tot dit ene thematische document, conform de bibliotheekfilosofie (thematisch, niet auteur-gebonden). De losse pagina's worden redirects naar deze pagina, zoals eerder bij TeamintelligentieKramer → TeamPsychologie.</p>
+<p><strong>Verwante bouwstenen:</strong></p>
+<ul>
+<li><code>GOV-ALL-LeadingChange</code> v1.2 — Wegter's stap 1-3 als verhaalvorm voor Kotter's stap 1-3 (Protagonist ≈ coalitie, Call to Adventure ≈ urgentie, Man op de Maan ≈ verandervisie)</li>
+<li><code>GOV-ALL-FramemakingSale</code> v1.1 — de gids-positionering is het emotionele fundament onder de Challenger Sale-logica</li>
+<li><code>GOV-ALL-TheyAskYouAnswer</code> v1.0 — radicale transparantie als manier om empathie én autoriteit tegelijk te tonen</li>
+<li><code>GOV-ALL-OvertuigingsPsychologie</code> v1.3 — overtuiging, framing en emotie als aangrenzend domein</li>
+</ul>
+<p><strong>Doel:</strong> Dit is geen samenvatting van beide boeken. Dit is Paul's werkversie van storytelling als geheel: Wegter geeft de algemene structuur (hoe bouw ik een verhaal op, welke rol geef ik wie), Miller geeft de klanttoepassing (hoe positioneer ik mezelf ten opzichte van de klant). Samen vormen ze één denkkader — de structuurvraag en de positioneringsvraag horen inhoudelijk bij elkaar en worden in de praktijk vrijwel altijd samen geraadpleegd.</p>
+<hr />
+<h2>Versietabel</h2>
+<table>
+<thead>
+<tr><th>Versie</th><th>Datum</th><th>Beschrijving</th></tr>
+</thead>
+<tbody>
+<tr><td>v1.1</td><td>25 juli 2026</td><td>Samenvoeging van <code>GOV-ALL-Verhaalstructuur</code> v1.0 (Wegter, juli 2026) en <code>GOV-ALL-StoryBrand</code> v1.0 (Miller, juli 2026) tot één thematisch document. Kern: de structuurvraag (Wegter) en de positioneringsvraag (Miller) zijn twee kanten van dezelfde toepassing en horen samen geraadpleegd te worden.</td></tr>
+</tbody>
+</table>
+<hr />
+<h2>Deel 1: Algemene verhaalstructuur (Wegter)</h2>
+<p>Wegter, storytelling-expert met 22 jaar media-ervaring (NPO), destilleerde uit duizenden verhalen — van sprookjes tot Hollywoodfilms tot merkverhalen — een terugkerende structuur van zeven stappen. De waarde zit niet in de nieuwigheid van het model (het is een variant op de klassieke heldenreis), maar in de dwingende eenvoud: elke stap is een vraag die je moet beantwoorden voordat je verder kunt.</p>
+<p><strong>De zeven stappen:</strong></p>
+<ol>
+<li><strong>De Protagonist</strong> — 'Er was eens...' Wiens verhaal vertel je? Een concreet persoon, een organisatie/team gepersonifieerd, of een metafoor.</li>
+<li><strong>De Call to Adventure</strong> — 'Op een dag...' Wat brengt de protagonist in beweging? Vereist een balans van urgentie (vasthouden aan status quo is geen optie) en verlangen (een groter verhaal om deel van uit te maken).</li>
+<li><strong>De Man op de Maan</strong> — Mission impossible. Het concrete én ambitieuze doel. Zonder scherp doel rent iedereen hard, maar niemand weet waarheen.</li>
+<li><strong>Obstakels</strong> — 'Maar toen...' De tegenstand die het verhaal geloofwaardig en spannend maakt. Hier zit ook de eventuele antagonist besloten — wie of wat de obstakels veroorzaakt.</li>
+<li><strong>De Climax</strong> — 'Totdat uiteindelijk...' Het overwinnen van de obstakels.</li>
+<li><strong>Het Einde</strong> — 'En ze leefden nog lang en gelukkig.' De afronding.</li>
+<li><strong>De Moraal</strong> — De verdiepte inzichten die het verhaal oplevert.</li>
+</ol>
+<p><strong>De structuur als speelveld, niet als keurslijf:</strong> doordat elke stap je dwingt een keuze te maken, kun je hetzelfde onderliggende verhaal vanuit verschillende invalshoeken vertellen door bijvoorbeeld alleen de Protagonist te wisselen. Dezelfde gebeurtenis — verteld vanuit de klant, vanuit het team, of vanuit de organisatie als geheel — wordt daardoor een ander verhaal met een andere impact, zonder dat de feiten veranderen.</p>
+<p><strong>Antagonist en draak:</strong> het boek kent geen losse stap voor "antagonist"; die valt onder stap 4 (Obstakels). Wegter gebruikt "draak" wél zelf als beeld voor obstakels die overwonnen moeten worden. Praktisch onderscheid: <strong>de draak</strong> = het obstakel zelf (situatie, weerstand, probleem); <strong>de antagonist</strong> = wie of wat het obstakel veroorzaakt of belichaamt (persoon, systeem, cultuur, marktomstandigheden).</p>
+<hr />
+<h2>Deel 2: Klanttoepassing — StoryBrand (Miller)</h2>
+<p>Miller's kernstelling: de meeste bedrijven positioneren zichzelf als de held van hun eigen verhaal. Dat is de fout. <strong>De klant is de held. Het merk is de gids</strong> — de Yoda- of Gandalf-figuur die er al is geweest en de held helpt winnen. Vuistregel: <em>"if you confuse, you lose."</em></p>
+<p><strong>De zeven elementen (SB7):</strong></p>
+<ol>
+<li><strong>Character (Held)</strong> — de klant, die iets wil.</li>
+<li><strong>Problem</strong> — drie lagen: extern (tastbaar), intern (hoe het voelt), filosofisch (waarom het niet zo zou moeten zijn). Het externe probleem maakt het interne probleem zichtbaar — klanten kopen oplossingen voor het interne probleem, niet alleen het externe.</li>
+<li><strong>Guide</strong> — het merk, dat vertrouwen wekt via <strong>empathie</strong> (je begrijpt hun probleem) en <strong>autoriteit</strong> (je kunt het oplossen) — zonder zelf de held te worden.</li>
+<li><strong>Plan</strong> — een simpel, meestal 3-4 stappen tellend pad.</li>
+<li><strong>Call to Action</strong> — direct (Bel nu, Koop nu) én transitioneel (gratis download, whitepaper).</li>
+<li><strong>Failure</strong> — wat er misgaat als de held niets doet.</li>
+<li><strong>Success</strong> — het concrete resultaat als de held wél in beweging komt.</li>
+</ol>
+<p>Miller noemt daarnaast expliciet <strong>de antagonist</strong> als apart, optioneel element binnen Problem: een goede schurk is een grondoorzaak, herkenbaar, singulier en echt — een verschil met Wegter, waar de antagonist geen apart element is maar besloten ligt binnen Obstakels.</p>
+<h3>De gids-positionering: bescheiden emotioneel, autoritair inhoudelijk</h3>
+<p>Paul's kerninzicht: de gids-rol vraagt een precieze balans. Op emotioneel niveau is de opstelling bescheiden — de klant is en blijft de held, niet jij. Maar op kennisniveau is de opstelling stevig, bijna onbescheiden: je krijgt de gids-rol pas gegund als de klant accepteert dat jij zijn business op onderdelen beter doorziet dan hijzelf. Empathie zonder autoriteit maakt je een sympathisant, geen gids. Autoriteit zonder empathie maakt je weer de held.</p>
+<hr />
+<h2>Deel 3: Verrijking en koppelingen</h2>
+<p><strong>Waarom deze twee samen horen:</strong> Wegter beantwoordt "hoe bouw ik dit verhaal op?" — Miller beantwoordt "wie ben ik ten opzichte van de klant in dit verhaal?" Protagonist (Wegter) en Character/Held (Miller) zijn in klantcontext vaak dezelfde rol, en Obstakels (Wegter) en Problem (Miller) dekken vergelijkbaar terrein, met complementaire verdieping: Wegter geeft de dramaturgische functie, Miller de drielagige probleemanalyse (extern/intern/filosofisch).</p>
+<p><strong>Relatie tot Kotter's verandermodel (GOV-ALL-LeadingChange):</strong> Wegter's eerste drie stappen zijn een verhaalvorm voor Kotter's eerste drie stappen van verandering:</p>
+<table>
+<thead>
+<tr><th>Wegter</th><th>Kotter (GOV-ALL-LeadingChange)</th></tr>
+</thead>
+<tbody>
+<tr><td>Protagonist</td><td>Stap 2 — de leidende coalitie</td></tr>
+<tr><td>Call to Adventure</td><td>Stap 1 — urgentie</td></tr>
+<tr><td>Man op de Maan</td><td>Stap 3 — de verandervisie</td></tr>
+<tr><td>Moraal</td><td>De boodschap die de visie verankert</td></tr>
+</tbody>
+</table>
+<p>De volgorde verschilt bewust: Kotter begint met urgentie, Wegter met de protagonist — het verschil tussen hoe je een verandering organiseert en hoe je erover vertelt.</p>
+<p><strong>Directe koppeling met Framemaking Sale / The Challenger Sale:</strong> hetzelfde inzicht als de kern van Framemaking Sale (Adamson &amp; Schmidt) en The Challenger Sale (Dixon), vanuit een andere hoek. Challenger Sale/Framemaking zegt: <em>wat je doet</em> — de klant een inzicht brengen dat hij nog niet had. StoryBrand zegt: <em>wie je daarmee wordt</em> — de gids, niet de held, en de emotionele voorwaarde die dat stelt. StoryBrand voegt de emotionele dimensie toe aan wat Framemaking Sale primair vanuit de zakelijke/cognitieve kant benadert (outcome uncertainty, regret-aversie).</p>
+<p><strong>TAYA-koppeling:</strong> TAYA's radicale transparantie is precies hoe je autoriteit én empathie tegelijk toont — je bewijst dat je de situatie begrijpt (empathie) door er eerlijk en volledig over te zijn (autoriteit), in plaats van het te verkopen.</p>
+<p><strong>De getrapte gids-heldrelatie:</strong> gids en held is niet altijd een vaste rol, maar kan getrapt zijn — een reeks schakels waarin de held in de ene schakel zelf weer gids moet zijn in de volgende. Dit patroon komt veel voor in B2B2C: elke schakel tussen fabrikant/leverancier en eindconsument (installateur, dealer, adviseur) is tegelijk held (die begeleid wordt) én gids (die zelf moet begeleiden). Het is niet genoeg om je eigen klant te helpen als held; je moet die klant ook toerusten om zelf gids te zijn voor wíens klant dan ook.</p>
+<hr />
+<h2>Deel 4: Paul's Praktijk</h2>
+<p><strong>Toepassingsprincipe per Wegter-stap — de vraag die je jezelf stelt:</strong></p>
+<table>
+<thead>
+<tr><th>Stap</th><th>Vraag aan jezelf</th></tr>
+</thead>
+<tbody>
+<tr><td>Protagonist</td><td>Wiens verhaal vertel ik — en is dat de juiste keuze?</td></tr>
+<tr><td>Call to Adventure</td><td>Wat zette dit in beweging? Genoeg urgentie én verlangen?</td></tr>
+<tr><td>Man op de Maan</td><td>Is het doel concreet én ambitieus genoeg?</td></tr>
+<tr><td>Obstakels</td><td>Wat stond er echt in de weg? Heeft het obstakel een gezicht?</td></tr>
+<tr><td>Climax</td><td>Wat was het kantelpunt?</td></tr>
+<tr><td>Einde</td><td>Is dit einde verdiend door wat eraan voorafging?</td></tr>
+<tr><td>Moraal</td><td>Welk inzicht wil ik dat blijft hangen?</td></tr>
+</tbody>
+</table>
+<h3>Illustratie: Hoomie — beide lenzen tegelijk</h3>
+<p><em>Wegter-lens:</em> Protagonist = Plieger/het Hoomie-team. Call to Adventure = de vraag om meer warmtepompen te verkopen. Man op de Maan = een self-service platform voor consument én installateur. Obstakels = vier pivots en uiteindelijk een structureel obstakel: de eigen plek in de waardeketen. Climax = het inzicht dat verdienmodel en ketenpositie onlosmakelijk verbonden zijn. Einde = na vier jaar stopt Plieger met Hoomie in de huidige vorm. Moraal = je plek in de waardeketen bepaalt je businessmodel.</p>
+<p><em>StoryBrand-lens, de getrapte gids-heldrelatie:</em> het platform begreep de warmtepompkeuze op onderdelen beter dan de installateur zelf — precies de autoriteit die de gids-rol rechtvaardigt. Tegelijk moest de installateur in het zadel worden gezet als expert richting zijn eigen klant: niet gepasseerd worden door het platform, maar toegerust om zelf gids te zijn. Het platform als gids voor de installateur, de installateur als gids voor de eindklant. Wie deze schakel mist en zich alleen richt op de eigen klant als held, laat de volgende schakel zonder gids achter.</p>
+<p>Dit is precies waarom beide lenzen samen sterker zijn dan apart: de Wegter-lens verklaart het verloop van het verhaal (vier pivots, uiteindelijke stop), de StoryBrand-lens verklaart waaróm het ontwerp was zoals het was (gids-positionering voor de installateur).</p>
+<h3>Illustratie: Sanquin — Wegter-lens (onvoltooide climax)</h3>
+<p><em>(Gebaseerd op het Substack-concept "Als je verdwaalt op het happy path" — nog niet gepubliceerd, ter beoordeling bij Sanquin. Sanquin is geen klant van Paul.)</em></p>
+<p>Protagonist = Paul als donor. Call to Adventure = het besluit om donor te worden. Man op de Maan = structureel kunnen blijven doneren. Obstakels = herhaalde mislukte donaties, geen escalatieroute. Climax = na de klacht werd Paul gemarkeerd in het systeem en kreeg bewust een ervaren prikker toegewezen. Einde = drie geslaagde donaties op rij. Moraal = Sanquin verbetert incident-gedreven, niet by design — een kleiner probleem dan geen correctie, maar geen structurele oplossing voor de volgende donor.</p>
+<h3>Illustratie: sales manager bij een fabrikant van technische producten — StoryBrand-lens</h3>
+<p>Paul hielp een sales manager begrijpen hoe hij zijn team via het CRM datagedreven kon laten werken. Paul voerde het niet zelf uit — dat moesten de sales manager en zijn team doen. Paul's rol: richting en kader geven, de gids-positie, met autoriteit over CRM en datagedreven verkoopprocessen, maar met de sales manager en zijn team als held van het eigen verandertraject.</p>
+<p><strong>Als consultant/interim manager (generiek):</strong> in elke opdracht is de kern hetzelfde — de opdrachtgever moet het zelf doen, Paul geeft richting. Letterlijk de gids zijn: niet het probleem overnemen, maar de weg wijzen zodat de opdrachtgever de held van zijn eigen traject blijft.</p>
+<hr />
+<h2>Deel 5: Verwante bouwstenen</h2>
+<ul>
+<li><code>GOV-ALL-LeadingChange</code> v1.2 — Kotter-koppeling (zie Deel 3)</li>
+<li><code>GOV-ALL-FramemakingSale</code> v1.1 — gids-positionering als emotioneel fundament onder Challenger Sale-logica</li>
+<li><code>GOV-ALL-TheyAskYouAnswer</code> v1.0 — radicale transparantie als empathie + autoriteit</li>
+<li><code>GOV-ALL-OvertuigingsPsychologie</code> v1.3 — overtuiging, framing en emotie als aangrenzend domein</li>
+</ul>
+<hr />
+<p><em>Dit document is een levend werkdocument. Versie verhogen bij elke substantiële aanvulling vanuit nieuwe praktijkervaringen.</em></p>
+</div>
+
+<div class="doc-footer">
+  <span>© Paul Willems — WillemsWorks</span>
+</div>
+
+</body>
+</html>
