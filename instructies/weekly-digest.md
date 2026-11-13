@@ -145,9 +145,9 @@ Outputformaat (basis voor Stap 4 en Stap 5):
 ## Stap 5 — Concept publiceren (via gov-library-html + gov-library-github-sync skills)
 
 Volg de workflow "nieuwe digest-editie publiceren" uit de gov-library-html skill, met deze afwijkingen:
-- Publiceer als `concepten/digest-[YYYY-MM-DD].html` — niet in de root.
+- Publiceer als `docs/concepten/digest-[YYYY-MM-DD].html` — niet direct in `docs/`.
 - Zet `<meta name="robots" content="noindex">` in de `<head>`.
-- Voeg **geen** kaart toe aan `digest.html`.
+- Voeg **geen** kaart toe aan `docs/digest.html`.
 - Elke Kern-paragraaf (`.digest-item p`) krijgt aan het einde een link naar de bron-URL van dat item (zie `assets/digest-page-template.html`), naast de link op de titel.
 - Footer van de pagina: "Samengesteld met AI, gecureerd door Paul Willems".
 
@@ -157,9 +157,9 @@ De research-log-updates uit Stap 4 gaan wél direct door: dat zijn interne werkb
 
 Wanneer Paul in een chat opdracht geeft om de digest te plaatsen (eventueel met correcties: items schrappen of aanpassen):
 1. Verwerk zijn correcties in het concept.
-2. Publiceer als `digest-[YYYY-MM-DD].html` in de root, mét de noindex-tag en de link naar `/bouwstenen/assets/site-theme.css` (neem `<head>` en topnav over van een bestaande digest-pagina; alle GOV Library-pagina's zijn openbaar maar niet vindbaar in Google, besluit 13 november 2026).
-3. Voeg de kaart toe aan `digest.html` (nieuwste eerst).
-4. Verwijder `concepten/digest-[YYYY-MM-DD].html`.
+2. Publiceer als `docs/digest-[YYYY-MM-DD].html`, mét de noindex-tag en de link naar `/bouwstenen/assets/site-theme.css` (neem `<head>` en topnav over van een bestaande digest-pagina; alle GOV Library-pagina's zijn openbaar maar niet vindbaar in Google, besluit 13 november 2026).
+3. Voeg de kaart toe aan `docs/digest.html` (nieuwste eerst).
+4. Verwijder `docs/concepten/digest-[YYYY-MM-DD].html`.
 5. Geschrapte items: zet in het research-log de status op `afgewezen`.
 6. Commit-message: `Digest gepubliceerd: week [nr], [jaar] (na review)`.
 
