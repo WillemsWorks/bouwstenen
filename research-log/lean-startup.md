@@ -22,3 +22,8 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Status:** nieuw
 **Bron:** Userpilot · 20 mei 2026, bijgewerkt 24 augustus 2026
 **Kern:** Nu AI-codeertools het bouwen democratiseren, verschuift het voordeel naar wie beter meet en sneller leert. Teams moeten actief niet-presterende features elimineren en meetvragen herzien voor AI-omgevingen ("voltooide de agent de taak?" i.p.v. "klikte de gebruiker?"). Passieve observatie gaat vóór actieve feedbackverzameling.
+
+## 2026-11-15 — [Van AI-ambitie naar werkelijkheid](https://www.managementsite.nl/management-pro/van-ai-ambitie-naar-werkelijkheid-waarom-organisaties-meer-dienen-te-onderzoeken-dan-wat-ai-kan)
+**Status:** nieuw
+**Bron:** ManagementSite (Willem Scheepers) · 9 november 2026
+**Kern:** Veel organisaties experimenteren met AI zonder te weten wat er in het dagelijkse werk verandert. Scheepers stelt dat potentiële tijdwinst niet vanzelf waarde wordt, omdat controle, correctie en het benutten van vrijgekomen tijd ook werk kosten. Hij toetst AI-initiatieven aan drie vragen: welke waarde ontstaat echt, welke menselijke kennis en beslisruimte is nodig, en waarvan worden we afhankelijk.

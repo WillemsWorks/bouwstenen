@@ -36,3 +36,8 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Status:** nieuw
 **Bron:** Harvard Business Review (Carter, Hoppe & Kelley) · 2 oktober 2026
 **Kern:** Drie mindsetverschuivingen voor leiders in een AI-versneld tijdperk: van zekerheid naar helderheid, van expertise naar exploratie, en van emotiecontrole naar emotie als informatiebron. De auteurs koppelen dit aan een vierstappenmethode (pauzeren, waarnemen, omschakelen, oefenen) waarmee leiders hun cognitieve reflexen actief kunnen herwireren. Sluit aan op Kouzes-Posner: credibiliteit vereist in het AI-tijdperk ook bewuste cognitieve flexibiliteit.
+
+## 2026-11-15 — [The spirit of the leader](https://www.mckinsey.com/capabilities/people-and-organization/our-insights/the-spirit-of-the-leader)
+**Status:** nieuw
+**Bron:** McKinsey Quarterly (Manish Chopra) · 5 november 2026
+**Kern:** Chopra stelt dat leiders in tijden van volatiliteit en AI-onzekerheid houvast vinden in innerlijke praktijk, los van religie. Hij onderscheidt vier kwaliteiten: karakter, beheersing van de geest, wijsheid en gelijkmoedigheid. Gelijkmoedigheid is geen passiviteit maar actieve rust: heldere richting geven en kritiek scheiden van vijandigheid. Hij koppelt aan elke kwaliteit één reflectievraag als zelfcheck.

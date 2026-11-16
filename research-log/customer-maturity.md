@@ -29,3 +29,8 @@ Items met status `nieuw` zijn nog niet besproken met Paul.
 **Status:** nieuw  
 **Bron:** Renascence.io · 6 augustus 2026  
 **Kern:** Klantcentriciteit in 2026 is een operationele discipline, geen positioneringskeuze. AI verlaagt overstapkosten dramatisch; personalisatie is van nice-to-have naar minimumverwachting verschoven. Organisaties die het als communicatiestrategie behandelen, verliezen marktaandeel.
+
+## 2026-11-15 — [Microsoft heeft een afdeling die je probleem kan oplossen. Je kan hem alleen niet bereiken](https://www.managementsite.nl/gek-op-klanten/microsoft-heeft-een-afdeling-die-je-probleem-kan-oplossen-je-kan-hem-alleen-niet-bereiken)
+**Status:** nieuw
+**Bron:** ManagementSite (Bert Overbeek) · 14 november 2026
+**Kern:** Overbeek beschrijft hoe hij als enige beheerder van een betaald zakelijk Microsoft 365-account werd buitengesloten toen zijn Authenticator niet meer werkte. De telefoonlijn hing op zodra hij zei dat hij buitengesloten was; de herstelprocedure bestaat wel, maar is voor de klant onbereikbaar. Zijn punt: strenge identiteitscontrole is nodig, maar een legitieme klant moet de veilige uitweg kunnen vinden.

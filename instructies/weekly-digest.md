@@ -17,9 +17,9 @@ clone, en opvolgen. Wijzigingen aan hoe de digest werkt: alleen hier aanpassen.*
 ## Doel
 
 Vind nieuwe publicaties, artikelen en onderzoek van de afgelopen 14 dagen
-die relevant zijn voor Paul's GOV Library. Maak een compacte digest en
-publiceer die naar de GOV Library op GitHub — research-log, digest-archief
-en HTML-pagina. Geen lokale kopie: de GOV Library is het enige eindstation.
+die relevant zijn voor Paul's bouwstenen. Maak een compacte digest en
+publiceer die naar de bouwstenen-repo op GitHub — research-log, digest-archief
+en HTML-pagina. Geen lokale kopie: de bouwstenen-repo is het enige eindstation.
 
 ## Skills die deze taak gebruikt
 
@@ -75,7 +75,7 @@ Podcasts zoals AI Report en BNR Nieuwsradio zijn niet automatisch te monitoren. 
 Schrijf per item:
 - **Titel** met URL
 - **Bron & datum**
-- **GOV-koppeling**: welk GOV-framework dit raakt (1 zin). Hoort het item bij een `backlog`-doc (nog geen publieke pagina): voeg " (backlog)" toe aan de framenaam, bijv. "GOV-koppeling: CustomerMaturity (backlog)"
+- **Bouwsteen**: welke bouwsteen dit raakt (1 zin). Hoort het item bij een `backlog`-doc (nog geen publieke pagina): voeg " (backlog)" toe aan de naam, bijv. "Bouwsteen: CustomerMaturity (backlog)". Gebruik in de HTML het label "Bouwsteen:" en in de disclaimer "bouwstenen" — nooit "GOV-koppeling" of "GOV-frameworks" (ook niet als het sjabloon van de skill die woorden nog bevat)
 - **Kern**: wat is er nieuw of inzichtelijk (2-3 zinnen, Nederlands)
 - **Toepassing**: hoe Paul dit kan gebruiken als interim manager/consultant (1-2 zinnen, Nederlands)
 
@@ -108,14 +108,14 @@ Outputformaat (basis voor Stap 4 en Stap 5):
 ```
 # 📚 Kennisbank Update — week [weeknummer], [datum]
 
-*Nieuwe publicaties relevant voor de GOV Library*
+*Nieuwe publicaties relevant voor de bouwstenen*
 
 ---
 
 ## [Clusternaam — zie hierboven, of "Strategie" met vermelding van het gekozen cluster erbij]
 **[Titel](URL)**
 *[Bron] · [datum]*
-**GOV-koppeling:** [frameworknaam]
+**Bouwsteen:** [naam]
 
 [Kern: 2-3 zinnen] ([bron →](URL))
 
@@ -124,7 +124,7 @@ Outputformaat (basis voor Stap 4 en Stap 5):
 ---
 [herhaal per item]
 ---
-*Samengesteld met AI, gecureerd door Paul Willems · [datum] · GOV Library*
+*Samengesteld met AI, gecureerd door Paul Willems · [datum] · Bouwstenen*
 ```
 
 **Bronlink bij de Kern-paragraaf verplicht:** naast de link op de titel krijgt ook de Kern-paragraaf zelf een link naar de bron (zie `(bron →)` hierboven) — zo is de bron direct zichtbaar bij de conclusie, niet alleen bij de titel.
@@ -157,7 +157,7 @@ De research-log-updates uit Stap 4 gaan wél direct door: dat zijn interne werkb
 
 Wanneer Paul in een chat opdracht geeft om de digest te plaatsen (eventueel met correcties: items schrappen of aanpassen):
 1. Verwerk zijn correcties in het concept.
-2. Publiceer als `docs/digest-[YYYY-MM-DD].html`, mét de noindex-tag en de link naar `/bouwstenen/assets/site-theme.css` (neem `<head>` en topnav over van een bestaande digest-pagina; alle GOV Library-pagina's zijn openbaar maar niet vindbaar in Google, besluit 13 november 2026).
+2. Publiceer als `docs/digest-[YYYY-MM-DD].html`, mét de noindex-tag en de link naar `/bouwstenen/assets/site-theme.css` (neem `<head>` en topnav over van een bestaande digest-pagina; alle bouwstenen-pagina's zijn openbaar maar niet vindbaar in Google, besluit 13 november 2026).
 3. Voeg de kaart toe aan `docs/digest.html` (nieuwste eerst).
 4. Verwijder `docs/concepten/digest-[YYYY-MM-DD].html`.
 5. Geschrapte items: zet in het research-log de status op `afgewezen`.

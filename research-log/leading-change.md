@@ -65,3 +65,8 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Status:** nieuw
 **Bron:** Harvard Business Review · oktober 2026
 **Kern:** ⚠️ Artikel gevonden via zoekresultaten maar niet volledig raadpleegbaar. Titel suggereert een model van vijf leiderschapstempi dat koppelt aan situatiekenmerken — relevant voor het LeadingChange-framework rond situationeel leiderschap. Raadpleeg originele bron voor de volledige inhoud.
+
+## 2026-11-15 — [Personalizing Change Management at Scale](https://www.bcg.com/publications/2026/ai-personalizes-change-management-scale)
+**Status:** nieuw
+**Bron:** BCG (Rafiq, Ellmer e.a.) · 13 november 2026
+**Kern:** BCG pleit ervoor medewerkers bij verandering te segmenteren in persona’s, net zoals je klanten segmenteert. Bedrijven met mensgerichte verandermanagement scoren volgens BCG 15% beter op aandeelhoudersrendement. De kern is ‘change distance’: leiders onderschatten wat medewerkers nodig hebben en overschatten de slaagkans, waardoor generieke communicatie en training tekortschieten. In de fusie van Allegiant en Sun Country werden 9.300 medewerkers in tien persona’s ingedeeld, elk met eigen interventies.
