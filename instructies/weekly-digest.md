@@ -55,6 +55,7 @@ Neem alleen items op die:
 - Echte nieuwe inzichten, onderzoek of toepassingen bieden — geen basisherhaling
 - Duidelijk aansluiten op een GOV-thema uit gov-index.json
 - Komen van betrouwbare bronnen (zie hieronder)
+- **Volledig gelezen zijn** (sinds 16 november 2026): neem een item alleen op als je de volledige tekst van het artikel hebt kunnen lezen. Zit het achter een registratie-, betaal- of downloadmuur, of kon je alleen een intro, samenvatting, zoekresultaat of PDF-link zien, dan is het item niet volledig gelezen. Log in die gevallen geen inloggegevens in en maak geen accounts aan.
 
 **Betrouwbare bronnen:**
 
@@ -193,3 +194,4 @@ Stuur een PushNotification met:
 - Bondig — leesbaar op een telefoon
 - Geen opvulling, geen samenvatting van samenvattingen
 - Minder dan 3 relevante items: zeg dat eerlijk
+- Niet volledig kunnen lezen (muur of alleen intro): laat het item weg uit de digest, of neem het op met de bronregel "alleen samenvatting beschikbaar" vooraan en zonder conclusies of cijfers die je niet in de zichtbare tekst hebt gezien. Noem dit item in de pushmelding aan Paul, zodat hij het zelf kan aanleveren als PDF. Schrijf zo'n item nooit in het research-log met status `nieuw` alsof het volledig gelezen is: zet erbij "⚠️ niet volledig gelezen".
