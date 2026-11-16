@@ -39,6 +39,7 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Kern:** 63% van B2B-kopers gebruikte AI bij aankoopproces; 94% controleert AI-informatie achteraf. Analystenrapporten als bron daalden 63%; peer-reviews stegen. Kopers willen zelf ontdekken — verkopers die dit negeren, verliezen vroegtijdig invloed op het framingproces.
 
 ## 2026-11-15 — [Reinventing the channel: How can your partner ecosystem fuel AI growth?](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/reinventing-the-channel-how-can-your-partner-ecosystem-fuel-ai-growth)
-**Status:** nieuw
+**Status:** afgewezen
 **Bron:** McKinsey & Company · 5 november 2026
 **Kern:** Partners leveren gemiddeld zo’n 60% van de omzet van softwareleveranciers, maar twee op de drie leveranciers zien tekorten in kanaalcapaciteiten. Omdat AI-omzet afhangt van gebruik en meetbare uitkomsten, moeten partners vroeg meedenken in co-design en verantwoordelijk blijven tot en met adoptie. Beloning verschuift van eenmalige verkoop naar doorlopend gebruik. McKinsey schat dat AI de kanaalproductiviteit met 30 tot 45% kan verhogen.
+**Reden:** Gaat over softwareleveranciers; sluit niet aan op het werk van Paul; cijfers zijn potentie uit eigen McKinsey-use cases (review 16 nov).

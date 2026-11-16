@@ -142,6 +142,24 @@ Outputformaat (basis voor Stap 4 en Stap 5):
 
 **Bronlink bij de Kern-paragraaf verplicht:** naast de link op de titel krijgt ook de Kern-paragraaf zelf een link naar de bron (zie `(bron →)` hierboven) — zo is de bron direct zichtbaar bij de conclusie, niet alleen bij de titel.
 
+### Uitsmijter (vast onderdeel, sinds 16 november 2026)
+
+Sluit elke editie af met één lichtvoetig voorbeeld onder de kop "Uitsmijter", onder de clusters en zonder cluster. Het is een kort, herkenbaar voorbeeld uit het dagelijks leven of zakelijke leven (klantcontact, service, een merk dat iets slims of juist iets doms doet) dat leuk is om te weten en geen wetenschappelijke analyse bevat. Eisen:
+- Volledig gelezen, en maximaal 14 dagen oud (zelfde regels als de andere items).
+- Geen onderzoeksclaims of cijfers die je niet in de tekst zelf hebt gezien.
+- Koppel aan een bouwsteen of thema als dat vanzelf past (bijvoorbeeld CustomerMaturity); anders alleen een korte toepassing van één zin.
+- Telt niet mee voor het minimum van 3 items. Is er geen goed voorbeeld, zeg dat dan in plaats van op te vullen.
+- Gebruik in de HTML een eigen `cluster-heading` "Uitsmijter" en de eyebrow "Lichtvoetig voorbeeld · [onderwerp]".
+
+### Kwaliteitslat (uit de review van 16 november 2026)
+
+Neem niet op, of markeer expliciet:
+- **Opiniestukken zonder data** en artikelen van een aanbieder die in het artikel eigen tools, methoden of diensten noemt. Noem in het item wat de onderbouwing is (onderzoek met n, enquête, of alleen mening).
+- **Ambities en intentieverklaringen** zonder budget, planning, nulmeting of bindende afspraken, zoals sectorconvenanten. Een intentie is geen resultaat.
+- **Cijfers die potentie of schatting zijn** (bijvoorbeeld "tot 30 tot 45%") presenteer je als potentie, met de bron van de schatting.
+- **Toepassingen buiten het domein van het artikel.** Heeft het artikel het over softwareleveranciers, schrijf dan niet dat het "ook geldt voor" fabrikanten, tenzij Paul dat zelf zegt.
+- **Stellige samenvattingen** die verder gaan dan de bron: houd je aan wat er staat (bijvoorbeeld wie zich aan een afspraak bindt, en voor welke producten).
+
 ## Stap 4 — Research-log (via gov-library-github-sync skill)
 
 1. Haal `research-log/gov-index.json` op

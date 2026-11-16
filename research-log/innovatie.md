@@ -46,11 +46,13 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Kern:** De arbeidsproductiviteit in de Amerikaanse industrie daalt sinds 2014 met 1,2% per jaar, terwijl andere sectoren groeien. De meeste industriële bedrijven gebruiken AI alleen om automatisering uit te breiden, wat geen onderscheid meer oplevert. BCG schat dat ongeveer 70% van de AI-waarde zit in mensen, organisatie en processen, en dat de organisatieverandering 18 tot 24 maanden kost. Advies: leg beslisregels vast, geef AI-agents beperkte bevoegdheid die groeit met vertrouwen, en organiseer rond end-to-end-uitkomsten.
 
 ## 2026-11-15 — [Vanaf 2028 nieuwe warmtepompen slim aanstuurbaar](https://www.tno.nl/nl/newsroom/2026/11/nieuwe-warmtepompen-slimmer-2028/)
-**Status:** nieuw
+**Status:** afgewezen
 **Bron:** TNO · 5 november 2026
 **Kern:** Warmtepompfabrikanten, netbeheerders en TNO spreken af dat nieuwe warmtepompen vanaf 2028 technisch slim aanstuurbaar zijn om piekbelasting op het stroomnet te verminderen. Fabrikanten volgen daarvoor de NTA 8171; netbeheerders leveren de signalen en randvoorwaarden. Huishoudens kunnen besparen binnen vooraf vastgestelde comfortgrenzen. De rol van installateurs wordt nog niet benoemd.
+**Reden:** Intentieverklaring zonder genoemde fabrikanten, bindendheid of handhaving; te dun (review 16 nov).
 
 ## 2026-11-15 — [Installatiebranche wil warmtepomp voor woningcorporaties de helft goedkoper maken met AI en slimme data](https://solarmagazine.nl/nieuws-zonne-energie/i45262/installatiebranche-wil-warmtepomp-voor-woningcorporaties-de-helft-goedkoper-maken-met-ai-en-slimme-data)
-**Status:** nieuw
+**Status:** afgewezen
 **Bron:** Solar & Storage Magazine · 5 november 2026
 **Kern:** Techniek Nederland bood het plan TCO0.500 aan de minister aan, met als doel de levensduurkosten van warmtepompen voor woningcorporaties te halveren. Drie pijlers: AI-ondersteuning voor installateurs bij voorbereiding, uitvoering en storingen; datagedreven onderhoud in plaats van vaste intervallen; en draaien wanneer het net ruimte heeft. Installateurs, fabrikanten, corporaties en een netbeheerder werken samen met TNO als coördinator. Voorganger TDI500 halveerde de installatietijd van een hybride warmtepomp al van 32 naar 16 uur.
+**Reden:** Ambitie zonder budget, planning, nulmeting of bronnen; niet concreet genoeg (review 16 nov).
