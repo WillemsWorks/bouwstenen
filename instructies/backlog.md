@@ -37,6 +37,7 @@
 
 ## Onderhoud
 
+- **Ronde langs alle bouwstenen: kan de tekst publiek blijven?** `Open` — Afgesproken 13 november 2026, na de scheiding publiek (`docs/`) en intern. Samen met Paul elke bouwsteen in `docs/` langslopen: wat kan openbaar blijven (via link, noindex) en wat moet eruit of geanonimiseerd worden? Datum nog te plannen.
 - **Digest: proef vakbronnen evalueren** `Open` — Na vier edities (rond half december 2026): besluiten welke vakbronnen (Techniek Nederland, Installatie.nl, TVVL, Dutch Heat Pump Association, Solar Magazine) blijven, op basis van de pushmeldingen. Uitkomst van de digest-review van 16 november 2026; alle andere besluiten uit die review staan in `instructies/weekly-digest.md`.
 - **Auteurs om te volgen bijhouden** `Doorlopend` — Bij elke nieuwe of bijgewerkte bouwsteen: auteurs toevoegen aan `research-log/auteurs.md` en het blok "Auteurs om te volgen" onderaan de pagina bijwerken. Nog te bevestigen URL's: Eric van 't Zelfde, Jos Burgers, Dominique Schreinemachers, Herman Wegter.
 
