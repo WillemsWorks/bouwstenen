@@ -80,11 +80,28 @@ Neem alleen items op die:
 - MT/Sprout (mt.nl, sprout.nl) — ondernemerschap, schaalbedrijven, management
 - Managementsite (managementsite.nl) — leiderschap, verandermanagement, managementkennis
 - Energeia (energeia.nl) — energietransitie, markttrends; relevant bij items over verandering en innovatie in de energiesector
+- AI Report (aireport.email) — wekelijkse podcast en nieuwsbrief van Alexander Klöpping en Wietse Hage; zie "AI Report" hieronder
+
+*Vakbronnen energietransitie en installatiebranche (proef sinds 16 november 2026, evaluatie na vier edities):*
+- Techniek Nederland (technieknederland.nl)
+- Installatie.nl
+- TVVL Magazine (tvvl.nl)
+- Dutch Heat Pump Association / Warmtepompen.nl
+- Solar Magazine (solarmagazine.nl)
+Houd in de pushmelding bij welke vakbron iets opleverde, zodat Paul na vier edities kan besluiten welke blijven.
+
+*Spreiding per editie (sinds 16 november 2026):*
+- Maximaal twee items van dezelfde bron.
+- Minstens één Nederlands item, als er een geschikt artikel is. Geen Nederlands item gevonden? Meld dat in de pushmelding.
+- Minstens één item uit Pauls domein (energietransitie of installatiebranche), als er een geschikt artikel is. Ook hier: niets gevonden, dan melden. Liever geen item dan een mager item.
 
 *Gevolgde auteurs:* zie `research-log/auteurs.md` en stap 1b. Hun eigen site, blog of nieuwsbrief geldt als betrouwbare bron.
 
-*Podcasts (niet doorzoekbaar):*
-Podcasts zoals AI Report en BNR Nieuwsradio zijn niet automatisch te monitoren. Als Paul zelf een tip aanlevert vanuit een podcast, verwerk die dan als regulier item met de bron "Podcast: [naam], aflevering [datum]".
+*AI Report (vaste bron):*
+Paul luistert de podcast zelf elke week. Controleer de nieuwsbrief en de afleveringspagina van de afgelopen 14 dagen (aireport.email, of de afleveringsbeschrijving en het transcript via het open RSS-feed). Neem hooguit één item op, alleen als een onderwerp aansluit op een bouwsteen. Geef dan geen samenvatting van de aflevering, want die kent Paul al, maar de koppeling: wat betekent dit voor de bouwsteen of voor zijn werk? Bron: "Podcast: AI Report, aflevering [datum]". Baseer je alleen op tekst die je hebt gelezen (nieuwsbrief, beschrijving of transcript), niet op de titel alleen.
+
+*Overige podcasts (niet doorzoekbaar):*
+Podcasts zoals BNR Nieuwsradio zijn niet automatisch te monitoren. Als Paul zelf een tip aanlevert vanuit een podcast, verwerk die dan als regulier item met de bron "Podcast: [naam], aflevering [datum]".
 
 ## Stap 3 — Schrijven
 

@@ -13,6 +13,7 @@
 
 | Groep | Auteur | Volgen via | Soort | Gecontroleerd | Komt terug in |
 |---|---|---|---|---|---|
+| elke week | Alexander Klöpping en Wietse Hage (AI Report) | https://aireport.email | podcast en nieuwsbrief | ja | geen bouwsteen; AI-thema's, mogelijke bouwsteen Werken met AI. Wekelijks gecontroleerd, zie weekly-digest.md |
 | A | Amy Edmondson | https://amycedmondson.com | site met blog en publicaties | ja | leading-change, verkennen-verankeren, organisatie, team-psychologie. The Fearless Organization, Right Kind of Wrong; bouwsteen Psychologische veiligheid in backlog |
 | A | Ben Tiggelaar | https://www.tiggelaar.nl | site, NRC-column | nee | leading-change, verkennen-verankeren, leiderschap, organisatie, strategie. MBA in één dag (DenkProducties, april 2026) |
 | A | Brené Brown | https://brenebrown.com | site, artikelen en podcast | nee | leiderschap. Dare to Lead |
