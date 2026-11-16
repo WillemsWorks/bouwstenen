@@ -52,6 +52,8 @@ Lees `research-log/auteurs.md`. Bereken de groep van deze week: ISO-weeknummer m
 
 Neem alleen items op die:
 - **Gepubliceerd zijn in de afgelopen 14 dagen** — dit is een harde grens. Items ouder dan 14 dagen worden niet in de digest opgenomen, ook niet als ze status `nieuw` hebben in de research-logs. Oudere `nieuw`-items zijn bedoeld voor de maandelijkse catch-up met Paul, niet voor de wekelijkse digest.
+- **Een exacte publicatiedatum hebben** (sinds 16 november 2026): dag, maand en jaar. Geeft het zoekresultaat alleen een maand of jaar ("september 2026"), zoek de datum dan op de pagina zelf (bijvoorbeeld de datumregel of `datePublished`). Lukt dat niet, dan valt het item af. Zet de exacte datum altijd in de bronregel.
+- **In deze run gevonden zijn**: de digest gebruikt alleen artikelen die in deze run via de zoekopdrachten of stap 1b zijn gevonden. Items die al in de research-logs staan (ook met status `nieuw`) gaan nooit naar de digest, alleen naar de maandelijkse catch-up.
 - Echte nieuwe inzichten, onderzoek of toepassingen bieden — geen basisherhaling
 - Duidelijk aansluiten op een GOV-thema uit gov-index.json
 - Komen van betrouwbare bronnen (zie hieronder)
