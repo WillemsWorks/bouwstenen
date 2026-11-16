@@ -24,6 +24,6 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 **Kern:** Longitudinale studie na orkaan Harvey (cross-cultureel gevalideerd): medewerkers die crisisvrijwilligerswerk deden scoorden significant hoger op veerkracht, aanpassingsvermogen en creatief probleemoplossen. Het mechanisme is gedwongen improvisatie onder extreme druk — dit bouwt cognitieve en emotionele capaciteiten op die in professionele contexten standhouden. Organisaties die dit faciliteren investeren in teamcapaciteit die in reguliere trainingen onbereikbaar blijft.
 
 ## 2026-11-15 — [How AI Erodes People’s Sense of Value at Work](https://hbr.org/2026/11/how-ai-erodes-peoples-sense-of-value-at-work)
-**Status:** nieuw — ⚠️ niet volledig gelezen (HBR-betaalmuur; alleen samenvatting en openingsalinea zichtbaar)
+**Status:** nieuw
 **Bron:** Harvard Business Review (Zach Mercurio) · 12 november 2026
-**Kern:** AI-adoptie kan het gevoel van ‘ertoe doen’ (mattering) uithollen: gezien, bevestigd en nodig zijn. Mercurio’s voorbeeld komt uit een bouwmaterialenbedrijf, waar een manager merkt dat collega’s nu ‘gewoon Copilot vragen’ in plaats van hem. Omdat mattering samenhangt met betrokkenheid en prestaties, is dit een bedrijfsrisico.
+**Kern:** AI kan het gevoel van ‘ertoe doen’ (mattering) uithollen, ook zonder dat banen verdwijnen: gezien en gehoord worden, bevestigd worden in je sterke kanten en nodig zijn. Onderbouwing uit onderzoek van anderen: wie AI vraagt in plaats van een collega voelt zich bijna half zo vaak van belang; 13% minder eigen ideeën bij een slogan waarvan men dacht dat AI hem maakte. Volledig gelezen via door Paul aangeleverde tekst (16 nov).
