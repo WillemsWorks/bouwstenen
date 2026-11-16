@@ -109,6 +109,8 @@ Elk doc in `gov-index.json` heeft een `cluster`-veld — gebruik dat om een item
 
 **Onvolledig gelezen artikelen (enige regel hierover, sinds 16 november 2026)**
 
+**Elk item toont in de bronregel hoe het is gelezen** (sinds 16 november 2026): "Gelezen: volledig" of, bij een gemarkeerd item, "⚠️ Alleen samenvatting beschikbaar (…)". In de HTML staat dit achter de datum in `digest-meta-line`. Zet nooit "Gelezen: volledig" bij een item waarvan je de volledige tekst niet hebt gezien; controleer dat per item, ook als de pagina laadt maar eindigt na een paar alinea's.
+
 Een artikel is onvolledig gelezen als je alleen een intro, samenvatting, zoekresultaat of PDF-link kon zien. Dat gebeurt bij een login- of registratiemuur, een betaalmuur, een download (bijvoorbeeld een rapport als PDF achter een formulier) of een ophaalfout zoals HBR `PROVENANCE_REQUIRED`. Log nooit in en maak geen accounts aan.
 
 1. **Standaard: laat het item weg** uit de digest.
@@ -132,7 +134,7 @@ Outputformaat (basis voor Stap 4 en Stap 5):
 
 ## [Clusternaam — zie hierboven, of "Strategie" met vermelding van het gekozen cluster erbij]
 **[Titel](URL)**
-*[Bron] · [datum]*
+*[Bron] · [datum] · Gelezen: volledig*
 **Bouwsteen:** [naam]
 
 [Kern: 2-3 zinnen] ([bron →](URL))
