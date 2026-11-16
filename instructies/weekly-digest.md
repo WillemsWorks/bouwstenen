@@ -108,9 +108,9 @@ Podcasts zoals BNR Nieuwsradio zijn niet automatisch te monitoren. Als Paul zelf
 Schrijf per item:
 - **Titel** met URL
 - **Bron & datum**
-- **Bouwsteen**: welke bouwsteen dit raakt (1 zin). Hoort het item bij een `backlog`-doc (nog geen publieke pagina): voeg " (backlog)" toe aan de naam, bijv. "Bouwsteen: CustomerMaturity (backlog)". Gebruik in de HTML het label "Bouwsteen:" en in de disclaimer "bouwstenen" — nooit "GOV-koppeling" of "GOV-frameworks" (ook niet als het sjabloon van de skill die woorden nog bevat)
+- **Bouwsteen**: welke bouwsteen dit raakt (1 zin). Gebruik alleen een bouwsteen uit `research-log/gov-index.json` (status `live` of `backlog`), met de exacte naam. Geen vrije tekst, geen bouwstenen die niet bestaan. Past een item bij geen enkele bouwsteen, dan hoort het niet in de digest. Hoort het item bij een `backlog`-doc (nog geen publieke pagina): voeg " (backlog)" toe aan de naam, bijv. "Bouwsteen: CustomerMaturity (backlog)". Gebruik in de HTML het label "Bouwsteen:" en in de disclaimer "bouwstenen" — nooit "GOV-koppeling" of "GOV-frameworks" (ook niet als het sjabloon van de skill die woorden nog bevat)
 - **Kern**: wat is er nieuw of inzichtelijk (2-3 zinnen, Nederlands)
-- **Toepassing**: hoe Paul dit kan gebruiken als interim manager/consultant (1-2 zinnen, Nederlands)
+- **Toepassing**: hoe Paul dit kan gebruiken (1-2 zinnen, Nederlands). Noem een concrete situatie of een concreet instrument, bijvoorbeeld "in een kick-off met teams uit drie landen" of "als vraag in een intakegesprek". Begin nooit met "Als interim manager…" of een andere algemene openingszin. Is er niets concreets te zeggen, laat de toepassing dan weg.
 
 Streef naar 5-8 items. Kwaliteit boven kwantiteit.
 
@@ -183,6 +183,7 @@ Neem niet op, of markeer expliciet:
 - **Opiniestukken zonder data** en artikelen van een aanbieder die in het artikel eigen tools, methoden of diensten noemt. Noem in het item wat de onderbouwing is (onderzoek met n, enquête, of alleen mening).
 - **Ambities en intentieverklaringen** zonder budget, planning, nulmeting of bindende afspraken, zoals sectorconvenanten. Een intentie is geen resultaat.
 - **Cijfers die potentie of schatting zijn** (bijvoorbeeld "tot 30 tot 45%") presenteer je als potentie, met de bron van de schatting.
+- **Blogs van leveranciers en adviesbureaus** (bijvoorbeeld softwareleveranciers die over hun eigen markt schrijven): niet opnemen. Uitzondering: eigen onderzoek met een zichtbare methode (aantal respondenten en periode). Dan begint de bronregel met "Onderzoek van [leverancier]".
 - **Toepassingen buiten het domein van het artikel.** Heeft het artikel het over softwareleveranciers, schrijf dan niet dat het "ook geldt voor" fabrikanten, tenzij Paul dat zelf zegt.
 - **Stellige samenvattingen** die verder gaan dan de bron: houd je aan wat er staat (bijvoorbeeld wie zich aan een afspraak bindt, en voor welke producten).
 
