@@ -55,7 +55,8 @@ Neem alleen items op die:
 - Echte nieuwe inzichten, onderzoek of toepassingen bieden — geen basisherhaling
 - Duidelijk aansluiten op een GOV-thema uit gov-index.json
 - Komen van betrouwbare bronnen (zie hieronder)
-- **Volledig gelezen zijn** (sinds 16 november 2026): neem een item alleen op als je de volledige tekst van het artikel hebt kunnen lezen. Zit het achter een registratie-, betaal- of downloadmuur, of kon je alleen een intro, samenvatting, zoekresultaat of PDF-link zien, dan is het item niet volledig gelezen. Log in die gevallen geen inloggegevens in en maak geen accounts aan.
+- **Niet eerder in een digest stonden** (sinds 16 november 2026): lees vóór het filteren de URL's en titels uit alle bestaande digest-pagina's in `docs/` (`docs/digest-*.html`) en sluit die uit. Dezelfde titel bij een andere bron telt ook als herhaling. Uitzondering: een echt vervolg (nieuw onderzoek, een reactie, een nieuwe editie) mag wel, met de bronregel "Vervolg op [datum eerdere digest]".
+- **Volledig gelezen zijn** (sinds 16 november 2026): neem een item alleen op als je de volledige tekst van het artikel hebt kunnen lezen. Zit het achter een registratie-, betaal- of downloadmuur, of kon je alleen een intro, samenvatting, zoekresultaat of PDF-link zien, dan is het item niet volledig gelezen. Log in die gevallen niet in en maak geen accounts aan. Wat je dan doet, staat in "Onvolledig gelezen artikelen" hieronder.
 
 **Betrouwbare bronnen:**
 
@@ -106,14 +107,18 @@ Elk doc in `gov-index.json` heeft een `cluster`-veld — gebruik dat om een item
 
 **Uitzondering: Strategie.** Dit doc heeft geen vast cluster (`cluster: null`, `context_afhankelijk: true`). Beoordeel per Strategie-gerelateerd artikel zelf: gaat het over richting/positionering vóór een veranderopgave → Verandering & Leiderschap. Gaat het over het verkennen/valideren van een nieuwe propositie of markt → Innovatie & Marketing. Geen vaste regel, per artikel op inhoud beoordelen (zie `beslisregel`-veld in gov-index.json).
 
-**Bronnen die de volledige tekst blokkeren (bijv. HBR PROVENANCE_REQUIRED):**
-Als WebFetch of een vergelijkbare tool een fout geeft bij het ophalen van de volledige tekst van een artikel — zoals een `PROVENANCE_REQUIRED`-melding (HBR), een betaalmuur, of een "access denied" — ga dan als volgt te werk:
+**Onvolledig gelezen artikelen (enige regel hierover, sinds 16 november 2026)**
 
-1. **Sla het item niet over.** Neem het op in de digest.
-2. Gebruik de titel, URL, bron en datum zoals gevonden via de zoekopdracht.
-3. Schrijf voor de Kern-paragraaf: `⚠️ Volledige tekst niet beschikbaar — bron vereist directe toegang. [Lees het originele artikel →](URL)`
-4. Laat de Toepassing-paragraaf weg voor dit item.
-5. Noteer in de HTML-pagina dezelfde melding op de plek van de Kern-tekst, zodat het voor de lezer ook zichtbaar is.
+Een artikel is onvolledig gelezen als je alleen een intro, samenvatting, zoekresultaat of PDF-link kon zien. Dat gebeurt bij een login- of registratiemuur, een betaalmuur, een download (bijvoorbeeld een rapport als PDF achter een formulier) of een ophaalfout zoals HBR `PROVENANCE_REQUIRED`. Log nooit in en maak geen accounts aan.
+
+1. **Standaard: laat het item weg** uit de digest.
+2. **Alleen als het item duidelijk de moeite waard is**, mag het erin als gemarkeerd item:
+   - bronregel begint met "⚠️ Alleen samenvatting beschikbaar ([login / betaalmuur / download])";
+   - Kern bevat alleen wat in de zichtbare tekst staat, zonder eigen conclusies of cijfers die je niet zelf hebt gezien;
+   - geen Toepassing-paragraaf;
+   - telt niet mee voor het minimum van 3 items.
+3. **Noem elk onvolledig gelezen item in de pushmelding aan Paul**, ook de weggelaten items, met de reden. Dan kan hij het zelf aanleveren, bijvoorbeeld als PDF.
+4. **In het research-log** krijgt zo'n item nooit status `nieuw` zonder meer. Zet erbij: "⚠️ niet volledig gelezen".
 
 Het feit dat een bron niet automatisch ophaalbaar is, is **geen reden om de push te annuleren of uit te stellen**. Zie ook de regel hieronder.
 
@@ -202,7 +207,7 @@ Zet het concept op GitHub zodra er minimaal 1 volledig item beschikbaar is, onge
 
 Stuur een PushNotification met:
 - "Digest-concept week [nr] staat klaar voor je check" + link naar `https://www.willemsworks.nl/bouwstenen/concepten/digest-[YYYY-MM-DD].html`
-- Aantal items en welke items een blokkeringsfout hadden (bron niet bereikbaar)
+- Aantal items, en welke artikelen onvolledig gelezen zijn (weggelaten of gemarkeerd) met de reden: login, betaalmuur, download of ophaalfout
 - Welke research-log-bestanden zijn bijgewerkt
 - De vraag aan Paul om na lezing in het WillemsWorks-project "plaats de digest" te zeggen (met eventuele correcties)
 
@@ -211,5 +216,6 @@ Stuur een PushNotification met:
 - Volledig Nederlands (titels/bronnen mogen Engels blijven)
 - Bondig — leesbaar op een telefoon
 - Geen opvulling, geen samenvatting van samenvattingen
-- Minder dan 3 relevante items: zeg dat eerlijk
-- Niet volledig kunnen lezen (muur of alleen intro): laat het item weg uit de digest, of neem het op met de bronregel "alleen samenvatting beschikbaar" vooraan en zonder conclusies of cijfers die je niet in de zichtbare tekst hebt gezien. Noem dit item in de pushmelding aan Paul, zodat hij het zelf kan aanleveren als PDF. Schrijf zo'n item nooit in het research-log met status `nieuw` alsof het volledig gelezen is: zet erbij "⚠️ niet volledig gelezen".
+- Minder dan 3 relevante items: maak een kortere digest en zeg dat eerlijk in de pushmelding. Vul niet aan met herhalingen of ouder werk.
+- Niet volledig kunnen lezen: zie "Onvolledig gelezen artikelen" in stap 3.
+- Herhalingen: zie stap 2. Te weinig nieuwe items is geen reden om oude items te herhalen.

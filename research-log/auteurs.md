@@ -17,7 +17,7 @@
 | A | Ben Tiggelaar | https://www.tiggelaar.nl | site, NRC-column | nee | leading-change, verkennen-verankeren, leiderschap, organisatie, strategie. MBA in één dag (DenkProducties, april 2026) |
 | A | Brené Brown | https://brenebrown.com | site, artikelen en podcast | nee | leiderschap. Dare to Lead |
 | A | David Rock (NeuroLeadership Institute) | https://neuroleadership.com | onderzoek en artikelen | nee | leading-change. SCARF-model |
-| A | Deborah Nas | nog te bepalen | nog te bepalen (site/LinkedIn) | — | geen bouwsteen. Seminar Extreme Time Management met AI (3 juni 2026); blog 'Niet sneller, maar scherper'; mogelijke bouwsteen Werken met AI |
+| A | Deborah Nas | https://www.deborahnas.com/blog-innovatie-technologie-trends | blog innovatie en technologietrends | ja (door Paul) | geen bouwsteen. Seminar Extreme Time Management met AI (3 juni 2026); blog 'Niet sneller, maar scherper'; mogelijke bouwsteen Werken met AI |
 | A | Gallup Workplace | https://www.gallup.com/workplace | onderzoek | nee | leiderschap, organisatie. Q12, sterkteaanpak (Clifton) |
 | A | John Kotter (Kotter Inc.) | https://www.kotterinc.com/category/type/blog/ | blog | ja | leading-change, faciliteren. Leading Change, Accelerate |
 | B | Eric van 't Zelfde | nog te bepalen | nog te bepalen | — | team-psychologie. Seminar DenkProducties, februari 2026 |
