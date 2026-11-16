@@ -55,14 +55,26 @@ Naast dit project heeft Paul twee andere Spirotech-projecten: één specifiek vo
 
 ## Promptinstructie
 
-**Kopieer dit in Spirotech-projecten:**
+**Kopieer dit in Spirotech-projecten (bijgewerkt 16 november 2026, na de verhuizing naar de repo `bouwstenen` en de map `docs/`):**
 
 ```
-Lees bij de start van elk gesprek
-https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze.md
-én
-https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze-spirotech.md
-op en pas beide toe. De Spirotech-werkwijze heeft voorrang bij conflicten.
+Lees bij de start van elk gesprek deze twee bestanden en pas ze toe. De Spirotech-werkwijze heeft voorrang bij conflicten:
+- https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze.md
+- https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/instructies/werkwijze-spirotech.md
+
+BOUWSTENEN
+Paul's kennisbank heet "bouwstenen" (vroeger GOV Library of GOV-docs; de repo heette vroeger WillemsWorks/gov-library). Een bouwsteen vind je zo:
+1. Open de index: https://raw.githubusercontent.com/WillemsWorks/bouwstenen/main/research-log/gov-index.json
+2. Zoek de juiste bouwsteen op titel, cluster of thema.
+3. Het veld "file" geeft het pad, bijvoorbeeld docs/culture-map.html. Lees de pagina via https://www.willemsworks.nl/bouwstenen/culture-map.html (pad zonder docs/), of via raw.githubusercontent.com met het volledige pad.
+
+TOEGANG
+- Je leest alleen. Schrijf, commit of push nooit naar deze repo vanuit Spirotech.
+- Lukt het ophalen niet, meld dat dan concreet (welk bestand, welke fout) en vraag Paul om de tekst. Werk niet door alsof je de werkwijze hebt gelezen.
+- Werkt de koppeling met GitHub wel in deze omgeving, dan mag je de repo WillemsWorks/bouwstenen ook daarmee lezen.
+
+VERTROUWELIJKHEID
+De Spirotech-werkwijze staat in een openbare repository, maar is intern. Citeer er niet uit in documenten die buiten Spirotech gaan.
 ```
 
 ## Communicatiefilter — Culture Map toegepast op Spirotech
