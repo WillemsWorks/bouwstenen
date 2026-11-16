@@ -76,3 +76,12 @@ h1, h2, h3, .doc-title, .hero h1 { font-family: "PP Formula Extended", "Sora", s
 
 @media (max-width: 1100px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px)  { .card-grid { grid-template-columns: 1fr; } .section { padding-top: 24px; } }
+
+/* Auteurs om te volgen (blok onderaan elke bouwsteen) */
+.doc-follow { max-width: 860px; margin: 48px auto 32px; padding: 28px 32px; background: #f4f3fb; border: 1px solid #ececf6; border-radius: 16px; }
+.doc-follow h2 { margin-top: 0; }
+.doc-follow a { color: #3a2e59; text-decoration-color: #b9b3e6; text-underline-offset: 3px; }
+.doc-follow a:hover { color: #6b5bd6; }
+.doc-follow ul { columns: 2; column-gap: 32px; padding-left: 18px; margin-bottom: 0; }
+.doc-follow li { margin-bottom: 6px; break-inside: avoid; }
+@media (max-width: 640px) { .doc-follow { margin: 32px 16px; padding: 20px; } .doc-follow ul { columns: 1; } }

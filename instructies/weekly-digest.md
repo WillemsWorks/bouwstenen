@@ -38,6 +38,16 @@ Vertaal de onderwerpen naar minimaal 6 gerichte zoekopdrachten, verdeeld over de
 
 **Zoek actief bij Nederlandse bronnen met Nederlandse zoektermen**, naast de Engelstalige internationale bronnen. Combineer twee à drie Nederlandse zoekopdrachten met termen als "verandermanagement", "leiderschap", "innovatie", "klantbeleving", "AI adoptie" per run.
 
+### Stap 1b — Gevolgde auteurs (vast onderdeel, sinds 16 november 2026)
+
+Lees `research-log/auteurs.md`. Bereken de groep van deze week: ISO-weeknummer modulo 4 (0 = A, 1 = B, 2 = C, 3 = D). Controleer voor elke auteur uit die groep de bron in de kolom "Volgen via" op nieuw werk: een blogpost, artikel, onderzoek, nieuwsbriefeditie of podcastaflevering. Staat er "nog te bepalen", zoek dan op naam plus maand en jaar.
+
+- **Termijn:** voor gevolgde auteurs geldt een venster van 30 dagen in plaats van 14, omdat zij minder vaak publiceren.
+- **Gewicht:** neem één tot twee items uit deze groep op, alleen als er echt nieuw werk is. Is er niets nieuws, dan geen opvulling met ouder of algemeen werk.
+- **Koppeling:** noem in het item de bouwsteen uit de kolom "Komt terug in". Heeft de auteur geen bouwsteen (bijvoorbeeld Deborah Nas), koppel dan aan het thema dat het dichtstbij ligt.
+- **Herkenbaar:** zet "Gevolgde auteur" voor de bronregel van het item.
+- **Signaleren:** werkt een URL niet meer, of publiceert een auteur nergens meer, meld dat dan in de samenvatting aan Paul. Pas `auteurs.md` niet zelf aan.
+
 ## Stap 2 — Filteren
 
 Neem alleen items op die:
@@ -66,6 +76,8 @@ Neem alleen items op die:
 - MT/Sprout (mt.nl, sprout.nl) — ondernemerschap, schaalbedrijven, management
 - Managementsite (managementsite.nl) — leiderschap, verandermanagement, managementkennis
 - Energeia (energeia.nl) — energietransitie, markttrends; relevant bij items over verandering en innovatie in de energiesector
+
+*Gevolgde auteurs:* zie `research-log/auteurs.md` en stap 1b. Hun eigen site, blog of nieuwsbrief geldt als betrouwbare bron.
 
 *Podcasts (niet doorzoekbaar):*
 Podcasts zoals AI Report en BNR Nieuwsradio zijn niet automatisch te monitoren. Als Paul zelf een tip aanlevert vanuit een podcast, verwerk die dan als regulier item met de bron "Podcast: [naam], aflevering [datum]".
