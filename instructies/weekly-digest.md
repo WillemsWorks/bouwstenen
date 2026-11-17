@@ -54,6 +54,8 @@ Neem alleen items op die:
 - **Gepubliceerd zijn in de afgelopen 14 dagen** — dit is een harde grens. Items ouder dan 14 dagen worden niet in de digest opgenomen, ook niet als ze status `nieuw` hebben in de research-logs. Oudere `nieuw`-items zijn bedoeld voor de maandelijkse catch-up met Paul, niet voor de wekelijkse digest.
 - **Een exacte publicatiedatum hebben** (sinds 16 november 2026): dag, maand en jaar. Geeft het zoekresultaat alleen een maand of jaar ("september 2026"), zoek de datum dan op de pagina zelf (bijvoorbeeld de datumregel of `datePublished`). Lukt dat niet, dan valt het item af. Zet de exacte datum altijd in de bronregel.
 - **In deze run gevonden zijn**: de digest gebruikt alleen artikelen die in deze run via de zoekopdrachten of stap 1b zijn gevonden. Items die al in de research-logs staan (ook met status `nieuw`) gaan nooit naar de digest, alleen naar de maandelijkse catch-up.
+- **Bronlink en brontekst controleren** (sinds 17 november 2026): open elke URL vóór opname en vergelijk de titel met het item. Bij een foutpagina, 404 of een andere titel valt het item af; nooit opnemen op basis van een zoekresultaat alleen. Neem tijdschrift, uitgever, auteurs en datum uit de bron zelf over. Controleer elk cijfer en elke naam in de Kern tegen de brontekst; staat het er niet, laat het weg of markeer het als eigen duiding (in de Toepassing). Bij een secundaire bron (bijvoorbeeld een vakblad dat over een McKinsey-rapport schrijft): zoek de primaire bron, en noem de secundaire in de bronregel als het de enige leesbare is.
+- **Onderwerp vergelijken, niet alleen de URL** (sinds 17 november 2026): hetzelfde artikel of rapport onder een andere URL of bij een ander medium telt als herhaling (zie ook de regel hieronder).
 - Echte nieuwe inzichten, onderzoek of toepassingen bieden — geen basisherhaling
 - Duidelijk aansluiten op een GOV-thema uit gov-index.json
 - Komen van betrouwbare bronnen (zie hieronder)
@@ -89,6 +91,12 @@ Neem alleen items op die:
 - Dutch Heat Pump Association / Warmtepompen.nl
 - Solar Magazine (solarmagazine.nl)
 Houd in de pushmelding bij welke vakbron iets opleverde, zodat Paul na vier edities kan besluiten welke blijven.
+
+*Nederlandse onderzoeksbureaus (proef sinds 17 november 2026, evaluatie samen met de vakbronnen na vier edities):*
+- Motivaction (motivaction.nl, nieuws en downloads; Mentality-model)
+- Market Response (marketresponse.nl, publicaties; BSR-model)
+- Locatus (locatus.com, blog en factsheets)
+Gebruik ze alleen voor onderzoek met zichtbare methode dat bruikbaar is voor B2B-keuzes, energietransitie, installatiebranche of segmentering van doelgroepen (bijvoorbeeld hoe het koopgedrag verschilt per bevolkingsgroep). Puur consumentenonderzoek zonder vertaling naar Pauls praktijk valt af. De overzichtspagina's tonen vaak geen datum: zoek de exacte publicatiedatum op de artikelpagina zelf. Houd in de pushmelding bij wat deze bronnen opleverden.
 
 *Spreiding per editie (sinds 16 november 2026):*
 - Maximaal twee items van dezelfde bron.
@@ -231,6 +239,7 @@ Stuur een PushNotification met:
 - "Digest-concept week [nr] staat klaar voor je check" + link naar `https://www.willemsworks.nl/bouwstenen/concepten/digest-[YYYY-MM-DD].html`
 - Aantal items, en welke artikelen onvolledig gelezen zijn (weggelaten of gemarkeerd) met de reden: login, betaalmuur, download of ophaalfout
 - Welke research-log-bestanden zijn bijgewerkt
+- Welke kandidaat-items zijn afgevallen door een dode of afwijkende link
 - **Postkandidaat** (sinds 17 november 2026): één item uit deze digest dat zich leent voor een LinkedIn-post en/of Substack-duiding, met één regel waarom en de voorgestelde invalshoek. Kies een item dat volledig is gelezen en aansluit op een bouwsteen. Zie `werkwijze-social.md`, "Wekelijkse post uit het digest". Paul mag een ander item kiezen.
 - De vraag aan Paul om na lezing in het WillemsWorks-project "plaats de digest" te zeggen (met eventuele correcties)
 
