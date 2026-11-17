@@ -16,13 +16,6 @@ Na bespreking wordt de status bijgewerkt naar `verwerkt` of `afgewezen`.
 
 ---
 
-## 2026-09-13 — [The State of Organizations 2026](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations-2026)
-**Status:** nieuw
-**Bron:** McKinsey & Company (10.000+ leidinggevenden, 15 landen) · maart 2026
-**Kern:** 66% van leidinggevenden vindt hun organisatie te complex en inefficiënt; 40% ziet werkstroomherdefiniëring als de belangrijkste prioriteit voor de komende twee jaar. Kernboodschap: vereenvoudig workflows eerst, automatiseer daarna — veel capaciteit zit vast in onnodige handoffs, duplicatie en onduidelijke beslissingsbevoegdheden. Sluit aan op Mintzberg's coördinatiemechanismen.
-
----
-
 ## 2026-08-18 — [What Companies Get Wrong About Decision Rights](https://hbr.org/2026/07/what-companies-get-wrong-about-decision-rights)
 **Status:** nieuw
 **Bron:** Harvard Business Review (Lindy Greer, Jennifer Jordan, Maxim Sytch) · juli 2026
