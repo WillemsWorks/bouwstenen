@@ -34,6 +34,19 @@ Bij twijfel of een boodschap conflicteert met andere content (website, eerdere a
 **Evaluatie na elk Substack-artikel**
 Na afronding van een Substack-artikel: evalueer de schrijfsessie op nieuwe, nog niet vastgelegde stijlpatronen (structuurkeuzes, tijdsvorm, toon, wat er juist géén patroon bleek te zijn - bijvoorbeeld een element dat bewust werd geschrapt). Leg relevante bevindingen, na expliciete bevestiging van Paul, vast onder "Patronen uit sessie-evaluaties" in `comm-substack-writingstyle.md`, met datum en artikeltitel.
 
+## Wekelijkse post uit het digest (afgesproken 17 november 2026)
+
+**Doel:** elke week een LinkedIn-post, en een Substack-post of -Note (eerst eens per maand, later mogelijk om de twee weken), met één item uit de digest en een korte eigen duiding. Licht van toon, gedegen van inhoud, zodat Paul als autoriteit zichtbaar wordt en de discussie op LinkedIn en Substack ontstaat.
+
+- **Postkandidaat:** de wekelijkse digest-taak stelt één item voor (met één regel waarom en de invalshoek). Paul mag een ander item kiezen.
+- **Werkwijze:** eerst vragen aan Paul, drie stuks: wat viel je op, waar zag je dit zelf in de praktijk, wat is je standpunt? De duiding komt van Paul. Daarna een concept; Paul past aan en plaatst zelf.
+- **Controle vóór plaatsen:** bronartikel volledig gelezen, elk cijfer en elke naam gecontroleerd tegen de brontekst, geen klantnamen, geen Spirotech-inhoud. Bij twijfel over botsing met andere content beslist Paul.
+- **LinkedIn:** geen links in de post zelf (kost bereik). De bronlink mag in de eerste reactie of wegblijven. **Substack:** links mogen.
+- **Bouwstenen en blogartikelen:** mogen als achtergrond meewegen, zonder verwijzing of link. Bouwstenen wegen zwaarder mee dan blogs.
+- **Tweede format:** af en toe een uitsmijter uit het digest, gespiegeld aan een eigen journey-ervaring (de vorm van de Substack-artikelen).
+- **Postlog:** houd bij in `research-log/posts.md`: datum, bron, invalshoek, platform, link.
+- **Geen automatisch publiceren.** Een koppeling die alleen concepten klaarzet kan later, plaatsen doet Paul zelf.
+
 ## Promptinstructie
 
 **Kopieer dit in het Social Content-project:**

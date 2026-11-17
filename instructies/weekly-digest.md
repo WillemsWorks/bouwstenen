@@ -231,6 +231,7 @@ Stuur een PushNotification met:
 - "Digest-concept week [nr] staat klaar voor je check" + link naar `https://www.willemsworks.nl/bouwstenen/concepten/digest-[YYYY-MM-DD].html`
 - Aantal items, en welke artikelen onvolledig gelezen zijn (weggelaten of gemarkeerd) met de reden: login, betaalmuur, download of ophaalfout
 - Welke research-log-bestanden zijn bijgewerkt
+- **Postkandidaat** (sinds 17 november 2026): één item uit deze digest dat zich leent voor een LinkedIn-post en/of Substack-duiding, met één regel waarom en de voorgestelde invalshoek. Kies een item dat volledig is gelezen en aansluit op een bouwsteen. Zie `werkwijze-social.md`, "Wekelijkse post uit het digest". Paul mag een ander item kiezen.
 - De vraag aan Paul om na lezing in het WillemsWorks-project "plaats de digest" te zeggen (met eventuele correcties)
 
 ## Regels
