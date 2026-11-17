@@ -65,7 +65,7 @@ Neem alleen items op die:
 **Betrouwbare bronnen:**
 
 *Internationaal:*
-- Harvard Business Review (hbr.org)
+- Harvard Business Review (hbr.org) — achter een betaalmuur: zonder abonnement is alleen de samenvatting leesbaar (vastgesteld 17 november 2026). Neem een HBR-artikel alleen op als de volledige tekst leesbaar is; anders alleen met de markering "⚠️ Alleen samenvatting beschikbaar (betaalmuur)", zonder Toepassing en zonder details die niet in de samenvatting staan.
 - McKinsey & Company (mckinsey.com)
 - MIT Sloan Management Review (sloanreview.mit.edu)
 - Strategy+Business / PwC (strategy-business.com)

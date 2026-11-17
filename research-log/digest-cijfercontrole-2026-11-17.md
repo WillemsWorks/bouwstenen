@@ -96,3 +96,10 @@ Backlog voor LinkedIn/Substack. Volgorde = eerste indruk, niet prioriteit; Paul 
 7. **Prosci, sponsorschap** (6 okt, geen vaste datum). 73% vs 29% succes met/zonder actief executive sponsorschap; 88% vs 13% bij projecten met uitstekend vs slecht change management (Prosci-onderzoek zonder methode).
 8. **Review teameffectiviteit, tien thema's** (Small Group Research, 2026). Idee staat al in backlog.
 9. **Uitsmijter Microsoft / Overbeek** (14 nov, datum onzeker) gespiegeld aan een eigen journey-ervaring.
+
+## Doorgevoerd (17 november 2026, na akkoord Paul)
+- Verwijderd (7): COE Psychological Safety Study (06-22), CMI B2B Content & Marketing Trends (06-22), Tess Breen (07-20), HBR "Driving Change When You Lack Authority" (08-18), HBR "A Better Way to Craft Strategy in the Age of AI" (09-27), HBR "5 Ways to Wield Influence" (10-18), HBR Csaszar "AI Is Revolutionizing Strategic Decision-Making" (10-04; het Csaszar-item van 09-06 is gecorrigeerd en blijft).
+- Overige HBR-items (alleen samenvatting en eerste alinea leesbaar): teruggebracht tot wat de samenvatting zegt, zonder Toepassing, met markering "Alleen samenvatting beschikbaar (betaalmuur)". Uitzondering: de IdeaCast (volledig transcript).
+- Correcties doorgevoerd bij o.a. hrzone (3 items), TopRank, Frontiers (2), SCARF, Dunford (deels achter betaalmuur), McKinsey (agentic gap, trust, AI agents, growth, operating model, leading when threatening, arenas, B2B sales), Deloitte, Accenture, G2, Gartner 69%, Consensus, SessionLab, Prosci, Mercurio.
+- Niet gewijzigd: McKinsey ATO (35-70% niet apart gecontroleerd), ManagementSite Overbeek (datum 14 november onzeker).
+- De Kern-regels in de andere research-log-bestanden zijn niet per item herschreven; de editiepagina's zijn leidend.
